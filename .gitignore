@@ -1,0 +1,45 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Model checkpoints (optional if very large)
+checkpoints/
+
+# Output files
+outputs/
+
+# OS files# Virtual Environment
+.venv/
+venv/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Dataset
+datasets/
+data/
+
+# Model Weights
+*.pth
+*.pt
+*.ckpt
+
+# Outputs
+outputs/
+.DS_Store
+Thumbs.db
