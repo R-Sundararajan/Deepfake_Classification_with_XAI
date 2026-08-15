@@ -1,6 +1,5 @@
 # Virtual environment
-.venv/
-venv/
+dfenv/
 
 # Python cache
 __pycache__/
@@ -19,9 +18,14 @@ checkpoints/
 # Output files
 outputs/
 
-# OS files# Virtual Environment
+# OS files
+.DS_Store
+Thumbs.db
 .venv/
 venv/
+
+# Virtual Environment
+dfenv/
 
 # Python Cache
 __pycache__/

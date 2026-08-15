@@ -1,8 +1,6 @@
+
 """
 Project Configuration File
-
-This file contains all global settings used throughout the project.
-Changing a value here updates it everywhere in the project.
 """
 
 import torch
@@ -12,21 +10,15 @@ from pathlib import Path
 # PROJECT PATHS
 # ============================================================
 
-# Root project directory
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-# Data folders
 DATA_DIR = PROJECT_ROOT / "data"
-
-# Dataset folder
 DATASET_DIR = DATA_DIR / "real_vs_fake" / "real-vs-fake"
 
-# Dataset splits
 TRAIN_DIR = DATASET_DIR / "train"
 VALID_DIR = DATASET_DIR / "valid"
 TEST_DIR = DATASET_DIR / "test"
 
-# Output folders
 CHECKPOINT_DIR = PROJECT_ROOT / "checkpoints"
 OUTPUT_DIR = PROJECT_ROOT / "outputs"
 
@@ -42,8 +34,11 @@ NUM_CLASSES = 2
 # TRAINING SETTINGS
 # ============================================================
 
-BATCH_SIZE = 16
-EPOCHS = 30
+BATCH_SIZE = 64
+
+# Change this to 6 if you want exactly 6 total epochs.
+EPOCHS = 5
+MAX_EPOCHS = 30
 
 LEARNING_RATE = 1e-4
 WEIGHT_DECAY = 1e-4
@@ -54,7 +49,6 @@ WEIGHT_DECAY = 1e-4
 
 PATCH_SIZE = 16
 
-# Recommended for RTX 3050 Laptop GPU
 EMBED_DIM = 128
 NUM_HEADS = 8
 NUM_LAYERS = 8
@@ -73,10 +67,29 @@ DEVICE = torch.device(
 )
 
 # ============================================================
+# CUDA OPTIMIZATION
+# ============================================================
+
+if DEVICE.type == "cuda":
+
+    # Allows TF32 operations on supported NVIDIA GPUs.
+    # RTX 4060 supports this.
+    torch.backends.cuda.matmul.allow_tf32 = True
+    torch.backends.cudnn.allow_tf32 = True
+
+    # Useful when image dimensions stay fixed at 256x256.
+    torch.backends.cudnn.benchmark = True
+
+# ============================================================
 # DATALOADER SETTINGS
 # ============================================================
 
-NUM_WORKERS = 0
+# IMPORTANT:
+# 0 = data loading happens in the training process.
+# 4 gives the GPU workers that can prepare batches ahead of time.
+#
+# If your CPU has plenty of cores, try 6 or 8.
+NUM_WORKERS = 4
 
 PIN_MEMORY = True
 

@@ -1,3 +1,4 @@
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -5,6 +6,7 @@ import torch.optim as optim
 from tqdm import tqdm
 
 from torch.amp import autocast, GradScaler
+
 from models.vit import VisionTransformer
 from datasets.dataloader import get_dataloaders
 
@@ -18,49 +20,80 @@ from utils.config import (
 
 from training.plot_history import save_training_history
 from training.early_stopping import EarlyStopping
+
 from training.checkpoint import (
     save_checkpoint,
     load_checkpoint,
 )
 
 
-def train():
+def train(
+    resume: bool = None,
+    max_epochs: int = None,
+):
 
-    # ----------------------------------------------------
-    # Device
-    # ----------------------------------------------------
+    # ========================================================
+    # DEVICE
+    # ========================================================
 
     print(f"Using Device : {DEVICE}")
 
-    # ----------------------------------------------------
-    # Data
-    # ----------------------------------------------------
+    if DEVICE.type == "cuda":
+
+        print(
+            f"GPU : {torch.cuda.get_device_name(0)}"
+        )
+
+        print(
+            f"CUDA : {torch.version.cuda}"
+        )
+
+    epochs_to_run = (
+        max_epochs
+        if max_epochs is not None
+        else EPOCHS
+    )
+
+    # ========================================================
+    # DATA
+    # ========================================================
 
     print("\nLoading Data...")
 
-    train_loader, valid_loader, test_loader = get_dataloaders()
+    train_loader, valid_loader, test_loader = (
+        get_dataloaders()
+    )
 
     print("Data Loaded Successfully.\n")
 
-    # ----------------------------------------------------
-    # Model
-    # ----------------------------------------------------
+    # ========================================================
+    # MODEL
+    # ========================================================
 
     print("Creating Vision Transformer...")
 
     model = VisionTransformer().to(DEVICE)
 
+    # channels_last can improve performance for models
+    # containing convolution operations such as the ViT
+    # patch embedding.
+    if DEVICE.type == "cuda":
+
+        model = model.to(
+            memory_format=torch.channels_last
+        )
+
     print("Model Created.\n")
 
-    # ----------------------------------------------------
-    # Loss Function
-    # ----------------------------------------------------
+    # ========================================================
+    # LOSS
+    # ========================================================
 
     criterion = nn.CrossEntropyLoss()
 
-    # ----------------------------------------------------
-    # Optimizer
-    # ----------------------------------------------------
+    # ========================================================
+    # OPTIMIZER
+    # ========================================================
 
     optimizer = optim.AdamW(
         model.parameters(),
@@ -74,49 +107,74 @@ def train():
         factor=0.5,
         patience=2,
     )
-    # ----------------------------------------------------
-    # Mixed Precision
-    # ----------------------------------------------------
+
+    # ========================================================
+    # MIXED PRECISION
+    # ========================================================
 
     USE_AMP = DEVICE.type == "cuda"
 
     scaler = GradScaler(
-        device=DEVICE.type,
+        "cuda",
         enabled=USE_AMP,
     )
-    # ----------------------------------------------------
-    # Training History
-    # ----------------------------------------------------
+
+    if USE_AMP:
+        print("Mixed Precision : ENABLED")
+
+    # ========================================================
+    # HISTORY
+    # ========================================================
 
     train_losses = []
     train_accuracies = []
     validation_accuracies = []
 
-    best_accuracy = 0
+    best_accuracy = 0.0
 
     early_stopping = EarlyStopping(
         patience=5
     )
 
-    print("=" * 60)
-    print("Training Started")
-    print("=" * 60)
+    # ========================================================
+    # CHECKPOINT
+    # ========================================================
 
-    # ----------------------------------------------------
-    # Resume Training
-    # ----------------------------------------------------
-
-    checkpoint_path = CHECKPOINT_DIR / "training_checkpoint.pth"
+    checkpoint_path = (
+        CHECKPOINT_DIR
+        / "training_checkpoint.pth"
+    )
 
     start_epoch = 0
 
+    # ========================================================
+    # RESUME
+    # ========================================================
+
     if checkpoint_path.exists():
 
-        choice = input(
-            "\nCheckpoint found. Resume training? (y/n): "
-        ).strip().lower()
+        if resume is None:
 
-        if choice == "y":
+            try:
+
+                choice = input(
+                    "\nCheckpoint found. "
+                    "Resume training? (y/n): "
+                ).strip().lower()
+
+                should_resume = (
+                    choice == "y"
+                )
+
+            except EOFError:
+
+                should_resume = True
+
+        else:
+
+            should_resume = resume
+
+        if should_resume:
 
             (
                 start_epoch,
@@ -131,38 +189,99 @@ def train():
                 scheduler,
             )
 
-            print(f"\nResuming from Epoch {start_epoch + 1}")
+            print(
+                f"\nResuming from Epoch "
+                f"{start_epoch + 1}"
+            )
 
         else:
 
-            print("\nStarting new training...")
+            print(
+                "\nStarting new training..."
+            )
 
-    # ====================================================
-    # Training Loop
-    # ====================================================
+    # ========================================================
+    # TRAINING
+    # ========================================================
 
-    for epoch in range(start_epoch, EPOCHS):
+    print("=" * 60)
+    print("Training Started")
+    print("=" * 60)
+
+    for epoch in range(
+        start_epoch,
+        epochs_to_run,
+    ):
 
         model.train()
 
-        running_loss = 0
+        # ----------------------------------------------------
+        # Accumulators stay on GPU.
+        #
+        # This avoids calling .item() every batch.
+        # ----------------------------------------------------
 
-        correct = 0
+        running_loss = torch.zeros(
+            1,
+            device=DEVICE,
+        )
+
+        correct = torch.zeros(
+            1,
+            device=DEVICE,
+        )
 
         total = 0
 
         progress_bar = tqdm(
             train_loader,
-            desc=f"Epoch {epoch + 1}/{EPOCHS}",
+            desc=(
+                f"Epoch "
+                f"{epoch + 1}/{epochs_to_run}"
+            ),
             leave=True,
         )
 
-        for images, labels in progress_bar:
+        # ----------------------------------------------------
+        # TRAIN BATCHES
+        # ----------------------------------------------------
 
-            images = images.to(DEVICE)
-            labels = labels.to(DEVICE)
+        for step, (images, labels) in enumerate(
+            progress_bar
+        ):
 
-            optimizer.zero_grad(set_to_none=True)
+            # ------------------------------------------------
+            # Move data efficiently to GPU
+            # ------------------------------------------------
+
+            images = images.to(
+                DEVICE,
+                non_blocking=True,
+            )
+
+            labels = labels.to(
+                DEVICE,
+                non_blocking=True,
+            )
+
+            # channels_last for image tensors
+            if DEVICE.type == "cuda":
+
+                images = images.contiguous(
+                    memory_format=torch.channels_last
+                )
+
+            # ------------------------------------------------
+            # Gradient reset
+            # ------------------------------------------------
+
+            optimizer.zero_grad(
+                set_to_none=True
+            )
+
+            # ------------------------------------------------
+            # Forward pass
+            # ------------------------------------------------
 
             with autocast(
                 device_type=DEVICE.type,
@@ -171,52 +290,111 @@ def train():
 
                 outputs = model(images)
 
-                loss = criterion(outputs, labels)
+                loss = criterion(
+                    outputs,
+                    labels,
+                )
+
+            # ------------------------------------------------
+            # Backward
+            # ------------------------------------------------
 
             scaler.scale(loss).backward()
-            
+
+            # ------------------------------------------------
+            # Gradient clipping
+            # ------------------------------------------------
+
             scaler.unscale_(optimizer)
 
             torch.nn.utils.clip_grad_norm_(
                 model.parameters(),
                 max_norm=1.0,
-)
+            )
+
+            # ------------------------------------------------
+            # Optimizer step
+            # ------------------------------------------------
 
             scaler.step(optimizer)
 
             scaler.update()
 
-            running_loss += loss.item()
+            # ------------------------------------------------
+            # Statistics
+            #
+            # Keep these on GPU to avoid synchronization.
+            # ------------------------------------------------
 
-            predictions = outputs.argmax(dim=1)
+            batch_size = labels.size(0)
 
-            correct += (predictions == labels).sum().item()
-
-            total += labels.size(0)
-
-            progress_bar.set_postfix(
-                loss=f"{loss.item():.4f}"
+            running_loss += (
+                loss.detach() * batch_size
             )
 
-        train_loss = running_loss / len(train_loader)
+            predictions = outputs.argmax(
+                dim=1
+            )
 
-        train_accuracy = 100 * correct / total
+            correct += (
+                predictions == labels
+            ).sum()
 
-        train_losses.append(train_loss)
+            total += batch_size
 
-        train_accuracies.append(train_accuracy)
+            # ------------------------------------------------
+            # Update tqdm only every 25 batches.
+            #
+            # Updating tqdm every single batch creates
+            # unnecessary CPU overhead.
+            # ------------------------------------------------
 
-        # ------------------------------------------------
-        # Validation
-        # ------------------------------------------------
+            if (
+                step % 25 == 0
+                or step == len(train_loader) - 1
+            ):
+
+                progress_bar.set_postfix(
+                    loss=f"{loss.detach().item():.4f}"
+                )
+
+        # ----------------------------------------------------
+        # Epoch statistics
+        # ----------------------------------------------------
+
+        train_loss = (
+            running_loss.item()
+            / total
+        )
+
+        train_accuracy = (
+            100.0
+            * correct.item()
+            / total
+        )
+
+        train_losses.append(
+            train_loss
+        )
+
+        train_accuracies.append(
+            train_accuracy
+        )
+
+        # ====================================================
+        # VALIDATION
+        # ====================================================
 
         model.eval()
 
-        correct = 0
+        validation_correct = torch.zeros(
+            1,
+            device=DEVICE,
+        )
 
-        total = 0
+        validation_total = 0
 
-        with torch.no_grad():
+        with torch.inference_mode():
 
             for images, labels in tqdm(
                 valid_loader,
@@ -224,8 +402,21 @@ def train():
                 leave=False,
             ):
 
-                images = images.to(DEVICE)
-                labels = labels.to(DEVICE)
+                images = images.to(
+                    DEVICE,
+                    non_blocking=True,
+                )
+
+                labels = labels.to(
+                    DEVICE,
+                    non_blocking=True,
+                )
+
+                if DEVICE.type == "cuda":
+
+                    images = images.contiguous(
+                        memory_format=torch.channels_last
+                    )
 
                 with autocast(
                     device_type=DEVICE.type,
@@ -234,52 +425,101 @@ def train():
 
                     outputs = model(images)
 
-                predictions = outputs.argmax(dim=1)
+                predictions = outputs.argmax(
+                    dim=1
+                )
 
-                correct += (predictions == labels).sum().item()
+                validation_correct += (
+                    predictions == labels
+                ).sum()
 
-                total += labels.size(0)
+                validation_total += (
+                    labels.size(0)
+                )
 
-        validation_accuracy = 100 * correct / total
+        validation_accuracy = (
+            100.0
+            * validation_correct.item()
+            / validation_total
+        )
 
-        validation_accuracies.append(validation_accuracy)
+        validation_accuracies.append(
+            validation_accuracy
+        )
 
-        scheduler.step(validation_accuracy)
+        # ====================================================
+        # SCHEDULER
+        # ====================================================
 
-        current_lr = optimizer.param_groups[0]["lr"]
+        scheduler.step(
+            validation_accuracy
+        )
+
+        current_lr = (
+            optimizer.param_groups[0]["lr"]
+        )
+
+        # ====================================================
+        # RESULTS
+        # ====================================================
 
         print("\n" + "-" * 60)
 
-        print(f"Epoch : {epoch + 1}/{EPOCHS}")
+        print(
+            f"Epoch : "
+            f"{epoch + 1}/{epochs_to_run}"
+        )
 
-        print(f"Training Loss        : {train_loss:.4f}")
+        print(
+            f"Training Loss       : "
+            f"{train_loss:.4f}"
+        )
 
-        print(f"Training Accuracy    : {train_accuracy:.2f}%")
+        print(
+            f"Training Accuracy   : "
+            f"{train_accuracy:.2f}%"
+        )
 
-        print(f"Validation Accuracy  : {validation_accuracy:.2f}%")
+        print(
+            f"Validation Accuracy : "
+            f"{validation_accuracy:.2f}%"
+        )
 
-        print(f"Learning Rate        : {current_lr:.8f}")
+        print(
+            f"Learning Rate       : "
+            f"{current_lr:.8f}"
+        )
 
         print("-" * 60)
 
-        # ------------------------------------------------
-        # Save Best Model
-        # ------------------------------------------------
+        # ====================================================
+        # BEST MODEL
+        # ====================================================
 
         if validation_accuracy > best_accuracy:
 
-            best_accuracy = validation_accuracy
+            best_accuracy = (
+                validation_accuracy
+            )
+
+            CHECKPOINT_DIR.mkdir(
+                parents=True,
+                exist_ok=True,
+            )
 
             torch.save(
                 model.state_dict(),
-                CHECKPOINT_DIR / "best_vit.pth",
+                CHECKPOINT_DIR
+                / "best_vit.pth",
             )
 
-            print("Best Model Saved.")
+            print(
+                "Best Model Saved."
+            )
 
-        # ------------------------------------------------
-        # Save Training Checkpoint
-        # ------------------------------------------------
+        # ====================================================
+        # CHECKPOINT
+        # ====================================================
 
         save_checkpoint(
             checkpoint_path=checkpoint_path,
@@ -293,23 +533,34 @@ def train():
             validation_accuracies=validation_accuracies,
         )
 
-        # ------------------------------------------------
-        # Early Stopping
-        # ------------------------------------------------
+        # ====================================================
+        # EARLY STOPPING
+        # ====================================================
 
-        early_stopping(validation_accuracy)
+        early_stopping(
+            validation_accuracy
+        )
 
         if early_stopping.early_stop:
 
-            print("\nEarly stopping triggered.")
+            print(
+                "\nEarly stopping triggered."
+            )
 
             break
+
+    # ========================================================
+    # COMPLETE
+    # ========================================================
 
     print("=" * 60)
 
     print("Training Completed")
 
-    print(f"Best Validation Accuracy : {best_accuracy:.2f}%")
+    print(
+        f"Best Validation Accuracy : "
+        f"{best_accuracy:.2f}%"
+    )
 
     print("=" * 60)
 
