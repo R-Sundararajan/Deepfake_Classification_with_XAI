@@ -34,8 +34,9 @@ __pycache__/
 # VS Code
 .vscode/
 
-# Dataset
-datasets/
+# Dataset images stay untracked; retain the setup note.
+datasets/*
+!datasets/README.md
 data/
 
 # Model Weights
@@ -47,3 +48,8 @@ data/
 outputs/
 .DS_Store
 Thumbs.db
+
+system_workflow.md
+literature_implementation_note.md
+old_prototype/
+datasets/

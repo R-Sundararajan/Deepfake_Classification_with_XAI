@@ -1,1 +1,1 @@
-# evaluation package
+"""Evaluation package for the review prototype."""

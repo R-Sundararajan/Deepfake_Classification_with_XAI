@@ -1,1 +1,1 @@
-# training package
+"""Training package for the review prototype."""
