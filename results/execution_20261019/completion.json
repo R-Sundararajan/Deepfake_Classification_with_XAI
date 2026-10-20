@@ -1,0 +1,31 @@
+{
+  "milestones": {
+    "A_demo_operational": true,
+    "B_dataset_available": "Real vs Fake Faces; verified deterministic split manifest",
+    "C_new_training_completed": 4,
+    "D_model_comparison": "5 completed configurations reconciled in the results workbook",
+    "E_selected_application_verified": true
+  },
+  "champion": "E00",
+  "test_accuracy": 0.9712,
+  "regression_tests_passed": 38,
+  "app": {
+    "url": "http://127.0.0.1:8501",
+    "pid": 19120,
+    "status_code": 200,
+    "healthy": true
+  },
+  "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+  "new_training_seconds": 1121.0532901000115,
+  "storage": {
+    "phase_bytes": 4714669638,
+    "free_bytes": 86312194048,
+    "limit_bytes": 32212254720,
+    "headroom_bytes": 5368709120
+  },
+  "limitations": [
+    "Experiments use the existing image dataset, not DFDC",
+    "MP4 fixture validates operation; labeled-video accuracy remains unmeasured",
+    "New configurations use 12,000 training images; legacy model used 100,000"
+  ]
+}

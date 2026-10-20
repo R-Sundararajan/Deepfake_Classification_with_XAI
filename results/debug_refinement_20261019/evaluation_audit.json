@@ -1,0 +1,2533 @@
+{
+  "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3",
+  "split_counts": {
+    "test": 174,
+    "train": 813,
+    "validation": 175
+  },
+  "split_class_counts": {
+    "test/FAKE": 163,
+    "train/REAL": 52,
+    "train/FAKE": 761,
+    "validation/FAKE": 164,
+    "test/REAL": 11,
+    "validation/REAL": 11
+  },
+  "groups_by_split": {
+    "train": 54,
+    "validation": 17,
+    "test": 15
+  },
+  "source_and_duplicate_leakage_found": false,
+  "models": {
+    "S0": {
+      "recalculated_validation": {
+        "accuracy": 0.06285714285714286,
+        "precision": 0.0,
+        "real_precision": 0.06285714285714286,
+        "real_recall": 1.0,
+        "fake_recall": 0.0,
+        "macro_f1": 0.05913978494623656,
+        "pr_auc": 0.9379592390572321,
+        "brier_score": 0.9370714657807658,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.4972283813747229,
+        "balanced_accuracy": 0.5,
+        "log_loss": 14.301143175841517,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            164,
+            0
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 20.0854102608446,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.06285714285714286,
+          "precision": 0.0,
+          "real_precision": 0.06285714285714286,
+          "real_recall": 1.0,
+          "fake_recall": 0.0,
+          "macro_f1": 0.05913978494623656,
+          "pr_auc": 0.9379592390572321,
+          "brier_score": 0.9370714657807658,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.4972283813747229,
+          "balanced_accuracy": 0.5,
+          "log_loss": 14.301143175841517,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              164,
+              0
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.9371025815791382
+        },
+        "after": {
+          "accuracy": 0.06285714285714286,
+          "precision": 0.0,
+          "real_precision": 0.06285714285714286,
+          "real_recall": 1.0,
+          "fake_recall": 0.0,
+          "macro_f1": 0.05913978494623656,
+          "pr_auc": 0.9379592390572321,
+          "brier_score": 0.441591106529682,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.4972283813747229,
+          "balanced_accuracy": 0.5,
+          "log_loss": 1.0971251685213863,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              164,
+              0
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.6179414876035644
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 3.479396501015384e-07,
+      "threshold_fitted_validation": {
+        "accuracy": 0.26285714285714284,
+        "precision": 0.972972972972973,
+        "real_precision": 0.07246376811594203,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.21951219512195122,
+        "macro_f1": 0.24621857157167182,
+        "pr_auc": 0.9379592390572321,
+        "brier_score": 0.9370714657807658,
+        "recall": 0.21951219512195122,
+        "f1": 0.3582089552238806,
+        "roc_auc": 0.4972283813747229,
+        "balanced_accuracy": 0.5643015521064302,
+        "log_loss": 14.301143175841517,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            128,
+            36
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 3.479396501015384e-07,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.28,
+        "precision": 0.9523809523809523,
+        "real_precision": 0.06766917293233082,
+        "real_recall": 0.8181818181818182,
+        "fake_recall": 0.24390243902439024,
+        "macro_f1": 0.2566747572815534,
+        "pr_auc": 0.9408594657375146,
+        "brier_score": 0.72,
+        "recall": 0.24390243902439024,
+        "f1": 0.3883495145631068,
+        "roc_auc": 0.5310421286031042,
+        "balanced_accuracy": 0.5310421286031042,
+        "log_loss": 25.95143044016434,
+        "confusion_matrix_real_fake": [
+          [
+            9,
+            2
+          ],
+          [
+            124,
+            40
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 2.817886594962683e-07
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 3.479396501015384e-07
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 3.479396501015384e-07
+        }
+      ],
+      "deployed_threshold_changed": false
+    },
+    "S1": {
+      "recalculated_validation": {
+        "accuracy": 0.5142857142857142,
+        "precision": 0.9647058823529412,
+        "real_precision": 0.08888888888888889,
+        "real_recall": 0.7272727272727273,
+        "fake_recall": 0.5,
+        "macro_f1": 0.40852518986838443,
+        "pr_auc": 0.9715406642159136,
+        "brier_score": 0.255018246686236,
+        "recall": 0.5,
+        "f1": 0.6586345381526104,
+        "roc_auc": 0.6945676274944568,
+        "balanced_accuracy": 0.6136363636363636,
+        "log_loss": 0.7079671321972731,
+        "confusion_matrix_real_fake": [
+          [
+            8,
+            3
+          ],
+          [
+            82,
+            82
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 2.4789721138480205,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.5142857142857142,
+          "precision": 0.9647058823529412,
+          "real_precision": 0.08888888888888889,
+          "real_recall": 0.7272727272727273,
+          "fake_recall": 0.5,
+          "macro_f1": 0.40852518986838443,
+          "pr_auc": 0.9715406642159136,
+          "brier_score": 0.255018246686236,
+          "recall": 0.5,
+          "f1": 0.6586345381526104,
+          "roc_auc": 0.6945676274944568,
+          "balanced_accuracy": 0.6136363636363636,
+          "log_loss": 0.7079671321972731,
+          "confusion_matrix_real_fake": [
+            [
+              8,
+              3
+            ],
+            [
+              82,
+              82
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.24032560123477528
+        },
+        "after": {
+          "accuracy": 0.5142857142857142,
+          "precision": 0.9647058823529412,
+          "real_precision": 0.08888888888888889,
+          "real_recall": 0.7272727272727273,
+          "fake_recall": 0.5,
+          "macro_f1": 0.40852518986838443,
+          "pr_auc": 0.9715406642159136,
+          "brier_score": 0.2412574282490252,
+          "recall": 0.5,
+          "f1": 0.6586345381526104,
+          "roc_auc": 0.6945676274944568,
+          "balanced_accuracy": 0.6136363636363636,
+          "log_loss": 0.6750435560292124,
+          "confusion_matrix_real_fake": [
+            [
+              8,
+              3
+            ],
+            [
+              82,
+              82
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.20863436458618986
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 0.4236817339574443,
+      "threshold_fitted_validation": {
+        "accuracy": 0.6457142857142857,
+        "precision": 0.9722222222222222,
+        "real_precision": 0.11940298507462686,
+        "real_recall": 0.7272727272727273,
+        "fake_recall": 0.6402439024390244,
+        "macro_f1": 0.4885935143288085,
+        "pr_auc": 0.9715406642159136,
+        "brier_score": 0.255018246686236,
+        "recall": 0.6402439024390244,
+        "f1": 0.7720588235294118,
+        "roc_auc": 0.6945676274944568,
+        "balanced_accuracy": 0.6837583148558759,
+        "log_loss": 0.7079671321972731,
+        "confusion_matrix_real_fake": [
+          [
+            8,
+            3
+          ],
+          [
+            59,
+            105
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.4236817339574443,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.6514285714285715,
+        "precision": 0.9557522123893806,
+        "real_precision": 0.0967741935483871,
+        "real_recall": 0.5454545454545454,
+        "fake_recall": 0.6585365853658537,
+        "macro_f1": 0.4720834775728203,
+        "pr_auc": 0.9493977984027628,
+        "brier_score": 0.3485714285714286,
+        "recall": 0.6585365853658537,
+        "f1": 0.779783393501805,
+        "roc_auc": 0.6019955654101996,
+        "balanced_accuracy": 0.6019955654101996,
+        "log_loss": 12.563787752777982,
+        "confusion_matrix_real_fake": [
+          [
+            6,
+            5
+          ],
+          [
+            56,
+            108
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 0.3811444172690718
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 0.3811444172690718
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 0.4236817339574443
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 0.4236817339574443
+        }
+      ],
+      "deployed_threshold_changed": false
+    },
+    "S1b": {
+      "recalculated_validation": {
+        "accuracy": 0.6514285714285715,
+        "precision": 1.0,
+        "real_precision": 0.1527777777777778,
+        "real_recall": 1.0,
+        "fake_recall": 0.6280487804878049,
+        "macro_f1": 0.5182979107441,
+        "pr_auc": 0.9860517745401474,
+        "brier_score": 0.2634176090154951,
+        "recall": 0.6280487804878049,
+        "f1": 0.7715355805243446,
+        "roc_auc": 0.815410199556541,
+        "balanced_accuracy": 0.8140243902439024,
+        "log_loss": 0.7504624339249777,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            61,
+            103
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 4.571204902317711,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.6514285714285715,
+          "precision": 1.0,
+          "real_precision": 0.1527777777777778,
+          "real_recall": 1.0,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.5182979107441,
+          "pr_auc": 0.9860517745401474,
+          "brier_score": 0.2634176090154951,
+          "recall": 0.6280487804878049,
+          "f1": 0.7715355805243446,
+          "roc_auc": 0.815410199556541,
+          "balanced_accuracy": 0.8140243902439024,
+          "log_loss": 0.7504624339249777,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.17212592623355333
+        },
+        "after": {
+          "accuracy": 0.6514285714285715,
+          "precision": 1.0,
+          "real_precision": 0.1527777777777778,
+          "real_recall": 1.0,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.5182979107441,
+          "pr_auc": 0.9860517745401474,
+          "brier_score": 0.2470507788803701,
+          "recall": 0.6280487804878049,
+          "f1": 0.7715355805243446,
+          "roc_auc": 0.815410199556541,
+          "balanced_accuracy": 0.8140243902439024,
+          "log_loss": 0.6874674272369268,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.1559730587789159
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 0.45329023794775297,
+      "threshold_fitted_validation": {
+        "accuracy": 0.6857142857142857,
+        "precision": 1.0,
+        "real_precision": 0.16666666666666666,
+        "real_recall": 1.0,
+        "fake_recall": 0.6646341463414634,
+        "macro_f1": 0.5421245421245422,
+        "pr_auc": 0.9860517745401474,
+        "brier_score": 0.2634176090154951,
+        "recall": 0.6646341463414634,
+        "f1": 0.7985347985347986,
+        "roc_auc": 0.815410199556541,
+        "balanced_accuracy": 0.8323170731707317,
+        "log_loss": 0.7504624339249777,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            55,
+            109
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.45329023794775297,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.68,
+        "precision": 1.0,
+        "real_precision": 0.16417910447761194,
+        "real_recall": 1.0,
+        "fake_recall": 0.6585365853658537,
+        "macro_f1": 0.5380844645550528,
+        "pr_auc": 0.9785365853658536,
+        "brier_score": 0.32,
+        "recall": 0.6585365853658537,
+        "f1": 0.7941176470588235,
+        "roc_auc": 0.8292682926829269,
+        "balanced_accuracy": 0.8292682926829269,
+        "log_loss": 11.533969084517487,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            56,
+            108
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 0.4669155608767005
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 0.45329023794775297
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 0.45329023794775297
+        }
+      ],
+      "deployed_threshold_changed": false
+    },
+    "S1p": {
+      "recalculated_validation": {
+        "accuracy": 0.9542857142857143,
+        "precision": 0.9642857142857143,
+        "real_precision": 0.7142857142857143,
+        "real_recall": 0.45454545454545453,
+        "fake_recall": 0.9878048780487805,
+        "macro_f1": 0.7657295850066934,
+        "pr_auc": 0.9899860119212932,
+        "brier_score": 0.051451688654689604,
+        "recall": 0.9878048780487805,
+        "f1": 0.9759036144578314,
+        "roc_auc": 0.8797117516629712,
+        "balanced_accuracy": 0.7211751662971175,
+        "log_loss": 0.19476598298822476,
+        "confusion_matrix_real_fake": [
+          [
+            5,
+            6
+          ],
+          [
+            2,
+            162
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 0.5559516246977887,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.9542857142857143,
+          "precision": 0.9642857142857143,
+          "real_precision": 0.7142857142857143,
+          "real_recall": 0.45454545454545453,
+          "fake_recall": 0.9878048780487805,
+          "macro_f1": 0.7657295850066934,
+          "pr_auc": 0.9899860119212932,
+          "brier_score": 0.051451688654689604,
+          "recall": 0.9878048780487805,
+          "f1": 0.9759036144578314,
+          "roc_auc": 0.8797117516629712,
+          "balanced_accuracy": 0.7211751662971175,
+          "log_loss": 0.19476598298822476,
+          "confusion_matrix_real_fake": [
+            [
+              5,
+              6
+            ],
+            [
+              2,
+              162
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.0781732121139743
+        },
+        "after": {
+          "accuracy": 0.9542857142857143,
+          "precision": 0.9642857142857143,
+          "real_precision": 0.7142857142857143,
+          "real_recall": 0.45454545454545453,
+          "fake_recall": 0.9878048780487805,
+          "macro_f1": 0.7657295850066934,
+          "pr_auc": 0.9899860119212932,
+          "brier_score": 0.04281379076251465,
+          "recall": 0.9878048780487805,
+          "f1": 0.9759036144578314,
+          "roc_auc": 0.8797117516629712,
+          "balanced_accuracy": 0.7211751662971175,
+          "log_loss": 0.16254822366925883,
+          "confusion_matrix_real_fake": [
+            [
+              5,
+              6
+            ],
+            [
+              2,
+              162
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.042850013612305664
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 0.7443665555805595,
+      "threshold_fitted_validation": {
+        "accuracy": 0.8457142857142858,
+        "precision": 0.9858156028368794,
+        "real_precision": 0.2647058823529412,
+        "real_recall": 0.8181818181818182,
+        "fake_recall": 0.8475609756097561,
+        "macro_f1": 0.6557377049180328,
+        "pr_auc": 0.9899860119212932,
+        "brier_score": 0.051451688654689604,
+        "recall": 0.8475609756097561,
+        "f1": 0.9114754098360656,
+        "roc_auc": 0.8797117516629712,
+        "balanced_accuracy": 0.8328713968957872,
+        "log_loss": 0.19476598298822476,
+        "confusion_matrix_real_fake": [
+          [
+            9,
+            2
+          ],
+          [
+            25,
+            139
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.7443665555805595,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.8342857142857143,
+        "precision": 0.9787234042553191,
+        "real_precision": 0.23529411764705882,
+        "real_recall": 0.7272727272727273,
+        "fake_recall": 0.8414634146341463,
+        "macro_f1": 0.6302367941712204,
+        "pr_auc": 0.9721313662984654,
+        "brier_score": 0.1657142857142857,
+        "recall": 0.8414634146341463,
+        "f1": 0.9049180327868852,
+        "roc_auc": 0.7843680709534367,
+        "balanced_accuracy": 0.7843680709534369,
+        "log_loss": 5.972948275910842,
+        "confusion_matrix_real_fake": [
+          [
+            8,
+            3
+          ],
+          [
+            26,
+            138
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 0.748539514900381
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 0.6905847121686594
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 0.7443665555805595
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 0.7443665555805595
+        }
+      ],
+      "deployed_threshold_changed": false
+    },
+    "S2": {
+      "recalculated_validation": {
+        "accuracy": 0.6514285714285715,
+        "precision": 1.0,
+        "real_precision": 0.1527777777777778,
+        "real_recall": 1.0,
+        "fake_recall": 0.6280487804878049,
+        "macro_f1": 0.5182979107441,
+        "pr_auc": 0.9855396074556835,
+        "brier_score": 0.25995582250508414,
+        "recall": 0.6280487804878049,
+        "f1": 0.7715355805243446,
+        "roc_auc": 0.8109756097560976,
+        "balanced_accuracy": 0.8140243902439024,
+        "log_loss": 0.7429120395554345,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            61,
+            103
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 3.97255472437057,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.6514285714285715,
+          "precision": 1.0,
+          "real_precision": 0.1527777777777778,
+          "real_recall": 1.0,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.5182979107441,
+          "pr_auc": 0.9855396074556835,
+          "brier_score": 0.25995582250508414,
+          "recall": 0.6280487804878049,
+          "f1": 0.7715355805243446,
+          "roc_auc": 0.8109756097560976,
+          "balanced_accuracy": 0.8140243902439024,
+          "log_loss": 0.7429120395554345,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.1996625886422381
+        },
+        "after": {
+          "accuracy": 0.6514285714285715,
+          "precision": 1.0,
+          "real_precision": 0.1527777777777778,
+          "real_recall": 1.0,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.5182979107441,
+          "pr_auc": 0.9855396074556835,
+          "brier_score": 0.24605323463204745,
+          "recall": 0.6280487804878049,
+          "f1": 0.7715355805243446,
+          "roc_auc": 0.8109756097560976,
+          "balanced_accuracy": 0.8140243902439024,
+          "log_loss": 0.6855986092998019,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.13361942489008655
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 0.49922144475917135,
+      "threshold_fitted_validation": {
+        "accuracy": 0.6571428571428571,
+        "precision": 1.0,
+        "real_precision": 0.15492957746478872,
+        "real_recall": 1.0,
+        "fake_recall": 0.6341463414634146,
+        "macro_f1": 0.522206042955952,
+        "pr_auc": 0.9855396074556835,
+        "brier_score": 0.25995582250508414,
+        "recall": 0.6341463414634146,
+        "f1": 0.7761194029850746,
+        "roc_auc": 0.8109756097560976,
+        "balanced_accuracy": 0.8170731707317074,
+        "log_loss": 0.7429120395554345,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            60,
+            104
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.49922144475917135,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.6457142857142857,
+        "precision": 0.9903846153846154,
+        "real_precision": 0.14084507042253522,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.6280487804878049,
+        "macro_f1": 0.5062795777211504,
+        "pr_auc": 0.97058127847762,
+        "brier_score": 0.35428571428571426,
+        "recall": 0.6280487804878049,
+        "f1": 0.7686567164179104,
+        "roc_auc": 0.768569844789357,
+        "balanced_accuracy": 0.768569844789357,
+        "log_loss": 12.769751486430076,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            61,
+            103
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 0.4681370644189456
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 0.5
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 0.49922144475917135
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 0.49922144475917135
+        }
+      ],
+      "deployed_threshold_changed": false
+    },
+    "S3": {
+      "recalculated_validation": {
+        "accuracy": 0.6914285714285714,
+        "precision": 0.9583333333333334,
+        "real_precision": 0.10909090909090909,
+        "real_recall": 0.5454545454545454,
+        "fake_recall": 0.7012195121951219,
+        "macro_f1": 0.4958386683738797,
+        "pr_auc": 0.9522129931237939,
+        "brier_score": 0.21589214658146547,
+        "recall": 0.7012195121951219,
+        "f1": 0.8098591549295775,
+        "roc_auc": 0.6252771618625277,
+        "balanced_accuracy": 0.6233370288248337,
+        "log_loss": 0.624498373824484,
+        "confusion_matrix_real_fake": [
+          [
+            6,
+            5
+          ],
+          [
+            49,
+            115
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 0.3658431170510292,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.6914285714285714,
+          "precision": 0.9583333333333334,
+          "real_precision": 0.10909090909090909,
+          "real_recall": 0.5454545454545454,
+          "fake_recall": 0.7012195121951219,
+          "macro_f1": 0.4958386683738797,
+          "pr_auc": 0.9522129931237939,
+          "brier_score": 0.21589214658146547,
+          "recall": 0.7012195121951219,
+          "f1": 0.8098591549295775,
+          "roc_auc": 0.6252771618625277,
+          "balanced_accuracy": 0.6233370288248337,
+          "log_loss": 0.624498373824484,
+          "confusion_matrix_real_fake": [
+            [
+              6,
+              5
+            ],
+            [
+              49,
+              115
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.2046210516787033
+        },
+        "after": {
+          "accuracy": 0.6914285714285714,
+          "precision": 0.9583333333333334,
+          "real_precision": 0.10909090909090909,
+          "real_recall": 0.5454545454545454,
+          "fake_recall": 0.7012195121951219,
+          "macro_f1": 0.4958386683738797,
+          "pr_auc": 0.9522129931237939,
+          "brier_score": 0.19314274765272282,
+          "recall": 0.7012195121951219,
+          "f1": 0.8098591549295775,
+          "roc_auc": 0.6252771618625277,
+          "balanced_accuracy": 0.6233370288248337,
+          "log_loss": 0.5837331084270708,
+          "confusion_matrix_real_fake": [
+            [
+              6,
+              5
+            ],
+            [
+              49,
+              115
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.18710494741182415
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 0.4925366074390633,
+      "threshold_fitted_validation": {
+        "accuracy": 0.72,
+        "precision": 0.96,
+        "real_precision": 0.12,
+        "real_recall": 0.5454545454545454,
+        "fake_recall": 0.7317073170731707,
+        "macro_f1": 0.5135855692325146,
+        "pr_auc": 0.9522129931237939,
+        "brier_score": 0.21589214658146547,
+        "recall": 0.7317073170731707,
+        "f1": 0.8304498269896193,
+        "roc_auc": 0.6252771618625277,
+        "balanced_accuracy": 0.6385809312638581,
+        "log_loss": 0.624498373824484,
+        "confusion_matrix_real_fake": [
+          [
+            6,
+            5
+          ],
+          [
+            44,
+            120
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.4925366074390633,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.7371428571428571,
+        "precision": 0.946969696969697,
+        "real_precision": 0.09302325581395349,
+        "real_recall": 0.36363636363636365,
+        "fake_recall": 0.7621951219512195,
+        "macro_f1": 0.4963713713713714,
+        "pr_auc": 0.9446328265230705,
+        "brier_score": 0.26285714285714284,
+        "recall": 0.7621951219512195,
+        "f1": 0.8445945945945946,
+        "roc_auc": 0.5629157427937916,
+        "balanced_accuracy": 0.5629157427937916,
+        "log_loss": 9.474331747996509,
+        "confusion_matrix_real_fake": [
+          [
+            4,
+            7
+          ],
+          [
+            39,
+            125
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 0.48220722980968433
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 0.42809834895955123
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 0.4925366074390633
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 0.4925366074390633
+        }
+      ],
+      "deployed_threshold_changed": false
+    },
+    "S4": {
+      "recalculated_validation": {
+        "accuracy": 0.68,
+        "precision": 0.990909090909091,
+        "real_precision": 0.15384615384615385,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.6646341463414634,
+        "macro_f1": 0.5293891663465232,
+        "pr_auc": 0.9920720580230438,
+        "brier_score": 0.2006629020322498,
+        "recall": 0.6646341463414634,
+        "f1": 0.7956204379562044,
+        "roc_auc": 0.8930155210643016,
+        "balanced_accuracy": 0.7868625277161863,
+        "log_loss": 0.5996815256617212,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            55,
+            109
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 0.9051385550507373,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.68,
+          "precision": 0.990909090909091,
+          "real_precision": 0.15384615384615385,
+          "real_recall": 0.9090909090909091,
+          "fake_recall": 0.6646341463414634,
+          "macro_f1": 0.5293891663465232,
+          "pr_auc": 0.9920720580230438,
+          "brier_score": 0.2006629020322498,
+          "recall": 0.6646341463414634,
+          "f1": 0.7956204379562044,
+          "roc_auc": 0.8930155210643016,
+          "balanced_accuracy": 0.7868625277161863,
+          "log_loss": 0.5996815256617212,
+          "confusion_matrix_real_fake": [
+            [
+              10,
+              1
+            ],
+            [
+              55,
+              109
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.07918341626599829
+        },
+        "after": {
+          "accuracy": 0.68,
+          "precision": 0.990909090909091,
+          "real_precision": 0.15384615384615385,
+          "real_recall": 0.9090909090909091,
+          "fake_recall": 0.6646341463414634,
+          "macro_f1": 0.5293891663465232,
+          "pr_auc": 0.9920720580230438,
+          "brier_score": 0.1997461655295132,
+          "recall": 0.6646341463414634,
+          "f1": 0.7956204379562044,
+          "roc_auc": 0.8930155210643016,
+          "balanced_accuracy": 0.7868625277161863,
+          "log_loss": 0.5990236277904311,
+          "confusion_matrix_real_fake": [
+            [
+              10,
+              1
+            ],
+            [
+              55,
+              109
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.0771058951484169
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 0.43683344420000736,
+      "threshold_fitted_validation": {
+        "accuracy": 0.7828571428571428,
+        "precision": 0.9921875,
+        "real_precision": 0.2127659574468085,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.774390243902439,
+        "macro_f1": 0.6073452999527633,
+        "pr_auc": 0.9920720580230438,
+        "brier_score": 0.2006629020322498,
+        "recall": 0.774390243902439,
+        "f1": 0.8698630136986302,
+        "roc_auc": 0.8930155210643016,
+        "balanced_accuracy": 0.8417405764966741,
+        "log_loss": 0.5996815256617212,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            37,
+            127
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.43683344420000736,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.7657142857142857,
+        "precision": 0.984251968503937,
+        "real_precision": 0.1875,
+        "real_recall": 0.8181818181818182,
+        "fake_recall": 0.7621951219512195,
+        "macro_f1": 0.5820956374861669,
+        "pr_auc": 0.973049192021729,
+        "brier_score": 0.2342857142857143,
+        "recall": 0.7621951219512195,
+        "f1": 0.8591065292096219,
+        "roc_auc": 0.7901884700665188,
+        "balanced_accuracy": 0.7901884700665189,
+        "log_loss": 8.44451307973602,
+        "confusion_matrix_real_fake": [
+          [
+            9,
+            2
+          ],
+          [
+            39,
+            125
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 0.44523739408830754
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 0.40946584474275455
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 0.43683344420000736
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 0.43683344420000736
+        }
+      ],
+      "deployed_threshold_changed": false
+    },
+    "S5": {
+      "recalculated_validation": {
+        "accuracy": 0.64,
+        "precision": 0.9809523809523809,
+        "real_precision": 0.12857142857142856,
+        "real_recall": 0.8181818181818182,
+        "fake_recall": 0.6280487804878049,
+        "macro_f1": 0.4940107393638992,
+        "pr_auc": 0.9842462596737052,
+        "brier_score": 0.22945636793975513,
+        "recall": 0.6280487804878049,
+        "f1": 0.7657992565055762,
+        "roc_auc": 0.8054323725055432,
+        "balanced_accuracy": 0.7231152993348116,
+        "log_loss": 0.6605885890387817,
+        "confusion_matrix_real_fake": [
+          [
+            9,
+            2
+          ],
+          [
+            61,
+            103
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 1.5250081164822207,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.64,
+          "precision": 0.9809523809523809,
+          "real_precision": 0.12857142857142856,
+          "real_recall": 0.8181818181818182,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.4940107393638992,
+          "pr_auc": 0.9842462596737052,
+          "brier_score": 0.22945636793975513,
+          "recall": 0.6280487804878049,
+          "f1": 0.7657992565055762,
+          "roc_auc": 0.8054323725055432,
+          "balanced_accuracy": 0.7231152993348116,
+          "log_loss": 0.6605885890387817,
+          "confusion_matrix_real_fake": [
+            [
+              9,
+              2
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.07152779189928991
+        },
+        "after": {
+          "accuracy": 0.64,
+          "precision": 0.9809523809523809,
+          "real_precision": 0.12857142857142856,
+          "real_recall": 0.8181818181818182,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.4940107393638992,
+          "pr_auc": 0.9842462596737052,
+          "brier_score": 0.2280637439431996,
+          "recall": 0.6280487804878049,
+          "f1": 0.7657992565055762,
+          "roc_auc": 0.8054323725055432,
+          "balanced_accuracy": 0.7231152993348116,
+          "log_loss": 0.6510088378323325,
+          "confusion_matrix_real_fake": [
+            [
+              9,
+              2
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.09778110238725092
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 0.526906638844163,
+      "threshold_fitted_validation": {
+        "accuracy": 0.6,
+        "precision": 0.9895833333333334,
+        "real_precision": 0.12658227848101267,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.5792682926829268,
+        "macro_f1": 0.47649572649572647,
+        "pr_auc": 0.9842462596737052,
+        "brier_score": 0.22945636793975513,
+        "recall": 0.5792682926829268,
+        "f1": 0.7307692307692307,
+        "roc_auc": 0.8054323725055432,
+        "balanced_accuracy": 0.7441796008869179,
+        "log_loss": 0.6605885890387817,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            69,
+            95
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.526906638844163,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.6057142857142858,
+        "precision": 0.9523809523809523,
+        "real_precision": 0.08571428571428572,
+        "real_recall": 0.5454545454545454,
+        "fake_recall": 0.6097560975609756,
+        "macro_f1": 0.4458212859699848,
+        "pr_auc": 0.9464343786295006,
+        "brier_score": 0.3942857142857143,
+        "recall": 0.6097560975609756,
+        "f1": 0.7434944237918215,
+        "roc_auc": 0.5776053215077606,
+        "balanced_accuracy": 0.5776053215077606,
+        "log_loss": 14.211497621994765,
+        "confusion_matrix_real_fake": [
+          [
+            6,
+            5
+          ],
+          [
+            64,
+            100
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 0.26986724126092954
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 0.26986724126092954
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 0.26986724126092954
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 0.47371989115935254
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 0.26986724126092954
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 0.526906638844163
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 0.526906638844163
+        }
+      ],
+      "deployed_threshold_changed": false
+    },
+    "S6": {
+      "recalculated_validation": {
+        "accuracy": 0.9028571428571428,
+        "precision": 1.0,
+        "real_precision": 0.39285714285714285,
+        "real_recall": 1.0,
+        "fake_recall": 0.8963414634146342,
+        "macro_f1": 0.7547200923406712,
+        "pr_auc": 0.9976468459404281,
+        "brier_score": 0.07721135106865358,
+        "recall": 0.8963414634146342,
+        "f1": 0.9453376205787781,
+        "roc_auc": 0.9645232815964522,
+        "balanced_accuracy": 0.9481707317073171,
+        "log_loss": 0.2693853375614683,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            17,
+            147
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 1.4091608530245567,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.9028571428571428,
+          "precision": 1.0,
+          "real_precision": 0.39285714285714285,
+          "real_recall": 1.0,
+          "fake_recall": 0.8963414634146342,
+          "macro_f1": 0.7547200923406712,
+          "pr_auc": 0.9976468459404281,
+          "brier_score": 0.07721135106865358,
+          "recall": 0.8963414634146342,
+          "f1": 0.9453376205787781,
+          "roc_auc": 0.9645232815964522,
+          "balanced_accuracy": 0.9481707317073171,
+          "log_loss": 0.2693853375614683,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              17,
+              147
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.05952737537690124
+        },
+        "after": {
+          "accuracy": 0.9028571428571428,
+          "precision": 1.0,
+          "real_precision": 0.39285714285714285,
+          "real_recall": 1.0,
+          "fake_recall": 0.8963414634146342,
+          "macro_f1": 0.7547200923406712,
+          "pr_auc": 0.9976468459404281,
+          "brier_score": 0.07514492951224594,
+          "recall": 0.8963414634146342,
+          "f1": 0.9453376205787781,
+          "roc_auc": 0.9645232815964522,
+          "balanced_accuracy": 0.9481707317073171,
+          "log_loss": 0.25123127192886474,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              17,
+              147
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.026549051024897418
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 0.4836625428711077,
+      "threshold_fitted_validation": {
+        "accuracy": 0.92,
+        "precision": 1.0,
+        "real_precision": 0.44,
+        "real_recall": 1.0,
+        "fake_recall": 0.9146341463414634,
+        "macro_f1": 0.7832625619249823,
+        "pr_auc": 0.9976468459404281,
+        "brier_score": 0.07721135106865358,
+        "recall": 0.9146341463414634,
+        "f1": 0.9554140127388535,
+        "roc_auc": 0.9645232815964522,
+        "balanced_accuracy": 0.9573170731707317,
+        "log_loss": 0.2693853375614683,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            14,
+            150
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.4836625428711077,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.9142857142857143,
+        "precision": 1.0,
+        "real_precision": 0.4230769230769231,
+        "real_recall": 1.0,
+        "fake_recall": 0.9085365853658537,
+        "macro_f1": 0.7733356359554443,
+        "pr_auc": 0.9942508710801394,
+        "brier_score": 0.08571428571428572,
+        "recall": 0.9085365853658537,
+        "f1": 0.952076677316294,
+        "roc_auc": 0.9542682926829269,
+        "balanced_accuracy": 0.9542682926829269,
+        "log_loss": 3.0894560047814705,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            15,
+            149
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 0.49434995115078934
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 0.4836625428711077
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 0.4836625428711077
+        }
+      ],
+      "deployed_threshold_changed": false
+    },
+    "S7": {
+      "recalculated_validation": {
+        "accuracy": 0.8971428571428571,
+        "precision": 1.0,
+        "real_precision": 0.3793103448275862,
+        "real_recall": 1.0,
+        "fake_recall": 0.8902439024390244,
+        "macro_f1": 0.7459677419354839,
+        "pr_auc": 0.9971113309590203,
+        "brier_score": 0.09155080781719081,
+        "recall": 0.8902439024390244,
+        "f1": 0.9419354838709677,
+        "roc_auc": 0.9562084257206207,
+        "balanced_accuracy": 0.9451219512195121,
+        "log_loss": 0.3295386828155319,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            18,
+            146
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 0.8296057008980618,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.8971428571428571,
+          "precision": 1.0,
+          "real_precision": 0.3793103448275862,
+          "real_recall": 1.0,
+          "fake_recall": 0.8902439024390244,
+          "macro_f1": 0.7459677419354839,
+          "pr_auc": 0.9971113309590203,
+          "brier_score": 0.09155080781719081,
+          "recall": 0.8902439024390244,
+          "f1": 0.9419354838709677,
+          "roc_auc": 0.9562084257206207,
+          "balanced_accuracy": 0.9451219512195121,
+          "log_loss": 0.3295386828155319,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              18,
+              146
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.07009250651344154
+        },
+        "after": {
+          "accuracy": 0.8971428571428571,
+          "precision": 1.0,
+          "real_precision": 0.3793103448275862,
+          "real_recall": 1.0,
+          "fake_recall": 0.8902439024390244,
+          "macro_f1": 0.7459677419354839,
+          "pr_auc": 0.9971113309590203,
+          "brier_score": 0.08899283299191964,
+          "recall": 0.8902439024390244,
+          "f1": 0.9419354838709677,
+          "roc_auc": 0.9562084257206207,
+          "balanced_accuracy": 0.9451219512195121,
+          "log_loss": 0.3236150384395601,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              18,
+              146
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.0365703844170755
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 0.4593229430847261,
+      "threshold_fitted_validation": {
+        "accuracy": 0.9142857142857143,
+        "precision": 1.0,
+        "real_precision": 0.4230769230769231,
+        "real_recall": 1.0,
+        "fake_recall": 0.9085365853658537,
+        "macro_f1": 0.7733356359554443,
+        "pr_auc": 0.9971113309590203,
+        "brier_score": 0.09155080781719081,
+        "recall": 0.9085365853658537,
+        "f1": 0.952076677316294,
+        "roc_auc": 0.9562084257206207,
+        "balanced_accuracy": 0.9542682926829269,
+        "log_loss": 0.3295386828155319,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            15,
+            149
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.4593229430847261,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.9028571428571428,
+        "precision": 0.9932885906040269,
+        "real_precision": 0.38461538461538464,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.9024390243902439,
+        "macro_f1": 0.7431137207495035,
+        "pr_auc": 0.9878109580712299,
+        "brier_score": 0.09714285714285714,
+        "recall": 0.9024390243902439,
+        "f1": 0.9456869009584664,
+        "roc_auc": 0.9057649667405764,
+        "balanced_accuracy": 0.9057649667405765,
+        "log_loss": 3.5013834720856662,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            16,
+            148
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 0.38359486675982635
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 0.46121261532246294
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 0.4593229430847261
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 0.4593229430847261
+        }
+      ],
+      "deployed_threshold_changed": false
+    },
+    "S8": {
+      "recalculated_validation": {
+        "accuracy": 0.8971428571428571,
+        "precision": 1.0,
+        "real_precision": 0.3793103448275862,
+        "real_recall": 1.0,
+        "fake_recall": 0.8902439024390244,
+        "macro_f1": 0.7459677419354839,
+        "pr_auc": 0.9972294450346227,
+        "brier_score": 0.08776088888198885,
+        "recall": 0.8902439024390244,
+        "f1": 0.9419354838709677,
+        "roc_auc": 0.9578713968957872,
+        "balanced_accuracy": 0.9451219512195121,
+        "log_loss": 0.31504678505970973,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            18,
+            146
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibration": {
+        "temperature": 0.8139183552856663,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.8971428571428571,
+          "precision": 1.0,
+          "real_precision": 0.3793103448275862,
+          "real_recall": 1.0,
+          "fake_recall": 0.8902439024390244,
+          "macro_f1": 0.7459677419354839,
+          "pr_auc": 0.9972294450346227,
+          "brier_score": 0.08776088888198885,
+          "recall": 0.8902439024390244,
+          "f1": 0.9419354838709677,
+          "roc_auc": 0.9578713968957872,
+          "balanced_accuracy": 0.9451219512195121,
+          "log_loss": 0.31504678505970973,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              18,
+              146
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.05358531695447024
+        },
+        "after": {
+          "accuracy": 0.8971428571428571,
+          "precision": 1.0,
+          "real_precision": 0.3793103448275862,
+          "real_recall": 1.0,
+          "fake_recall": 0.8902439024390244,
+          "macro_f1": 0.7459677419354839,
+          "pr_auc": 0.9972294450346227,
+          "brier_score": 0.08531678780108838,
+          "recall": 0.8902439024390244,
+          "f1": 0.9419354838709677,
+          "roc_auc": 0.9578713968957872,
+          "balanced_accuracy": 0.9451219512195121,
+          "log_loss": 0.3079543695116281,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              18,
+              146
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.03366727162332754
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "best_in_sample_validation_threshold": 0.449069040370822,
+      "threshold_fitted_validation": {
+        "accuracy": 0.9142857142857143,
+        "precision": 1.0,
+        "real_precision": 0.4230769230769231,
+        "real_recall": 1.0,
+        "fake_recall": 0.9085365853658537,
+        "macro_f1": 0.7733356359554443,
+        "pr_auc": 0.9972294450346227,
+        "brier_score": 0.08776088888198885,
+        "recall": 0.9085365853658537,
+        "f1": 0.952076677316294,
+        "roc_auc": 0.9578713968957872,
+        "balanced_accuracy": 0.9542682926829269,
+        "log_loss": 0.31504678505970973,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            15,
+            149
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.449069040370822,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "leave_one_source_group_out_threshold_decisions": {
+        "accuracy": 0.9028571428571428,
+        "precision": 0.9932885906040269,
+        "real_precision": 0.38461538461538464,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.9024390243902439,
+        "macro_f1": 0.7431137207495035,
+        "pr_auc": 0.9878109580712299,
+        "brier_score": 0.09714285714285714,
+        "recall": 0.9024390243902439,
+        "f1": 0.9456869009584664,
+        "roc_auc": 0.9057649667405764,
+        "balanced_accuracy": 0.9057649667405765,
+        "log_loss": 3.5013834720856662,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            16,
+            148
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "threshold_folds": [
+        {
+          "excluded_source_group": "aegvtnwqoe.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "ajeegjgyzk.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "ambabjrwbt.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "ansbtntiqu.mp4",
+          "threshold": 0.3988092332483832
+        },
+        {
+          "excluded_source_group": "axfhbpkdlc.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "bdnoxibdvz.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "bmfkkzheii.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "bzvzpwrabw.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "ccjiwxnihq.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "cqbhgsmffd.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "cqroxivqio.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "dhjnjkzuhq.mp4",
+          "threshold": 0.46349089249514375
+        },
+        {
+          "excluded_source_group": "dhyybsrvwc.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "dqlmffnywx.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "fgobmbcami.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "fhgnmqzfca.mp4",
+          "threshold": 0.449069040370822
+        },
+        {
+          "excluded_source_group": "lgkakqesov.mp4",
+          "threshold": 0.449069040370822
+        }
+      ],
+      "deployed_threshold_changed": false
+    }
+  },
+  "threshold_policy": "Alternatives below use validation only. Historical frozen threshold 0.5 and test outputs are unchanged.",
+  "leaderboards": {
+    "Image": [
+      {
+        "family": "ResNet / CNN",
+        "best": "S0",
+        "best_balanced_accuracy": 0.969,
+        "mean_balanced_accuracy": 0.9385,
+        "comparable_runs": 2
+      },
+      {
+        "family": "EfficientNet",
+        "best": "E02_efficientnet_b0",
+        "best_balanced_accuracy": 0.9245,
+        "mean_balanced_accuracy": 0.9225,
+        "comparable_runs": 3
+      }
+    ],
+    "Video": [
+      {
+        "family": "Spatial + Temporal Hybrid",
+        "best": "S6",
+        "best_balanced_accuracy": 0.9481707317073171,
+        "mean_balanced_accuracy": 0.9461382113821138,
+        "comparable_runs": 3
+      },
+      {
+        "family": "EfficientNet",
+        "best": "S1b",
+        "best_balanced_accuracy": 0.8140243902439024,
+        "mean_balanced_accuracy": 0.7407150776053215,
+        "comparable_runs": 4
+      },
+      {
+        "family": "Vision Transformer",
+        "best": "S4",
+        "best_balanced_accuracy": 0.7868625277161863,
+        "mean_balanced_accuracy": 0.70509977827051,
+        "comparable_runs": 2
+      },
+      {
+        "family": "CNN + ViT Hybrid",
+        "best": "S5",
+        "best_balanced_accuracy": 0.7231152993348116,
+        "mean_balanced_accuracy": 0.7231152993348116,
+        "comparable_runs": 1
+      },
+      {
+        "family": "ResNet / CNN",
+        "best": "S0",
+        "best_balanced_accuracy": 0.5,
+        "mean_balanced_accuracy": 0.5,
+        "comparable_runs": 1
+      }
+    ]
+  }
+}

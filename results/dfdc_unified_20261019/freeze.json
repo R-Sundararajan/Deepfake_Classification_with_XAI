@@ -1,0 +1,80 @@
+{
+  "format": "unified_freeze_v1",
+  "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3",
+  "selection_split": "validation",
+  "selection_rule": "both recalls >0; highest balanced accuracy, macro-F1, ROC-AUC, lower measured cost",
+  "champion": "S6",
+  "experiments": {
+    "S0": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\models\\best_resnet18.pth",
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+      "temperature": 20.0854102608446,
+      "summary_sha256": "cc6713ae1f11ef4cd99d751d7c78721f451256fc42fc4a899037b2512321c069"
+    },
+    "S1": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1\\best.pt",
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+      "temperature": 2.4789721138480205,
+      "summary_sha256": "c92c146c867361901f64c8a03fecf5f3b08f675da2c891837148f51e00dfd87c"
+    },
+    "S1p": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1p\\best.pt",
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+      "temperature": 0.5559516246977887,
+      "summary_sha256": "241189e281f0fdc39f4880222ea0f2e6e8fd65d3089ea2f3c3c7290f04e32239"
+    },
+    "S1b": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1b\\best.pt",
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+      "temperature": 4.571204902317711,
+      "summary_sha256": "2fb4d9309d52b7cc6163ee17e3d90642144539b728aad2ff57a8b88bda01b59b"
+    },
+    "S2": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S2\\best.pt",
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "temperature": 3.97255472437057,
+      "summary_sha256": "4d2d727b6b30f226a9e94ad2c3bce20aef11e2ada93633aa52be83ccce94e81f"
+    },
+    "S3": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S3\\best.pt",
+      "checkpoint_sha256": "8ba1c464ffcb319870533285ffad0aa688d3fdcc624e48d9effd8800975448c4",
+      "temperature": 0.3658431170510292,
+      "summary_sha256": "f8dbfacfbaffea85d916e8f008ff1217176ff24d40c1944a5a18a90c2c208c9b"
+    },
+    "S4": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S4\\best.pt",
+      "checkpoint_sha256": "5091341e18e4ed0c304f015749282a0736bf05c636743b71590be82888d7fd0f",
+      "temperature": 0.9051385550507373,
+      "summary_sha256": "478e9a4248e0ee1fc4e2bc4c067c0dbbee3c2a2ba4edd2542b4d2c6dfefdfabe"
+    },
+    "S5": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S5\\best.pt",
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "temperature": 1.5250081164822207,
+      "summary_sha256": "6a6135a2943397fc28e1b09746b1e534928eb2b740b2fb16ffe355b82a383097"
+    },
+    "S6": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt",
+      "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc",
+      "temperature": 1.4091608530245567,
+      "summary_sha256": "14ff58b9634542b3b61212cdcde1aade5e6eccd7d19b8d37b0086f243ddda572"
+    },
+    "S7": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S7\\config.json",
+      "checkpoint_sha256": "8a1f91873fae00c452e8e24f5907a3c330f63951f064c7d0bee0202afb19a44b",
+      "temperature": 0.8296057008980618,
+      "summary_sha256": "a5fe2c1b3f33335597f37276df5ba8d8fb35021faabbc392f61d8d82c606443a"
+    },
+    "S8": {
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S8\\config.json",
+      "checkpoint_sha256": "9d6c36fb1496de413c9c7f16c9fd28fa76078e423dc0f2807496f7fae2cd458d",
+      "temperature": 0.8139183552856663,
+      "summary_sha256": "b567d09208d8d214b4d38c799f3df0bd76abf53aa036ae369c3b74222ced4709"
+    }
+  },
+  "optional_skipped": {
+    "added_ECA_CBAM": "Deferred: prioritize frozen spatial, hybrid and temporal controlled comparisons",
+    "temporal_transformer": "Deferred: small source-group cohort and laptop budget",
+    "full_backbone_finetuning": "Not run; all new encoders frozen for controlled feature-head transfer"
+  }
+}

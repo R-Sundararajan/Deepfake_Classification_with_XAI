@@ -1,0 +1,101 @@
+{
+  "format": "local_dfdc_normalized8_v1",
+  "metadata_path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\metadata\\metadata.json",
+  "metadata_sha256": "ec95a01cdcb8958ce8983cb12c0aaf2fbfda0b496831ad2a0eb7775a726e3212",
+  "local_videos": 1163,
+  "labeled_videos": 1162,
+  "label_counts": {
+    "FAKE": 1088,
+    "REAL": 74
+  },
+  "unlabeled_quarantined": [
+    {
+      "filename": "elyvkuldpz.mp4",
+      "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\train_sample_videos\\elyvkuldpz.mp4",
+      "sha256": "caafeb366b13681777235dbcc3fd134801c4b28f4ae1052eecf1545c57760bee",
+      "reason": "no metadata label; excluded from all supervised stages"
+    }
+  ],
+  "conflicting_labels": 0,
+  "metadata_entries": 1334,
+  "provenance": "Existing local subset matched by filename to supplied Kaggle community-mirror metadata; not certified official distribution",
+  "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3",
+  "seed": 42,
+  "source_groups": 86,
+  "split_counts": {
+    "train": {
+      "videos": 813,
+      "labels": {
+        "REAL": 52,
+        "FAKE": 761
+      },
+      "source_groups": 54
+    },
+    "validation": {
+      "videos": 175,
+      "labels": {
+        "FAKE": 164,
+        "REAL": 11
+      },
+      "source_groups": 17
+    },
+    "test": {
+      "videos": 174,
+      "labels": {
+        "FAKE": 163,
+        "REAL": 11
+      },
+      "source_groups": 15
+    }
+  },
+  "duration_by_class": {
+    "REAL": {
+      "count": 74,
+      "total_seconds": 740.7683302802152,
+      "minimum": 10.010277217943756,
+      "p10": 10.010310619938537,
+      "p25": 10.010344022156227,
+      "median": 10.010344022156227,
+      "mean": 10.01038284162453,
+      "p75": 10.010444230146787,
+      "p90": 10.010477633256142,
+      "maximum": 10.010511036588419
+    },
+    "FAKE": {
+      "count": 1088,
+      "total_seconds": 10891.304968103468,
+      "minimum": 10.010277217943756,
+      "p10": 10.010310619938537,
+      "p25": 10.010344022156227,
+      "median": 10.01041082726035,
+      "mean": 10.010390595683335,
+      "p75": 10.010444230146787,
+      "p90": 10.010477633256142,
+      "maximum": 10.010511036588419
+    }
+  },
+  "decode_errors": [],
+  "all_fake_accuracy": 0.9363166953528399,
+  "warnings": [
+    "12 original source names absent from sample; siblings remain grouped through these external names.",
+    "Source-video grouping does not guarantee complete actor disjointness. Optional official identity IDs are grouped when provided; sample metadata normally lacks them."
+  ],
+  "probe_scope": "All labeled containers and eight normalized sampled frames per video; not exhaustive all-frame decoding",
+  "preprocessing": {
+    "size": 224,
+    "frames_per_video": 8,
+    "sampling": "normalized_bin_centers",
+    "faces": "yunet",
+    "align": true,
+    "margin": 1.3,
+    "normalization": "ImageNet",
+    "no_face_policy": "full_frame_fallback"
+  },
+  "audit_seconds": 1407.347584000032,
+  "storage": {
+    "phase_bytes": 11582864305,
+    "free_bytes": 79403642880,
+    "limit_bytes": 32212254720,
+    "headroom_bytes": 5368709120
+  }
+}

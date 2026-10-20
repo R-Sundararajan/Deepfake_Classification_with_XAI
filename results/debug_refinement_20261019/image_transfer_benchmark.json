@@ -1,0 +1,43 @@
+{
+  "format": "image_transfer_evaluation_v1",
+  "completed": true,
+  "model_id": "S2",
+  "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+  "manifest_sha256": "3efcc0153a09f62e794effd76ab48f3b06c1a8a120842be1b4864e5ec49381a2",
+  "predictions_path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\debug_refinement_20261019\\domain_pilot\\S2_image_validation_predictions.csv",
+  "predictions_sha256": "46664860173d877d4006b1960322ae5f97821ddfdca37d36fe7d407ae8bcc70f",
+  "validation": {
+    "accuracy": 0.511,
+    "precision": 0.5116033755274262,
+    "real_precision": 0.5104562737642585,
+    "real_recall": 0.537,
+    "fake_recall": 0.485,
+    "macro_f1": 0.510669212387574,
+    "pr_auc": 0.5092254693805234,
+    "brier_score": 0.33691851200983247,
+    "recall": 0.485,
+    "f1": 0.49794661190965095,
+    "roc_auc": 0.517363,
+    "balanced_accuracy": 0.511,
+    "log_loss": 1.0158710396749522,
+    "confusion_matrix_real_fake": [
+      [
+        537,
+        463
+      ],
+      [
+        515,
+        485
+      ]
+    ],
+    "positive_class": "FAKE",
+    "threshold": 0.5,
+    "undefined_precision_recall_f1_policy": "zero when denominator zero"
+  },
+  "samples": 2000,
+  "evaluation_unit": "image",
+  "split": "validation",
+  "temperature": 1.0,
+  "preprocessing": "Native S2 YuNet alignment, bilinear224, RGB ImageNet normalization",
+  "selection_note": "Measured after the original video freeze; does not change any historical video metrics or test decisions"
+}

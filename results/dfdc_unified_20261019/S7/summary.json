@@ -1,0 +1,126 @@
+{
+  "id": "S7",
+  "config": {
+    "id": "S7",
+    "model": "EfficientNet spatial + LSTM late fusion",
+    "kind": "score_fusion",
+    "components": [
+      "S2",
+      "S6"
+    ],
+    "backbones": [
+      "efficientnet_b0"
+    ],
+    "spatial_weight": 0.25,
+    "preprocess": "face",
+    "balance": true,
+    "augment": true,
+    "weight_candidates": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "selected_on": "validation"
+  },
+  "validation": {
+    "accuracy": 0.8971428571428571,
+    "precision": 1.0,
+    "real_precision": 0.3793103448275862,
+    "real_recall": 1.0,
+    "fake_recall": 0.8902439024390244,
+    "macro_f1": 0.7459677419354839,
+    "pr_auc": 0.9971113309590203,
+    "brier_score": 0.09155080781719081,
+    "recall": 0.8902439024390244,
+    "f1": 0.9419354838709677,
+    "roc_auc": 0.9562084257206207,
+    "balanced_accuracy": 0.9451219512195121,
+    "log_loss": 0.3295386828155319,
+    "confusion_matrix_real_fake": [
+      [
+        11,
+        0
+      ],
+      [
+        18,
+        146
+      ]
+    ],
+    "positive_class": "FAKE",
+    "threshold": 0.5,
+    "undefined_precision_recall_f1_policy": "zero when denominator zero",
+    "ece": 0.07009250651344154
+  },
+  "calibration": {
+    "temperature": 0.8296057008980618,
+    "fit_split": "validation",
+    "method": "scalar temperature on video aggregate log probabilities/logits",
+    "before": {
+      "accuracy": 0.8971428571428571,
+      "precision": 1.0,
+      "real_precision": 0.3793103448275862,
+      "real_recall": 1.0,
+      "fake_recall": 0.8902439024390244,
+      "macro_f1": 0.7459677419354839,
+      "pr_auc": 0.9971113309590203,
+      "brier_score": 0.09155080781719081,
+      "recall": 0.8902439024390244,
+      "f1": 0.9419354838709677,
+      "roc_auc": 0.9562084257206207,
+      "balanced_accuracy": 0.9451219512195121,
+      "log_loss": 0.3295386828155319,
+      "confusion_matrix_real_fake": [
+        [
+          11,
+          0
+        ],
+        [
+          18,
+          146
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "ece": 0.07009250651344154
+    },
+    "after": {
+      "accuracy": 0.8971428571428571,
+      "precision": 1.0,
+      "real_precision": 0.3793103448275862,
+      "real_recall": 1.0,
+      "fake_recall": 0.8902439024390244,
+      "macro_f1": 0.7459677419354839,
+      "pr_auc": 0.9971113309590203,
+      "brier_score": 0.08899283299191964,
+      "recall": 0.8902439024390244,
+      "f1": 0.9419354838709677,
+      "roc_auc": 0.9562084257206207,
+      "balanced_accuracy": 0.9451219512195121,
+      "log_loss": 0.3236150384395601,
+      "confusion_matrix_real_fake": [
+        [
+          11,
+          0
+        ],
+        [
+          18,
+          146
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "ece": 0.0365703844170755
+    },
+    "inconclusive_enabled": false,
+    "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+  },
+  "training_seconds": 0,
+  "training_cost_scope": "reuses S2/S6; validation weight selection only",
+  "inference_ms_per_video": 23.821140852690277,
+  "latency_scope": "estimated shared-encoder upper branch cost; not independently benchmarked",
+  "peak_vram_bytes": 158609920,
+  "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S7\\config.json",
+  "checkpoint_sha256": "8a1f91873fae00c452e8e24f5907a3c330f63951f064c7d0bee0202afb19a44b"
+}

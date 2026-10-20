@@ -1,55 +1,124 @@
-# Virtual environment
+# Python environments, bytecode and tool caches
 dfenv/
-
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-
-# Jupyter
-.ipynb_checkpoints/
-
-# VS Code
-.vscode/
-
-# Model checkpoints (optional if very large)
-checkpoints/
-
-# Output files
-outputs/
-
-# OS files
-.DS_Store
-Thumbs.db
 .venv/
 venv/
-
-# Virtual Environment
-dfenv/
-
-# Python Cache
 __pycache__/
-*.pyc
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+tools/node_modules/
 
-# VS Code
+# Local editor/OS files and credentials
 .vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+.aws/
+.kaggle/
+kaggle.json
+*.pem
+*.key
 
-# Dataset images stay untracked; retain the setup note.
-datasets/*
-!datasets/README.md
+# Datasets, preserved uploads, model weights and generated arrays
 data/
-
-# Model Weights
+datasets/
+checkpoints/
+outputs/
 *.pth
 *.pt
 *.ckpt
+*.safetensors
+*.onnx
+*.npy
+*.npz
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.part
+*.tmp
+*.log
+*.xlsx
 
-# Outputs
-outputs/
-.DS_Store
-Thumbs.db
-
+# Archived local prototype and working notes
+old_prototype/
 system_workflow.md
 literature_implementation_note.md
-old_prototype/
-datasets/
+
+# Generated results are local by default. Only compact, reviewable evidence
+# below is versioned; do not add diagnostic face crops, uploads or tensors.
+/results/*
+!/results/README.md
+!/results/champion.json
+
+# Frozen DFDC benchmark: protocol/metrics, per-video scores and aggregate plots.
+!/results/dfdc_unified_20261019/
+/results/dfdc_unified_20261019/*
+!/results/dfdc_unified_20261019/*.json
+!/results/dfdc_unified_20261019/*.csv
+/results/dfdc_unified_20261019/server*.json
+!/results/dfdc_unified_20261019/S*/
+/results/dfdc_unified_20261019/S*/*
+!/results/dfdc_unified_20261019/S*/*.json
+!/results/dfdc_unified_20261019/S*/*_predictions.csv
+!/results/dfdc_unified_20261019/figures/
+/results/dfdc_unified_20261019/figures/*
+!/results/dfdc_unified_20261019/figures/*.png
+
+# Completed image benchmarks; dataset manifests and smoke/demo runs stay local.
+!/results/execution_20261019/
+/results/execution_20261019/*
+!/results/execution_20261019/comparison.json
+!/results/execution_20261019/completion.json
+!/results/execution_20261019/cpu_fallback.json
+!/results/execution_20261019/champion_cpu_fallback.json
+!/results/execution_20261019/E00_test/
+!/results/execution_20261019/E00_validation/
+!/results/execution_20261019/E01_resnet18/
+!/results/execution_20261019/E02_efficientnet_b0/
+!/results/execution_20261019/E03_attention/
+!/results/execution_20261019/E04_jpeg/
+/results/execution_20261019/E*/*
+!/results/execution_20261019/E*/summary.json
+!/results/execution_20261019/E*/metrics.json
+!/results/execution_20261019/E*/config.json
+!/results/execution_20261019/E*/history.json
+!/results/execution_20261019/E*/classification_report.txt
+!/results/execution_20261019/E*/validation_predictions.csv
+!/results/execution_20261019/E*/confusion_matrix.png
+!/results/execution_20261019/E*/training_curves.png
+
+# Refinement reports and aggregate checks, including the image-transfer CSV
+# whose digest is verified by inference/catalog.py. Original faces stay local.
+!/results/debug_refinement_20261019/
+/results/debug_refinement_20261019/*
+!/results/debug_refinement_20261019/*.md
+!/results/debug_refinement_20261019/*.json
+/results/debug_refinement_20261019/server*.json
+!/results/debug_refinement_20261019/domain_pilot/
+/results/debug_refinement_20261019/domain_pilot/*
+!/results/debug_refinement_20261019/domain_pilot/comparison.json
+!/results/debug_refinement_20261019/domain_pilot/registration.json
+!/results/debug_refinement_20261019/domain_pilot/S2_baseline_validation.json
+!/results/debug_refinement_20261019/domain_pilot/S2_image_validation_predictions.csv
+!/results/debug_refinement_20261019/domain_pilot/sanity.json
+!/results/debug_refinement_20261019/images/
+/results/debug_refinement_20261019/images/*
+!/results/debug_refinement_20261019/images/checks.json
+!/results/debug_refinement_20261019/video/
+/results/debug_refinement_20261019/video/*
+!/results/debug_refinement_20261019/video/checks.json
+!/results/debug_refinement_20261019/video/additional_methods.json
+
+# UI verification summaries; screenshots containing uploaded faces stay local.
+!/results/demo_presentation_20261020/
+/results/demo_presentation_20261020/*
+!/results/demo_presentation_20261020/REPORT.md
+!/results/demo_presentation_20261020/app_qa_final.json
+!/results/demo_presentation_20261020/parallel_parity.json
+!/results/demo_presentation_20261020/regression.json

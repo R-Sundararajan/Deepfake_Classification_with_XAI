@@ -53,7 +53,7 @@ def load_model_checkpoint(
             f"Checkpoint not found: {checkpoint_path}. Run training first."
         )
 
-    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
     trainable_blocks = int(checkpoint.get("trainable_backbone_blocks", 1))
     model = create_model(pretrained=False, trainable_backbone_blocks=trainable_blocks)
     model.load_state_dict(checkpoint["model_state_dict"])

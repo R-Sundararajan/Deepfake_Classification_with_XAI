@@ -1,0 +1,174 @@
+{
+  "completed": true,
+  "smoke_test": false,
+  "dataset": "Real vs Fake Faces",
+  "evaluation_unit": "image",
+  "evaluation_split": "validation",
+  "experiment_id": "E01_resnet18",
+  "model": {
+    "backbone": "resnet18",
+    "attention": "none",
+    "fusion": "none",
+    "dropout": 0.2
+  },
+  "config": {
+    "experiment_id": "E01_resnet18",
+    "manifest": "results/execution_20261019/dataset/manifest.csv",
+    "model": {
+      "backbone": "resnet18",
+      "attention": "none",
+      "fusion": "none"
+    },
+    "augmentation": "basic",
+    "head_epochs": 1,
+    "fine_tune_epochs": 2,
+    "fine_tune_blocks": 1,
+    "batch_size": 32,
+    "head_lr": 0.001,
+    "backbone_lr": 0.0001,
+    "patience": 2,
+    "seed": 42,
+    "max_minutes": 20
+  },
+  "pretrained_url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+  "manifest_sha256": "3efcc0153a09f62e794effd76ab48f3b06c1a8a120842be1b4864e5ec49381a2",
+  "training_images": 12000,
+  "validation_images": 2000,
+  "best_epoch": 3,
+  "history": [
+    {
+      "epoch": 1,
+      "phase": "head",
+      "training_loss": 0.5936470454533895,
+      "validation_loss": 0.5453939638137817,
+      "validation": {
+        "accuracy": 0.7225,
+        "precision": 0.671022290545734,
+        "recall": 0.873,
+        "f1": 0.758800521512386,
+        "roc_auc": 0.8155189999999999,
+        "balanced_accuracy": 0.7224999999999999,
+        "log_loss": 0.5453939646287954,
+        "confusion_matrix_real_fake": [
+          [
+            572,
+            428
+          ],
+          [
+            127,
+            873
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "samples": 2000,
+        "loss": 0.5453939638137817,
+        "inference_ms_per_image": 0.8315448001085315,
+        "evaluation_seconds": 26.405857300036587
+      },
+      "epoch_seconds": 103.21691630000714
+    },
+    {
+      "epoch": 2,
+      "phase": "fine_tune",
+      "training_loss": 0.42966815996170044,
+      "validation_loss": 0.2893677537441254,
+      "validation": {
+        "accuracy": 0.874,
+        "precision": 0.8589251439539347,
+        "recall": 0.895,
+        "f1": 0.8765915768854065,
+        "roc_auc": 0.9496679999999998,
+        "balanced_accuracy": 0.874,
+        "log_loss": 0.28936776162324457,
+        "confusion_matrix_real_fake": [
+          [
+            853,
+            147
+          ],
+          [
+            105,
+            895
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "samples": 2000,
+        "loss": 0.2893677537441254,
+        "inference_ms_per_image": 0.759230949828634,
+        "evaluation_seconds": 22.641938199987635
+      },
+      "epoch_seconds": 83.70619729999453
+    },
+    {
+      "epoch": 3,
+      "phase": "fine_tune",
+      "training_loss": 0.24107886718710264,
+      "validation_loss": 0.20372224885225296,
+      "validation": {
+        "accuracy": 0.908,
+        "precision": 0.9188911704312115,
+        "recall": 0.895,
+        "f1": 0.9067882472137792,
+        "roc_auc": 0.975501,
+        "balanced_accuracy": 0.908,
+        "log_loss": 0.2037222501921609,
+        "confusion_matrix_real_fake": [
+          [
+            921,
+            79
+          ],
+          [
+            105,
+            895
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "samples": 2000,
+        "loss": 0.20372224885225296,
+        "inference_ms_per_image": 0.7572456999914721,
+        "evaluation_seconds": 22.07370649999939
+      },
+      "epoch_seconds": 81.28896410000743
+    }
+  ],
+  "validation": {
+    "accuracy": 0.908,
+    "precision": 0.9188911704312115,
+    "recall": 0.895,
+    "f1": 0.9067882472137792,
+    "roc_auc": 0.975501,
+    "balanced_accuracy": 0.908,
+    "log_loss": 0.2037222501921609,
+    "confusion_matrix_real_fake": [
+      [
+        921,
+        79
+      ],
+      [
+        105,
+        895
+      ]
+    ],
+    "positive_class": "FAKE",
+    "threshold": 0.5,
+    "undefined_precision_recall_f1_policy": "zero when denominator zero",
+    "samples": 2000,
+    "loss": 0.20372224885225296,
+    "inference_ms_per_image": 0.7473697000823449,
+    "evaluation_seconds": 22.67984980001347
+  },
+  "training_seconds": 269.46064290002687,
+  "gpu_peak_mib": 418.32861328125,
+  "parameters": 11177538,
+  "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\execution_20261019\\E01_resnet18\\best.pt",
+  "checkpoint_sha256": "e387b5bacd1fb1a3f5d4b461cc4ac35f402f4d74eb7fa0ad80326176119ea637",
+  "checkpoint_bytes": 44784331,
+  "limitations": "No source-video or identity metadata. Exact hash checks do not rule out identity or near-duplicate leakage. Image classification results do not establish video detection accuracy.",
+  "video_metrics": null,
+  "video_metrics_status": "No labeled video benchmark evaluated"
+}

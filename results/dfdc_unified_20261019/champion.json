@@ -1,0 +1,9 @@
+{
+  "id": "S6",
+  "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt",
+  "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc",
+  "temperature": 1.4091608530245567,
+  "summary_sha256": "14ff58b9634542b3b61212cdcde1aade5e6eccd7d19b8d37b0086f243ddda572",
+  "selection_split": "validation",
+  "scope": "Local source-grouped DFDC subset, eight normalized video frames; image transfer unbenchmarked"
+}

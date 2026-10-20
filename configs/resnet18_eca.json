@@ -1,0 +1,6 @@
+{
+  "experiment_id": "B1_resnet18_eca",
+  "model": {"backbone": "resnet18", "attention": "eca", "fusion": "none"},
+  "reference_experiment": "A1_resnet18_frozen",
+  "comparison": "Added ECA after final spatial map; run only if CNN baseline evidence justifies Stage B"
+}

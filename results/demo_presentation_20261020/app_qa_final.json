@@ -1,0 +1,3111 @@
+{
+  "checks": [
+    {
+      "case": "initial",
+      "milliseconds": 1700.1938999746926,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "synthetic_auto_six",
+      "milliseconds": 4782.3939000372775,
+      "new_predictions": 1,
+      "new_maps": 6
+    },
+    {
+      "case": "rerender_cached",
+      "milliseconds": 193.33259999984875,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "opacity_cached",
+      "milliseconds": 185.0406999583356,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "real_auto_six",
+      "milliseconds": 1349.157800024841,
+      "new_predictions": 1,
+      "new_maps": 6
+    },
+    {
+      "case": "model_change_automatic",
+      "milliseconds": 2839.418499963358,
+      "new_predictions": 1,
+      "new_maps": 6
+    },
+    {
+      "case": "experimental_options",
+      "milliseconds": 169.1092000110075,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "hybrid_image_eight",
+      "milliseconds": 31137.61139998678,
+      "new_predictions": 1,
+      "new_maps": 8
+    },
+    {
+      "case": "video_initial",
+      "milliseconds": 205.6639000074938,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "video_real_auto_six",
+      "milliseconds": 17341.27749997424,
+      "new_predictions": 1,
+      "new_maps": 6
+    },
+    {
+      "case": "video_cache",
+      "milliseconds": 320.4713999875821,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "video_extra_frame_automatic",
+      "milliseconds": 7811.288099968806,
+      "new_predictions": 0,
+      "new_maps": 12
+    },
+    {
+      "case": "video_fake_auto_six",
+      "milliseconds": 16639.803799975198,
+      "new_predictions": 1,
+      "new_maps": 6
+    },
+    {
+      "case": "video_hybrid_eight",
+      "milliseconds": 14932.253600039985,
+      "new_predictions": 1,
+      "new_maps": 8
+    },
+    {
+      "case": "video_transformer_five",
+      "milliseconds": 8958.55370000936,
+      "new_predictions": 1,
+      "new_maps": 5
+    },
+    {
+      "case": "corrupt_video",
+      "milliseconds": 53.05319995386526,
+      "new_predictions": 0,
+      "new_maps": 0
+    }
+  ],
+  "calls": [
+    {
+      "method": "gradcam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474550.091374,
+      "finished": 474550.3886145,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 92.18899536132812,
+        "raw_map_max": 0.1044376939535141,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 281.78840002510697,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 5.465399997774512,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474550.0908795,
+          "finished": 474550.3887415,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474550.1321816,
+      "finished": 474550.3934249,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 92.18899536132812,
+        "raw_map_max": 0.5029178261756897,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 247.98329995246604,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 5.364399985410273,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474550.1319187,
+          "finished": 474550.3934661,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474550.3897818,
+      "finished": 474550.4493021,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 92.18899536132812,
+        "raw_map_max": 0.09351978451013565,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 39.19439995661378,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.891699958126992,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474550.3889279,
+          "finished": 474550.4493303,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474550.4501447,
+      "finished": 474550.7479469,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "raw_attribution_statistics": {
+          "min": -0.09433251619338989,
+          "max": 0.8508596420288086,
+          "mean": 0.38677644182224663,
+          "std": 0.29385863539567086,
+          "abs_sum": 19724.379852294922,
+          "signed_sum": 19406.894744873047,
+          "positive_sum": 19565.637298583984,
+          "negative_sum": -158.7425537109375,
+          "absolute_quantiles_0_50_90_99_100": [
+            0.0021442770957946777,
+            0.3832767605781555,
+            0.821828305721283,
+            0.8508596420288086,
+            0.8508596420288086
+          ]
+        },
+        "clean_class_probability": 0.8578057885169983,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 282.9960999661125,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.2746000215411186,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474550.4494323,
+          "finished": 474550.7479866,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474550.393939,
+      "finished": 474551.0911649,
+      "details": {
+        "steps": 64,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 4.674234390258789,
+        "signed_attribution_sum": 4.494927406311035,
+        "completeness_absolute_residual": 0.1793069839477539,
+        "completeness_relative_residual": 0.038360717280552674,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.3101015090942383,
+            "relative_residual": 0.06634273834031448
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.1793069839477539,
+            "relative_residual": 0.038360717280552674
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.5442498326301575,
+          "max": 0.7326262593269348,
+          "mean": 2.9861079117897144e-05,
+          "std": 0.03121630330339749,
+          "abs_sum": 2598.7123935316617,
+          "signed_sum": 4.494928517458821,
+          "positive_sum": 1301.6036610245606,
+          "negative_sum": -1297.1087325071016,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.1178772574282902e-08,
+            0.008583354763686657,
+            0.04228228665888313,
+            0.12621949449181571,
+            0.7326262593269348
+          ]
+        },
+        "gradient_abs_sum": 254721.939453125,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 666.7813999811187,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 4.1145000141114,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474550.3935743,
+          "finished": 474551.0912071,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474550.7489624,
+      "finished": 474553.5242382,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.3159125859153049,
+        "surrogate_intercept": -0.26682115265828177,
+        "surrogate_local_prediction": 0.26718760798799057,
+        "actual_target_probability": 0.8579660058021545,
+        "raw_attribution_statistics": {
+          "min": 0.0010171323083341122,
+          "max": 0.026484565809369087,
+          "mean": 0.010898137971169638,
+          "std": 0.005289554128229185,
+          "abs_sum": 0.5340087605873123,
+          "signed_sum": 0.5340087605873123,
+          "positive_sum": 0.5340087605873123,
+          "negative_sum": 0.0,
+          "absolute_quantiles_0_50_90_99_100": [
+            0.0010171323083341122,
+            0.010292711667716503,
+            0.017862201854586604,
+            0.02422509439289568,
+            0.026484565809369087
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 2763.4723999653943,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 5.129500001203269,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474550.748119,
+          "finished": 474553.524286,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474554.1407899,
+      "finished": 474554.1783062,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 95.716796875,
+        "raw_map_max": 0.1582736372947693,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 24.781899992376566,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.7901000468991697,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474554.1402717,
+          "finished": 474554.1783466,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474554.1405907,
+      "finished": 474554.1807782,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 95.716796875,
+        "raw_map_max": 1.6009330749511719,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 28.75960001256317,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.8500999798998237,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474554.1404379,
+          "finished": 474554.1808061,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474554.1797074,
+      "finished": 474554.235013,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 95.716796875,
+        "raw_map_max": 0.1835191696882248,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 33.357499982230365,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 4.507000034209341,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474554.1784788,
+          "finished": 474554.2350497,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474554.2358777,
+      "finished": 474554.4375437,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "raw_attribution_statistics": {
+          "min": -0.0036728382110595703,
+          "max": -0.00025004148483276367,
+          "mean": -0.0027842387861135055,
+          "std": 0.001015632044463934,
+          "abs_sum": 139.70196533203125,
+          "signed_sum": -139.70196533203125,
+          "positive_sum": 0.0,
+          "negative_sum": -139.70196533203125,
+          "absolute_quantiles_0_50_90_99_100": [
+            0.00025004148483276367,
+            0.003300487995147705,
+            0.0036586523056030273,
+            0.0036728382110595703,
+            0.0036728382110595703
+          ]
+        },
+        "clean_class_probability": 0.9962918758392334,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 187.09419999504462,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.183000022545457,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474554.2351634,
+          "finished": 474554.4375816,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474554.4384617,
+      "finished": 474554.8416293,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.31588893379835903,
+        "surrogate_intercept": 1.0011527151532675,
+        "surrogate_local_prediction": 0.9988456815847849,
+        "actual_target_probability": 0.9962932467460632,
+        "raw_attribution_statistics": {
+          "min": -0.00011440371599746868,
+          "max": -4.371986051410204e-06,
+          "mean": -4.708231784076945e-05,
+          "std": 2.2855326207097427e-05,
+          "abs_sum": 0.0023070335741977033,
+          "signed_sum": -0.0023070335741977033,
+          "positive_sum": 0.0,
+          "negative_sum": -0.0023070335741977033,
+          "absolute_quantiles_0_50_90_99_100": [
+            4.371986051410204e-06,
+            4.4444263039622456e-05,
+            7.714700623182582e-05,
+            0.00010465009341714896,
+            0.00011440371599746868
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 387.3407999635674,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.836400002706796,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474554.4377034,
+          "finished": 474554.8416553,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474554.1814861,
+      "finished": 474555.2508463,
+      "details": {
+        "steps": 128,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": -1.8788518905639648,
+        "signed_attribution_sum": -2.1083638668060303,
+        "completeness_absolute_residual": 0.22951197624206543,
+        "completeness_relative_residual": 0.1221554383263143,
+        "converged": false,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 1.0580384731292725,
+            "relative_residual": 0.5631303235997419
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.5001230239868164,
+            "relative_residual": 0.26618544362041074
+          },
+          {
+            "steps": 128,
+            "absolute_residual": 0.22951197624206543,
+            "relative_residual": 0.1221554383263143
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.3071717619895935,
+          "max": 0.34371769428253174,
+          "mean": -1.4006456447881344e-05,
+          "std": 0.02496963911031654,
+          "abs_sum": 2343.9689477645525,
+          "signed_sum": -2.108363876186683,
+          "positive_sum": 1170.930291944183,
+          "negative_sum": -1173.0386558203697,
+          "absolute_quantiles_0_50_90_99_100": [
+            5.2184017107492764e-08,
+            0.008837607223540545,
+            0.03855947926640511,
+            0.09212485566735301,
+            0.34371769428253174
+          ]
+        },
+        "gradient_abs_sum": 420112.529296875,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 1050.3798000281677,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.32169997273013,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474554.1808781,
+          "finished": 474555.2509393,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474556.2333424,
+      "finished": 474556.4504156,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 51.79407501220703,
+        "raw_map_max": 0.3664216995239258,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 207.62280002236366,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.618800012394786,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474556.2329956,
+          "finished": 474556.4504455,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474556.4512942,
+      "finished": 474556.5255687,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 51.79407501220703,
+        "raw_map_max": 0.6797147989273071,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 68.58389999251813,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.813899947796017,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474556.450554,
+          "finished": 474556.5255981,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474556.3546076,
+      "finished": 474556.5519094,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 51.79407501220703,
+        "raw_map_max": 16.158409118652344,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 190.39850000990555,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.248500044923276,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474556.3544441,
+          "finished": 474556.5519516,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474556.5540835,
+      "finished": 474557.0919514,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "raw_attribution_statistics": {
+          "min": -0.002569258213043213,
+          "max": 0.0043103694915771484,
+          "mean": 0.00033305250868505363,
+          "std": 0.0012079752336875936,
+          "abs_sum": 40.93927001953125,
+          "signed_sum": 16.71124267578125,
+          "positive_sum": 28.82525634765625,
+          "negative_sum": -12.114013671875,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.537799835205078e-05,
+            0.0005024075508117676,
+            0.0025492310523986816,
+            0.0043103694915771484,
+            0.0043103694915771484
+          ]
+        },
+        "clean_class_probability": 0.9970118999481201,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 530.1693999790587,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.870200005825609,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474556.5520758,
+          "finished": 474557.0919776,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474557.093097,
+      "finished": 474557.9932564,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.3863050854056299,
+        "surrogate_intercept": 0.9221145119004012,
+        "surrogate_local_prediction": 1.0278953539545563,
+        "actual_target_probability": 0.9970235228538513,
+        "raw_attribution_statistics": {
+          "min": -0.01715913414955139,
+          "max": 0.028178932145237923,
+          "mean": 0.0021587926312349737,
+          "std": 0.010512881866374366,
+          "abs_sum": 0.4493676958954893,
+          "signed_sum": 0.10578083893051371,
+          "positive_sum": 0.2775742674130015,
+          "negative_sum": -0.1717934284824878,
+          "absolute_quantiles_0_50_90_99_100": [
+            0.0008417730568908155,
+            0.00898562278598547,
+            0.01655161418020725,
+            0.023915796950459443,
+            0.028178932145237923
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 893.5262999730185,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.138199961744249,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474557.0920673,
+          "finished": 474557.9932842,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474556.5265277,
+      "finished": 474558.0922053,
+      "details": {
+        "steps": 64,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 6.393350124359131,
+        "signed_attribution_sum": 6.406089782714844,
+        "completeness_absolute_residual": 0.01273965835571289,
+        "completeness_relative_residual": 0.001992642059000314,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.4985818862915039,
+            "relative_residual": 0.07798444893419344
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.01273965835571289,
+            "relative_residual": 0.001992642059000314
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.2372206449508667,
+          "max": 0.2390083521604538,
+          "mean": 4.255746202798359e-05,
+          "std": 0.009379007506023614,
+          "abs_sum": 695.2368404983652,
+          "signed_sum": 6.406089644148314,
+          "positive_sum": 350.82146507125674,
+          "negative_sum": -344.4153754271084,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.0557918095344121e-08,
+            0.00220654031727463,
+            0.010714593343436727,
+            0.03778988163918263,
+            0.2390083521604538
+          ]
+        },
+        "gradient_abs_sum": 60652.659912109375,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 1559.810100006871,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.2875000033527613,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474556.5256933,
+          "finished": 474558.0923324,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474567.7144523,
+      "finished": 474574.8425981,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 84.03886413574219,
+        "raw_map_max": 0.26224038004875183,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 7083.8000000221655,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 5.110999976750463,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474567.7138464,
+          "finished": 474574.8426556,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474574.8437201,
+      "finished": 474574.9553718,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 84.03886413574219,
+        "raw_map_max": 0.976067304611206,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 82.84879999700934,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.4218999790027738,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474574.8427856,
+          "finished": 474574.9554261,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474567.9054269,
+      "finished": 474575.1552084,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 84.03886413574219,
+        "raw_map_max": 23.480897903442383,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 7225.2462999895215,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.7837000088766217,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474567.9052463,
+          "finished": 474575.1552646,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474575.1565006,
+      "finished": 474575.7343141,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "raw_attribution_statistics": {
+          "min": -0.08200341463088989,
+          "max": 0.04724377393722534,
+          "mean": -0.005213272814847985,
+          "std": 0.02868880163270809,
+          "abs_sum": 1106.6177978515625,
+          "signed_sum": -261.5811767578125,
+          "positive_sum": 422.518310546875,
+          "negative_sum": -684.0994873046875,
+          "absolute_quantiles_0_50_90_99_100": [
+            0.0011473298072814941,
+            0.016656100749969482,
+            0.047330617904663086,
+            0.08200341463088989,
+            0.08200341463088989
+          ]
+        },
+        "clean_class_probability": 0.6580379605293274,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 548.1822000001557,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.034800000023097,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474575.1554114,
+          "finished": 474575.7343499,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474575.7355912,
+      "finished": 474576.8035579,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.6833964173359546,
+        "surrogate_intercept": 0.5994786821702036,
+        "surrogate_local_prediction": 0.6434011224283257,
+        "actual_target_probability": 0.6583506464958191,
+        "raw_attribution_statistics": {
+          "min": -0.08149785548448563,
+          "max": 0.08707159012556076,
+          "mean": 0.0008963764032196938,
+          "std": 0.03755694774198441,
+          "abs_sum": 1.4454328498104587,
+          "signed_sum": 0.043922443757764995,
+          "positive_sum": 0.7446776467841119,
+          "negative_sum": -0.7007552030263469,
+          "absolute_quantiles_0_50_90_99_100": [
+            0.0010396013967692852,
+            0.022687995806336403,
+            0.06435869634151459,
+            0.08439619749784467,
+            0.08707159012556076
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 1039.3052999861538,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.895599987823516,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474575.7344728,
+          "finished": 474576.8036357,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "attention_rollout",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474576.8061141,
+      "finished": 474576.8810219,
+      "details": {
+        "class_agnostic": true,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "attention_rollout",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 48.21159999119118,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.4193000281229615,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474576.8038378,
+          "finished": 474576.8810664,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradient_attention",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474576.8825297,
+      "finished": 474577.0380408,
+      "details": {
+        "class_agnostic": false,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "gradient_attention",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 128.34430002840236,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.827900054398924,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474576.8812019,
+          "finished": 474577.0380774,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474574.9567429,
+      "finished": 474589.3780625,
+      "details": {
+        "steps": 128,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.6479469537734985,
+        "signed_attribution_sum": 0.6616718769073486,
+        "completeness_absolute_residual": 0.013724923133850098,
+        "completeness_relative_residual": 0.02118217093840662,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.07343697547912598,
+            "relative_residual": 0.11333794387248125
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.18995535373687744,
+            "relative_residual": 0.29316497690222915
+          },
+          {
+            "steps": 128,
+            "absolute_residual": 0.013724923133850098,
+            "relative_residual": 0.02118217093840662
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.14324083924293518,
+          "max": 0.1400664895772934,
+          "mean": 4.3956748247951524e-06,
+          "std": 0.004289182211147777,
+          "abs_sum": 322.49049711767054,
+          "signed_sum": 0.6616721400267647,
+          "positive_sum": 161.57608462884863,
+          "negative_sum": -160.91441248882188,
+          "absolute_quantiles_0_50_90_99_100": [
+            2.611011407083197e-09,
+            0.0010409365640953183,
+            0.005196770746260885,
+            0.015357426116243024,
+            0.14324083924293518
+          ]
+        },
+        "gradient_abs_sum": 81685.09631347656,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 14396.603200002573,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.1190000008791685,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474574.9555729,
+          "finished": 474589.3781005,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474605.4435402,
+      "finished": 474605.6333506,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.0010039081098511815,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 163.8457999797538,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 4.4988999725319445,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474605.4392811,
+          "finished": 474605.6333829,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474605.5892657,
+      "finished": 474605.7267817,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.031048545613884926,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 121.19570001959801,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.9094999665394425,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474605.5866709,
+          "finished": 474605.7268393,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474605.634905,
+      "finished": 474605.7559215,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.0012674687895923853,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 94.75529997143894,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.9745999965816736,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474605.633465,
+          "finished": 474605.7561033,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474605.758845,
+      "finished": 474606.3054353,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "raw_attribution_statistics": {
+          "min": -0.00012761354446411133,
+          "max": 0.00028204917907714844,
+          "mean": 2.8807289746342872e-05,
+          "std": 7.374519384780415e-05,
+          "abs_sum": 2.5325927734375,
+          "signed_sum": 1.4454345703125,
+          "positive_sum": 1.989013671875,
+          "negative_sum": -0.5435791015625,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.5762786865234375e-07,
+            2.9385089874267578e-05,
+            0.0001304149627685547,
+            0.00028204917907714844,
+            0.00028204917907714844
+          ]
+        },
+        "clean_class_probability": 0.9754828214645386,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 517.4306000117213,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.5210000351071358,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474605.7562553,
+          "finished": 474606.305567,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474605.728188,
+      "finished": 474606.622028,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.013683319091796875,
+        "signed_attribution_sum": 0.01848100870847702,
+        "completeness_absolute_residual": 0.004797689616680145,
+        "completeness_relative_residual": 0.3506232358168386,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.004797689616680145,
+            "relative_residual": 0.3506232358168386
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0009114212007261813,
+          "max": 0.001000061514787376,
+          "mean": 1.2277459890318595e-07,
+          "std": 6.182096092368707e-05,
+          "abs_sum": 4.869213786343034,
+          "signed_sum": 0.018481014823698773,
+          "positive_sum": 2.443847400583366,
+          "negative_sum": -2.4253663857596672,
+          "absolute_quantiles_0_50_90_99_100": [
+            6.967443288985464e-11,
+            1.34185393108055e-05,
+            8.392498566536244e-05,
+            0.00025721362966578507,
+            0.001000061514787376
+          ]
+        },
+        "gradient_abs_sum": 256.7776565551758,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 868.5420000110753,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.6496000248007476,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474605.7269266,
+          "finished": 474606.6220669,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474606.3082628,
+      "finished": 474606.961249,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.8013337916312131,
+        "surrogate_intercept": 0.9736879065654568,
+        "surrogate_local_prediction": 0.9751950833765453,
+        "actual_target_probability": 0.9754830598831177,
+        "raw_attribution_statistics": {
+          "min": -0.00021627308160532266,
+          "max": 0.0007205831934697926,
+          "mean": 3.0758710751718594e-05,
+          "std": 0.0001704566317906005,
+          "abs_sum": 0.005699285123654363,
+          "signed_sum": 0.0015071768268342112,
+          "positive_sum": 0.003603230975244287,
+          "negative_sum": -0.002096054148410076,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.8039738115003274e-07,
+            6.957365258131176e-05,
+            0.00022377278946805748,
+            0.0005880779470317054,
+            0.0007205831934697926
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 629.5350999571383,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.5012000114656985,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474606.3057185,
+          "finished": 474606.9612852,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474607.572434,
+      "finished": 474607.6710457,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.0010039081098511815,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 72.30670005083084,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.2939999946393073,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474607.5709502,
+          "finished": 474607.773737,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474607.5726116,
+      "finished": 474607.6923671,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.031048545613884926,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 96.2765000294894,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.7123999898321927,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474607.5710869,
+          "finished": 474607.8142042,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474607.6713868,
+      "finished": 474607.7736748,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.9701606631278992,
+        "raw_map_max": 0.002445593476295471,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 84.7150000045076,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.6110999644733965,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474607.5709502,
+          "finished": 474607.773737,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474607.6924763,
+      "finished": 474607.8141416,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.9701606631278992,
+        "raw_map_max": 0.07286489009857178,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 103.3939000335522,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.4546999959275126,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474607.5710869,
+          "finished": 474607.8142042,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474607.7752644,
+      "finished": 474607.9106793,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.0012674687895923853,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 101.67930001625791,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.5035000182688236,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474607.773891,
+          "finished": 474607.9807316,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474607.910863,
+      "finished": 474607.9806673,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.9701606631278992,
+        "raw_map_max": 0.0029747167136520147,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 52.27410001680255,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 4.399699973873794,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474607.773891,
+          "finished": 474607.9807316,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474607.9829113,
+      "finished": 474608.2546077,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "raw_attribution_statistics": {
+          "min": -0.00012761354446411133,
+          "max": 0.00028204917907714844,
+          "mean": 2.8807289746342872e-05,
+          "std": 7.374519384780415e-05,
+          "abs_sum": 2.5325927734375,
+          "signed_sum": 1.4454345703125,
+          "positive_sum": 1.989013671875,
+          "negative_sum": -0.5435791015625,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.5762786865234375e-07,
+            2.9385089874267578e-05,
+            0.0001304149627685547,
+            0.00028204917907714844,
+            0.00028204917907714844
+          ]
+        },
+        "clean_class_probability": 0.9754828214645386,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 250.4179000388831,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.15419998858124,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474607.9808833,
+          "finished": 474608.511596,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474608.254722,
+      "finished": 474608.5114955,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "raw_attribution_statistics": {
+          "min": -0.00012201070785522461,
+          "max": 0.002987384796142578,
+          "mean": 9.7743102482387e-05,
+          "std": 0.0004309240162778453,
+          "abs_sum": 6.49920654296875,
+          "signed_sum": 4.90435791015625,
+          "positive_sum": 5.7017822265625,
+          "negative_sum": -0.79742431640625,
+          "absolute_quantiles_0_50_90_99_100": [
+            2.086162567138672e-06,
+            4.07099723815918e-05,
+            0.00023889541625976562,
+            0.002987384796142578,
+            0.002987384796142578
+          ]
+        },
+        "clean_class_probability": 0.9754789471626282,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 243.68840001989156,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.1946999952197075,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474607.9808833,
+          "finished": 474608.511596,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474608.5138733,
+      "finished": 474609.0851141,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.8013337916312131,
+        "surrogate_intercept": 0.9736879065654568,
+        "surrogate_local_prediction": 0.9751950833765453,
+        "actual_target_probability": 0.9754830598831177,
+        "raw_attribution_statistics": {
+          "min": -0.00021627308160532266,
+          "max": 0.0007205831934697926,
+          "mean": 3.0758710751718594e-05,
+          "std": 0.0001704566317906005,
+          "abs_sum": 0.005699285123654363,
+          "signed_sum": 0.0015071768268342112,
+          "positive_sum": 0.003603230975244287,
+          "negative_sum": -0.002096054148410076,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.8039738115003274e-07,
+            6.957365258131176e-05,
+            0.00022377278946805748,
+            0.0005880779470317054,
+            0.0007205831934697926
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 546.7419000342488,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.2225999855436385,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474608.5118853,
+          "finished": 474609.6458063,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 474609.0852635,
+      "finished": 474609.6457473,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.7161211013485922,
+        "surrogate_intercept": 0.9739061730404716,
+        "surrogate_local_prediction": 0.97468549148127,
+        "actual_target_probability": 0.9754772782325745,
+        "raw_attribution_statistics": {
+          "min": -0.00026811400311999023,
+          "max": 0.0010741009609773755,
+          "mean": 1.590445829290785e-05,
+          "std": 0.00021370513899292068,
+          "abs_sum": 0.006769265388811618,
+          "signed_sum": 0.0007793184563524846,
+          "positive_sum": 0.0037742919225820515,
+          "negative_sum": -0.002994973466229567,
+          "absolute_quantiles_0_50_90_99_100": [
+            7.538547379226657e-06,
+            9.171912824967876e-05,
+            0.00027536961133591844,
+            0.0007308827154338331,
+            0.0010741009609773755
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 547.3135000211187,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.8987000114284456,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474608.5118853,
+          "finished": 474609.6458063,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474607.8167074,
+      "finished": 474614.6462487,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.013683319091796875,
+        "signed_attribution_sum": 0.01848100870847702,
+        "completeness_absolute_residual": 0.004797689616680145,
+        "completeness_relative_residual": 0.3506232358168386,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.004797689616680145,
+            "relative_residual": 0.3506232358168386
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0009114212007261813,
+          "max": 0.001000061514787376,
+          "mean": 1.2277459890318595e-07,
+          "std": 6.182096092368707e-05,
+          "abs_sum": 4.869213786343034,
+          "signed_sum": 0.018481014823698773,
+          "positive_sum": 2.443847400583366,
+          "negative_sum": -2.4253663857596672,
+          "absolute_quantiles_0_50_90_99_100": [
+            6.967443288985464e-11,
+            1.34185393108055e-05,
+            8.392498566536244e-05,
+            0.00025721362966578507,
+            0.001000061514787376
+          ]
+        },
+        "gradient_abs_sum": 256.7776565551758,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 6798.056100029498,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.732000022660941,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474607.814355,
+          "finished": 474615.0798589,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 474614.6463988,
+      "finished": 474615.0797922,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.01596975326538086,
+        "signed_attribution_sum": 0.012025384232401848,
+        "completeness_absolute_residual": 0.0039443690329790115,
+        "completeness_relative_residual": 0.24698997958406735,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.0039443690329790115,
+            "relative_residual": 0.24698997958406735
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0010875217849388719,
+          "max": 0.0010450822301208973,
+          "mean": 7.988805701055413e-08,
+          "std": 6.561867676097047e-05,
+          "abs_sum": 5.213759444695158,
+          "signed_sum": 0.012025389445684691,
+          "positive_sum": 2.6128924170704213,
+          "negative_sum": -2.6008670276247363,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.634375786432109e-11,
+            1.4396037840924691e-05,
+            9.031831577885899e-05,
+            0.0002725685093901139,
+            0.0010875217849388719
+          ]
+        },
+        "gradient_abs_sum": 303.6159477233887,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 419.11929997149855,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.812699996866286,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474607.814355,
+          "finished": 474615.0798589,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474630.0165417,
+      "finished": 474630.1167115,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 25.29421043395996,
+        "raw_map_max": 0.019957326352596283,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 73.08170001488179,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.225299995392561,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474630.0127193,
+          "finished": 474630.1167532,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474630.016078,
+      "finished": 474630.1432915,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 25.29421043395996,
+        "raw_map_max": 3.100731611251831,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 101.61889996379614,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.5991999902762473,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474630.0128618,
+          "finished": 474630.1433683,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474630.1182765,
+      "finished": 474630.2366125,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 25.29421043395996,
+        "raw_map_max": 0.12726551294326782,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 94.60790001321584,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.383600036613643,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474630.116841,
+          "finished": 474630.2366645,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474630.2410453,
+      "finished": 474630.7248628,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "raw_attribution_statistics": {
+          "min": -0.0036679506301879883,
+          "max": 0.0033382177352905273,
+          "mean": -0.0004647666094254474,
+          "std": 0.0013576307888824406,
+          "abs_sum": 53.31060791015625,
+          "signed_sum": -23.32012939453125,
+          "positive_sum": 14.9952392578125,
+          "negative_sum": -38.31536865234375,
+          "absolute_quantiles_0_50_90_99_100": [
+            5.030632019042969e-05,
+            0.000653684139251709,
+            0.0027531981468200684,
+            0.0036679506301879883,
+            0.0036679506301879883
+          ]
+        },
+        "clean_class_probability": 0.9892162084579468,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 465.0073000229895,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.38979997811839,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474630.2367463,
+          "finished": 474630.7249366,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474630.7261716,
+      "finished": 474631.4209382,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.45951169909748524,
+        "surrogate_intercept": 0.9933153824916607,
+        "surrogate_local_prediction": 0.9898397339510929,
+        "actual_target_probability": 0.989258348941803,
+        "raw_attribution_statistics": {
+          "min": -0.0007665165467187762,
+          "max": 0.0007188046583905816,
+          "mean": -7.093160256401312e-05,
+          "std": 0.0003587948748735138,
+          "abs_sum": 0.01501381691196002,
+          "signed_sum": -0.003475648525636643,
+          "positive_sum": 0.005769084193161689,
+          "negative_sum": -0.009244732718798332,
+          "absolute_quantiles_0_50_90_99_100": [
+            2.2866890503792092e-05,
+            0.0002959596167784184,
+            0.000583933130837977,
+            0.0007436148403212426,
+            0.0007665165467187762
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 672.6639000116847,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.327300015371293,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474630.7250391,
+          "finished": 474631.4209914,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474630.1525224,
+      "finished": 474631.7323383,
+      "details": {
+        "steps": 64,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.11487197875976562,
+        "signed_attribution_sum": 0.12646132707595825,
+        "completeness_absolute_residual": 0.011589348316192627,
+        "completeness_relative_residual": 0.10088925464085279,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.044682323932647705,
+            "relative_residual": 0.3889749651313386
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.011589348316192627,
+            "relative_residual": 0.10088925464085279
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.039887867867946625,
+          "max": 0.0361027829349041,
+          "mean": 8.401193602074192e-07,
+          "std": 0.0017627662316885152,
+          "abs_sum": 139.42522693742586,
+          "signed_sum": 0.1264614870533024,
+          "positive_sum": 69.77584421223959,
+          "negative_sum": -69.64938272518629,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.5360168692524212e-10,
+            0.0003990823170170188,
+            0.0024126874515786787,
+            0.007161960713565413,
+            0.039887867867946625
+          ]
+        },
+        "gradient_abs_sum": 16588.49156188965,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 1552.9206999926828,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.521499991416931,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474630.1435151,
+          "finished": 474631.732395,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474644.5322995,
+      "finished": 474644.7915628,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.22664828598499298,
+        "raw_map_max": 0.00034834188409149647,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 230.24549998808652,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.561400004196912,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474644.5279965,
+          "finished": 474644.7916137,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474644.7122909,
+      "finished": 474644.8833047,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.22664828598499298,
+        "raw_map_max": 0.055181834846735,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 152.95300004072487,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.8797999839298427,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474644.710459,
+          "finished": 474644.8833513,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474644.7965004,
+      "finished": 474644.94716,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.22664828598499298,
+        "raw_map_max": 0.00225242180749774,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 128.49410000490025,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.5843000039458275,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474644.7917223,
+          "finished": 474644.9472107,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474644.9488845,
+      "finished": 474645.6102835,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "raw_attribution_statistics": {
+          "min": -0.0002652406692504883,
+          "max": 0.0010669827461242676,
+          "mean": 2.5889094994992625e-05,
+          "std": 0.0002210205219746016,
+          "abs_sum": 7.31951904296875,
+          "signed_sum": 1.29901123046875,
+          "positive_sum": 4.30926513671875,
+          "negative_sum": -3.01025390625,
+          "absolute_quantiles_0_50_90_99_100": [
+            2.2649765014648438e-06,
+            0.00010877847671508789,
+            0.00028079748153686523,
+            0.0010669827461242676,
+            0.0010669827461242676
+          ]
+        },
+        "clean_class_probability": 0.9646052122116089,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 639.4409000058658,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.3032999490387738,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474644.9473219,
+          "finished": 474645.6103221,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474644.8849052,
+      "finished": 474645.9665289,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.003202870488166809,
+        "signed_attribution_sum": -0.0005002273246645927,
+        "completeness_absolute_residual": 0.003703097812831402,
+        "completeness_relative_residual": 1.156180940351073,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.003703097812831402,
+            "relative_residual": 1.156180940351073
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0005837287753820419,
+          "max": 0.0009166713571175933,
+          "mean": -3.3231562245137687e-09,
+          "std": 2.9396386950165118e-05,
+          "abs_sum": 2.276429149178739,
+          "signed_sum": -0.0005002280601636086,
+          "positive_sum": 1.1379644605592876,
+          "negative_sum": -1.1384646886194512,
+          "absolute_quantiles_0_50_90_99_100": [
+            8.037340758215716e-12,
+            6.4164805735345e-06,
+            3.909092265530492e-05,
+            0.00011784715985413659,
+            0.0009166713571175933
+          ]
+        },
+        "gradient_abs_sum": 118.15230560302734,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 1055.7178999879397,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 4.125500039663166,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474644.8834564,
+          "finished": 474645.9667839,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "attention_rollout",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474645.9687334,
+      "finished": 474646.0377964,
+      "details": {
+        "class_agnostic": true,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "attention_rollout",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 42.062099964823574,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.1118999468162656,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474645.9668709,
+          "finished": 474646.0378503,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradient_attention",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474646.0408365,
+      "finished": 474646.2300283,
+      "details": {
+        "class_agnostic": false,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "gradient_attention",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 161.8711000191979,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.0721999937668443,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474646.0379741,
+          "finished": 474646.230134,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474645.6116627,
+      "finished": 474646.665252,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.47987363053459675,
+        "surrogate_intercept": 0.9612874197645692,
+        "surrogate_local_prediction": 0.9657365409273604,
+        "actual_target_probability": 0.9646010994911194,
+        "raw_attribution_statistics": {
+          "min": -0.0008732777205295861,
+          "max": 0.0006684151012450457,
+          "mean": 9.079839191497517e-05,
+          "std": 0.00026758761250257493,
+          "abs_sum": 0.010345131852773193,
+          "signed_sum": 0.0044491212038337835,
+          "positive_sum": 0.007397126528303488,
+          "negative_sum": -0.0029480053244697046,
+          "absolute_quantiles_0_50_90_99_100": [
+            7.87536282587098e-06,
+            0.0001417215244146064,
+            0.0004191122250631453,
+            0.0007749436632730059,
+            0.0008732777205295861
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 1027.7605000301264,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.752200001850724,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474645.6103982,
+          "finished": 474646.6653193,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474649.3868914,
+      "finished": 474651.3878937,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "raw_attribution_statistics": {
+          "min": -0.00044155120849609375,
+          "max": 0.007030487060546875,
+          "mean": 0.0011386457754641163,
+          "std": 0.0014412902622205682,
+          "abs_sum": 58.7176513671875,
+          "signed_sum": 57.1326904296875,
+          "positive_sum": 57.9251708984375,
+          "negative_sum": -0.79248046875,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.043081283569336e-05,
+            0.0008215904235839844,
+            0.002220630645751953,
+            0.007030487060546875,
+            0.007030487060546875
+          ]
+        },
+        "clean_class_probability": 0.7729107141494751,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 1986.7182999732904,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.8128000451251864,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474649.3846064,
+          "finished": 474651.3879512,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474649.3238316,
+      "finished": 474652.092083,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.000979989767074585,
+        "signed_attribution_sum": 0.003468761220574379,
+        "completeness_absolute_residual": 0.002488771453499794,
+        "completeness_relative_residual": 2.5395892254356354,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.002488771453499794,
+            "relative_residual": 2.5395892254356354
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0007408644305542111,
+          "max": 0.0008339648484252393,
+          "mean": 2.3043995361349036e-08,
+          "std": 4.220756617838558e-05,
+          "abs_sum": 3.1790919076767103,
+          "signed_sum": 0.0034687665337531474,
+          "positive_sum": 1.5912803371052315,
+          "negative_sum": -1.5878115705714784,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.6458468188893534e-11,
+            8.397536930715432e-06,
+            5.404818984970924e-05,
+            0.00017678435018751804,
+            0.0008339648484252393
+          ]
+        },
+        "gradient_abs_sum": 201.01374053955078,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 2753.207299974747,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.2837999858893454,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474649.3222062,
+          "finished": 474652.092137,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "attention_rollout",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474652.0933582,
+      "finished": 474652.2636976,
+      "details": {
+        "class_agnostic": true,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "attention_rollout",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 146.21590002207085,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.141700009815395,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474652.092207,
+          "finished": 474652.2637433,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradient_attention",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 474652.2650447,
+      "finished": 474652.5948486,
+      "details": {
+        "class_agnostic": false,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "gradient_attention",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 312.83989996882156,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.508800011128187,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474652.263828,
+          "finished": 474652.5948956,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 474651.3904406,
+      "finished": 474655.6267363,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.6166118551109951,
+        "surrogate_intercept": 0.7634799300058227,
+        "surrogate_local_prediction": 0.7723107278768258,
+        "actual_target_probability": 0.7729116082191467,
+        "raw_attribution_statistics": {
+          "min": -0.0030849380418658257,
+          "max": 0.004270132165402174,
+          "mean": 0.00018022036824639107,
+          "std": 0.0014252124549479332,
+          "abs_sum": 0.05562768382878858,
+          "signed_sum": 0.008830798044073163,
+          "positive_sum": 0.03222924093643087,
+          "negative_sum": -0.023398442892357707,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.0298837878508493e-05,
+            0.0010229225736111403,
+            0.002243125578388572,
+            0.003720863256603475,
+            0.004270132165402174
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 4219.438200001605,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.1441999706439674,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474651.3880801,
+          "finished": 474655.6267655,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    }
+  ],
+  "counters": {
+    "predictions": 8,
+    "methods": 63
+  },
+  "concurrent_pairs_observed": 53,
+  "image_prediction": [
+    "FAKE",
+    "85.78%",
+    "14.22%"
+  ],
+  "timing_scope": "AppTest wall time, includes model load, GPU warmup and rendering/serialization; not browser paint."
+}

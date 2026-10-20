@@ -1,0 +1,8 @@
+{
+  "device": "cpu",
+  "image_prediction": "REAL",
+  "video_prediction": "REAL",
+  "image_seconds": 0.33502350002527237,
+  "video_seconds": 0.47425759996986017,
+  "passed": true
+}

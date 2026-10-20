@@ -1,0 +1,144 @@
+{
+  "id": "S6",
+  "config": {
+    "id": "S6",
+    "model": "EfficientNet-B0 + one-layer LSTM",
+    "backbones": [
+      "efficientnet_b0"
+    ],
+    "preprocess": "face",
+    "balance": true,
+    "augment": true,
+    "kind": "temporal",
+    "seed": 42,
+    "max_epochs": 24,
+    "patience": 5,
+    "batch_videos": 32,
+    "optimizer": "AdamW",
+    "lr": 0.002,
+    "weight_decay": 0.01,
+    "AMP": true,
+    "encoders": "frozen ImageNet-1K",
+    "train_unit": "whole eight-frame video",
+    "sampling": "inverse-class-frequency video sampler, replacement, one training-set length per epoch",
+    "augmentation": "one deterministic flip/brightness/contrast/saturation view per training video, randomly original/view each epoch",
+    "preprocessing_spec": {
+      "size": 224,
+      "frames_per_video": 8,
+      "sampling": "normalized_bin_centers",
+      "faces": "yunet",
+      "align": true,
+      "margin": 1.3,
+      "normalization": "ImageNet",
+      "no_face_policy": "full_frame_fallback"
+    },
+    "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3"
+  },
+  "validation": {
+    "accuracy": 0.9028571428571428,
+    "precision": 1.0,
+    "real_precision": 0.39285714285714285,
+    "real_recall": 1.0,
+    "fake_recall": 0.8963414634146342,
+    "macro_f1": 0.7547200923406712,
+    "pr_auc": 0.9976468459404281,
+    "brier_score": 0.07721135106865358,
+    "recall": 0.8963414634146342,
+    "f1": 0.9453376205787781,
+    "roc_auc": 0.9645232815964522,
+    "balanced_accuracy": 0.9481707317073171,
+    "log_loss": 0.2693853375614683,
+    "confusion_matrix_real_fake": [
+      [
+        11,
+        0
+      ],
+      [
+        17,
+        147
+      ]
+    ],
+    "positive_class": "FAKE",
+    "threshold": 0.5,
+    "undefined_precision_recall_f1_policy": "zero when denominator zero",
+    "ece": 0.05952737537690124
+  },
+  "calibration": {
+    "temperature": 1.4091608530245567,
+    "fit_split": "validation",
+    "method": "scalar temperature on video aggregate log probabilities/logits",
+    "before": {
+      "accuracy": 0.9028571428571428,
+      "precision": 1.0,
+      "real_precision": 0.39285714285714285,
+      "real_recall": 1.0,
+      "fake_recall": 0.8963414634146342,
+      "macro_f1": 0.7547200923406712,
+      "pr_auc": 0.9976468459404281,
+      "brier_score": 0.07721135106865358,
+      "recall": 0.8963414634146342,
+      "f1": 0.9453376205787781,
+      "roc_auc": 0.9645232815964522,
+      "balanced_accuracy": 0.9481707317073171,
+      "log_loss": 0.2693853375614683,
+      "confusion_matrix_real_fake": [
+        [
+          11,
+          0
+        ],
+        [
+          17,
+          147
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "ece": 0.05952737537690124
+    },
+    "after": {
+      "accuracy": 0.9028571428571428,
+      "precision": 1.0,
+      "real_precision": 0.39285714285714285,
+      "real_recall": 1.0,
+      "fake_recall": 0.8963414634146342,
+      "macro_f1": 0.7547200923406712,
+      "pr_auc": 0.9976468459404281,
+      "brier_score": 0.07514492951224594,
+      "recall": 0.8963414634146342,
+      "f1": 0.9453376205787781,
+      "roc_auc": 0.9645232815964522,
+      "balanced_accuracy": 0.9481707317073171,
+      "log_loss": 0.25123127192886474,
+      "confusion_matrix_real_fake": [
+        [
+          11,
+          0
+        ],
+        [
+          17,
+          147
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "ece": 0.026549051024897418
+    },
+    "inconclusive_enabled": false,
+    "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+  },
+  "training_seconds": 3.1573886999394745,
+  "training_cost_scope": "head training only; shared encoder/cache extraction reported separately",
+  "epochs": 13,
+  "best_epoch": 8,
+  "inference_ms_per_video": 23.821140852690277,
+  "latency_scope": "encoder batch-eight forward plus batch-one head; excludes decode/cropping/XAI",
+  "peak_vram_bytes": 158609920,
+  "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt",
+  "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc",
+  "train_videos": 813,
+  "validation_videos": 175,
+  "trainable_parameters": 94594,
+  "attention": "native EfficientNet squeeze/excitation; no added ECA/CBAM"
+}

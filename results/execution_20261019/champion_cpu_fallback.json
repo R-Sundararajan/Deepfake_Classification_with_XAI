@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "device": "cpu",
+  "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+  "image_prediction": "REAL",
+  "video_prediction": "REAL",
+  "image_seconds": 0.3448645999887958,
+  "video_seconds": 0.5227287000161596
+}

@@ -1,0 +1,209 @@
+{
+  "records": [
+    {
+      "id": "S0",
+      "forward_ms_per_video": 7.148753333603963,
+      "peak_vram_bytes": 135564800,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+      "model_artifact_bytes": 44790475,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\models\\best_resnet18.pth"
+      ]
+    },
+    {
+      "id": "S1",
+      "forward_ms_per_video": 25.96608000070167,
+      "peak_vram_bytes": 97455104,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+      "model_artifact_bytes": 16349842,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1\\best.pt"
+      ]
+    },
+    {
+      "id": "S1p",
+      "forward_ms_per_video": 27.769836666993797,
+      "peak_vram_bytes": 97455104,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+      "model_artifact_bytes": 16349842,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1p\\best.pt"
+      ]
+    },
+    {
+      "id": "S1b",
+      "forward_ms_per_video": 23.71963666713176,
+      "peak_vram_bytes": 97455104,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+      "model_artifact_bytes": 16349906,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1b\\best.pt"
+      ]
+    },
+    {
+      "id": "S2",
+      "forward_ms_per_video": 22.664853332874674,
+      "peak_vram_bytes": 97455104,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "model_artifact_bytes": 16349970,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S2\\best.pt"
+      ]
+    },
+    {
+      "id": "S3",
+      "forward_ms_per_video": 18.508740000349157,
+      "peak_vram_bytes": 71225344,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "8ba1c464ffcb319870533285ffad0aa688d3fdcc624e48d9effd8800975448c4",
+      "model_artifact_bytes": 22162522,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\deit_tiny_patch16_224.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S3\\best.pt"
+      ]
+    },
+    {
+      "id": "S4",
+      "forward_ms_per_video": 19.203826666732006,
+      "peak_vram_bytes": 71225344,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "5091341e18e4ed0c304f015749282a0736bf05c636743b71590be82888d7fd0f",
+      "model_artifact_bytes": 22162650,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\deit_tiny_patch16_224.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S4\\best.pt"
+      ]
+    },
+    {
+      "id": "S5",
+      "forward_ms_per_video": 44.30409333241793,
+      "peak_vram_bytes": 119577088,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "model_artifact_bytes": 38509357,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\deit_tiny_patch16_224.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S5\\best.pt"
+      ]
+    },
+    {
+      "id": "S6",
+      "forward_ms_per_video": 24.82176000097146,
+      "peak_vram_bytes": 97834496,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc",
+      "model_artifact_bytes": 16743335,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S2\\best.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt"
+      ]
+    },
+    {
+      "id": "S7",
+      "forward_ms_per_video": 24.79713666640843,
+      "peak_vram_bytes": 97834496,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "8a1f91873fae00c452e8e24f5907a3c330f63951f064c7d0bee0202afb19a44b",
+      "model_artifact_bytes": 16743694,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S2\\best.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S7\\config.json"
+      ]
+    },
+    {
+      "id": "S8",
+      "forward_ms_per_video": 41.54719666500265,
+      "peak_vram_bytes": 119956480,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "9d6c36fb1496de413c9c7f16c9fd28fa76078e423dc0f2807496f7fae2cd458d",
+      "model_artifact_bytes": 38903110,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\deit_tiny_patch16_224.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S5\\best.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S8\\config.json"
+      ]
+    }
+  ],
+  "selection_effect": "Retrospective runtime measurement only; frozen champion unchanged"
+}

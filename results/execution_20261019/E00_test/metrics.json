@@ -1,0 +1,35 @@
+{
+  "split": "test",
+  "samples": 20000,
+  "positive_class": "FAKE",
+  "accuracy": 0.9712,
+  "balanced_accuracy": 0.9712000000000001,
+  "precision": 0.9893042575285566,
+  "recall": 0.9527,
+  "f1_score": 0.9706571574121243,
+  "roc_auc": 0.9973239,
+  "confusion_matrix_labels": [
+    "REAL",
+    "FAKE"
+  ],
+  "confusion_matrix": [
+    [
+      9897,
+      103
+    ],
+    [
+      473,
+      9527
+    ]
+  ],
+  "checkpoint_epoch": 2,
+  "checkpoint_valid_accuracy": 0.96925,
+  "training_seconds": 658.6758378999948,
+  "dataset": "Real vs Fake Faces",
+  "evaluation_unit": "image",
+  "evaluation_seconds": 125.43872640002519,
+  "inference_ms_per_image": 0.6312886900181184,
+  "inference_timing_scope": "Batched forward pass, softmax and CUDA synchronization; excludes data loading",
+  "peak_gpu_mib": 525.0078125,
+  "checkpoint_bytes": 44790475
+}

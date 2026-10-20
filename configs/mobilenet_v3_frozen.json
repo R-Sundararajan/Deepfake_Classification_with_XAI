@@ -1,0 +1,5 @@
+{
+  "experiment_id": "A3_mobilenet_v3_frozen",
+  "model": {"backbone": "mobilenet_v3_large", "attention": "none", "fusion": "none"},
+  "comparison": "Stage A: backbone only; native squeeze-and-excitation retained"
+}

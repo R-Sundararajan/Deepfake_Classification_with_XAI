@@ -1,0 +1,7 @@
+{
+  "experiment_id": "C2_resnet18_noise",
+  "model": {"backbone": "resnet18", "attention": "none", "fusion": "none"},
+  "augmentation": "noise",
+  "reference_experiment": "A1_resnet18_frozen",
+  "comparison": "Basic augmentation plus Gaussian RGB noise sigma 0.01..0.03 at probability 0.5"
+}

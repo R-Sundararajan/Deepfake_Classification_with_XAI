@@ -1,0 +1,21 @@
+{
+  "experiment_id": "E03_attention",
+  "manifest": "results/execution_20261019/dataset/manifest.csv",
+  "model": {
+    "backbone": "efficientnet_b0",
+    "attention": "eca",
+    "fusion": "none"
+  },
+  "augmentation": "basic",
+  "head_epochs": 1,
+  "fine_tune_epochs": 2,
+  "fine_tune_blocks": 2,
+  "batch_size": 32,
+  "head_lr": 0.001,
+  "backbone_lr": 0.0001,
+  "patience": 2,
+  "seed": 42,
+  "max_minutes": 20,
+  "reference_experiment": "E02_efficientnet_b0",
+  "justification": "Add lightweight ECA channel attention"
+}

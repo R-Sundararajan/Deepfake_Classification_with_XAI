@@ -1,0 +1,22 @@
+{
+  "complete": true,
+  "experiments": [
+    "S0",
+    "S1",
+    "S1p",
+    "S1b",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+  ],
+  "storage": {
+    "phase_bytes": 14607783415,
+    "free_bytes": 76409229312,
+    "limit_bytes": 32212254720,
+    "headroom_bytes": 5368709120
+  }
+}

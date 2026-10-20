@@ -1,0 +1,17 @@
+{
+  "dataset": "ImageNet-1K pretrained model weights, not additional DFDC/media downloads",
+  "weights": [
+    {
+      "filename": "efficientnet_b0_rwightman-7f5810bc.pth",
+      "source": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+      "sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+      "bytes": 21444401
+    },
+    {
+      "filename": "deit_tiny_patch16_224-a1311bcf.pth",
+      "source": "https://dl.fbaipublicfiles.com/deit/deit_tiny_patch16_224-a1311bcf.pth",
+      "sha256": "a1311bcf4f24e3c95adaa75535db67bc4412d95535b98f7c1dfd1164dda41c97",
+      "bytes": 22917895
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "batch_videos": 2,
+  "sequence_length": 8,
+  "loss": 1.0739549398422241,
+  "peak_vram_bytes": 142464000
+}

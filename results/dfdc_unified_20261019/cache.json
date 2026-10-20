@@ -1,0 +1,35 @@
+{
+  "complete": true,
+  "videos": 1162,
+  "frames": 9296,
+  "shape": [
+    8,
+    224,
+    224,
+    3
+  ],
+  "format": "lossless uint8 npz, raw and aligned variants; no test labels used by preprocessing",
+  "preprocessing": {
+    "size": 224,
+    "frames_per_video": 8,
+    "sampling": "normalized_bin_centers",
+    "faces": "yunet",
+    "align": true,
+    "margin": 1.3,
+    "normalization": "ImageNet",
+    "no_face_policy": "full_frame_fallback"
+  },
+  "crop_methods": {
+    "yunet_landmark_aligned": 7845,
+    "no_face_full_frame_fallback": 1451
+  },
+  "seconds": 457.64928059995873,
+  "timing_scope": "Final completed cache pass; reuses complete files from interrupted preparation passes",
+  "CPU_workers": 2,
+  "storage": {
+    "phase_bytes": 14418851110,
+    "free_bytes": 76598759424,
+    "limit_bytes": 32212254720,
+    "headroom_bytes": 5368709120
+  }
+}

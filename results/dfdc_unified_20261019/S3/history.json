@@ -1,0 +1,233 @@
+[
+  {
+    "epoch": 1,
+    "loss": 0.667517208136045,
+    "seconds": 0.142915099975653,
+    "validation": {
+      "accuracy": 0.7371428571428571,
+      "precision": 0.946969696969697,
+      "real_precision": 0.09302325581395349,
+      "real_recall": 0.36363636363636365,
+      "fake_recall": 0.7621951219512195,
+      "macro_f1": 0.4963713713713714,
+      "pr_auc": 0.9545482509193904,
+      "brier_score": 0.2376783809052934,
+      "recall": 0.7621951219512195,
+      "f1": 0.8445945945945946,
+      "roc_auc": 0.6164079822616407,
+      "balanced_accuracy": 0.5629157427937916,
+      "log_loss": 0.670557960277901,
+      "confusion_matrix_real_fake": [
+        [
+          4,
+          7
+        ],
+        [
+          39,
+          125
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero"
+    }
+  },
+  {
+    "epoch": 2,
+    "loss": 0.6141901153784531,
+    "seconds": 0.11730480002006516,
+    "validation": {
+      "accuracy": 0.6914285714285714,
+      "precision": 0.9583333333333334,
+      "real_precision": 0.10909090909090909,
+      "real_recall": 0.5454545454545454,
+      "fake_recall": 0.7012195121951219,
+      "macro_f1": 0.4958386683738797,
+      "pr_auc": 0.9522129931237939,
+      "brier_score": 0.21589214658146547,
+      "recall": 0.7012195121951219,
+      "f1": 0.8098591549295775,
+      "roc_auc": 0.6252771618625277,
+      "balanced_accuracy": 0.6233370288248337,
+      "log_loss": 0.624498373824484,
+      "confusion_matrix_real_fake": [
+        [
+          6,
+          5
+        ],
+        [
+          49,
+          115
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero"
+    }
+  },
+  {
+    "epoch": 3,
+    "loss": 0.5757666814785737,
+    "seconds": 0.12251539999851957,
+    "validation": {
+      "accuracy": 0.8171428571428572,
+      "precision": 0.9459459459459459,
+      "real_precision": 0.1111111111111111,
+      "real_recall": 0.2727272727272727,
+      "fake_recall": 0.8536585365853658,
+      "macro_f1": 0.5276653171390013,
+      "pr_auc": 0.952774370980664,
+      "brier_score": 0.1931671101411507,
+      "recall": 0.8536585365853658,
+      "f1": 0.8974358974358975,
+      "roc_auc": 0.6280487804878049,
+      "balanced_accuracy": 0.5631929046563193,
+      "log_loss": 0.5769863250717218,
+      "confusion_matrix_real_fake": [
+        [
+          3,
+          8
+        ],
+        [
+          24,
+          140
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero"
+    }
+  },
+  {
+    "epoch": 4,
+    "loss": 0.5439902807657535,
+    "seconds": 0.1205026000388898,
+    "validation": {
+      "accuracy": 0.8685714285714285,
+      "precision": 0.9490445859872612,
+      "real_precision": 0.16666666666666666,
+      "real_recall": 0.2727272727272727,
+      "fake_recall": 0.9085365853658537,
+      "macro_f1": 0.5676227306907294,
+      "pr_auc": 0.9493108308094717,
+      "brier_score": 0.18538495964187265,
+      "recall": 0.9085365853658537,
+      "f1": 0.9283489096573209,
+      "roc_auc": 0.6241685144124169,
+      "balanced_accuracy": 0.5906319290465631,
+      "log_loss": 0.5615342933164281,
+      "confusion_matrix_real_fake": [
+        [
+          3,
+          8
+        ],
+        [
+          15,
+          149
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero"
+    }
+  },
+  {
+    "epoch": 5,
+    "loss": 0.511864612881954,
+    "seconds": 0.12035639997338876,
+    "validation": {
+      "accuracy": 0.6114285714285714,
+      "precision": 0.9444444444444444,
+      "real_precision": 0.07462686567164178,
+      "real_recall": 0.45454545454545453,
+      "fake_recall": 0.6219512195121951,
+      "macro_f1": 0.4391025641025641,
+      "pr_auc": 0.9418995927869733,
+      "brier_score": 0.20619053322034261,
+      "recall": 0.6219512195121951,
+      "f1": 0.75,
+      "roc_auc": 0.5914634146341463,
+      "balanced_accuracy": 0.5382483370288248,
+      "log_loss": 0.600984530884735,
+      "confusion_matrix_real_fake": [
+        [
+          5,
+          6
+        ],
+        [
+          62,
+          102
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero"
+    }
+  },
+  {
+    "epoch": 6,
+    "loss": 0.4860515216222176,
+    "seconds": 0.13980479998281226,
+    "validation": {
+      "accuracy": 0.9371428571428572,
+      "precision": 0.9421965317919075,
+      "real_precision": 0.5,
+      "real_recall": 0.09090909090909091,
+      "fake_recall": 0.9939024390243902,
+      "macro_f1": 0.5606026021456288,
+      "pr_auc": 0.9332403574852421,
+      "brier_score": 0.15104853747623806,
+      "recall": 0.9939024390243902,
+      "f1": 0.9673590504451038,
+      "roc_auc": 0.5886917960088692,
+      "balanced_accuracy": 0.5424057649667405,
+      "log_loss": 0.4892289785177676,
+      "confusion_matrix_real_fake": [
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          163
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero"
+    }
+  },
+  {
+    "epoch": 7,
+    "loss": 0.4604791941551062,
+    "seconds": 0.12573349999729544,
+    "validation": {
+      "accuracy": 0.9371428571428572,
+      "precision": 0.9421965317919075,
+      "real_precision": 0.5,
+      "real_recall": 0.09090909090909091,
+      "fake_recall": 0.9939024390243902,
+      "macro_f1": 0.5606026021456288,
+      "pr_auc": 0.9592003185931687,
+      "brier_score": 0.13080154458123014,
+      "recall": 0.9939024390243902,
+      "f1": 0.9673590504451038,
+      "roc_auc": 0.6685144124168514,
+      "balanced_accuracy": 0.5424057649667405,
+      "log_loss": 0.44064412888940063,
+      "confusion_matrix_real_fake": [
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          163
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero"
+    }
+  }
+]

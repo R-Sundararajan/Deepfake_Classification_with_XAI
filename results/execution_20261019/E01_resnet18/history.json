@@ -1,0 +1,101 @@
+[
+  {
+    "epoch": 1,
+    "phase": "head",
+    "training_loss": 0.5936470454533895,
+    "validation_loss": 0.5453939638137817,
+    "validation": {
+      "accuracy": 0.7225,
+      "precision": 0.671022290545734,
+      "recall": 0.873,
+      "f1": 0.758800521512386,
+      "roc_auc": 0.8155189999999999,
+      "balanced_accuracy": 0.7224999999999999,
+      "log_loss": 0.5453939646287954,
+      "confusion_matrix_real_fake": [
+        [
+          572,
+          428
+        ],
+        [
+          127,
+          873
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "samples": 2000,
+      "loss": 0.5453939638137817,
+      "inference_ms_per_image": 0.8315448001085315,
+      "evaluation_seconds": 26.405857300036587
+    },
+    "epoch_seconds": 103.21691630000714
+  },
+  {
+    "epoch": 2,
+    "phase": "fine_tune",
+    "training_loss": 0.42966815996170044,
+    "validation_loss": 0.2893677537441254,
+    "validation": {
+      "accuracy": 0.874,
+      "precision": 0.8589251439539347,
+      "recall": 0.895,
+      "f1": 0.8765915768854065,
+      "roc_auc": 0.9496679999999998,
+      "balanced_accuracy": 0.874,
+      "log_loss": 0.28936776162324457,
+      "confusion_matrix_real_fake": [
+        [
+          853,
+          147
+        ],
+        [
+          105,
+          895
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "samples": 2000,
+      "loss": 0.2893677537441254,
+      "inference_ms_per_image": 0.759230949828634,
+      "evaluation_seconds": 22.641938199987635
+    },
+    "epoch_seconds": 83.70619729999453
+  },
+  {
+    "epoch": 3,
+    "phase": "fine_tune",
+    "training_loss": 0.24107886718710264,
+    "validation_loss": 0.20372224885225296,
+    "validation": {
+      "accuracy": 0.908,
+      "precision": 0.9188911704312115,
+      "recall": 0.895,
+      "f1": 0.9067882472137792,
+      "roc_auc": 0.975501,
+      "balanced_accuracy": 0.908,
+      "log_loss": 0.2037222501921609,
+      "confusion_matrix_real_fake": [
+        [
+          921,
+          79
+        ],
+        [
+          105,
+          895
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "samples": 2000,
+      "loss": 0.20372224885225296,
+      "inference_ms_per_image": 0.7572456999914721,
+      "evaluation_seconds": 22.07370649999939
+    },
+    "epoch_seconds": 81.28896410000743
+  }
+]

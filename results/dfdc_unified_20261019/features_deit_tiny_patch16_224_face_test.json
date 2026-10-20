@@ -1,0 +1,8 @@
+{
+  "videos": 174,
+  "frames": 1392,
+  "forward_seconds": 3.2623625000123866,
+  "forward_ms_per_video": 18.74920977018613,
+  "peak_vram_bytes": 113694720,
+  "encoder_sha256": "e1cf022b64547ae004b720dd45047b80fdf5361ad8eb9d26a106e7e33fe1e057"
+}

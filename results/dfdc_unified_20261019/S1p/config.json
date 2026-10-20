@@ -1,0 +1,34 @@
+{
+  "id": "S1p",
+  "model": "EfficientNet-B0",
+  "backbones": [
+    "efficientnet_b0"
+  ],
+  "preprocess": "face",
+  "balance": false,
+  "augment": false,
+  "kind": "spatial",
+  "seed": 42,
+  "max_epochs": 24,
+  "patience": 5,
+  "batch_videos": 32,
+  "optimizer": "AdamW",
+  "lr": 0.002,
+  "weight_decay": 0.01,
+  "AMP": true,
+  "encoders": "frozen ImageNet-1K",
+  "train_unit": "whole eight-frame video",
+  "sampling": "natural shuffled videos",
+  "augmentation": "none",
+  "preprocessing_spec": {
+    "size": 224,
+    "frames_per_video": 8,
+    "sampling": "normalized_bin_centers",
+    "faces": "yunet",
+    "align": true,
+    "margin": 1.3,
+    "normalization": "ImageNet",
+    "no_face_policy": "full_frame_fallback"
+  },
+  "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3"
+}

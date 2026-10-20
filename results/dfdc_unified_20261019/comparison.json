@@ -1,0 +1,2634 @@
+{
+  "audit": {
+    "format": "local_dfdc_normalized8_v1",
+    "metadata_path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\metadata\\metadata.json",
+    "metadata_sha256": "ec95a01cdcb8958ce8983cb12c0aaf2fbfda0b496831ad2a0eb7775a726e3212",
+    "local_videos": 1163,
+    "labeled_videos": 1162,
+    "label_counts": {
+      "FAKE": 1088,
+      "REAL": 74
+    },
+    "unlabeled_quarantined": [
+      {
+        "filename": "elyvkuldpz.mp4",
+        "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\train_sample_videos\\elyvkuldpz.mp4",
+        "sha256": "caafeb366b13681777235dbcc3fd134801c4b28f4ae1052eecf1545c57760bee",
+        "reason": "no metadata label; excluded from all supervised stages"
+      }
+    ],
+    "conflicting_labels": 0,
+    "metadata_entries": 1334,
+    "provenance": "Existing local subset matched by filename to supplied Kaggle community-mirror metadata; not certified official distribution",
+    "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3",
+    "seed": 42,
+    "source_groups": 86,
+    "split_counts": {
+      "train": {
+        "videos": 813,
+        "labels": {
+          "REAL": 52,
+          "FAKE": 761
+        },
+        "source_groups": 54
+      },
+      "validation": {
+        "videos": 175,
+        "labels": {
+          "FAKE": 164,
+          "REAL": 11
+        },
+        "source_groups": 17
+      },
+      "test": {
+        "videos": 174,
+        "labels": {
+          "FAKE": 163,
+          "REAL": 11
+        },
+        "source_groups": 15
+      }
+    },
+    "duration_by_class": {
+      "REAL": {
+        "count": 74,
+        "total_seconds": 740.7683302802152,
+        "minimum": 10.010277217943756,
+        "p10": 10.010310619938537,
+        "p25": 10.010344022156227,
+        "median": 10.010344022156227,
+        "mean": 10.01038284162453,
+        "p75": 10.010444230146787,
+        "p90": 10.010477633256142,
+        "maximum": 10.010511036588419
+      },
+      "FAKE": {
+        "count": 1088,
+        "total_seconds": 10891.304968103468,
+        "minimum": 10.010277217943756,
+        "p10": 10.010310619938537,
+        "p25": 10.010344022156227,
+        "median": 10.01041082726035,
+        "mean": 10.010390595683335,
+        "p75": 10.010444230146787,
+        "p90": 10.010477633256142,
+        "maximum": 10.010511036588419
+      }
+    },
+    "decode_errors": [],
+    "all_fake_accuracy": 0.9363166953528399,
+    "warnings": [
+      "12 original source names absent from sample; siblings remain grouped through these external names.",
+      "Source-video grouping does not guarantee complete actor disjointness. Optional official identity IDs are grouped when provided; sample metadata normally lacks them."
+    ],
+    "probe_scope": "All labeled containers and eight normalized sampled frames per video; not exhaustive all-frame decoding",
+    "preprocessing": {
+      "size": 224,
+      "frames_per_video": 8,
+      "sampling": "normalized_bin_centers",
+      "faces": "yunet",
+      "align": true,
+      "margin": 1.3,
+      "normalization": "ImageNet",
+      "no_face_policy": "full_frame_fallback"
+    },
+    "audit_seconds": 1407.347584000032,
+    "storage": {
+      "phase_bytes": 11582864305,
+      "free_bytes": 79403642880,
+      "limit_bytes": 32212254720,
+      "headroom_bytes": 5368709120
+    }
+  },
+  "freeze": {
+    "format": "unified_freeze_v1",
+    "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3",
+    "selection_split": "validation",
+    "selection_rule": "both recalls >0; highest balanced accuracy, macro-F1, ROC-AUC, lower measured cost",
+    "champion": "S6",
+    "experiments": {
+      "S0": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\models\\best_resnet18.pth",
+        "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+        "temperature": 20.0854102608446,
+        "summary_sha256": "cc6713ae1f11ef4cd99d751d7c78721f451256fc42fc4a899037b2512321c069"
+      },
+      "S1": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1\\best.pt",
+        "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+        "temperature": 2.4789721138480205,
+        "summary_sha256": "c92c146c867361901f64c8a03fecf5f3b08f675da2c891837148f51e00dfd87c"
+      },
+      "S1p": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1p\\best.pt",
+        "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+        "temperature": 0.5559516246977887,
+        "summary_sha256": "241189e281f0fdc39f4880222ea0f2e6e8fd65d3089ea2f3c3c7290f04e32239"
+      },
+      "S1b": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1b\\best.pt",
+        "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+        "temperature": 4.571204902317711,
+        "summary_sha256": "2fb4d9309d52b7cc6163ee17e3d90642144539b728aad2ff57a8b88bda01b59b"
+      },
+      "S2": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S2\\best.pt",
+        "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+        "temperature": 3.97255472437057,
+        "summary_sha256": "4d2d727b6b30f226a9e94ad2c3bce20aef11e2ada93633aa52be83ccce94e81f"
+      },
+      "S3": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S3\\best.pt",
+        "checkpoint_sha256": "8ba1c464ffcb319870533285ffad0aa688d3fdcc624e48d9effd8800975448c4",
+        "temperature": 0.3658431170510292,
+        "summary_sha256": "f8dbfacfbaffea85d916e8f008ff1217176ff24d40c1944a5a18a90c2c208c9b"
+      },
+      "S4": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S4\\best.pt",
+        "checkpoint_sha256": "5091341e18e4ed0c304f015749282a0736bf05c636743b71590be82888d7fd0f",
+        "temperature": 0.9051385550507373,
+        "summary_sha256": "478e9a4248e0ee1fc4e2bc4c067c0dbbee3c2a2ba4edd2542b4d2c6dfefdfabe"
+      },
+      "S5": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S5\\best.pt",
+        "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+        "temperature": 1.5250081164822207,
+        "summary_sha256": "6a6135a2943397fc28e1b09746b1e534928eb2b740b2fb16ffe355b82a383097"
+      },
+      "S6": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt",
+        "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc",
+        "temperature": 1.4091608530245567,
+        "summary_sha256": "14ff58b9634542b3b61212cdcde1aade5e6eccd7d19b8d37b0086f243ddda572"
+      },
+      "S7": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S7\\config.json",
+        "checkpoint_sha256": "8a1f91873fae00c452e8e24f5907a3c330f63951f064c7d0bee0202afb19a44b",
+        "temperature": 0.8296057008980618,
+        "summary_sha256": "a5fe2c1b3f33335597f37276df5ba8d8fb35021faabbc392f61d8d82c606443a"
+      },
+      "S8": {
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S8\\config.json",
+        "checkpoint_sha256": "9d6c36fb1496de413c9c7f16c9fd28fa76078e423dc0f2807496f7fae2cd458d",
+        "temperature": 0.8139183552856663,
+        "summary_sha256": "b567d09208d8d214b4d38c799f3df0bd76abf53aa036ae369c3b74222ced4709"
+      }
+    },
+    "optional_skipped": {
+      "added_ECA_CBAM": "Deferred: prioritize frozen spatial, hybrid and temporal controlled comparisons",
+      "temporal_transformer": "Deferred: small source-group cohort and laptop budget",
+      "full_backbone_finetuning": "Not run; all new encoders frozen for controlled feature-head transfer"
+    }
+  },
+  "validation": [
+    {
+      "id": "S0",
+      "config": {
+        "id": "S0",
+        "model": "Preserved image ResNet-18",
+        "backbones": [],
+        "preprocess": "raw",
+        "balance": false,
+        "augment": false,
+        "kind": "legacy"
+      },
+      "validation": {
+        "accuracy": 0.06285714285714286,
+        "precision": 0.0,
+        "real_precision": 0.06285714285714286,
+        "real_recall": 1.0,
+        "fake_recall": 0.0,
+        "macro_f1": 0.05913978494623656,
+        "pr_auc": 0.9379592390572321,
+        "brier_score": 0.9370714657807658,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.4972283813747229,
+        "balanced_accuracy": 0.5,
+        "log_loss": 14.301143175841517,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            164,
+            0
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.9371025815791382
+      },
+      "calibration": {
+        "temperature": 20.0854102608446,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.06285714285714286,
+          "precision": 0.0,
+          "real_precision": 0.06285714285714286,
+          "real_recall": 1.0,
+          "fake_recall": 0.0,
+          "macro_f1": 0.05913978494623656,
+          "pr_auc": 0.9379592390572321,
+          "brier_score": 0.9370714657807658,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.4972283813747229,
+          "balanced_accuracy": 0.5,
+          "log_loss": 14.301143175841517,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              164,
+              0
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.9371025815791382
+        },
+        "after": {
+          "accuracy": 0.06285714285714286,
+          "precision": 0.0,
+          "real_precision": 0.06285714285714286,
+          "real_recall": 1.0,
+          "fake_recall": 0.0,
+          "macro_f1": 0.05913978494623656,
+          "pr_auc": 0.9379592390572321,
+          "brier_score": 0.441591106529682,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.4972283813747229,
+          "balanced_accuracy": 0.5,
+          "log_loss": 1.0971251685213863,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              164,
+              0
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.6179414876035644
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 0,
+      "training_note": "Preserved image-trained checkpoint, no DFDC training",
+      "inference_ms_per_video": 9.461595428043179,
+      "peak_vram_bytes": 148410368,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\models\\best_resnet18.pth",
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+      "validation_videos": 175,
+      "elapsed_seconds": 8.118141799990553
+    },
+    {
+      "id": "S1",
+      "config": {
+        "id": "S1",
+        "model": "EfficientNet-B0",
+        "backbones": [
+          "efficientnet_b0"
+        ],
+        "preprocess": "raw",
+        "balance": false,
+        "augment": false,
+        "kind": "spatial",
+        "seed": 42,
+        "max_epochs": 24,
+        "patience": 5,
+        "batch_videos": 32,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "AMP": true,
+        "encoders": "frozen ImageNet-1K",
+        "train_unit": "whole eight-frame video",
+        "sampling": "natural shuffled videos",
+        "augmentation": "none",
+        "preprocessing_spec": {
+          "size": 224,
+          "frames_per_video": 8,
+          "sampling": "normalized_bin_centers",
+          "faces": "yunet",
+          "align": true,
+          "margin": 1.3,
+          "normalization": "ImageNet",
+          "no_face_policy": "full_frame_fallback"
+        },
+        "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3"
+      },
+      "validation": {
+        "accuracy": 0.5142857142857142,
+        "precision": 0.9647058823529412,
+        "real_precision": 0.08888888888888889,
+        "real_recall": 0.7272727272727273,
+        "fake_recall": 0.5,
+        "macro_f1": 0.40852518986838443,
+        "pr_auc": 0.9715406642159136,
+        "brier_score": 0.255018246686236,
+        "recall": 0.5,
+        "f1": 0.6586345381526104,
+        "roc_auc": 0.6945676274944568,
+        "balanced_accuracy": 0.6136363636363636,
+        "log_loss": 0.7079671321972731,
+        "confusion_matrix_real_fake": [
+          [
+            8,
+            3
+          ],
+          [
+            82,
+            82
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.24032560123477528
+      },
+      "calibration": {
+        "temperature": 2.4789721138480205,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.5142857142857142,
+          "precision": 0.9647058823529412,
+          "real_precision": 0.08888888888888889,
+          "real_recall": 0.7272727272727273,
+          "fake_recall": 0.5,
+          "macro_f1": 0.40852518986838443,
+          "pr_auc": 0.9715406642159136,
+          "brier_score": 0.255018246686236,
+          "recall": 0.5,
+          "f1": 0.6586345381526104,
+          "roc_auc": 0.6945676274944568,
+          "balanced_accuracy": 0.6136363636363636,
+          "log_loss": 0.7079671321972731,
+          "confusion_matrix_real_fake": [
+            [
+              8,
+              3
+            ],
+            [
+              82,
+              82
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.24032560123477528
+        },
+        "after": {
+          "accuracy": 0.5142857142857142,
+          "precision": 0.9647058823529412,
+          "real_precision": 0.08888888888888889,
+          "real_recall": 0.7272727272727273,
+          "fake_recall": 0.5,
+          "macro_f1": 0.40852518986838443,
+          "pr_auc": 0.9715406642159136,
+          "brier_score": 0.2412574282490252,
+          "recall": 0.5,
+          "f1": 0.6586345381526104,
+          "roc_auc": 0.6945676274944568,
+          "balanced_accuracy": 0.6136363636363636,
+          "log_loss": 0.6750435560292124,
+          "confusion_matrix_real_fake": [
+            [
+              8,
+              3
+            ],
+            [
+              82,
+              82
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.20863436458618986
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 1.1496591999894008,
+      "training_cost_scope": "head training only; shared encoder/cache extraction reported separately",
+      "epochs": 6,
+      "best_epoch": 1,
+      "inference_ms_per_video": 23.856202001084707,
+      "latency_scope": "encoder batch-eight forward plus batch-one head; excludes decode/cropping/XAI",
+      "peak_vram_bytes": 145117696,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1\\best.pt",
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+      "train_videos": 813,
+      "validation_videos": 175,
+      "trainable_parameters": 2562,
+      "attention": "native EfficientNet squeeze/excitation; no added ECA/CBAM"
+    },
+    {
+      "id": "S1p",
+      "config": {
+        "id": "S1p",
+        "model": "EfficientNet-B0",
+        "backbones": [
+          "efficientnet_b0"
+        ],
+        "preprocess": "face",
+        "balance": false,
+        "augment": false,
+        "kind": "spatial",
+        "seed": 42,
+        "max_epochs": 24,
+        "patience": 5,
+        "batch_videos": 32,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "AMP": true,
+        "encoders": "frozen ImageNet-1K",
+        "train_unit": "whole eight-frame video",
+        "sampling": "natural shuffled videos",
+        "augmentation": "none",
+        "preprocessing_spec": {
+          "size": 224,
+          "frames_per_video": 8,
+          "sampling": "normalized_bin_centers",
+          "faces": "yunet",
+          "align": true,
+          "margin": 1.3,
+          "normalization": "ImageNet",
+          "no_face_policy": "full_frame_fallback"
+        },
+        "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3"
+      },
+      "validation": {
+        "accuracy": 0.9542857142857143,
+        "precision": 0.9642857142857143,
+        "real_precision": 0.7142857142857143,
+        "real_recall": 0.45454545454545453,
+        "fake_recall": 0.9878048780487805,
+        "macro_f1": 0.7657295850066934,
+        "pr_auc": 0.9899860119212932,
+        "brier_score": 0.051451688654689604,
+        "recall": 0.9878048780487805,
+        "f1": 0.9759036144578314,
+        "roc_auc": 0.8797117516629712,
+        "balanced_accuracy": 0.7211751662971175,
+        "log_loss": 0.19476598298822476,
+        "confusion_matrix_real_fake": [
+          [
+            5,
+            6
+          ],
+          [
+            2,
+            162
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.0781732121139743
+      },
+      "calibration": {
+        "temperature": 0.5559516246977887,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.9542857142857143,
+          "precision": 0.9642857142857143,
+          "real_precision": 0.7142857142857143,
+          "real_recall": 0.45454545454545453,
+          "fake_recall": 0.9878048780487805,
+          "macro_f1": 0.7657295850066934,
+          "pr_auc": 0.9899860119212932,
+          "brier_score": 0.051451688654689604,
+          "recall": 0.9878048780487805,
+          "f1": 0.9759036144578314,
+          "roc_auc": 0.8797117516629712,
+          "balanced_accuracy": 0.7211751662971175,
+          "log_loss": 0.19476598298822476,
+          "confusion_matrix_real_fake": [
+            [
+              5,
+              6
+            ],
+            [
+              2,
+              162
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.0781732121139743
+        },
+        "after": {
+          "accuracy": 0.9542857142857143,
+          "precision": 0.9642857142857143,
+          "real_precision": 0.7142857142857143,
+          "real_recall": 0.45454545454545453,
+          "fake_recall": 0.9878048780487805,
+          "macro_f1": 0.7657295850066934,
+          "pr_auc": 0.9899860119212932,
+          "brier_score": 0.04281379076251465,
+          "recall": 0.9878048780487805,
+          "f1": 0.9759036144578314,
+          "roc_auc": 0.8797117516629712,
+          "balanced_accuracy": 0.7211751662971175,
+          "log_loss": 0.16254822366925883,
+          "confusion_matrix_real_fake": [
+            [
+              5,
+              6
+            ],
+            [
+              2,
+              162
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.042850013612305664
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 2.2200344998855144,
+      "training_cost_scope": "head training only; shared encoder/cache extraction reported separately",
+      "epochs": 17,
+      "best_epoch": 12,
+      "inference_ms_per_video": 23.49809685272963,
+      "latency_scope": "encoder batch-eight forward plus batch-one head; excludes decode/cropping/XAI",
+      "peak_vram_bytes": 145117696,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1p\\best.pt",
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+      "train_videos": 813,
+      "validation_videos": 175,
+      "trainable_parameters": 2562,
+      "attention": "native EfficientNet squeeze/excitation; no added ECA/CBAM"
+    },
+    {
+      "id": "S1b",
+      "config": {
+        "id": "S1b",
+        "model": "EfficientNet-B0",
+        "backbones": [
+          "efficientnet_b0"
+        ],
+        "preprocess": "face",
+        "balance": true,
+        "augment": false,
+        "kind": "spatial",
+        "seed": 42,
+        "max_epochs": 24,
+        "patience": 5,
+        "batch_videos": 32,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "AMP": true,
+        "encoders": "frozen ImageNet-1K",
+        "train_unit": "whole eight-frame video",
+        "sampling": "inverse-class-frequency video sampler, replacement, one training-set length per epoch",
+        "augmentation": "none",
+        "preprocessing_spec": {
+          "size": 224,
+          "frames_per_video": 8,
+          "sampling": "normalized_bin_centers",
+          "faces": "yunet",
+          "align": true,
+          "margin": 1.3,
+          "normalization": "ImageNet",
+          "no_face_policy": "full_frame_fallback"
+        },
+        "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3"
+      },
+      "validation": {
+        "accuracy": 0.6514285714285715,
+        "precision": 1.0,
+        "real_precision": 0.1527777777777778,
+        "real_recall": 1.0,
+        "fake_recall": 0.6280487804878049,
+        "macro_f1": 0.5182979107441,
+        "pr_auc": 0.9860517745401474,
+        "brier_score": 0.2634176090154951,
+        "recall": 0.6280487804878049,
+        "f1": 0.7715355805243446,
+        "roc_auc": 0.815410199556541,
+        "balanced_accuracy": 0.8140243902439024,
+        "log_loss": 0.7504624339249777,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            61,
+            103
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.17212592623355333
+      },
+      "calibration": {
+        "temperature": 4.571204902317711,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.6514285714285715,
+          "precision": 1.0,
+          "real_precision": 0.1527777777777778,
+          "real_recall": 1.0,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.5182979107441,
+          "pr_auc": 0.9860517745401474,
+          "brier_score": 0.2634176090154951,
+          "recall": 0.6280487804878049,
+          "f1": 0.7715355805243446,
+          "roc_auc": 0.815410199556541,
+          "balanced_accuracy": 0.8140243902439024,
+          "log_loss": 0.7504624339249777,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.17212592623355333
+        },
+        "after": {
+          "accuracy": 0.6514285714285715,
+          "precision": 1.0,
+          "real_precision": 0.1527777777777778,
+          "real_recall": 1.0,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.5182979107441,
+          "pr_auc": 0.9860517745401474,
+          "brier_score": 0.2470507788803701,
+          "recall": 0.6280487804878049,
+          "f1": 0.7715355805243446,
+          "roc_auc": 0.815410199556541,
+          "balanced_accuracy": 0.8140243902439024,
+          "log_loss": 0.6874674272369268,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.1559730587789159
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 0.8775160999502987,
+      "training_cost_scope": "head training only; shared encoder/cache extraction reported separately",
+      "epochs": 6,
+      "best_epoch": 1,
+      "inference_ms_per_video": 23.526826853797374,
+      "latency_scope": "encoder batch-eight forward plus batch-one head; excludes decode/cropping/XAI",
+      "peak_vram_bytes": 145117696,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1b\\best.pt",
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+      "train_videos": 813,
+      "validation_videos": 175,
+      "trainable_parameters": 2562,
+      "attention": "native EfficientNet squeeze/excitation; no added ECA/CBAM"
+    },
+    {
+      "id": "S2",
+      "config": {
+        "id": "S2",
+        "model": "EfficientNet-B0",
+        "backbones": [
+          "efficientnet_b0"
+        ],
+        "preprocess": "face",
+        "balance": true,
+        "augment": true,
+        "kind": "spatial",
+        "seed": 42,
+        "max_epochs": 24,
+        "patience": 5,
+        "batch_videos": 32,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "AMP": true,
+        "encoders": "frozen ImageNet-1K",
+        "train_unit": "whole eight-frame video",
+        "sampling": "inverse-class-frequency video sampler, replacement, one training-set length per epoch",
+        "augmentation": "one deterministic flip/brightness/contrast/saturation view per training video, randomly original/view each epoch",
+        "preprocessing_spec": {
+          "size": 224,
+          "frames_per_video": 8,
+          "sampling": "normalized_bin_centers",
+          "faces": "yunet",
+          "align": true,
+          "margin": 1.3,
+          "normalization": "ImageNet",
+          "no_face_policy": "full_frame_fallback"
+        },
+        "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3"
+      },
+      "validation": {
+        "accuracy": 0.6514285714285715,
+        "precision": 1.0,
+        "real_precision": 0.1527777777777778,
+        "real_recall": 1.0,
+        "fake_recall": 0.6280487804878049,
+        "macro_f1": 0.5182979107441,
+        "pr_auc": 0.9855396074556835,
+        "brier_score": 0.25995582250508414,
+        "recall": 0.6280487804878049,
+        "f1": 0.7715355805243446,
+        "roc_auc": 0.8109756097560976,
+        "balanced_accuracy": 0.8140243902439024,
+        "log_loss": 0.7429120395554345,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            61,
+            103
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.1996625886422381
+      },
+      "calibration": {
+        "temperature": 3.97255472437057,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.6514285714285715,
+          "precision": 1.0,
+          "real_precision": 0.1527777777777778,
+          "real_recall": 1.0,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.5182979107441,
+          "pr_auc": 0.9855396074556835,
+          "brier_score": 0.25995582250508414,
+          "recall": 0.6280487804878049,
+          "f1": 0.7715355805243446,
+          "roc_auc": 0.8109756097560976,
+          "balanced_accuracy": 0.8140243902439024,
+          "log_loss": 0.7429120395554345,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.1996625886422381
+        },
+        "after": {
+          "accuracy": 0.6514285714285715,
+          "precision": 1.0,
+          "real_precision": 0.1527777777777778,
+          "real_recall": 1.0,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.5182979107441,
+          "pr_auc": 0.9855396074556835,
+          "brier_score": 0.24605323463204745,
+          "recall": 0.6280487804878049,
+          "f1": 0.7715355805243446,
+          "roc_auc": 0.8109756097560976,
+          "balanced_accuracy": 0.8140243902439024,
+          "log_loss": 0.6855986092998019,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.13361942489008655
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 0.8059368000249378,
+      "training_cost_scope": "head training only; shared encoder/cache extraction reported separately",
+      "epochs": 6,
+      "best_epoch": 1,
+      "inference_ms_per_video": 23.492122852642623,
+      "latency_scope": "encoder batch-eight forward plus batch-one head; excludes decode/cropping/XAI",
+      "peak_vram_bytes": 146429440,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S2\\best.pt",
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "train_videos": 813,
+      "validation_videos": 175,
+      "trainable_parameters": 2562,
+      "attention": "native EfficientNet squeeze/excitation; no added ECA/CBAM"
+    },
+    {
+      "id": "S3",
+      "config": {
+        "id": "S3",
+        "model": "DeiT-Tiny",
+        "backbones": [
+          "deit_tiny_patch16_224"
+        ],
+        "preprocess": "raw",
+        "balance": false,
+        "augment": false,
+        "kind": "spatial",
+        "seed": 42,
+        "max_epochs": 24,
+        "patience": 5,
+        "batch_videos": 32,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "AMP": true,
+        "encoders": "frozen ImageNet-1K",
+        "train_unit": "whole eight-frame video",
+        "sampling": "natural shuffled videos",
+        "augmentation": "none",
+        "preprocessing_spec": {
+          "size": 224,
+          "frames_per_video": 8,
+          "sampling": "normalized_bin_centers",
+          "faces": "yunet",
+          "align": true,
+          "margin": 1.3,
+          "normalization": "ImageNet",
+          "no_face_policy": "full_frame_fallback"
+        },
+        "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3"
+      },
+      "validation": {
+        "accuracy": 0.6914285714285714,
+        "precision": 0.9583333333333334,
+        "real_precision": 0.10909090909090909,
+        "real_recall": 0.5454545454545454,
+        "fake_recall": 0.7012195121951219,
+        "macro_f1": 0.4958386683738797,
+        "pr_auc": 0.9522129931237939,
+        "brier_score": 0.21589214658146547,
+        "recall": 0.7012195121951219,
+        "f1": 0.8098591549295775,
+        "roc_auc": 0.6252771618625277,
+        "balanced_accuracy": 0.6233370288248337,
+        "log_loss": 0.624498373824484,
+        "confusion_matrix_real_fake": [
+          [
+            6,
+            5
+          ],
+          [
+            49,
+            115
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.2046210516787033
+      },
+      "calibration": {
+        "temperature": 0.3658431170510292,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.6914285714285714,
+          "precision": 0.9583333333333334,
+          "real_precision": 0.10909090909090909,
+          "real_recall": 0.5454545454545454,
+          "fake_recall": 0.7012195121951219,
+          "macro_f1": 0.4958386683738797,
+          "pr_auc": 0.9522129931237939,
+          "brier_score": 0.21589214658146547,
+          "recall": 0.7012195121951219,
+          "f1": 0.8098591549295775,
+          "roc_auc": 0.6252771618625277,
+          "balanced_accuracy": 0.6233370288248337,
+          "log_loss": 0.624498373824484,
+          "confusion_matrix_real_fake": [
+            [
+              6,
+              5
+            ],
+            [
+              49,
+              115
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.2046210516787033
+        },
+        "after": {
+          "accuracy": 0.6914285714285714,
+          "precision": 0.9583333333333334,
+          "real_precision": 0.10909090909090909,
+          "real_recall": 0.5454545454545454,
+          "fake_recall": 0.7012195121951219,
+          "macro_f1": 0.4958386683738797,
+          "pr_auc": 0.9522129931237939,
+          "brier_score": 0.19314274765272282,
+          "recall": 0.7012195121951219,
+          "f1": 0.8098591549295775,
+          "roc_auc": 0.6252771618625277,
+          "balanced_accuracy": 0.6233370288248337,
+          "log_loss": 0.5837331084270708,
+          "confusion_matrix_real_fake": [
+            [
+              6,
+              5
+            ],
+            [
+              49,
+              115
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.18710494741182415
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 0.889132599986624,
+      "training_cost_scope": "head training only; shared encoder/cache extraction reported separately",
+      "epochs": 7,
+      "best_epoch": 2,
+      "inference_ms_per_video": 18.604422856088995,
+      "latency_scope": "encoder batch-eight forward plus batch-one head; excludes decode/cropping/XAI",
+      "peak_vram_bytes": 79643136,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S3\\best.pt",
+      "checkpoint_sha256": "8ba1c464ffcb319870533285ffad0aa688d3fdcc624e48d9effd8800975448c4",
+      "train_videos": 813,
+      "validation_videos": 175,
+      "trainable_parameters": 386,
+      "attention": "native ViT self-attention"
+    },
+    {
+      "id": "S4",
+      "config": {
+        "id": "S4",
+        "model": "DeiT-Tiny",
+        "backbones": [
+          "deit_tiny_patch16_224"
+        ],
+        "preprocess": "face",
+        "balance": true,
+        "augment": true,
+        "kind": "spatial",
+        "seed": 42,
+        "max_epochs": 24,
+        "patience": 5,
+        "batch_videos": 32,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "AMP": true,
+        "encoders": "frozen ImageNet-1K",
+        "train_unit": "whole eight-frame video",
+        "sampling": "inverse-class-frequency video sampler, replacement, one training-set length per epoch",
+        "augmentation": "one deterministic flip/brightness/contrast/saturation view per training video, randomly original/view each epoch",
+        "preprocessing_spec": {
+          "size": 224,
+          "frames_per_video": 8,
+          "sampling": "normalized_bin_centers",
+          "faces": "yunet",
+          "align": true,
+          "margin": 1.3,
+          "normalization": "ImageNet",
+          "no_face_policy": "full_frame_fallback"
+        },
+        "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3"
+      },
+      "validation": {
+        "accuracy": 0.68,
+        "precision": 0.990909090909091,
+        "real_precision": 0.15384615384615385,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.6646341463414634,
+        "macro_f1": 0.5293891663465232,
+        "pr_auc": 0.9920720580230438,
+        "brier_score": 0.2006629020322498,
+        "recall": 0.6646341463414634,
+        "f1": 0.7956204379562044,
+        "roc_auc": 0.8930155210643016,
+        "balanced_accuracy": 0.7868625277161863,
+        "log_loss": 0.5996815256617212,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            55,
+            109
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.07918341626599829
+      },
+      "calibration": {
+        "temperature": 0.9051385550507373,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.68,
+          "precision": 0.990909090909091,
+          "real_precision": 0.15384615384615385,
+          "real_recall": 0.9090909090909091,
+          "fake_recall": 0.6646341463414634,
+          "macro_f1": 0.5293891663465232,
+          "pr_auc": 0.9920720580230438,
+          "brier_score": 0.2006629020322498,
+          "recall": 0.6646341463414634,
+          "f1": 0.7956204379562044,
+          "roc_auc": 0.8930155210643016,
+          "balanced_accuracy": 0.7868625277161863,
+          "log_loss": 0.5996815256617212,
+          "confusion_matrix_real_fake": [
+            [
+              10,
+              1
+            ],
+            [
+              55,
+              109
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.07918341626599829
+        },
+        "after": {
+          "accuracy": 0.68,
+          "precision": 0.990909090909091,
+          "real_precision": 0.15384615384615385,
+          "real_recall": 0.9090909090909091,
+          "fake_recall": 0.6646341463414634,
+          "macro_f1": 0.5293891663465232,
+          "pr_auc": 0.9920720580230438,
+          "brier_score": 0.1997461655295132,
+          "recall": 0.6646341463414634,
+          "f1": 0.7956204379562044,
+          "roc_auc": 0.8930155210643016,
+          "balanced_accuracy": 0.7868625277161863,
+          "log_loss": 0.5990236277904311,
+          "confusion_matrix_real_fake": [
+            [
+              10,
+              1
+            ],
+            [
+              55,
+              109
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.0771058951484169
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 3.143542699923273,
+      "training_cost_scope": "head training only; shared encoder/cache extraction reported separately",
+      "epochs": 24,
+      "best_epoch": 22,
+      "inference_ms_per_video": 18.06828485735293,
+      "latency_scope": "encoder batch-eight forward plus batch-one head; excludes decode/cropping/XAI",
+      "peak_vram_bytes": 79840768,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S4\\best.pt",
+      "checkpoint_sha256": "5091341e18e4ed0c304f015749282a0736bf05c636743b71590be82888d7fd0f",
+      "train_videos": 813,
+      "validation_videos": 175,
+      "trainable_parameters": 386,
+      "attention": "native ViT self-attention"
+    },
+    {
+      "id": "S5",
+      "config": {
+        "id": "S5",
+        "model": "EfficientNet-B0 + DeiT-Tiny",
+        "backbones": [
+          "efficientnet_b0",
+          "deit_tiny_patch16_224"
+        ],
+        "preprocess": "face",
+        "balance": true,
+        "augment": true,
+        "kind": "spatial",
+        "seed": 42,
+        "max_epochs": 24,
+        "patience": 5,
+        "batch_videos": 32,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "AMP": true,
+        "encoders": "frozen ImageNet-1K",
+        "train_unit": "whole eight-frame video",
+        "sampling": "inverse-class-frequency video sampler, replacement, one training-set length per epoch",
+        "augmentation": "one deterministic flip/brightness/contrast/saturation view per training video, randomly original/view each epoch",
+        "preprocessing_spec": {
+          "size": 224,
+          "frames_per_video": 8,
+          "sampling": "normalized_bin_centers",
+          "faces": "yunet",
+          "align": true,
+          "margin": 1.3,
+          "normalization": "ImageNet",
+          "no_face_policy": "full_frame_fallback"
+        },
+        "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3"
+      },
+      "validation": {
+        "accuracy": 0.64,
+        "precision": 0.9809523809523809,
+        "real_precision": 0.12857142857142856,
+        "real_recall": 0.8181818181818182,
+        "fake_recall": 0.6280487804878049,
+        "macro_f1": 0.4940107393638992,
+        "pr_auc": 0.9842462596737052,
+        "brier_score": 0.22945636793975513,
+        "recall": 0.6280487804878049,
+        "f1": 0.7657992565055762,
+        "roc_auc": 0.8054323725055432,
+        "balanced_accuracy": 0.7231152993348116,
+        "log_loss": 0.6605885890387817,
+        "confusion_matrix_real_fake": [
+          [
+            9,
+            2
+          ],
+          [
+            61,
+            103
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.07152779189928991
+      },
+      "calibration": {
+        "temperature": 1.5250081164822207,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.64,
+          "precision": 0.9809523809523809,
+          "real_precision": 0.12857142857142856,
+          "real_recall": 0.8181818181818182,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.4940107393638992,
+          "pr_auc": 0.9842462596737052,
+          "brier_score": 0.22945636793975513,
+          "recall": 0.6280487804878049,
+          "f1": 0.7657992565055762,
+          "roc_auc": 0.8054323725055432,
+          "balanced_accuracy": 0.7231152993348116,
+          "log_loss": 0.6605885890387817,
+          "confusion_matrix_real_fake": [
+            [
+              9,
+              2
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.07152779189928991
+        },
+        "after": {
+          "accuracy": 0.64,
+          "precision": 0.9809523809523809,
+          "real_precision": 0.12857142857142856,
+          "real_recall": 0.8181818181818182,
+          "fake_recall": 0.6280487804878049,
+          "macro_f1": 0.4940107393638992,
+          "pr_auc": 0.9842462596737052,
+          "brier_score": 0.2280637439431996,
+          "recall": 0.6280487804878049,
+          "f1": 0.7657992565055762,
+          "roc_auc": 0.8054323725055432,
+          "balanced_accuracy": 0.7231152993348116,
+          "log_loss": 0.6510088378323325,
+          "confusion_matrix_real_fake": [
+            [
+              9,
+              2
+            ],
+            [
+              61,
+              103
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.09778110238725092
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 0.7957623999682255,
+      "training_cost_scope": "head training only; shared encoder/cache extraction reported separately",
+      "epochs": 6,
+      "best_epoch": 1,
+      "inference_ms_per_video": 41.37189971116771,
+      "latency_scope": "encoder batch-eight forward plus batch-one head; excludes decode/cropping/XAI",
+      "peak_vram_bytes": 157668864,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S5\\best.pt",
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "train_videos": 813,
+      "validation_videos": 175,
+      "trainable_parameters": 2946,
+      "attention": "native ViT self-attention"
+    },
+    {
+      "id": "S6",
+      "config": {
+        "id": "S6",
+        "model": "EfficientNet-B0 + one-layer LSTM",
+        "backbones": [
+          "efficientnet_b0"
+        ],
+        "preprocess": "face",
+        "balance": true,
+        "augment": true,
+        "kind": "temporal",
+        "seed": 42,
+        "max_epochs": 24,
+        "patience": 5,
+        "batch_videos": 32,
+        "optimizer": "AdamW",
+        "lr": 0.002,
+        "weight_decay": 0.01,
+        "AMP": true,
+        "encoders": "frozen ImageNet-1K",
+        "train_unit": "whole eight-frame video",
+        "sampling": "inverse-class-frequency video sampler, replacement, one training-set length per epoch",
+        "augmentation": "one deterministic flip/brightness/contrast/saturation view per training video, randomly original/view each epoch",
+        "preprocessing_spec": {
+          "size": 224,
+          "frames_per_video": 8,
+          "sampling": "normalized_bin_centers",
+          "faces": "yunet",
+          "align": true,
+          "margin": 1.3,
+          "normalization": "ImageNet",
+          "no_face_policy": "full_frame_fallback"
+        },
+        "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3"
+      },
+      "validation": {
+        "accuracy": 0.9028571428571428,
+        "precision": 1.0,
+        "real_precision": 0.39285714285714285,
+        "real_recall": 1.0,
+        "fake_recall": 0.8963414634146342,
+        "macro_f1": 0.7547200923406712,
+        "pr_auc": 0.9976468459404281,
+        "brier_score": 0.07721135106865358,
+        "recall": 0.8963414634146342,
+        "f1": 0.9453376205787781,
+        "roc_auc": 0.9645232815964522,
+        "balanced_accuracy": 0.9481707317073171,
+        "log_loss": 0.2693853375614683,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            17,
+            147
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.05952737537690124
+      },
+      "calibration": {
+        "temperature": 1.4091608530245567,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.9028571428571428,
+          "precision": 1.0,
+          "real_precision": 0.39285714285714285,
+          "real_recall": 1.0,
+          "fake_recall": 0.8963414634146342,
+          "macro_f1": 0.7547200923406712,
+          "pr_auc": 0.9976468459404281,
+          "brier_score": 0.07721135106865358,
+          "recall": 0.8963414634146342,
+          "f1": 0.9453376205787781,
+          "roc_auc": 0.9645232815964522,
+          "balanced_accuracy": 0.9481707317073171,
+          "log_loss": 0.2693853375614683,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              17,
+              147
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.05952737537690124
+        },
+        "after": {
+          "accuracy": 0.9028571428571428,
+          "precision": 1.0,
+          "real_precision": 0.39285714285714285,
+          "real_recall": 1.0,
+          "fake_recall": 0.8963414634146342,
+          "macro_f1": 0.7547200923406712,
+          "pr_auc": 0.9976468459404281,
+          "brier_score": 0.07514492951224594,
+          "recall": 0.8963414634146342,
+          "f1": 0.9453376205787781,
+          "roc_auc": 0.9645232815964522,
+          "balanced_accuracy": 0.9481707317073171,
+          "log_loss": 0.25123127192886474,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              17,
+              147
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.026549051024897418
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 3.1573886999394745,
+      "training_cost_scope": "head training only; shared encoder/cache extraction reported separately",
+      "epochs": 13,
+      "best_epoch": 8,
+      "inference_ms_per_video": 23.821140852690277,
+      "latency_scope": "encoder batch-eight forward plus batch-one head; excludes decode/cropping/XAI",
+      "peak_vram_bytes": 158609920,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt",
+      "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc",
+      "train_videos": 813,
+      "validation_videos": 175,
+      "trainable_parameters": 94594,
+      "attention": "native EfficientNet squeeze/excitation; no added ECA/CBAM"
+    },
+    {
+      "id": "S7",
+      "config": {
+        "id": "S7",
+        "model": "EfficientNet spatial + LSTM late fusion",
+        "kind": "score_fusion",
+        "components": [
+          "S2",
+          "S6"
+        ],
+        "backbones": [
+          "efficientnet_b0"
+        ],
+        "spatial_weight": 0.25,
+        "preprocess": "face",
+        "balance": true,
+        "augment": true,
+        "weight_candidates": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "selected_on": "validation"
+      },
+      "validation": {
+        "accuracy": 0.8971428571428571,
+        "precision": 1.0,
+        "real_precision": 0.3793103448275862,
+        "real_recall": 1.0,
+        "fake_recall": 0.8902439024390244,
+        "macro_f1": 0.7459677419354839,
+        "pr_auc": 0.9971113309590203,
+        "brier_score": 0.09155080781719081,
+        "recall": 0.8902439024390244,
+        "f1": 0.9419354838709677,
+        "roc_auc": 0.9562084257206207,
+        "balanced_accuracy": 0.9451219512195121,
+        "log_loss": 0.3295386828155319,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            18,
+            146
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.07009250651344154
+      },
+      "calibration": {
+        "temperature": 0.8296057008980618,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.8971428571428571,
+          "precision": 1.0,
+          "real_precision": 0.3793103448275862,
+          "real_recall": 1.0,
+          "fake_recall": 0.8902439024390244,
+          "macro_f1": 0.7459677419354839,
+          "pr_auc": 0.9971113309590203,
+          "brier_score": 0.09155080781719081,
+          "recall": 0.8902439024390244,
+          "f1": 0.9419354838709677,
+          "roc_auc": 0.9562084257206207,
+          "balanced_accuracy": 0.9451219512195121,
+          "log_loss": 0.3295386828155319,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              18,
+              146
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.07009250651344154
+        },
+        "after": {
+          "accuracy": 0.8971428571428571,
+          "precision": 1.0,
+          "real_precision": 0.3793103448275862,
+          "real_recall": 1.0,
+          "fake_recall": 0.8902439024390244,
+          "macro_f1": 0.7459677419354839,
+          "pr_auc": 0.9971113309590203,
+          "brier_score": 0.08899283299191964,
+          "recall": 0.8902439024390244,
+          "f1": 0.9419354838709677,
+          "roc_auc": 0.9562084257206207,
+          "balanced_accuracy": 0.9451219512195121,
+          "log_loss": 0.3236150384395601,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              18,
+              146
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.0365703844170755
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 0,
+      "training_cost_scope": "reuses S2/S6; validation weight selection only",
+      "inference_ms_per_video": 23.821140852690277,
+      "latency_scope": "estimated shared-encoder upper branch cost; not independently benchmarked",
+      "peak_vram_bytes": 158609920,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S7\\config.json",
+      "checkpoint_sha256": "8a1f91873fae00c452e8e24f5907a3c330f63951f064c7d0bee0202afb19a44b"
+    },
+    {
+      "id": "S8",
+      "config": {
+        "id": "S8",
+        "model": "CNN–ViT hybrid + LSTM combined system",
+        "kind": "score_fusion",
+        "components": [
+          "S5",
+          "S6"
+        ],
+        "backbones": [
+          "efficientnet_b0",
+          "deit_tiny_patch16_224"
+        ],
+        "spatial_weight": 0.25,
+        "preprocess": "face",
+        "balance": true,
+        "augment": true,
+        "weight_candidates": [
+          0.25,
+          0.5,
+          0.75
+        ],
+        "selected_on": "validation"
+      },
+      "validation": {
+        "accuracy": 0.8971428571428571,
+        "precision": 1.0,
+        "real_precision": 0.3793103448275862,
+        "real_recall": 1.0,
+        "fake_recall": 0.8902439024390244,
+        "macro_f1": 0.7459677419354839,
+        "pr_auc": 0.9972294450346227,
+        "brier_score": 0.08776088888198885,
+        "recall": 0.8902439024390244,
+        "f1": 0.9419354838709677,
+        "roc_auc": 0.9578713968957872,
+        "balanced_accuracy": 0.9451219512195121,
+        "log_loss": 0.31504678505970973,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            18,
+            146
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.05358531695447024
+      },
+      "calibration": {
+        "temperature": 0.8139183552856663,
+        "fit_split": "validation",
+        "method": "scalar temperature on video aggregate log probabilities/logits",
+        "before": {
+          "accuracy": 0.8971428571428571,
+          "precision": 1.0,
+          "real_precision": 0.3793103448275862,
+          "real_recall": 1.0,
+          "fake_recall": 0.8902439024390244,
+          "macro_f1": 0.7459677419354839,
+          "pr_auc": 0.9972294450346227,
+          "brier_score": 0.08776088888198885,
+          "recall": 0.8902439024390244,
+          "f1": 0.9419354838709677,
+          "roc_auc": 0.9578713968957872,
+          "balanced_accuracy": 0.9451219512195121,
+          "log_loss": 0.31504678505970973,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              18,
+              146
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.05358531695447024
+        },
+        "after": {
+          "accuracy": 0.8971428571428571,
+          "precision": 1.0,
+          "real_precision": 0.3793103448275862,
+          "real_recall": 1.0,
+          "fake_recall": 0.8902439024390244,
+          "macro_f1": 0.7459677419354839,
+          "pr_auc": 0.9972294450346227,
+          "brier_score": 0.08531678780108838,
+          "recall": 0.8902439024390244,
+          "f1": 0.9419354838709677,
+          "roc_auc": 0.9578713968957872,
+          "balanced_accuracy": 0.9451219512195121,
+          "log_loss": 0.3079543695116281,
+          "confusion_matrix_real_fake": [
+            [
+              11,
+              0
+            ],
+            [
+              18,
+              146
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "ece": 0.03366727162332754
+        },
+        "inconclusive_enabled": false,
+        "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+      },
+      "training_seconds": 0,
+      "training_cost_scope": "reuses S5/S6; validation weight selection only",
+      "inference_ms_per_video": 41.37189971116771,
+      "latency_scope": "estimated shared-encoder upper branch cost; not independently benchmarked",
+      "peak_vram_bytes": 158609920,
+      "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S8\\config.json",
+      "checkpoint_sha256": "9d6c36fb1496de413c9c7f16c9fd28fa76078e423dc0f2807496f7fae2cd458d"
+    }
+  ],
+  "test": {
+    "S0": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.06321839080459771,
+        "precision": 0.0,
+        "real_precision": 0.06321839080459771,
+        "real_recall": 1.0,
+        "fake_recall": 0.0,
+        "macro_f1": 0.05945945945945946,
+        "pr_auc": 0.9397087865561534,
+        "brier_score": 0.9366887161901185,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.4807585052983826,
+        "balanced_accuracy": 0.5,
+        "log_loss": 13.361096191761689,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            163,
+            0
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.06321839080459771,
+        "precision": 0.0,
+        "real_precision": 0.06321839080459771,
+        "real_recall": 1.0,
+        "fake_recall": 0.0,
+        "macro_f1": 0.05945945945945946,
+        "pr_auc": 0.9397087865561534,
+        "brier_score": 0.4281087558921146,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.4807585052983826,
+        "balanced_accuracy": 0.5,
+        "log_loss": 1.0673724603120862,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            163,
+            0
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.6064824054688248
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06"
+    },
+    "S1": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.735632183908046,
+        "precision": 0.9465648854961832,
+        "real_precision": 0.09302325581395349,
+        "real_recall": 0.36363636363636365,
+        "fake_recall": 0.7607361963190185,
+        "macro_f1": 0.4958427815570673,
+        "pr_auc": 0.9480270602406976,
+        "brier_score": 0.22949825253411724,
+        "recall": 0.7607361963190185,
+        "f1": 0.8435374149659864,
+        "roc_auc": 0.5755716675962075,
+        "balanced_accuracy": 0.5621862799776911,
+        "log_loss": 0.6730815595127442,
+        "confusion_matrix_real_fake": [
+          [
+            4,
+            7
+          ],
+          [
+            39,
+            124
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.735632183908046,
+        "precision": 0.9465648854961832,
+        "real_precision": 0.09302325581395349,
+        "real_recall": 0.36363636363636365,
+        "fake_recall": 0.7607361963190185,
+        "macro_f1": 0.4958427815570673,
+        "pr_auc": 0.9480270602406976,
+        "brier_score": 0.23341320896680892,
+        "recall": 0.7607361963190185,
+        "f1": 0.8435374149659864,
+        "roc_auc": 0.5755716675962075,
+        "balanced_accuracy": 0.5621862799776911,
+        "log_loss": 0.6608468586322663,
+        "confusion_matrix_real_fake": [
+          [
+            4,
+            7
+          ],
+          [
+            39,
+            124
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.2722407012903957
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc"
+    },
+    "S1p": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.9252873563218391,
+        "precision": 0.9629629629629629,
+        "real_precision": 0.4166666666666667,
+        "real_recall": 0.45454545454545453,
+        "fake_recall": 0.9570552147239264,
+        "macro_f1": 0.697391304347826,
+        "pr_auc": 0.9883029652631822,
+        "brier_score": 0.06314457261749093,
+        "recall": 0.9570552147239264,
+        "f1": 0.96,
+        "roc_auc": 0.864472950362521,
+        "balanced_accuracy": 0.7058003346346905,
+        "log_loss": 0.2218305911821783,
+        "confusion_matrix_real_fake": [
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            156
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.9252873563218391,
+        "precision": 0.9629629629629629,
+        "real_precision": 0.4166666666666667,
+        "real_recall": 0.45454545454545453,
+        "fake_recall": 0.9570552147239264,
+        "macro_f1": 0.697391304347826,
+        "pr_auc": 0.9883029652631822,
+        "brier_score": 0.05781366514462241,
+        "recall": 0.9570552147239264,
+        "f1": 0.96,
+        "roc_auc": 0.864472950362521,
+        "balanced_accuracy": 0.7058003346346905,
+        "log_loss": 0.20433293915100803,
+        "confusion_matrix_real_fake": [
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            156
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.037044278944932174
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b"
+    },
+    "S1b": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.6206896551724138,
+        "precision": 0.98989898989899,
+        "real_precision": 0.13333333333333333,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.6012269938650306,
+        "macro_f1": 0.4903248712941594,
+        "pr_auc": 0.9872414345123741,
+        "brier_score": 0.2702800167837445,
+        "recall": 0.6012269938650306,
+        "f1": 0.7480916030534351,
+        "roc_auc": 0.8382598996095929,
+        "balanced_accuracy": 0.7551589514779699,
+        "log_loss": 0.7801612204526495,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            65,
+            98
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.6206896551724138,
+        "precision": 0.98989898989899,
+        "real_precision": 0.13333333333333333,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.6012269938650306,
+        "macro_f1": 0.4903248712941594,
+        "pr_auc": 0.9872414345123741,
+        "brier_score": 0.24890717054696468,
+        "recall": 0.6012269938650306,
+        "f1": 0.7480916030534351,
+        "roc_auc": 0.8382598996095929,
+        "balanced_accuracy": 0.7551589514779699,
+        "log_loss": 0.6913434159240129,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            65,
+            98
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.14317168620398266
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9"
+    },
+    "S2": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.6206896551724138,
+        "precision": 0.9801980198019802,
+        "real_precision": 0.1232876712328767,
+        "real_recall": 0.8181818181818182,
+        "fake_recall": 0.6073619631901841,
+        "macro_f1": 0.48214285714285715,
+        "pr_auc": 0.9866347659566882,
+        "brier_score": 0.2719625723356616,
+        "recall": 0.6073619631901841,
+        "f1": 0.75,
+        "roc_auc": 0.830451756832125,
+        "balanced_accuracy": 0.7127718906860012,
+        "log_loss": 0.7880469122292316,
+        "confusion_matrix_real_fake": [
+          [
+            9,
+            2
+          ],
+          [
+            64,
+            99
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.6206896551724138,
+        "precision": 0.9801980198019802,
+        "real_precision": 0.1232876712328767,
+        "real_recall": 0.8181818181818182,
+        "fake_recall": 0.6073619631901841,
+        "macro_f1": 0.48214285714285715,
+        "pr_auc": 0.9866347659566882,
+        "brier_score": 0.2501230575597329,
+        "recall": 0.6073619631901841,
+        "f1": 0.75,
+        "roc_auc": 0.830451756832125,
+        "balanced_accuracy": 0.7127718906860012,
+        "log_loss": 0.6941131729995706,
+        "confusion_matrix_real_fake": [
+          [
+            9,
+            2
+          ],
+          [
+            64,
+            99
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.15319876464018725
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11"
+    },
+    "S3": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.7816091954022989,
+        "precision": 0.9496402877697842,
+        "real_precision": 0.11428571428571428,
+        "real_recall": 0.36363636363636365,
+        "fake_recall": 0.8098159509202454,
+        "macro_f1": 0.5240426144543622,
+        "pr_auc": 0.9523092338912966,
+        "brier_score": 0.20716917452254618,
+        "recall": 0.8098159509202454,
+        "f1": 0.8741721854304636,
+        "roc_auc": 0.5978806469604016,
+        "balanced_accuracy": 0.5867261572783045,
+        "log_loss": 0.6099914653553852,
+        "confusion_matrix_real_fake": [
+          [
+            4,
+            7
+          ],
+          [
+            31,
+            132
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.7816091954022989,
+        "precision": 0.9496402877697842,
+        "real_precision": 0.11428571428571428,
+        "real_recall": 0.36363636363636365,
+        "fake_recall": 0.8098159509202454,
+        "macro_f1": 0.5240426144543622,
+        "pr_auc": 0.9523092338912966,
+        "brier_score": 0.16406006350637042,
+        "recall": 0.8098159509202454,
+        "f1": 0.8741721854304636,
+        "roc_auc": 0.5978806469604016,
+        "balanced_accuracy": 0.5867261572783045,
+        "log_loss": 0.5500520651015832,
+        "confusion_matrix_real_fake": [
+          [
+            4,
+            7
+          ],
+          [
+            31,
+            132
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.17979216031499884
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "8ba1c464ffcb319870533285ffad0aa688d3fdcc624e48d9effd8800975448c4"
+    },
+    "S4": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.7586206896551724,
+        "precision": 0.991869918699187,
+        "real_precision": 0.19607843137254902,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.7484662576687117,
+        "macro_f1": 0.5878637491540717,
+        "pr_auc": 0.9902934764574258,
+        "brier_score": 0.182739534612309,
+        "recall": 0.7484662576687117,
+        "f1": 0.8531468531468531,
+        "roc_auc": 0.8661461238148356,
+        "balanced_accuracy": 0.8287785833798104,
+        "log_loss": 0.6080488815784086,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            41,
+            122
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.7586206896551724,
+        "precision": 0.991869918699187,
+        "real_precision": 0.19607843137254902,
+        "real_recall": 0.9090909090909091,
+        "fake_recall": 0.7484662576687117,
+        "macro_f1": 0.5878637491540717,
+        "pr_auc": 0.9902934764574258,
+        "brier_score": 0.1803531549526017,
+        "recall": 0.7484662576687117,
+        "f1": 0.8531468531468531,
+        "roc_auc": 0.8661461238148356,
+        "balanced_accuracy": 0.8287785833798104,
+        "log_loss": 0.6121939310942007,
+        "confusion_matrix_real_fake": [
+          [
+            10,
+            1
+          ],
+          [
+            41,
+            122
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.10166104800810916
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "5091341e18e4ed0c304f015749282a0736bf05c636743b71590be82888d7fd0f"
+    },
+    "S5": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.7068965517241379,
+        "precision": 0.9827586206896551,
+        "real_precision": 0.15517241379310345,
+        "real_recall": 0.8181818181818182,
+        "fake_recall": 0.6993865030674846,
+        "macro_f1": 0.53903693314633,
+        "pr_auc": 0.9870444942794784,
+        "brier_score": 0.22157558896614643,
+        "recall": 0.6993865030674846,
+        "f1": 0.8172043010752689,
+        "roc_auc": 0.8349135527049638,
+        "balanced_accuracy": 0.7587841606246515,
+        "log_loss": 0.6865846326942091,
+        "confusion_matrix_real_fake": [
+          [
+            9,
+            2
+          ],
+          [
+            49,
+            114
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.7068965517241379,
+        "precision": 0.9827586206896551,
+        "real_precision": 0.15517241379310345,
+        "real_recall": 0.8181818181818182,
+        "fake_recall": 0.6993865030674846,
+        "macro_f1": 0.53903693314633,
+        "pr_auc": 0.9870444942794784,
+        "brier_score": 0.2258625636536091,
+        "recall": 0.6993865030674846,
+        "f1": 0.8172043010752689,
+        "roc_auc": 0.8349135527049638,
+        "balanced_accuracy": 0.7587841606246515,
+        "log_loss": 0.663066305086521,
+        "confusion_matrix_real_fake": [
+          [
+            9,
+            2
+          ],
+          [
+            49,
+            114
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.15468309008522493
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3"
+    },
+    "S6": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.9022988505747126,
+        "precision": 1.0,
+        "real_precision": 0.39285714285714285,
+        "real_recall": 1.0,
+        "fake_recall": 0.8957055214723927,
+        "macro_f1": 0.7545431914363954,
+        "pr_auc": 0.9972829815002996,
+        "brier_score": 0.08644101747212452,
+        "recall": 0.8957055214723927,
+        "f1": 0.9449838187702265,
+        "roc_auc": 0.9592861126603459,
+        "balanced_accuracy": 0.9478527607361964,
+        "log_loss": 0.3202369806421808,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            17,
+            146
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.9022988505747126,
+        "precision": 1.0,
+        "real_precision": 0.39285714285714285,
+        "real_recall": 1.0,
+        "fake_recall": 0.8957055214723927,
+        "macro_f1": 0.7545431914363954,
+        "pr_auc": 0.9972829815002996,
+        "brier_score": 0.08415735314702899,
+        "recall": 0.8957055214723927,
+        "f1": 0.9449838187702265,
+        "roc_auc": 0.9592861126603459,
+        "balanced_accuracy": 0.9478527607361964,
+        "log_loss": 0.2816029079829804,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            17,
+            146
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.06211907431251874
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc"
+    },
+    "S7": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.8793103448275862,
+        "precision": 1.0,
+        "real_precision": 0.34375,
+        "real_recall": 1.0,
+        "fake_recall": 0.8711656441717791,
+        "macro_f1": 0.7213877239801754,
+        "pr_auc": 0.9965705620153558,
+        "brier_score": 0.10204774439382304,
+        "recall": 0.8711656441717791,
+        "f1": 0.9311475409836065,
+        "roc_auc": 0.9486893474623536,
+        "balanced_accuracy": 0.9355828220858895,
+        "log_loss": 0.36511533728571066,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            21,
+            142
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.8793103448275862,
+        "precision": 1.0,
+        "real_precision": 0.34375,
+        "real_recall": 1.0,
+        "fake_recall": 0.8711656441717791,
+        "macro_f1": 0.7213877239801754,
+        "pr_auc": 0.9965705620153558,
+        "brier_score": 0.1005243350863234,
+        "recall": 0.8711656441717791,
+        "f1": 0.9311475409836065,
+        "roc_auc": 0.9486893474623536,
+        "balanced_accuracy": 0.9355828220858895,
+        "log_loss": 0.36845860377828915,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            21,
+            142
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.054058716622710196
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "8a1f91873fae00c452e8e24f5907a3c330f63951f064c7d0bee0202afb19a44b"
+    },
+    "S8": {
+      "split": "held-out test",
+      "one_time_frozen_evaluation": true,
+      "videos": 174,
+      "source_groups": 15,
+      "raw": {
+        "accuracy": 0.8793103448275862,
+        "precision": 1.0,
+        "real_precision": 0.34375,
+        "real_recall": 1.0,
+        "fake_recall": 0.8711656441717791,
+        "macro_f1": 0.7213877239801754,
+        "pr_auc": 0.9967726033058775,
+        "brier_score": 0.09586289542393656,
+        "recall": 0.8711656441717791,
+        "f1": 0.9311475409836065,
+        "roc_auc": 0.9520356943669827,
+        "balanced_accuracy": 0.9355828220858895,
+        "log_loss": 0.3388556355667717,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            21,
+            142
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero"
+      },
+      "calibrated": {
+        "accuracy": 0.8793103448275862,
+        "precision": 1.0,
+        "real_precision": 0.34375,
+        "real_recall": 1.0,
+        "fake_recall": 0.8711656441717791,
+        "macro_f1": 0.7213877239801754,
+        "pr_auc": 0.9967726033058775,
+        "brier_score": 0.09522661738908166,
+        "recall": 0.8711656441717791,
+        "f1": 0.9311475409836065,
+        "roc_auc": 0.9520356943669827,
+        "balanced_accuracy": 0.9355828220858895,
+        "log_loss": 0.3416416926130585,
+        "confusion_matrix_real_fake": [
+          [
+            11,
+            0
+          ],
+          [
+            21,
+            142
+          ]
+        ],
+        "positive_class": "FAKE",
+        "threshold": 0.5,
+        "undefined_precision_recall_f1_policy": "zero when denominator zero",
+        "ece": 0.07304315582946644
+      },
+      "temperature_fit_split": "validation",
+      "checkpoint_sha256": "9d6c36fb1496de413c9c7f16c9fd28fa76078e423dc0f2807496f7fae2cd458d"
+    }
+  },
+  "common_runtime_benchmark": {
+    "S0": {
+      "id": "S0",
+      "forward_ms_per_video": 7.148753333603963,
+      "peak_vram_bytes": 135564800,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+      "model_artifact_bytes": 44790475,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\models\\best_resnet18.pth"
+      ]
+    },
+    "S1": {
+      "id": "S1",
+      "forward_ms_per_video": 25.96608000070167,
+      "peak_vram_bytes": 97455104,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+      "model_artifact_bytes": 16349842,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1\\best.pt"
+      ]
+    },
+    "S1p": {
+      "id": "S1p",
+      "forward_ms_per_video": 27.769836666993797,
+      "peak_vram_bytes": 97455104,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+      "model_artifact_bytes": 16349842,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1p\\best.pt"
+      ]
+    },
+    "S1b": {
+      "id": "S1b",
+      "forward_ms_per_video": 23.71963666713176,
+      "peak_vram_bytes": 97455104,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+      "model_artifact_bytes": 16349906,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S1b\\best.pt"
+      ]
+    },
+    "S2": {
+      "id": "S2",
+      "forward_ms_per_video": 22.664853332874674,
+      "peak_vram_bytes": 97455104,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "model_artifact_bytes": 16349970,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S2\\best.pt"
+      ]
+    },
+    "S3": {
+      "id": "S3",
+      "forward_ms_per_video": 18.508740000349157,
+      "peak_vram_bytes": 71225344,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "8ba1c464ffcb319870533285ffad0aa688d3fdcc624e48d9effd8800975448c4",
+      "model_artifact_bytes": 22162522,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\deit_tiny_patch16_224.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S3\\best.pt"
+      ]
+    },
+    "S4": {
+      "id": "S4",
+      "forward_ms_per_video": 19.203826666732006,
+      "peak_vram_bytes": 71225344,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "5091341e18e4ed0c304f015749282a0736bf05c636743b71590be82888d7fd0f",
+      "model_artifact_bytes": 22162650,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\deit_tiny_patch16_224.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S4\\best.pt"
+      ]
+    },
+    "S5": {
+      "id": "S5",
+      "forward_ms_per_video": 44.30409333241793,
+      "peak_vram_bytes": 119577088,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "model_artifact_bytes": 38509357,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\deit_tiny_patch16_224.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S5\\best.pt"
+      ]
+    },
+    "S6": {
+      "id": "S6",
+      "forward_ms_per_video": 24.82176000097146,
+      "peak_vram_bytes": 97834496,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc",
+      "model_artifact_bytes": 16743335,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S2\\best.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt"
+      ]
+    },
+    "S7": {
+      "id": "S7",
+      "forward_ms_per_video": 24.79713666640843,
+      "peak_vram_bytes": 97834496,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "8a1f91873fae00c452e8e24f5907a3c330f63951f064c7d0bee0202afb19a44b",
+      "model_artifact_bytes": 16743694,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S2\\best.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S7\\config.json"
+      ]
+    },
+    "S8": {
+      "id": "S8",
+      "forward_ms_per_video": 41.54719666500265,
+      "peak_vram_bytes": 119956480,
+      "frames": 8,
+      "warmups": 5,
+      "repeats": 30,
+      "precision": "legacy ResNet FP32; new frozen encoders FP16 autocast and heads FP32",
+      "scope": "Resident normalized GPU tensor through actual shared encoder(s), spatial/temporal heads and fusion; excludes transfer, decode, face processing, XAI",
+      "media_split": "validation",
+      "filename": "aegvtnwqoe.mp4",
+      "checkpoint_sha256": "9d6c36fb1496de413c9c7f16c9fd28fa76078e423dc0f2807496f7fae2cd458d",
+      "model_artifact_bytes": 38903110,
+      "model_artifacts": [
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\deit_tiny_patch16_224.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S5\\best.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S6\\best.pt",
+        "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\dfdc_unified_20261019\\S8\\config.json"
+      ]
+    }
+  },
+  "storage": {
+    "phase_bytes": 14634186428,
+    "free_bytes": 76381626368,
+    "limit_bytes": 32212254720,
+    "headroom_bytes": 5368709120
+  }
+}

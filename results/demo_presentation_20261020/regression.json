@@ -1,0 +1,9 @@
+{
+  "tests": 59,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 71.163,
+  "command": "python -B -m unittest discover -s tests -v",
+  "scope": "Full regression suite before Git cleanup commit",
+  "raw_log": "git_cleanup_regression.log (local, ignored)"
+}

@@ -1,0 +1,27 @@
+{
+  "image_train_per_class": 1000,
+  "image_validation": 2000,
+  "epochs": 16,
+  "domain_weight_image": 0.5,
+  "domain_weight_video": 0.5,
+  "batch_per_domain": 32,
+  "steps_per_epoch": 26,
+  "learning_rate": 0.0005,
+  "weight_decay": 0.01,
+  "seed": 42,
+  "encoder": "existing frozen ImageNet EfficientNet-B0; no encoder updates",
+  "initial_head_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+  "image_manifest_sha256": "3efcc0153a09f62e794effd76ab48f3b06c1a8a120842be1b4864e5ec49381a2",
+  "video_manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3",
+  "normalization": "original S2 train-only feature statistics for both arms",
+  "selection": "harmonic mean of separate image and video validation balanced accuracies; macro-F1 tie break",
+  "deployment_rule": "Must match both existing modality champions within 1 percentage point and improve one by at least 1 point. Otherwise research only.",
+  "test_access": false,
+  "sanity_image_access": false,
+  "class_mapping": {
+    "REAL": 0,
+    "FAKE": 1
+  },
+  "control": "Same initial S2 head, video samples, optimizer, steps and validation selection; no image loss",
+  "training_policy": "Independent inverse-class-frequency replacement sampling within each domain; average domain losses, not concatenated frames"
+}

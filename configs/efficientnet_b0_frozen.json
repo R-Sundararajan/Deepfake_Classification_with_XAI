@@ -1,0 +1,5 @@
+{
+  "experiment_id": "A2_efficientnet_b0_frozen",
+  "model": {"backbone": "efficientnet_b0", "attention": "none", "fusion": "none"},
+  "comparison": "Stage A: backbone only; native squeeze-and-excitation retained"
+}

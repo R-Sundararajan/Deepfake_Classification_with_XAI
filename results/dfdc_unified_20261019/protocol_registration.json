@@ -1,0 +1,132 @@
+{
+  "candidate_configs": [
+    {
+      "id": "S0",
+      "model": "Preserved image ResNet-18",
+      "backbones": [],
+      "preprocess": "raw",
+      "balance": false,
+      "augment": false,
+      "kind": "legacy"
+    },
+    {
+      "id": "S1",
+      "model": "EfficientNet-B0",
+      "backbones": [
+        "efficientnet_b0"
+      ],
+      "preprocess": "raw",
+      "balance": false,
+      "augment": false,
+      "kind": "spatial"
+    },
+    {
+      "id": "S1p",
+      "model": "EfficientNet-B0",
+      "backbones": [
+        "efficientnet_b0"
+      ],
+      "preprocess": "face",
+      "balance": false,
+      "augment": false,
+      "kind": "spatial"
+    },
+    {
+      "id": "S1b",
+      "model": "EfficientNet-B0",
+      "backbones": [
+        "efficientnet_b0"
+      ],
+      "preprocess": "face",
+      "balance": true,
+      "augment": false,
+      "kind": "spatial"
+    },
+    {
+      "id": "S2",
+      "model": "EfficientNet-B0",
+      "backbones": [
+        "efficientnet_b0"
+      ],
+      "preprocess": "face",
+      "balance": true,
+      "augment": true,
+      "kind": "spatial"
+    },
+    {
+      "id": "S3",
+      "model": "DeiT-Tiny",
+      "backbones": [
+        "deit_tiny_patch16_224"
+      ],
+      "preprocess": "raw",
+      "balance": false,
+      "augment": false,
+      "kind": "spatial"
+    },
+    {
+      "id": "S4",
+      "model": "DeiT-Tiny",
+      "backbones": [
+        "deit_tiny_patch16_224"
+      ],
+      "preprocess": "face",
+      "balance": true,
+      "augment": true,
+      "kind": "spatial"
+    },
+    {
+      "id": "S5",
+      "model": "EfficientNet-B0 + DeiT-Tiny",
+      "backbones": [
+        "efficientnet_b0",
+        "deit_tiny_patch16_224"
+      ],
+      "preprocess": "face",
+      "balance": true,
+      "augment": true,
+      "kind": "spatial"
+    },
+    {
+      "id": "S6",
+      "model": "EfficientNet-B0 + one-layer LSTM",
+      "backbones": [
+        "efficientnet_b0"
+      ],
+      "preprocess": "face",
+      "balance": true,
+      "augment": true,
+      "kind": "temporal"
+    }
+  ],
+  "additional_fusions": {
+    "S7": [
+      "S2",
+      "S6"
+    ],
+    "S8": [
+      "S5",
+      "S6"
+    ]
+  },
+  "fusion_weight_grid": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "head_budget": {
+    "max_epochs": 24,
+    "patience": 5,
+    "seed": 42,
+    "batch_videos": 32,
+    "learning_rate": 0.002
+  },
+  "selection": "validation balanced accuracy, macro F1, ROC AUC then cost; both recalls nonzero for deployment",
+  "test_status": "No test predictions or labels used in training/config selection; existing source-group manifest test sealed",
+  "manifest_sha256": "1b2bd9ec28c1b49f10b27201a484d825d6c8a4fa5e594447d81152c496d061c3",
+  "code_sha256": {
+    "training/unified_experiment.py": "da60244c0543e9e375130ce2551d084b5507387aa04cc1ef69a952dd64375b8c",
+    "models/unified.py": "6861f9b662cd6f92463b22a7f5e202d42652b5a5da3884dca47fa2f76c3eca2c",
+    "training/video_protocol.py": "8820ae89e86c3af66cabc0c170a619a2f55abdddbebf656cf387eab2ac7aa742"
+  }
+}

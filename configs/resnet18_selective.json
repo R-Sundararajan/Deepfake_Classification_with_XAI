@@ -1,0 +1,9 @@
+{
+  "experiment_id": "A4_resnet18_selective",
+  "model": {"backbone": "resnet18", "attention": "none", "fusion": "none"},
+  "initialize_from": "results/experiments/A1_resnet18_frozen/best.pt",
+  "head_epochs": 0,
+  "fine_tune_epochs": 3,
+  "fine_tune_blocks": 1,
+  "comparison": "A1 frozen head versus additional layer4 fine-tuning; extra training cost reported"
+}

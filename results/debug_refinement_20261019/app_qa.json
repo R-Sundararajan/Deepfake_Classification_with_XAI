@@ -1,0 +1,55 @@
+{
+  "checks": [
+    "initial",
+    "image_first_upload",
+    "image_cached_rerender",
+    "gradcam_first",
+    "opacity_cached",
+    "target_change_no_compute",
+    "target_real_explanation",
+    "method_change_no_compute",
+    "ig_on_demand",
+    "image_efficientnet_family",
+    "experimental_enabled",
+    "experimental_temporal_family",
+    "experimental_s8_fallback",
+    "video_initial",
+    "video_REAL",
+    "video_explanation",
+    "video_cached_rerender",
+    "video_FAKE",
+    "corrupt_video_error"
+  ],
+  "milliseconds": {
+    "initial": 2577.5980000034906,
+    "image_first_upload": 1112.965099979192,
+    "image_cached_rerender": 66.71849999111146,
+    "gradcam_first": 277.21479994943365,
+    "opacity_cached": 89.99300003051758,
+    "target_change_no_compute": 70.51679998403415,
+    "target_real_explanation": 136.4546000258997,
+    "method_change_no_compute": 74.02279996313155,
+    "ig_on_demand": 368.5924999881536,
+    "image_efficientnet_family": 559.4087999779731,
+    "experimental_enabled": 83.15169997513294,
+    "experimental_temporal_family": 5231.491899990942,
+    "experimental_s8_fallback": 6102.443900017533,
+    "video_initial": 45.84129998693243,
+    "video_REAL": 10766.919799963944,
+    "video_explanation": 4505.139600019902,
+    "video_cached_rerender": 198.91370000550523,
+    "video_FAKE": 10061.306799994782,
+    "corrupt_video_error": 344.50860001379624
+  },
+  "counters": {
+    "feature_calls": 5,
+    "attribution_calls": 4
+  },
+  "image_prediction": [
+    "FAKE",
+    "85.78%",
+    "14.22%",
+    "85.78%"
+  ],
+  "timing_scope": "AppTest wall time includes Python UI rendering/serialization; not browser paint. First upload includes model load and kernel warmup."
+}

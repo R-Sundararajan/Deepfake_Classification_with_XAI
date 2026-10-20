@@ -1,0 +1,7 @@
+{
+  "experiment_id": "C1_resnet18_jpeg",
+  "model": {"backbone": "resnet18", "attention": "none", "fusion": "none"},
+  "augmentation": "jpeg",
+  "reference_experiment": "A1_resnet18_frozen",
+  "comparison": "Basic augmentation plus JPEG quality 50..95 at probability 0.5"
+}

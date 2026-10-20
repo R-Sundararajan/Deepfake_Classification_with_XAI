@@ -1,0 +1,6 @@
+{
+  "experiment_id": "D1_resnet18_frequency",
+  "model": {"backbone": "resnet18", "attention": "none", "fusion": "frequency"},
+  "reference_experiment": "A1_resnet18_frozen",
+  "comparison": "Frozen CNN plus 16 normalized radial FFT log-power bands; run after Stage A evidence review"
+}

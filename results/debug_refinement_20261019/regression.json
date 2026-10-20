@@ -1,0 +1,7 @@
+{
+  "tests": 56,
+  "seconds": 55.064,
+  "status": "passed",
+  "command": ".\\dfenv\\Scripts\\python.exe -m unittest discover -s tests -v",
+  "log": "results\\debug_refinement_20261019\\regression.log"
+}

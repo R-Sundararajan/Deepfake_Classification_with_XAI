@@ -22,7 +22,7 @@ class DeepfakePredictor:
         self.transform = evaluation_transform()
 
     def predict(self, image: Image.Image) -> dict:
-        image = image.convert("RGB").resize((IMAGE_SIZE, IMAGE_SIZE))
+        image = image.convert("RGB").resize((IMAGE_SIZE, IMAGE_SIZE), Image.Resampling.BILINEAR)
         input_tensor = self.transform(image).unsqueeze(0).to(self.device)
         with torch.no_grad():
             logits = self.model(input_tensor)
@@ -55,6 +55,9 @@ class DeepfakePredictor:
             "network relied most strongly for this prediction; it does not identify or prove "
             "a particular manipulation artifact."
         )
+        if float(np.std(cam)) < 1e-8:
+            region_text = 'unavailable (constant attribution)'
+            explanation = f'The model classified this image as {predicted_class} ({confidence:.2%} model score). Grad-CAM is constant; spatial localization is unavailable.'
 
         return {
             "prediction": predicted_class,

@@ -1,0 +1,55 @@
+{
+  "Image": [
+    {
+      "family": "ResNet / CNN",
+      "best": "S0",
+      "balanced_accuracy": 0.969,
+      "mean": 0.9385,
+      "runs": 2
+    },
+    {
+      "family": "EfficientNet",
+      "best": "E02_efficientnet_b0",
+      "balanced_accuracy": 0.9245,
+      "mean": 0.819625,
+      "runs": 4
+    }
+  ],
+  "Video": [
+    {
+      "family": "Spatial + Temporal Hybrid",
+      "best": "S6",
+      "balanced_accuracy": 0.9481707317073171,
+      "mean": 0.9461382113821138,
+      "runs": 3
+    },
+    {
+      "family": "EfficientNet",
+      "best": "S1b",
+      "balanced_accuracy": 0.8140243902439024,
+      "mean": 0.7407150776053215,
+      "runs": 4
+    },
+    {
+      "family": "Vision Transformer",
+      "best": "S4",
+      "balanced_accuracy": 0.7868625277161863,
+      "mean": 0.70509977827051,
+      "runs": 2
+    },
+    {
+      "family": "CNN + ViT Hybrid",
+      "best": "S5",
+      "balanced_accuracy": 0.7231152993348116,
+      "mean": 0.7231152993348116,
+      "runs": 1
+    },
+    {
+      "family": "ResNet / CNN",
+      "best": "S0",
+      "balanced_accuracy": 0.5,
+      "mean": 0.5,
+      "runs": 1
+    }
+  ]
+}

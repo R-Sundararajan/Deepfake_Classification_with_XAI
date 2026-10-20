@@ -1,0 +1,6 @@
+# Frozen experiment artifacts are checked by SHA-256. Preserve their original
+# JSON/CSV bytes across platforms instead of applying core.autocrlf conversion.
+# Original CSV/JSON files may use CRLF; recognize CR as part of the line ending.
+/results/** -text whitespace=blank-at-eol,space-before-tab,cr-at-eol
+# This sealed CSV has original CR-CR-LF endings bound by its recorded digest.
+/results/debug_refinement_20261019/domain_pilot/S2_image_validation_predictions.csv -whitespace

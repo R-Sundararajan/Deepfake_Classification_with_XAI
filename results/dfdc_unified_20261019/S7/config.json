@@ -1,0 +1,22 @@
+{
+  "id": "S7",
+  "model": "EfficientNet spatial + LSTM late fusion",
+  "kind": "score_fusion",
+  "components": [
+    "S2",
+    "S6"
+  ],
+  "backbones": [
+    "efficientnet_b0"
+  ],
+  "spatial_weight": 0.25,
+  "preprocess": "face",
+  "balance": true,
+  "augment": true,
+  "weight_candidates": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "selected_on": "validation"
+}

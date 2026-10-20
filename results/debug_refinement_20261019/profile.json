@@ -1,0 +1,417 @@
+{
+  "scope": "Same process/device, synchronized GPU, resident models, two warmups and seven repeats. Browser paint excluded.",
+  "measurements": [
+    {
+      "model": "S0",
+      "input": "random-person.jpeg",
+      "baseline_gradcam": {
+        "median_ms": 67.7117999875918,
+        "min_ms": 61.60989997442812,
+        "max_ms": 76.92859997041523,
+        "repeats": 7
+      },
+      "corrected_gradcam": {
+        "median_ms": 58.621899981517345,
+        "min_ms": 52.34530003508553,
+        "max_ms": 61.2350000301376,
+        "repeats": 7
+      },
+      "prediction_only": {
+        "median_ms": 37.39419998601079,
+        "min_ms": 30.843599990475923,
+        "max_ms": 39.87589996540919,
+        "repeats": 7
+      },
+      "stages_ms": {
+        "face_detection_ms": 5.4290000116452575,
+        "resize_ms": 13.160899979993701,
+        "normalization_ms": 1.2296000495553017,
+        "gpu_transfer_ms": 0.3556999727152288,
+        "forward_ms": 6.693299976177514,
+        "decision_ms": 0.804100011009723
+      },
+      "checkpoint_load_before_ms": 383.80539999343455,
+      "checkpoint_load_after_ms": 231.52179998578504
+    },
+    {
+      "model": "S0",
+      "input": "real.jpeg",
+      "baseline_gradcam": {
+        "median_ms": 69.44500003010035,
+        "min_ms": 66.1180000170134,
+        "max_ms": 74.27450001705438,
+        "repeats": 7
+      },
+      "corrected_gradcam": {
+        "median_ms": 62.15760001214221,
+        "min_ms": 58.509399998001754,
+        "max_ms": 69.07319999299943,
+        "repeats": 7
+      },
+      "prediction_only": {
+        "median_ms": 42.43289999430999,
+        "min_ms": 39.86670001177117,
+        "max_ms": 44.359799998346716,
+        "repeats": 7
+      },
+      "stages_ms": {
+        "face_detection_ms": 8.63039999967441,
+        "resize_ms": 19.467199977952987,
+        "normalization_ms": 2.1109000081196427,
+        "gpu_transfer_ms": 0.3013000241480768,
+        "forward_ms": 6.996499956585467,
+        "decision_ms": 0.8222999749705195
+      },
+      "checkpoint_load_before_ms": 383.80539999343455,
+      "checkpoint_load_after_ms": 231.52179998578504
+    },
+    {
+      "model": "S2",
+      "input": "random-person.jpeg",
+      "baseline_gradcam": {
+        "median_ms": 146.9529999885708,
+        "min_ms": 142.38560001831502,
+        "max_ms": 268.46310001565143,
+        "repeats": 7
+      },
+      "corrected_gradcam": {
+        "median_ms": 126.7947000451386,
+        "min_ms": 119.51619997853413,
+        "max_ms": 152.94199995696545,
+        "repeats": 7
+      },
+      "prediction_only": {
+        "median_ms": 87.02330000232905,
+        "min_ms": 80.85560001200065,
+        "max_ms": 102.74189995834604,
+        "repeats": 7
+      },
+      "stages_ms": {
+        "face_detection_ms": 41.2400999921374,
+        "resize_ms": 0.526099989656359,
+        "normalization_ms": 2.4479999556206167,
+        "gpu_transfer_ms": 1.2835999950766563,
+        "forward_ms": 29.39490001881495,
+        "decision_ms": 1.3780000153928995
+      },
+      "checkpoint_load_before_ms": 329.12929996382445,
+      "checkpoint_load_after_ms": 264.4822000293061
+    },
+    {
+      "model": "S2",
+      "input": "real.jpeg",
+      "baseline_gradcam": {
+        "median_ms": 130.23820001399145,
+        "min_ms": 123.67399997310713,
+        "max_ms": 137.05730001674965,
+        "repeats": 7
+      },
+      "corrected_gradcam": {
+        "median_ms": 112.00110003119335,
+        "min_ms": 105.26380001101643,
+        "max_ms": 120.82130002090707,
+        "repeats": 7
+      },
+      "prediction_only": {
+        "median_ms": 69.30690002627671,
+        "min_ms": 63.1075999699533,
+        "max_ms": 73.64309998229146,
+        "repeats": 7
+      },
+      "stages_ms": {
+        "face_detection_ms": 37.588899955153465,
+        "resize_ms": 0.37209998117759824,
+        "normalization_ms": 1.4882999821566045,
+        "gpu_transfer_ms": 0.8779999916441739,
+        "forward_ms": 30.804899986833334,
+        "decision_ms": 1.2666000402532518
+      },
+      "checkpoint_load_before_ms": 329.12929996382445,
+      "checkpoint_load_after_ms": 264.4822000293061
+    }
+  ],
+  "baseline_comparison": [
+    {
+      "input": "random-person.jpeg",
+      "baseline": "mean",
+      "milliseconds": 12808.760799991433,
+      "details": {
+        "steps": 256,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.1466042399406433,
+        "signed_attribution_sum": 0.1437908411026001,
+        "completeness_absolute_residual": 0.002813398838043213,
+        "completeness_relative_residual": 0.019190432958707697,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 1.1926214098930359,
+            "relative_residual": 8.134972156166159
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.46827560663223267,
+            "relative_residual": 3.194147773773983
+          },
+          {
+            "steps": 128,
+            "absolute_residual": 0.06189030408859253,
+            "relative_residual": 0.4221590324648898
+          },
+          {
+            "steps": 256,
+            "absolute_residual": 0.002813398838043213,
+            "relative_residual": 0.019190432958707697
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.127783864736557,
+          "max": 0.09517274051904678,
+          "mean": 9.552442341282907e-07,
+          "std": 0.005014458335526874,
+          "abs_sum": 436.18320823514216,
+          "signed_sum": 0.14379100407486334,
+          "positive_sum": 218.1634996196085,
+          "negative_sum": -218.01970861553366,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.0326941080052165e-08,
+            0.0015154391876421869,
+            0.007180340355262165,
+            0.019394912533462056,
+            0.127783864736557
+          ]
+        },
+        "gradient_abs_sum": 157939.43893432617,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 12796.639100008179,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.3434999748133123
+      }
+    },
+    {
+      "input": "random-person.jpeg",
+      "baseline": "blur",
+      "milliseconds": 514.6267000236548,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "input blurred with a 31-pixel mean filter; explains differences from this reference",
+        "output_difference": 1.5534372329711914,
+        "signed_attribution_sum": 1.5678126811981201,
+        "completeness_absolute_residual": 0.014375448226928711,
+        "completeness_relative_residual": 0.009253961422975179,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.014375448226928711,
+            "relative_residual": 0.009253961422975179
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.04921110346913338,
+          "max": 0.044470563530921936,
+          "mean": 1.0415421737198211e-05,
+          "std": 0.001992955855402477,
+          "abs_sum": 161.2183386753095,
+          "signed_sum": 1.5678126032569724,
+          "positive_sum": 81.39307563928324,
+          "negative_sum": -79.82526303602626,
+          "absolute_quantiles_0_50_90_99_100": [
+            2.7848082173598243e-10,
+            0.000501978094689548,
+            0.0026799892308190477,
+            0.00792301511392,
+            0.04921110346913338
+          ]
+        },
+        "gradient_abs_sum": 16678.843017578125,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 503.426400013268,
+        "target_class": "REAL",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 3.1375999678857625
+      }
+    },
+    {
+      "input": "real.jpeg",
+      "baseline": "mean",
+      "milliseconds": 3526.8940000096336,
+      "details": {
+        "steps": 256,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.010123804211616516,
+        "signed_attribution_sum": 0.006246209144592285,
+        "completeness_absolute_residual": 0.003877595067024231,
+        "completeness_relative_residual": 0.3830175876549352,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 1.440708801150322,
+            "relative_residual": 142.3090343348587
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.18882329761981964,
+            "relative_residual": 18.651417359805826
+          },
+          {
+            "steps": 128,
+            "absolute_residual": 0.012550398707389832,
+            "relative_residual": 1.2396919621370126
+          },
+          {
+            "steps": 256,
+            "absolute_residual": 0.003877595067024231,
+            "relative_residual": 0.3830175876549352
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.11017013341188431,
+          "max": 0.08380860835313797,
+          "mean": 4.149590191814545e-08,
+          "std": 0.0032021097967917895,
+          "abs_sum": 239.39812346000173,
+          "signed_sum": 0.006246295123934598,
+          "positive_sum": 119.70218487756284,
+          "negative_sum": -119.6959385824389,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.078228338893041e-09,
+            0.0007295775867532939,
+            0.0039076375309377905,
+            0.012177132973447516,
+            0.11017013341188431
+          ]
+        },
+        "gradient_abs_sum": 117097.28398895264,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 3516.196199983824,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.1076000411994755
+      }
+    },
+    {
+      "input": "real.jpeg",
+      "baseline": "blur",
+      "milliseconds": 264.02000000234693,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "input blurred with a 31-pixel mean filter; explains differences from this reference",
+        "output_difference": -1.9132415056228638,
+        "signed_attribution_sum": -1.9007129669189453,
+        "completeness_absolute_residual": 0.012528538703918457,
+        "completeness_relative_residual": 0.0065483310220367285,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.012528538703918457,
+            "relative_residual": 0.0065483310220367285
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.10117916762828827,
+          "max": 0.07450161129236221,
+          "mean": -1.2626973098153455e-05,
+          "std": 0.002118129806571403,
+          "abs_sum": 96.54099327643485,
+          "signed_sum": -1.9007130065188433,
+          "positive_sum": 47.320140134957995,
+          "negative_sum": -49.22085314147684,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.6302814920841087e-11,
+            0.0001588846862432547,
+            0.0014641071786172688,
+            0.0071410534158349095,
+            0.10117916762828827
+          ]
+        },
+        "gradient_abs_sum": 13819.361328125,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 252.9235999681987,
+        "target_class": "FAKE",
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "precision": "FP32",
+        "blend_ms": 2.147699997294694
+      }
+    }
+  ],
+  "streamlit_memory_cache": [
+    {
+      "model": "S0",
+      "prediction_cache": {
+        "median_ms": 0.9885000181384385,
+        "min_ms": 0.9427000186406076,
+        "max_ms": 1.0239999974146485,
+        "repeats": 7
+      },
+      "explanation_cache": {
+        "median_ms": 0.6852000369690359,
+        "min_ms": 0.5218000151216984,
+        "max_ms": 0.9327000007033348,
+        "repeats": 7
+      }
+    },
+    {
+      "model": "S2",
+      "prediction_cache": {
+        "median_ms": 0.8903000270947814,
+        "min_ms": 0.8308999822475016,
+        "max_ms": 1.0003999923355877,
+        "repeats": 7
+      },
+      "explanation_cache": {
+        "median_ms": 0.7094999891705811,
+        "min_ms": 0.6802999996580184,
+        "max_ms": 0.7596000214107335,
+        "repeats": 7
+      }
+    }
+  ]
+}

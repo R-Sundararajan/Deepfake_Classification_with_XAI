@@ -1,0 +1,19 @@
+{
+  "prediction_checkpoints_unchanged": true,
+  "repairs": [
+    {
+      "issue": "cuDNN evaluation-mode RNN has no backward workspace",
+      "fix": "Native eval LSTM for explanation gradients only; inference/training unchanged"
+    },
+    {
+      "issue": "Windows default text encoding distorted UTF-8 model names",
+      "fix": "Explicit UTF-8 JSON reads; numerical results and checkpoints unchanged"
+    }
+  ],
+  "source_sha256": {
+    "training/unified_experiment.py": "c3c1f2506120205c491a089d8ab7c49cbf412d6e6f2fcf86e6c3bf81305697a5",
+    "models/unified.py": "6861f9b662cd6f92463b22a7f5e202d42652b5a5da3884dca47fa2f76c3eca2c",
+    "training/video_protocol.py": "b3df66c6d65e5063f07f1103ceea07f08934fa5aca8a78881f609340d0da9bc6",
+    "inference/unified.py": "5de4992ebb208dc5b3665bf12576b91e48cd20f28d8e35538cfa3abcb4ced5fb"
+  }
+}

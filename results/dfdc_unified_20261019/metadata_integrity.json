@@ -1,0 +1,16 @@
+{
+  "metadata_files": [
+    {
+      "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\kaggle_part00_metadata\\metadata.json",
+      "sha256": "ec95a01cdcb8958ce8983cb12c0aaf2fbfda0b496831ad2a0eb7775a726e3212",
+      "entries": 1334
+    },
+    {
+      "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\metadata\\metadata.json",
+      "sha256": "ec95a01cdcb8958ce8983cb12c0aaf2fbfda0b496831ad2a0eb7775a726e3212",
+      "entries": 1334
+    }
+  ],
+  "conflicting_labels": [],
+  "comparison": "All local metadata.json label mappings compared; no prediction-derived labels"
+}

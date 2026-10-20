@@ -1,0 +1,114 @@
+{
+  "id": "S0",
+  "config": {
+    "id": "S0",
+    "model": "Preserved image ResNet-18",
+    "backbones": [],
+    "preprocess": "raw",
+    "balance": false,
+    "augment": false,
+    "kind": "legacy"
+  },
+  "validation": {
+    "accuracy": 0.06285714285714286,
+    "precision": 0.0,
+    "real_precision": 0.06285714285714286,
+    "real_recall": 1.0,
+    "fake_recall": 0.0,
+    "macro_f1": 0.05913978494623656,
+    "pr_auc": 0.9379592390572321,
+    "brier_score": 0.9370714657807658,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.4972283813747229,
+    "balanced_accuracy": 0.5,
+    "log_loss": 14.301143175841517,
+    "confusion_matrix_real_fake": [
+      [
+        11,
+        0
+      ],
+      [
+        164,
+        0
+      ]
+    ],
+    "positive_class": "FAKE",
+    "threshold": 0.5,
+    "undefined_precision_recall_f1_policy": "zero when denominator zero",
+    "ece": 0.9371025815791382
+  },
+  "calibration": {
+    "temperature": 20.0854102608446,
+    "fit_split": "validation",
+    "method": "scalar temperature on video aggregate log probabilities/logits",
+    "before": {
+      "accuracy": 0.06285714285714286,
+      "precision": 0.0,
+      "real_precision": 0.06285714285714286,
+      "real_recall": 1.0,
+      "fake_recall": 0.0,
+      "macro_f1": 0.05913978494623656,
+      "pr_auc": 0.9379592390572321,
+      "brier_score": 0.9370714657807658,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.4972283813747229,
+      "balanced_accuracy": 0.5,
+      "log_loss": 14.301143175841517,
+      "confusion_matrix_real_fake": [
+        [
+          11,
+          0
+        ],
+        [
+          164,
+          0
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "ece": 0.9371025815791382
+    },
+    "after": {
+      "accuracy": 0.06285714285714286,
+      "precision": 0.0,
+      "real_precision": 0.06285714285714286,
+      "real_recall": 1.0,
+      "fake_recall": 0.0,
+      "macro_f1": 0.05913978494623656,
+      "pr_auc": 0.9379592390572321,
+      "brier_score": 0.441591106529682,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.4972283813747229,
+      "balanced_accuracy": 0.5,
+      "log_loss": 1.0971251685213863,
+      "confusion_matrix_real_fake": [
+        [
+          11,
+          0
+        ],
+        [
+          164,
+          0
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "ece": 0.6179414876035644
+    },
+    "inconclusive_enabled": false,
+    "inconclusive_reason": "Small REAL validation sample cannot establish a reliable selective-risk guarantee; no threshold deployed"
+  },
+  "training_seconds": 0,
+  "training_note": "Preserved image-trained checkpoint, no DFDC training",
+  "inference_ms_per_video": 9.461595428043179,
+  "peak_vram_bytes": 148410368,
+  "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\models\\best_resnet18.pth",
+  "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+  "validation_videos": 175,
+  "elapsed_seconds": 8.118141799990553
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "candidate": "dfdc_only_control",
+    "input": "random-person.jpeg",
+    "expected_user_label": "FAKE",
+    "prediction": "REAL",
+    "fake_probability": 0.23733516037464142,
+    "real_probability": 0.7626648396253586,
+    "checkpoint_sha256": "81a492473107c3a8a47185ef6072697a971e739d7badd5e17463fd2d89910c95",
+    "interpretation": "Post-selection sanity check only; not used for training, thresholding, model selection or deployment"
+  },
+  {
+    "candidate": "dfdc_only_control",
+    "input": "real.jpeg",
+    "expected_user_label": "REAL",
+    "prediction": "FAKE",
+    "fake_probability": 0.8487008213996887,
+    "real_probability": 0.15129917860031128,
+    "checkpoint_sha256": "81a492473107c3a8a47185ef6072697a971e739d7badd5e17463fd2d89910c95",
+    "interpretation": "Post-selection sanity check only; not used for training, thresholding, model selection or deployment"
+  },
+  {
+    "candidate": "mixed_domains",
+    "input": "random-person.jpeg",
+    "expected_user_label": "FAKE",
+    "prediction": "FAKE",
+    "fake_probability": 0.6874364018440247,
+    "real_probability": 0.31256359815597534,
+    "checkpoint_sha256": "2745e2a51ce23943eed21c9accc7441eb2ac7a609774758ea2ffa461f672550b",
+    "interpretation": "Post-selection sanity check only; not used for training, thresholding, model selection or deployment"
+  },
+  {
+    "candidate": "mixed_domains",
+    "input": "real.jpeg",
+    "expected_user_label": "REAL",
+    "prediction": "FAKE",
+    "fake_probability": 0.7594593167304993,
+    "real_probability": 0.24054068326950073,
+    "checkpoint_sha256": "2745e2a51ce23943eed21c9accc7441eb2ac7a609774758ea2ffa461f672550b",
+    "interpretation": "Post-selection sanity check only; not used for training, thresholding, model selection or deployment"
+  }
+]

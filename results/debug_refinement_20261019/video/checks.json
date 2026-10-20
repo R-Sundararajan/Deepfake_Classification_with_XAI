@@ -1,0 +1,1320 @@
+{
+  "selection": "First filename alphabetically per class in validation; not selected for correct predictions",
+  "videos": [
+    {
+      "model": "S6",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.02451816014945507,
+      "saved_validation_probability": 0.0245181567367942,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 10121.477800013963,
+      "xai_ms": 4591.774100030307,
+      "temperature": 1.4091608530245567,
+      "timings": {
+        "normalization_ms": 9.217199985869229,
+        "gpu_transfer_ms": 0.8285000221803784,
+        "forward_ms": 8584.496899973601,
+        "decode_ms": 408.61299994867295,
+        "face_detection_ms": 145.33729996765032,
+        "resize_ms": 3.5885999677702785,
+        "decision_ms": 195.7092999946326
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.024517226964235306,
+      "deterministic_repeat": true,
+      "all_video_methods": [
+        {
+          "method": "gradcam",
+          "details": {
+            "activation_shape": [
+              1,
+              1280,
+              7,
+              7
+            ],
+            "gradient_shape": [
+              1,
+              1280,
+              7,
+              7
+            ],
+            "gradient_abs_sum": 0.48629462718963623,
+            "raw_map_max": 0.0010039082262665033,
+            "raw_map_min": 0.0,
+            "low_signal": false,
+            "target_index": 0,
+            "display": "Relative positive influence on the selected class score",
+            "method": "gradcam",
+            "finite": true,
+            "constant_map": false,
+            "signed": false,
+            "attribution_ms": 49.2831000010483,
+            "target_class": "REAL",
+            "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+            "precision": "FP32",
+            "blend_ms": 2.9830000130459666
+          }
+        },
+        {
+          "method": "gradcam++",
+          "details": {
+            "activation_shape": [
+              1,
+              1280,
+              7,
+              7
+            ],
+            "gradient_shape": [
+              1,
+              1280,
+              7,
+              7
+            ],
+            "gradient_abs_sum": 0.48629462718963623,
+            "raw_map_max": 0.031048553064465523,
+            "raw_map_min": 0.0,
+            "low_signal": false,
+            "target_index": 0,
+            "display": "Relative positive influence on the selected class score",
+            "method": "gradcam++",
+            "finite": true,
+            "constant_map": false,
+            "signed": false,
+            "attribution_ms": 86.32279996527359,
+            "target_class": "REAL",
+            "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+            "precision": "FP32",
+            "blend_ms": 3.1305000302381814
+          }
+        },
+        {
+          "method": "layercam",
+          "details": {
+            "activation_shape": [
+              1,
+              1280,
+              7,
+              7
+            ],
+            "gradient_shape": [
+              1,
+              1280,
+              7,
+              7
+            ],
+            "gradient_abs_sum": 0.48629462718963623,
+            "raw_map_max": 0.0012674691388383508,
+            "raw_map_min": 0.0,
+            "low_signal": false,
+            "target_index": 0,
+            "display": "Relative positive influence on the selected class score",
+            "method": "layercam",
+            "finite": true,
+            "constant_map": false,
+            "signed": false,
+            "attribution_ms": 40.886999981012195,
+            "target_class": "REAL",
+            "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+            "precision": "FP32",
+            "blend_ms": 2.8590000001713634
+          }
+        },
+        {
+          "method": "integrated_gradients",
+          "details": {
+            "steps": 32,
+            "quadrature": "Gauss-Legendre",
+            "internal_batch_size": 8,
+            "baseline": "zero normalized input = ImageNet mean RGB",
+            "output_difference": 0.013683319091796875,
+            "signed_attribution_sum": 0.018483273684978485,
+            "completeness_absolute_residual": 0.00479995459318161,
+            "completeness_relative_residual": 0.35078876411346527,
+            "converged": true,
+            "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+            "convergence_history": [
+              {
+                "steps": 32,
+                "absolute_residual": 0.00479995459318161,
+                "relative_residual": 0.35078876411346527
+              }
+            ],
+            "raw_attribution_statistics": {
+              "min": -0.0009114411659538746,
+              "max": 0.001000238349661231,
+              "mean": 1.2278963229030698e-07,
+              "std": 6.181994791763857e-05,
+              "abs_sum": 4.8691595011080775,
+              "signed_sum": 0.018483277769395328,
+              "positive_sum": 2.4438213894387366,
+              "negative_sum": -2.4253381116693413,
+              "absolute_quantiles_0_50_90_99_100": [
+                1.8860394149222692e-11,
+                1.341860661341343e-05,
+                8.392823947360746e-05,
+                0.00025719885336002407,
+                0.001000238349661231
+              ]
+            },
+            "gradient_abs_sum": 256.77315521240234,
+            "gradient_available": true,
+            "low_signal": false,
+            "target_index": 0,
+            "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+            "method": "integrated_gradients",
+            "finite": true,
+            "constant_map": false,
+            "signed": true,
+            "attribution_ms": 8602.296099998057,
+            "target_class": "REAL",
+            "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+            "precision": "FP32",
+            "blend_ms": 2.6357999886386096
+          }
+        },
+        {
+          "method": "occlusion",
+          "details": {
+            "patch_size": 32,
+            "regions": 49,
+            "baseline": "ImageNet mean RGB",
+            "raw_attribution_statistics": {
+              "min": -0.00012761354446411133,
+              "max": 0.00028204917907714844,
+              "mean": 2.8807289746342872e-05,
+              "std": 7.374519384780415e-05,
+              "abs_sum": 2.5325927734375,
+              "signed_sum": 1.4454345703125,
+              "positive_sum": 1.989013671875,
+              "negative_sum": -0.5435791015625,
+              "absolute_quantiles_0_50_90_99_100": [
+                3.5762786865234375e-07,
+                2.9385089874267578e-05,
+                0.0001304149627685547,
+                0.00028204917907714844,
+                0.00028204917907714844
+              ]
+            },
+            "clean_class_probability": 0.9754828214645386,
+            "limitation": "Masking may create out-of-distribution inputs",
+            "signed": true,
+            "method": "occlusion",
+            "target_index": 0,
+            "finite": true,
+            "constant_map": false,
+            "attribution_ms": 308.8178000180051,
+            "target_class": "REAL",
+            "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+            "precision": "FP32",
+            "blend_ms": 2.5161999510601163
+          }
+        },
+        {
+          "method": "lime",
+          "details": {
+            "samples": 256,
+            "seed": 42,
+            "regions": 49,
+            "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+            "weighted_surrogate_r2": 0.8013337916312131,
+            "surrogate_intercept": 0.9736879065654568,
+            "surrogate_local_prediction": 0.9751950833765453,
+            "actual_target_probability": 0.9754830598831177,
+            "raw_attribution_statistics": {
+              "min": -0.00021627308160532266,
+              "max": 0.0007205831934697926,
+              "mean": 3.0758710751718594e-05,
+              "std": 0.0001704566317906005,
+              "abs_sum": 0.005699285123654363,
+              "signed_sum": 0.0015071768268342112,
+              "positive_sum": 0.003603230975244287,
+              "negative_sum": -0.002096054148410076,
+              "absolute_quantiles_0_50_90_99_100": [
+                3.8039738115003274e-07,
+                6.957365258131176e-05,
+                0.00022377278946805748,
+                0.0005880779470317054,
+                0.0007205831934697926
+              ]
+            },
+            "signed": true,
+            "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+            "method": "lime",
+            "target_index": 0,
+            "finite": true,
+            "constant_map": false,
+            "attribution_ms": 3601.906700001564,
+            "target_class": "REAL",
+            "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+            "precision": "FP32",
+            "blend_ms": 2.396699972450733
+          }
+        }
+      ]
+    },
+    {
+      "model": "S6",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "FAKE",
+      "fake_probability": 0.9892132878303528,
+      "saved_validation_probability": 0.9892132986728708,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "no_face_full_frame_fallback",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1332.909099990502,
+      "xai_ms": 50.94099999405444,
+      "temperature": 1.4091608530245567,
+      "timings": {
+        "normalization_ms": 18.542899983003736,
+        "gpu_transfer_ms": 0.923599989619106,
+        "forward_ms": 32.61709999060258,
+        "decode_ms": 480.2915000473149,
+        "face_detection_ms": 146.30770008079708,
+        "resize_ms": 36.906100052874535,
+        "decision_ms": 2.669000008609146
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.9892143607139587
+    },
+    {
+      "model": "S8",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.037247251719236374,
+      "saved_validation_probability": 0.03724724869085504,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1421.493300003931,
+      "xai_ms": 108.07229997590184,
+      "temperature": 0.8139183552856663,
+      "timings": {
+        "normalization_ms": 9.201600041706115,
+        "gpu_transfer_ms": 1.6884999931789935,
+        "forward_ms": 66.47939997492358,
+        "decode_ms": 513.826800044626,
+        "face_detection_ms": 171.6331000206992,
+        "resize_ms": 4.645099979825318,
+        "decision_ms": 4.102199978660792
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed; CNN branch localization only",
+      "complete_selected_decision_probability": 0.03724261000752449
+    },
+    {
+      "model": "S8",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "FAKE",
+      "fake_probability": 0.9646026492118835,
+      "saved_validation_probability": 0.9646025879710904,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "no_face_full_frame_fallback",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1309.3005000264384,
+      "xai_ms": 61.3024000194855,
+      "temperature": 0.8139183552856663,
+      "timings": {
+        "normalization_ms": 9.862199949566275,
+        "gpu_transfer_ms": 2.69210000988096,
+        "forward_ms": 59.099000005517155,
+        "decode_ms": 407.7629999956116,
+        "face_detection_ms": 131.96959998458624,
+        "resize_ms": 30.6781999533996,
+        "decision_ms": 3.689299977850169
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed; CNN branch localization only",
+      "complete_selected_decision_probability": 0.9646047353744507
+    },
+    {
+      "model": "S7",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.03570979833602905,
+      "saved_validation_probability": 0.03570978493994303,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1343.3346999809146,
+      "xai_ms": 81.6000999766402,
+      "temperature": 0.8296057008980618,
+      "timings": {
+        "normalization_ms": 10.484199970960617,
+        "gpu_transfer_ms": 4.271899990271777,
+        "forward_ms": 94.15260003879666,
+        "decode_ms": 434.8510999698192,
+        "face_detection_ms": 153.34980003535748,
+        "resize_ms": 3.676899941638112,
+        "decision_ms": 4.071800038218498
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.035707902163267136
+    },
+    {
+      "model": "S7",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "FAKE",
+      "fake_probability": 0.9532070159912109,
+      "saved_validation_probability": 0.9532070844428077,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "no_face_full_frame_fallback",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1197.7445000084117,
+      "xai_ms": 64.18450002092868,
+      "temperature": 0.8296057008980618,
+      "timings": {
+        "normalization_ms": 10.150200047064573,
+        "gpu_transfer_ms": 0.8375999750569463,
+        "forward_ms": 20.316299982368946,
+        "decode_ms": 383.863500028383,
+        "face_detection_ms": 136.66819996433333,
+        "resize_ms": 28.33450003527105,
+        "decision_ms": 2.151200023945421
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.9531969428062439
+    },
+    {
+      "model": "S1b",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.4333746135234833,
+      "saved_validation_probability": 0.43337457936667134,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1203.4144999925047,
+      "xai_ms": 45.11070001171902,
+      "temperature": 4.571204902317711,
+      "timings": {
+        "normalization_ms": 14.41599999088794,
+        "gpu_transfer_ms": 2.648100024089217,
+        "forward_ms": 38.41229999670759,
+        "decode_ms": 423.0203001643531,
+        "face_detection_ms": 138.59619986033067,
+        "resize_ms": 3.005899954587221,
+        "decision_ms": 2.2433000267483294
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.4333736300468445
+    },
+    {
+      "model": "S1b",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "FAKE",
+      "fake_probability": 0.5418242812156677,
+      "saved_validation_probability": 0.5418242494868257,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "no_face_full_frame_fallback",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1257.2665000334382,
+      "xai_ms": 61.573299986775964,
+      "temperature": 4.571204902317711,
+      "timings": {
+        "normalization_ms": 10.540699993725866,
+        "gpu_transfer_ms": 5.020899989176542,
+        "forward_ms": 58.76670003635809,
+        "decode_ms": 434.53560007037595,
+        "face_detection_ms": 151.56679990468547,
+        "resize_ms": 37.6864000572823,
+        "decision_ms": 2.3048000293783844
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.5418070554733276
+    },
+    {
+      "model": "S2",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.4235961437225342,
+      "saved_validation_probability": 0.42359614548408103,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1240.9817000152543,
+      "xai_ms": 38.205500051844865,
+      "temperature": 3.97255472437057,
+      "timings": {
+        "normalization_ms": 9.432699996978045,
+        "gpu_transfer_ms": 2.256800013128668,
+        "forward_ms": 25.772000022698194,
+        "decode_ms": 462.2207999927923,
+        "face_detection_ms": 135.72239986388013,
+        "resize_ms": 3.1163000385276973,
+        "decision_ms": 1.8097999854944646
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.42359283566474915
+    },
+    {
+      "model": "S2",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "FAKE",
+      "fake_probability": 0.5536705255508423,
+      "saved_validation_probability": 0.5536705380227284,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "no_face_full_frame_fallback",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1222.2881999914534,
+      "xai_ms": 39.798100013285875,
+      "temperature": 3.97255472437057,
+      "timings": {
+        "normalization_ms": 11.875999975018203,
+        "gpu_transfer_ms": 4.213300009723753,
+        "forward_ms": 42.076599958818406,
+        "decode_ms": 404.599699890241,
+        "face_detection_ms": 151.30049985600635,
+        "resize_ms": 31.50759998243302,
+        "decision_ms": 3.34840000141412
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.5536546111106873
+    },
+    {
+      "model": "S4",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.29682379961013794,
+      "saved_validation_probability": 0.29682377755586875,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1214.1494999523275,
+      "xai_ms": 323.84180004009977,
+      "temperature": 0.9051385550507373,
+      "timings": {
+        "normalization_ms": 10.644299967680126,
+        "gpu_transfer_ms": 4.183300014119595,
+        "forward_ms": 31.28550003748387,
+        "decode_ms": 419.89150003064424,
+        "face_detection_ms": 140.06860001245514,
+        "resize_ms": 3.4476000000722706,
+        "decision_ms": 1.920800015795976
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.2969028055667877
+    },
+    {
+      "model": "S4",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "FAKE",
+      "fake_probability": 0.7729208469390869,
+      "saved_validation_probability": 0.7729208239389166,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "no_face_full_frame_fallback",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1158.4781000274234,
+      "xai_ms": 168.37099997792393,
+      "temperature": 0.9051385550507373,
+      "timings": {
+        "normalization_ms": 9.57850000122562,
+        "gpu_transfer_ms": 0.952300033532083,
+        "forward_ms": 17.32010004343465,
+        "decode_ms": 425.6112999864854,
+        "face_detection_ms": 134.75729996571317,
+        "resize_ms": 32.025600026827306,
+        "decision_ms": 1.1912999907508492
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.7729107141494751
+    },
+    {
+      "model": "S5",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.32582053542137146,
+      "saved_validation_probability": 0.3258205095988687,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1336.2324999761768,
+      "xai_ms": 77.57339999079704,
+      "temperature": 1.5250081164822207,
+      "timings": {
+        "normalization_ms": 9.261699975468218,
+        "gpu_transfer_ms": 1.2533999979496002,
+        "forward_ms": 44.06269994797185,
+        "decode_ms": 542.4459999776445,
+        "face_detection_ms": 162.88759984308854,
+        "resize_ms": 3.855799965094775,
+        "decision_ms": 1.4744999934919178
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed; CNN branch localization only",
+      "complete_selected_decision_probability": 0.3258011043071747
+    },
+    {
+      "model": "S5",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "FAKE",
+      "fake_probability": 0.6733817458152771,
+      "saved_validation_probability": 0.6733817699958436,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "no_face_full_frame_fallback",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1210.5732000200078,
+      "xai_ms": 59.567000018432736,
+      "temperature": 1.5250081164822207,
+      "timings": {
+        "normalization_ms": 10.847400000784546,
+        "gpu_transfer_ms": 2.329300041310489,
+        "forward_ms": 38.33960002521053,
+        "decode_ms": 421.3144000386819,
+        "face_detection_ms": 158.30039989668876,
+        "resize_ms": 32.52780012553558,
+        "decision_ms": 2.0050000166520476
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed; CNN branch localization only",
+      "complete_selected_decision_probability": 0.6733905673027039
+    },
+    {
+      "model": "S1p",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.3048994243144989,
+      "saved_validation_probability": 0.3048994184195053,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1214.116700051818,
+      "xai_ms": 46.48670001188293,
+      "temperature": 0.5559516246977887,
+      "timings": {
+        "normalization_ms": 8.290200028568506,
+        "gpu_transfer_ms": 3.766500041820109,
+        "forward_ms": 46.59919999539852,
+        "decode_ms": 436.3871000823565,
+        "face_detection_ms": 139.8307000636123,
+        "resize_ms": 3.0353000620380044,
+        "decision_ms": 2.37210001796484
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.30389153957366943
+    },
+    {
+      "model": "S1p",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "FAKE",
+      "fake_probability": 0.9943957328796387,
+      "saved_validation_probability": 0.9943957062345176,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "yunet_landmark_aligned",
+        "no_face_full_frame_fallback",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned",
+        "yunet_landmark_aligned"
+      ],
+      "milliseconds": 1242.9070000071079,
+      "xai_ms": 41.46689997287467,
+      "temperature": 0.5559516246977887,
+      "timings": {
+        "normalization_ms": 10.512100008782,
+        "gpu_transfer_ms": 4.202199983410537,
+        "forward_ms": 39.39099999843165,
+        "decode_ms": 455.7104997802526,
+        "face_detection_ms": 152.14979992015287,
+        "resize_ms": 32.93619997566566,
+        "decision_ms": 2.669000008609146
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.9943958520889282
+    },
+    {
+      "model": "S3",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.4497390687465668,
+      "saved_validation_probability": 0.4497390151198825,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame"
+      ],
+      "milliseconds": 1274.8562999768183,
+      "xai_ms": 380.8425000170246,
+      "temperature": 0.3658431170510292,
+      "timings": {
+        "normalization_ms": 9.34300001244992,
+        "gpu_transfer_ms": 4.111699992790818,
+        "forward_ms": 28.791600023396313,
+        "decode_ms": 460.9809000394307,
+        "face_detection_ms": 0.22529996931552887,
+        "resize_ms": 221.4191000093706,
+        "decision_ms": 2.08609999390319
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.44995954632759094
+    },
+    {
+      "model": "S3",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "FAKE",
+      "fake_probability": 0.7899094820022583,
+      "saved_validation_probability": 0.789909502277419,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame"
+      ],
+      "milliseconds": 1197.3932999535464,
+      "xai_ms": 213.1791000138037,
+      "temperature": 0.3658431170510292,
+      "timings": {
+        "normalization_ms": 10.648499999660999,
+        "gpu_transfer_ms": 0.9976000292226672,
+        "forward_ms": 18.34979996783659,
+        "decode_ms": 431.93150009028614,
+        "face_detection_ms": 0.2245000214315951,
+        "resize_ms": 221.16539999842644,
+        "decision_ms": 1.262200006749481
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.7899965047836304
+    },
+    {
+      "model": "S1",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.4508821666240692,
+      "saved_validation_probability": 0.45088215021011513,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame"
+      ],
+      "milliseconds": 1284.862000029534,
+      "xai_ms": 57.748000021092594,
+      "temperature": 2.4789721138480205,
+      "timings": {
+        "normalization_ms": 8.990200003609061,
+        "gpu_transfer_ms": 2.112100017257035,
+        "forward_ms": 36.7600999888964,
+        "decode_ms": 446.09710009535775,
+        "face_detection_ms": 0.2519000554457307,
+        "resize_ms": 216.19340003235266,
+        "decision_ms": 2.6996000087819993
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.45091012120246887
+    },
+    {
+      "model": "S1",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "FAKE",
+      "fake_probability": 0.7158231139183044,
+      "saved_validation_probability": 0.7158231232495013,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame"
+      ],
+      "milliseconds": 1135.82480000332,
+      "xai_ms": 36.19299997808412,
+      "temperature": 2.4789721138480205,
+      "timings": {
+        "normalization_ms": 15.013299998827279,
+        "gpu_transfer_ms": 2.5647999718785286,
+        "forward_ms": 23.366899986285716,
+        "decode_ms": 351.3448000885546,
+        "face_detection_ms": 0.2231999533250928,
+        "resize_ms": 209.5600999891758,
+        "decision_ms": 1.3722999719902873
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.7160653471946716
+    },
+    {
+      "model": "S0",
+      "filename": "dhjnjkzuhq.mp4",
+      "expected": "REAL",
+      "prediction": "REAL",
+      "fake_probability": 0.309495747089386,
+      "saved_validation_probability": 0.3094957490256586,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame"
+      ],
+      "milliseconds": 1375.5227999645285,
+      "xai_ms": 210.30199999222532,
+      "temperature": 20.0854102608446,
+      "timings": {
+        "normalization_ms": 10.519100003875792,
+        "gpu_transfer_ms": 4.062500025611371,
+        "forward_ms": 96.23630001442507,
+        "decode_ms": 449.3042000103742,
+        "face_detection_ms": 0.27540017617866397,
+        "resize_ms": 243.4809000696987,
+        "decision_ms": 2.5270000332966447
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.309495747089386
+    },
+    {
+      "model": "S0",
+      "filename": "aegvtnwqoe.mp4",
+      "expected": "FAKE",
+      "prediction": "REAL",
+      "fake_probability": 0.3305075764656067,
+      "saved_validation_probability": 0.33050757117038804,
+      "input_shape": [
+        8,
+        3,
+        224,
+        224
+      ],
+      "indices": [
+        18,
+        56,
+        93,
+        131,
+        168,
+        206,
+        243,
+        281
+      ],
+      "crop_methods": [
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame",
+        "full_frame"
+      ],
+      "milliseconds": 1274.3349999655038,
+      "xai_ms": 22.82280003419146,
+      "temperature": 20.0854102608446,
+      "timings": {
+        "normalization_ms": 9.82310000108555,
+        "gpu_transfer_ms": 2.6435000472702086,
+        "forward_ms": 28.15490000648424,
+        "decode_ms": 460.95830004196614,
+        "face_detection_ms": 0.20870001753792167,
+        "resize_ms": 249.40230004722252,
+        "decision_ms": 0.9119000169448555
+      },
+      "explanation_scope": "Selected complete video decision with other seven frame embeddings held fixed",
+      "complete_selected_decision_probability": 0.3304886817932129
+    }
+  ],
+  "errors": [
+    {
+      "input": "corrupt",
+      "handled": true,
+      "message": "Video cannot be opened"
+    },
+    {
+      "input": "missing",
+      "handled": true,
+      "message": "Video cannot be opened"
+    }
+  ],
+  "mov_mode": "lossless remux",
+  "mov": {
+    "decoded": true,
+    "prediction": "REAL",
+    "fake_probability": 0.02451816014945507,
+    "metadata": {
+      "fps": 29.9689,
+      "frame_count": 300,
+      "width": 1080,
+      "height": 1920,
+      "duration_seconds": 10.010377424596832,
+      "sampled_frame_count": 8,
+      "face_status_counts": {
+        "yunet_landmark_aligned": 8
+      }
+    }
+  }
+}

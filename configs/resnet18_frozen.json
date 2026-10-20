@@ -1,0 +1,7 @@
+{
+  "experiment_id": "A1_resnet18_frozen",
+  "model": {"backbone": "resnet18", "attention": "none", "fusion": "none"},
+  "head_epochs": 3,
+  "fine_tune_epochs": 0,
+  "comparison": "Stage A: common frozen-feature baseline"
+}

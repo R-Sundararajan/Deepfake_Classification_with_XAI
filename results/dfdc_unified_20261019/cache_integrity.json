@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "videos": 1162,
+  "source_hashes_reverified": true,
+  "full_metadata_graph_disjoint": true,
+  "face_methods_by_split_class": {
+    "test_FAKE": {
+      "yunet_landmark_aligned": 1216,
+      "no_face_full_frame_fallback": 88
+    },
+    "train_REAL": {
+      "no_face_full_frame_fallback": 56,
+      "yunet_landmark_aligned": 360
+    },
+    "train_FAKE": {
+      "yunet_landmark_aligned": 4803,
+      "no_face_full_frame_fallback": 1285
+    },
+    "validation_FAKE": {
+      "yunet_landmark_aligned": 1296,
+      "no_face_full_frame_fallback": 16
+    },
+    "test_REAL": {
+      "yunet_landmark_aligned": 82,
+      "no_face_full_frame_fallback": 6
+    },
+    "validation_REAL": {
+      "yunet_landmark_aligned": 88
+    }
+  },
+  "storage": {
+    "phase_bytes": 14435184293,
+    "free_bytes": 76582420480,
+    "limit_bytes": 32212254720,
+    "headroom_bytes": 5368709120
+  }
+}

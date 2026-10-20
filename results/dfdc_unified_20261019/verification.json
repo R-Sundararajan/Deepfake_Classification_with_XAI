@@ -1,0 +1,1782 @@
+{
+  "passed": true,
+  "model_count": 11,
+  "inference_cases": 66,
+  "streamlit_cases": 66,
+  "cpu_fallback": {
+    "passed": true,
+    "id": "S6",
+    "image_probability": 0.33744940161705017,
+    "video_probability": 0.024347607046365738,
+    "image_seconds": 2.175932499987539,
+    "video_seconds": 3.5081573000061326,
+    "cached_cuda_score_difference": 0.0001705496904284634
+  },
+  "original_checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+  "inference": [
+    {
+      "id": "S0",
+      "method": "gradcam",
+      "kind": "image",
+      "fake_probability": 1.0028860515376437e-06,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.6515662000165321,
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S0",
+      "method": "gradcam",
+      "kind": "video",
+      "fake_probability": 0.309495747089386,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.5634331000037491,
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+      "cached_validation_score_difference": 1.9362725867111408e-09
+    },
+    {
+      "id": "S0",
+      "method": "gradcam++",
+      "kind": "image",
+      "fake_probability": 1.0028860515376437e-06,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.06757420004578307,
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S0",
+      "method": "gradcam++",
+      "kind": "video",
+      "fake_probability": 0.309495747089386,
+      "finite": true,
+      "nonconstant_map": false,
+      "elapsed_seconds": 1.3437819999526255,
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+      "cached_validation_score_difference": 1.9362725867111408e-09
+    },
+    {
+      "id": "S0",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 1.0028860515376437e-06,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.45577669999329373,
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S0",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.309495747089386,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.748059999954421,
+      "checkpoint_sha256": "406c11e8ddac13a1364483734d1bcbc829add2e367b816bc40b6e9ed44121d06",
+      "cached_validation_score_difference": 1.9362725867111408e-09
+    },
+    {
+      "id": "S1",
+      "method": "gradcam",
+      "kind": "image",
+      "fake_probability": 0.5819371938705444,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 13.099222799995914,
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S1",
+      "method": "gradcam",
+      "kind": "video",
+      "fake_probability": 0.4508821666240692,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 10.55970740003977,
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+      "cached_validation_score_difference": 1.641395408480406e-08
+    },
+    {
+      "id": "S1",
+      "method": "gradcam++",
+      "kind": "image",
+      "fake_probability": 0.5819371938705444,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.0912804999970831,
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S1",
+      "method": "gradcam++",
+      "kind": "video",
+      "fake_probability": 0.4508821666240692,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.485156700015068,
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+      "cached_validation_score_difference": 1.641395408480406e-08
+    },
+    {
+      "id": "S1",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 0.5819371938705444,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.2560733000282198,
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S1",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.4508821666240692,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 2.619290100003127,
+      "checkpoint_sha256": "c05af06b62f0c977b16534df6a665862c897be7b455a1b3840a4983b3daf19dc",
+      "cached_validation_score_difference": 1.641395408480406e-08
+    },
+    {
+      "id": "S1p",
+      "method": "gradcam",
+      "kind": "image",
+      "fake_probability": 0.2681167721748352,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.12144080002326518,
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S1p",
+      "method": "gradcam",
+      "kind": "video",
+      "fake_probability": 0.3048994243144989,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.3878148999647237,
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+      "cached_validation_score_difference": 5.894993604371734e-09
+    },
+    {
+      "id": "S1p",
+      "method": "gradcam++",
+      "kind": "image",
+      "fake_probability": 0.2681167721748352,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.09777450002729893,
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S1p",
+      "method": "gradcam++",
+      "kind": "video",
+      "fake_probability": 0.3048994243144989,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.3710437000263482,
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+      "cached_validation_score_difference": 5.894993604371734e-09
+    },
+    {
+      "id": "S1p",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 0.2681167721748352,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.213495599979069,
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S1p",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.3048994243144989,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 2.5494201999972574,
+      "checkpoint_sha256": "c38f027363a9f7dc9c81cb05b7b9185eaa145f5a008e4053d5bffd1b9ed28d1b",
+      "cached_validation_score_difference": 5.894993604371734e-09
+    },
+    {
+      "id": "S1b",
+      "method": "gradcam",
+      "kind": "image",
+      "fake_probability": 0.3078292906284332,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.09842850000131875,
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S1b",
+      "method": "gradcam",
+      "kind": "video",
+      "fake_probability": 0.4333746135234833,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.294500700023491,
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+      "cached_validation_score_difference": 3.4156811934416e-08
+    },
+    {
+      "id": "S1b",
+      "method": "gradcam++",
+      "kind": "image",
+      "fake_probability": 0.3078292906284332,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.09887940000044182,
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S1b",
+      "method": "gradcam++",
+      "kind": "video",
+      "fake_probability": 0.4333746135234833,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.3080385999637656,
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+      "cached_validation_score_difference": 3.4156811934416e-08
+    },
+    {
+      "id": "S1b",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 0.3078292906284332,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.246347899956163,
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S1b",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.4333746135234833,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 2.4806359999929555,
+      "checkpoint_sha256": "1e71461e92bb04483118f289eccb84b5b1701b632772b468921422caaa8ce4a9",
+      "cached_validation_score_difference": 3.4156811934416e-08
+    },
+    {
+      "id": "S2",
+      "method": "gradcam",
+      "kind": "image",
+      "fake_probability": 0.3369324505329132,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.10105689999181777,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S2",
+      "method": "gradcam",
+      "kind": "video",
+      "fake_probability": 0.4235961437225342,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.38008729997091,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": 1.7615468528298095e-09
+    },
+    {
+      "id": "S2",
+      "method": "gradcam++",
+      "kind": "image",
+      "fake_probability": 0.3369324505329132,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.10061289998702705,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S2",
+      "method": "gradcam++",
+      "kind": "video",
+      "fake_probability": 0.4235961437225342,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.3315466999774799,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": 1.7615468528298095e-09
+    },
+    {
+      "id": "S2",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 0.3369324505329132,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.2609891999745741,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S2",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.4235961437225342,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 2.4384262999519706,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": 1.7615468528298095e-09
+    },
+    {
+      "id": "S3",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 0.13920249044895172,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.9635301000089385,
+      "checkpoint_sha256": "8ba1c464ffcb319870533285ffad0aa688d3fdcc624e48d9effd8800975448c4",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S3",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.4497390687465668,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 2.125626499997452,
+      "checkpoint_sha256": "8ba1c464ffcb319870533285ffad0aa688d3fdcc624e48d9effd8800975448c4",
+      "cached_validation_score_difference": 5.3626684259899804e-08
+    },
+    {
+      "id": "S3",
+      "method": "attention_rollout",
+      "kind": "image",
+      "fake_probability": 0.13920249044895172,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.0591370000038296,
+      "checkpoint_sha256": "8ba1c464ffcb319870533285ffad0aa688d3fdcc624e48d9effd8800975448c4",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S3",
+      "method": "attention_rollout",
+      "kind": "video",
+      "fake_probability": 0.4497390687465668,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.301674400048796,
+      "checkpoint_sha256": "8ba1c464ffcb319870533285ffad0aa688d3fdcc624e48d9effd8800975448c4",
+      "cached_validation_score_difference": 5.3626684259899804e-08
+    },
+    {
+      "id": "S4",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 0.558316171169281,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.8060901999706402,
+      "checkpoint_sha256": "5091341e18e4ed0c304f015749282a0736bf05c636743b71590be82888d7fd0f",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S4",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.29682379961013794,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 2.09307959995931,
+      "checkpoint_sha256": "5091341e18e4ed0c304f015749282a0736bf05c636743b71590be82888d7fd0f",
+      "cached_validation_score_difference": 2.2054269188664932e-08
+    },
+    {
+      "id": "S4",
+      "method": "attention_rollout",
+      "kind": "image",
+      "fake_probability": 0.558316171169281,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.05581250000977889,
+      "checkpoint_sha256": "5091341e18e4ed0c304f015749282a0736bf05c636743b71590be82888d7fd0f",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S4",
+      "method": "attention_rollout",
+      "kind": "video",
+      "fake_probability": 0.29682379961013794,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.21773720002966,
+      "checkpoint_sha256": "5091341e18e4ed0c304f015749282a0736bf05c636743b71590be82888d7fd0f",
+      "cached_validation_score_difference": 2.2054269188664932e-08
+    },
+    {
+      "id": "S5",
+      "method": "gradcam",
+      "kind": "image",
+      "fake_probability": 0.1877177655696869,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.15378430002601817,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S5",
+      "method": "gradcam",
+      "kind": "video",
+      "fake_probability": 0.32582053542137146,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.4382636999944225,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": 2.5822502747185894e-08
+    },
+    {
+      "id": "S5",
+      "method": "gradcam++",
+      "kind": "image",
+      "fake_probability": 0.1877177655696869,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.15310200001113117,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S5",
+      "method": "gradcam++",
+      "kind": "video",
+      "fake_probability": 0.32582053542137146,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.3622274000081234,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": 2.5822502747185894e-08
+    },
+    {
+      "id": "S5",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 0.1877177655696869,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 2.1067419000319205,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S5",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.32582053542137146,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 3.302084500028286,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": 2.5822502747185894e-08
+    },
+    {
+      "id": "S5",
+      "method": "attention_rollout",
+      "kind": "image",
+      "fake_probability": 0.1877177655696869,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.07903610001085326,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S5",
+      "method": "attention_rollout",
+      "kind": "video",
+      "fake_probability": 0.32582053542137146,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.2572763999924064,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": 2.5822502747185894e-08
+    },
+    {
+      "id": "S6",
+      "method": "gradcam",
+      "kind": "image",
+      "fake_probability": 0.3369324505329132,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.10038589994655922,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S6",
+      "method": "gradcam",
+      "kind": "video",
+      "fake_probability": 0.02451816014945507,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.3577472000033595,
+      "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc",
+      "cached_validation_score_difference": 3.412660869173134e-09
+    },
+    {
+      "id": "S6",
+      "method": "gradcam++",
+      "kind": "image",
+      "fake_probability": 0.3369324505329132,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.10766089998651296,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S6",
+      "method": "gradcam++",
+      "kind": "video",
+      "fake_probability": 0.02451816014945507,
+      "finite": true,
+      "nonconstant_map": false,
+      "elapsed_seconds": 1.2689446000149474,
+      "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc",
+      "cached_validation_score_difference": 3.412660869173134e-09
+    },
+    {
+      "id": "S6",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 0.3369324505329132,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.3867765999748372,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S6",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.02451816014945507,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 2.7360804000054486,
+      "checkpoint_sha256": "45083ac238d3cc067b017ad7a6d4058473168642395ce22f1a78d7f1ade2c8dc",
+      "cached_validation_score_difference": 3.412660869173134e-09
+    },
+    {
+      "id": "S7",
+      "method": "gradcam",
+      "kind": "image",
+      "fake_probability": 0.3369324505329132,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.10131200001342222,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S7",
+      "method": "gradcam",
+      "kind": "video",
+      "fake_probability": 0.03570979833602905,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.317342899972573,
+      "checkpoint_sha256": "8a1f91873fae00c452e8e24f5907a3c330f63951f064c7d0bee0202afb19a44b",
+      "cached_validation_score_difference": 1.3396086025185827e-08
+    },
+    {
+      "id": "S7",
+      "method": "gradcam++",
+      "kind": "image",
+      "fake_probability": 0.3369324505329132,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.10731939994730055,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S7",
+      "method": "gradcam++",
+      "kind": "video",
+      "fake_probability": 0.03570979833602905,
+      "finite": true,
+      "nonconstant_map": false,
+      "elapsed_seconds": 1.3606841000146233,
+      "checkpoint_sha256": "8a1f91873fae00c452e8e24f5907a3c330f63951f064c7d0bee0202afb19a44b",
+      "cached_validation_score_difference": 1.3396086025185827e-08
+    },
+    {
+      "id": "S7",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 0.3369324505329132,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.2672208999865688,
+      "checkpoint_sha256": "8653ca44ea701cea26cb4452936c3aa36b39da5251e9de0b9c3d6f10b178df11",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S7",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.03570979833602905,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 2.556006700033322,
+      "checkpoint_sha256": "8a1f91873fae00c452e8e24f5907a3c330f63951f064c7d0bee0202afb19a44b",
+      "cached_validation_score_difference": 1.3396086025185827e-08
+    },
+    {
+      "id": "S8",
+      "method": "gradcam",
+      "kind": "image",
+      "fake_probability": 0.1877177655696869,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.1558406000258401,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S8",
+      "method": "gradcam",
+      "kind": "video",
+      "fake_probability": 0.037247251719236374,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.4222762999706902,
+      "checkpoint_sha256": "9d6c36fb1496de413c9c7f16c9fd28fa76078e423dc0f2807496f7fae2cd458d",
+      "cached_validation_score_difference": 3.0283813373666035e-09
+    },
+    {
+      "id": "S8",
+      "method": "gradcam++",
+      "kind": "image",
+      "fake_probability": 0.1877177655696869,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.1351083000190556,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S8",
+      "method": "gradcam++",
+      "kind": "video",
+      "fake_probability": 0.037247251719236374,
+      "finite": true,
+      "nonconstant_map": false,
+      "elapsed_seconds": 1.4336077999905683,
+      "checkpoint_sha256": "9d6c36fb1496de413c9c7f16c9fd28fa76078e423dc0f2807496f7fae2cd458d",
+      "cached_validation_score_difference": 3.0283813373666035e-09
+    },
+    {
+      "id": "S8",
+      "method": "integrated_gradients",
+      "kind": "image",
+      "fake_probability": 0.1877177655696869,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 2.02399079996394,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S8",
+      "method": "integrated_gradients",
+      "kind": "video",
+      "fake_probability": 0.037247251719236374,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 3.4200849999906495,
+      "checkpoint_sha256": "9d6c36fb1496de413c9c7f16c9fd28fa76078e423dc0f2807496f7fae2cd458d",
+      "cached_validation_score_difference": 3.0283813373666035e-09
+    },
+    {
+      "id": "S8",
+      "method": "attention_rollout",
+      "kind": "image",
+      "fake_probability": 0.1877177655696869,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 0.09510729997418821,
+      "checkpoint_sha256": "f2790fddd1c3cd88a5d7e487e21dfba7a1bc8787840d4df82543e0fc35d4c6f3",
+      "cached_validation_score_difference": null
+    },
+    {
+      "id": "S8",
+      "method": "attention_rollout",
+      "kind": "video",
+      "fake_probability": 0.037247251719236374,
+      "finite": true,
+      "nonconstant_map": true,
+      "elapsed_seconds": 1.264694299956318,
+      "checkpoint_sha256": "9d6c36fb1496de413c9c7f16c9fd28fa76078e423dc0f2807496f7fae2cd458d",
+      "cached_validation_score_difference": 3.0283813373666035e-09
+    }
+  ],
+  "streamlit": [
+    {
+      "id": "S0",
+      "kind": "Image",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S0",
+      "kind": "Image",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S0",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S0",
+      "kind": "Video",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S0",
+      "kind": "Video",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S0",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S1",
+      "kind": "Image",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S1",
+      "kind": "Image",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S1",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S1",
+      "kind": "Video",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S1",
+      "kind": "Video",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S1",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S1p",
+      "kind": "Image",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S1p",
+      "kind": "Image",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S1p",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S1p",
+      "kind": "Video",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S1p",
+      "kind": "Video",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S1p",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S1b",
+      "kind": "Image",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S1b",
+      "kind": "Image",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S1b",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S1b",
+      "kind": "Video",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S1b",
+      "kind": "Video",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S1b",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S2",
+      "kind": "Image",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S2",
+      "kind": "Image",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S2",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S2",
+      "kind": "Video",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S2",
+      "kind": "Video",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S2",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S3",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S3",
+      "kind": "Image",
+      "method": "attention_rollout",
+      "passed": true
+    },
+    {
+      "id": "S3",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S3",
+      "kind": "Video",
+      "method": "attention_rollout",
+      "passed": true
+    },
+    {
+      "id": "S4",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S4",
+      "kind": "Image",
+      "method": "attention_rollout",
+      "passed": true
+    },
+    {
+      "id": "S4",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S4",
+      "kind": "Video",
+      "method": "attention_rollout",
+      "passed": true
+    },
+    {
+      "id": "S5",
+      "kind": "Image",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S5",
+      "kind": "Image",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S5",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S5",
+      "kind": "Image",
+      "method": "attention_rollout",
+      "passed": true
+    },
+    {
+      "id": "S5",
+      "kind": "Video",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S5",
+      "kind": "Video",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S5",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S5",
+      "kind": "Video",
+      "method": "attention_rollout",
+      "passed": true
+    },
+    {
+      "id": "S6",
+      "kind": "Image",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S6",
+      "kind": "Image",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S6",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S6",
+      "kind": "Video",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S6",
+      "kind": "Video",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S6",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S7",
+      "kind": "Image",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S7",
+      "kind": "Image",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S7",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S7",
+      "kind": "Video",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S7",
+      "kind": "Video",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S7",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S8",
+      "kind": "Image",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S8",
+      "kind": "Image",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S8",
+      "kind": "Image",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S8",
+      "kind": "Image",
+      "method": "attention_rollout",
+      "passed": true
+    },
+    {
+      "id": "S8",
+      "kind": "Video",
+      "method": "gradcam",
+      "passed": true
+    },
+    {
+      "id": "S8",
+      "kind": "Video",
+      "method": "gradcam++",
+      "passed": true
+    },
+    {
+      "id": "S8",
+      "kind": "Video",
+      "method": "integrated_gradients",
+      "passed": true
+    },
+    {
+      "id": "S8",
+      "kind": "Video",
+      "method": "attention_rollout",
+      "passed": true
+    }
+  ],
+  "xai_sanity": [
+    {
+      "id": "S0",
+      "method": "gradcam",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.9999990463256836,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 1.9788742065429688e-05,
+      "random_deletion_drop": 0.017284293969472248,
+      "advantage": -0.01726450522740682,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9059291706547049,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S0",
+      "method": "gradcam++",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.9999990463256836,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 2.574920654296875e-05,
+      "random_deletion_drop": 0.017284293969472248,
+      "advantage": -0.01725854476292928,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9191938186296211,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S0",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.9999990463256836,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": -5.960464477539062e-07,
+      "random_deletion_drop": 0.017284293969472248,
+      "advantage": -0.017284890015920002,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.37357436382081766,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 2.6906776428222656,
+        "signed_attribution_sum": 1.853536605834961,
+        "completeness_absolute_residual": 0.8371410369873047,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S1",
+      "method": "gradcam",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.5793741941452026,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.06853574514389038,
+      "random_deletion_drop": -0.20759197076161703,
+      "advantage": 0.27612771590550744,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9628729539539784,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S1",
+      "method": "gradcam++",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.5793741941452026,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.18225035071372986,
+      "random_deletion_drop": -0.20759197076161703,
+      "advantage": 0.3898423214753469,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9958372771824098,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S1",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.5793741941452026,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.0576094388961792,
+      "random_deletion_drop": -0.20759197076161703,
+      "advantage": 0.26520140965779626,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.699388750169936,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": -1.6762765645980835,
+        "signed_attribution_sum": -1.5950334072113037,
+        "completeness_absolute_residual": 0.08124315738677979,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S1p",
+      "method": "gradcam",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.7233532071113586,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.7229853821918368,
+      "random_deletion_drop": 0.6254100402196249,
+      "advantage": 0.09757534197221196,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9318930975510845,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S1p",
+      "method": "gradcam++",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.7233532071113586,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.7047413904219866,
+      "random_deletion_drop": 0.6254100402196249,
+      "advantage": 0.0793313502023617,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9899215417801644,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S1p",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.7233532071113586,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.6257815957069397,
+      "random_deletion_drop": 0.6254100402196249,
+      "advantage": 0.000371555487314823,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.6795436023944916,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": -2.703395366668701,
+        "signed_attribution_sum": -5.505189418792725,
+        "completeness_absolute_residual": 2.8017940521240234,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S1b",
+      "method": "gradcam",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6907604932785034,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.5608629882335663,
+      "random_deletion_drop": 0.10503610968589783,
+      "advantage": 0.45582687854766846,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.8991949335098178,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S1b",
+      "method": "gradcam++",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6907604932785034,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.604814201593399,
+      "random_deletion_drop": 0.10503610968589783,
+      "advantage": 0.4997780919075012,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9896136388197483,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S1b",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6907604932785034,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": -0.17675793170928955,
+      "random_deletion_drop": 0.10503610968589783,
+      "advantage": -0.2817940413951874,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.698822766769697,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.5872637033462524,
+        "signed_attribution_sum": 1.5095871686935425,
+        "completeness_absolute_residual": 0.92232346534729,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S2",
+      "method": "gradcam",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6614324450492859,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.5215816348791122,
+      "random_deletion_drop": 0.22789287567138672,
+      "advantage": 0.2936887592077255,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.8670887471773838,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S2",
+      "method": "gradcam++",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6614324450492859,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.529686838388443,
+      "random_deletion_drop": 0.22789287567138672,
+      "advantage": 0.3017939627170563,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9893882659504973,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S2",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6614324450492859,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": -0.004586160182952881,
+      "random_deletion_drop": 0.22789287567138672,
+      "advantage": -0.2324790358543396,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.6949683857027783,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.6790834069252014,
+        "signed_attribution_sum": 1.7343380451202393,
+        "completeness_absolute_residual": 1.0552546381950378,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S3",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.8608594536781311,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": -0.004424691200256348,
+      "random_deletion_drop": -0.08631209532419841,
+      "advantage": 0.08188740412394206,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.6173900729588464,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": -0.1319712996482849,
+        "signed_attribution_sum": -0.3761286735534668,
+        "completeness_absolute_residual": 0.24415737390518188,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S3",
+      "method": "attention_rollout",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.8608594536781311,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.08066391944885254,
+      "random_deletion_drop": -0.08631209532419841,
+      "advantage": 0.16697601477305096,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9799850221105094,
+      "IG": {
+        "meaning": "Native class-token attention rollout, class-agnostic; not established as faithful attribution or manipulation evidence",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S4",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.55824875831604,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": -0.4410859942436218,
+      "random_deletion_drop": -0.37155898412068683,
+      "advantage": -0.069527010122935,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.6534743137046802,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": -1.8774824142456055,
+        "signed_attribution_sum": -1.804417610168457,
+        "completeness_absolute_residual": 0.07306480407714844,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S4",
+      "method": "attention_rollout",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.55824875831604,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": -0.3604234457015991,
+      "random_deletion_drop": -0.37155898412068683,
+      "advantage": 0.01113553841908771,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9794630960876749,
+      "IG": {
+        "meaning": "Native class-token attention rollout, class-agnostic; not established as faithful attribution or manipulation evidence",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S5",
+      "method": "gradcam",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.8103334307670593,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.2825075387954712,
+      "random_deletion_drop": -0.06313608090082805,
+      "advantage": 0.34564361969629925,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.939082306341414,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S5",
+      "method": "gradcam++",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.8103334307670593,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.5716720819473267,
+      "random_deletion_drop": -0.06313608090082805,
+      "advantage": 0.6348081628481547,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9896684575698377,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S5",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.8103334307670593,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.010597467422485352,
+      "random_deletion_drop": -0.06313608090082805,
+      "advantage": 0.0737335483233134,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.6446156309099467,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 1.8339149951934814,
+        "signed_attribution_sum": 2.094496965408325,
+        "completeness_absolute_residual": 0.26058197021484375,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S5",
+      "method": "attention_rollout",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.8103334307670593,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.02531808614730835,
+      "random_deletion_drop": -0.06313608090082805,
+      "advantage": 0.0884541670481364,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9794630960876749,
+      "IG": {
+        "meaning": "Native class-token attention rollout, class-agnostic; not established as faithful attribution or manipulation evidence",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S6",
+      "method": "gradcam",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6614324450492859,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.5215816348791122,
+      "random_deletion_drop": 0.22789287567138672,
+      "advantage": 0.2936887592077255,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.8670887471773838,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S6",
+      "method": "gradcam++",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6614324450492859,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.529686838388443,
+      "random_deletion_drop": 0.22789287567138672,
+      "advantage": 0.3017939627170563,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9893882659504973,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S6",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6614324450492859,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": -0.004586160182952881,
+      "random_deletion_drop": 0.22789287567138672,
+      "advantage": -0.2324790358543396,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.6949683857027783,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.6790834069252014,
+        "signed_attribution_sum": 1.7343380451202393,
+        "completeness_absolute_residual": 1.0552546381950378,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S7",
+      "method": "gradcam",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6614324450492859,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.5215816348791122,
+      "random_deletion_drop": 0.22789287567138672,
+      "advantage": 0.2936887592077255,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.8670887471773838,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S7",
+      "method": "gradcam++",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6614324450492859,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.529686838388443,
+      "random_deletion_drop": 0.22789287567138672,
+      "advantage": 0.3017939627170563,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9893882659504973,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S7",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.6614324450492859,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": -0.004586160182952881,
+      "random_deletion_drop": 0.22789287567138672,
+      "advantage": -0.2324790358543396,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.6949683857027783,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.6790834069252014,
+        "signed_attribution_sum": 1.7343380451202393,
+        "completeness_absolute_residual": 1.0552546381950378,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S8",
+      "method": "gradcam",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.8103334307670593,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.2825075387954712,
+      "random_deletion_drop": -0.06313608090082805,
+      "advantage": 0.34564361969629925,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.939082306341414,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S8",
+      "method": "gradcam++",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.8103334307670593,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.5716720819473267,
+      "random_deletion_drop": -0.06313608090082805,
+      "advantage": 0.6348081628481547,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9896684575698377,
+      "IG": {
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S8",
+      "method": "integrated_gradients",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.8103334307670593,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.010597467422485352,
+      "random_deletion_drop": -0.06313608090082805,
+      "advantage": 0.0737335483233134,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.6446156309099467,
+      "IG": {
+        "steps": 24,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 1.8339149951934814,
+        "signed_attribution_sum": 2.094496965408325,
+        "completeness_absolute_residual": 0.26058197021484375,
+        "display": "absolute channel-summed attribution; sign not represented",
+        "constant_map": false
+      }
+    },
+    {
+      "id": "S8",
+      "method": "attention_rollout",
+      "scope": "one validation image software/stability check; not a population faithfulness estimate",
+      "clean_class_probability": 0.8103334307670593,
+      "mask_fraction": 0.15,
+      "salient_deletion_drop": 0.02531808614730835,
+      "random_deletion_drop": -0.06313608090082805,
+      "advantage": 0.0884541670481364,
+      "nonconstant": true,
+      "finite": true,
+      "limitation": "Mean-color masks may be out of distribution; a small sanity check is not proof of faithfulness",
+      "flip_correlation": 0.9794630960876749,
+      "IG": {
+        "meaning": "Native class-token attention rollout, class-agnostic; not established as faithful attribution or manipulation evidence",
+        "constant_map": false
+      }
+    }
+  ],
+  "media_scope": "Validation DFDC REAL video plus existing validation image; not an accuracy experiment",
+  "storage": {
+    "phase_bytes": 14634684543,
+    "free_bytes": 76380823552,
+    "limit_bytes": 32212254720,
+    "headroom_bytes": 5368709120
+  }
+}

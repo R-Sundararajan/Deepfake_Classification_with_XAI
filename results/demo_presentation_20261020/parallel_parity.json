@@ -1,0 +1,182 @@
+[
+  {
+    "model_id": "S0",
+    "modality": "Image",
+    "prediction": "FAKE",
+    "fake_probability_before": 0.8578057885169983,
+    "fake_probability_after": 0.8578057885169983,
+    "parallel_seconds_including_clone": 5.63314019999234,
+    "serial_seconds_warm_model": 0.8229644999955781,
+    "methods": [
+      {
+        "method": "gradcam",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474436.711479,
+          "finished": 474437.0026779,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "gradcam++",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474436.7529503,
+          "finished": 474437.0059429,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "layercam",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474437.0027856,
+          "finished": 474437.0365944,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "integrated_gradients",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474437.006145,
+          "finished": 474437.7656773,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "occlusion",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474437.0367294,
+          "finished": 474437.4412537,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "lime",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474437.4414126,
+          "finished": 474442.1739719,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    ],
+    "peak_allocated_cuda_bytes": 549417984,
+    "peak_reserved_cuda_bytes": 1304428544
+  },
+  {
+    "model_id": "S8",
+    "modality": "Video",
+    "prediction": "FAKE",
+    "fake_probability_before": 0.9646026492118835,
+    "fake_probability_after": 0.9646026492118835,
+    "parallel_seconds_including_clone": 17.366105099965353,
+    "serial_seconds_warm_model": 12.516349499986973,
+    "methods": [
+      {
+        "method": "gradcam",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474457.6372981,
+          "finished": 474464.0941662,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "gradcam++",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474457.7964507,
+          "finished": 474464.3632841,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "layercam",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474464.0942674,
+          "finished": 474464.1921971,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "integrated_gradients",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_0",
+          "started": 474464.1922696,
+          "finished": 474474.8499056,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "occlusion",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474464.3633951,
+          "finished": 474465.0660969,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "lime",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474465.0663353,
+          "finished": 474465.9632531,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "attention_rollout",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474465.96333,
+          "finished": 474466.0096777,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      },
+      {
+        "method": "gradient_attention",
+        "max_absolute_map_difference": 0.0,
+        "execution": {
+          "worker": "xai_1",
+          "started": 474466.0097796,
+          "finished": 474466.1301785,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    ],
+    "peak_allocated_cuda_bytes": 1386366464,
+    "peak_reserved_cuda_bytes": 3558866944
+  }
+]

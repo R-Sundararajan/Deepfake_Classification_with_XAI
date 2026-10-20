@@ -1,0 +1,6 @@
+{
+  "experiment_id": "B2_resnet18_cbam",
+  "model": {"backbone": "resnet18", "attention": "cbam", "fusion": "none"},
+  "reference_experiment": "A1_resnet18_frozen",
+  "comparison": "Added channel/spatial CBAM; same split, head budget and basic augmentation as A1"
+}

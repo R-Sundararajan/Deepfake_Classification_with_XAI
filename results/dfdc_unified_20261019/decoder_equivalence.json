@@ -1,0 +1,15 @@
+{
+  "checks": [
+    {
+      "filename": "dhjnjkzuhq.mp4",
+      "frames": 8,
+      "pixel_identical": true
+    },
+    {
+      "filename": "aegvtnwqoe.mp4",
+      "frames": 8,
+      "pixel_identical": true
+    }
+  ],
+  "scope": "Two validation clips, optimized sequential retrieval versus eight seeks at identical indices"
+}
