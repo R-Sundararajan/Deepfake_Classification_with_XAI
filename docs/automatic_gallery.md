@@ -1,5 +1,11 @@
 # Automatic XAI demonstration
 
+## Current image checkpoint — 21 October 2026
+
+The recommended image model is **ResNet-18 [ft, a, img100k]**, where `ft` means continued fine-tuning of the original checkpoint. Its selector shows **98.655% full validation accuracy** on 20,000 images. The caption separately reports **98.695% held-out test accuracy** on 20,000 images. Ranking still uses the shared 2,000-image validation cohort; the full validation score is explicitly labeled to distinguish these scopes. Internal ID: `R18_FT_20261021`.
+
+The final checkpoint passed reload, repeated inference, all six CNN explanation methods and actual Streamlit uploads. Epoch selection used validation only. The test set was evaluated once after selection. These are within-dataset image results; heatmaps retain the interpretation limits below. The original image checkpoint remains available, and the video models retain their existing results. See [the local measured report](../results/demo_accuracy_20261021_040741/REPORT.md) for precision, recall, F1, confusion matrices and rollback.
+
 Upload an image or video, keep the recommended detection model or choose another, and scroll through the explanation gallery. Every compatible method runs automatically. The default video explanation uses the sampled frame whose spatial score most supports the video prediction; the optional frame panel can select up to three frames.
 
 ## What REAL and FAKE meant in the old control

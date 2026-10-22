@@ -1,0 +1,198 @@
+[
+  {
+    "additional_epoch": 1,
+    "original_epoch": 3,
+    "train_loss": 0.01705585501551628,
+    "train_accuracy": 0.99495,
+    "validation": {
+      "accuracy": 0.9824,
+      "precision": 0.983754512635379,
+      "real_precision": 0.9810530514559234,
+      "real_recall": 0.9838,
+      "fake_recall": 0.981,
+      "macro_f1": 0.9823999655039324,
+      "pr_auc": 0.9986556343943033,
+      "brier_score": 0.013255169859653505,
+      "recall": 0.981,
+      "f1": 0.9823753254556379,
+      "roc_auc": 0.99863407,
+      "balanced_accuracy": 0.9823999999999999,
+      "log_loss": 0.048074361493580624,
+      "confusion_matrix_real_fake": [
+        [
+          9838,
+          162
+        ],
+        [
+          190,
+          9810
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "loss": 0.04807435675337911,
+      "samples": 20000,
+      "split": "validation",
+      "completed": true,
+      "checkpoint_sha256": "in_memory_epoch_1",
+      "class_to_idx": {
+        "fake": 0,
+        "real": 1
+      },
+      "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+      "seconds": 70.36530019994825,
+      "evaluated_utc": "2026-10-21T04:22:40.299856+00:00",
+      "inference_precision": "FP32"
+    },
+    "learning_rate": 3e-05,
+    "seconds": 495.2282573999837
+  },
+  {
+    "additional_epoch": 2,
+    "original_epoch": 4,
+    "train_loss": 0.006482994513511657,
+    "train_accuracy": 0.99835,
+    "validation": {
+      "accuracy": 0.985,
+      "precision": 0.9827792156082023,
+      "real_precision": 0.9872413100261201,
+      "real_recall": 0.9827,
+      "fake_recall": 0.9873,
+      "macro_f1": 0.9849999206495803,
+      "pr_auc": 0.998941782759464,
+      "brier_score": 0.011521082036667532,
+      "recall": 0.9873,
+      "f1": 0.9850344208320863,
+      "roc_auc": 0.998934985,
+      "balanced_accuracy": 0.985,
+      "log_loss": 0.043745102416424486,
+      "confusion_matrix_real_fake": [
+        [
+          9827,
+          173
+        ],
+        [
+          127,
+          9873
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "loss": 0.04374512813165784,
+      "samples": 20000,
+      "split": "validation",
+      "completed": true,
+      "checkpoint_sha256": "in_memory_epoch_2",
+      "class_to_idx": {
+        "fake": 0,
+        "real": 1
+      },
+      "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+      "seconds": 63.096593099995516,
+      "evaluated_utc": "2026-10-21T04:29:43.688528+00:00",
+      "inference_precision": "FP32"
+    },
+    "learning_rate": 3e-05,
+    "seconds": 423.24760870006867
+  },
+  {
+    "additional_epoch": 3,
+    "original_epoch": 5,
+    "train_loss": 0.028613010947704316,
+    "train_accuracy": 0.98955,
+    "validation": {
+      "accuracy": 0.98555,
+      "precision": 0.9810759932626573,
+      "real_precision": 0.9901080044413041,
+      "real_recall": 0.9809,
+      "fake_recall": 0.9902,
+      "macro_f1": 0.985549687548119,
+      "pr_auc": 0.9991583024686279,
+      "brier_score": 0.010891878075509356,
+      "recall": 0.9902,
+      "f1": 0.9856168815010202,
+      "roc_auc": 0.99914799,
+      "balanced_accuracy": 0.9855499999999999,
+      "log_loss": 0.03979791652546619,
+      "confusion_matrix_real_fake": [
+        [
+          9809,
+          191
+        ],
+        [
+          98,
+          9902
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "loss": 0.0397978936612606,
+      "samples": 20000,
+      "split": "validation",
+      "completed": true,
+      "checkpoint_sha256": "in_memory_epoch_3",
+      "class_to_idx": {
+        "fake": 0,
+        "real": 1
+      },
+      "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+      "seconds": 62.99346449994482,
+      "evaluated_utc": "2026-10-21T04:36:38.937664+00:00",
+      "inference_precision": "FP32"
+    },
+    "learning_rate": 3e-05,
+    "seconds": 415.11010159994476
+  },
+  {
+    "additional_epoch": 4,
+    "original_epoch": 6,
+    "train_loss": 0.01822552217364311,
+    "train_accuracy": 0.99333,
+    "validation": {
+      "accuracy": 0.98655,
+      "precision": 0.9856273081145823,
+      "real_precision": 0.9874762047890993,
+      "real_recall": 0.9856,
+      "fake_recall": 0.9875,
+      "macro_f1": 0.986549987861364,
+      "pr_auc": 0.9991378868799764,
+      "brier_score": 0.010341152128959787,
+      "recall": 0.9875,
+      "f1": 0.9865627653728958,
+      "roc_auc": 0.9991437400000001,
+      "balanced_accuracy": 0.98655,
+      "log_loss": 0.038193785162877476,
+      "confusion_matrix_real_fake": [
+        [
+          9856,
+          144
+        ],
+        [
+          125,
+          9875
+        ]
+      ],
+      "positive_class": "FAKE",
+      "threshold": 0.5,
+      "undefined_precision_recall_f1_policy": "zero when denominator zero",
+      "loss": 0.03819372550398111,
+      "samples": 20000,
+      "split": "validation",
+      "completed": true,
+      "checkpoint_sha256": "in_memory_epoch_4",
+      "class_to_idx": {
+        "fake": 0,
+        "real": 1
+      },
+      "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+      "seconds": 61.557934499927796,
+      "evaluated_utc": "2026-10-21T04:43:28.700349+00:00",
+      "inference_precision": "FP32"
+    },
+    "learning_rate": 3e-05,
+    "seconds": 409.5987189000007
+  }
+]

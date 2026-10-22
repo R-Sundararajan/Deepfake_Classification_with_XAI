@@ -7,6 +7,7 @@ from inference.contracts import checkpoint_digest
 from inference.unified import available_models, ResearchPredictor
 from inference.media import MediaPredictor
 from explainability.api import compatible_methods
+from inference.demo_candidate import active_image_candidate
 
 
 ARCHITECTURE_NAMES = {
@@ -16,6 +17,7 @@ ARCHITECTURE_NAMES = {
     'mobilenet_v3_large': 'MobileNet-V3-Large',
 }
 MODEL_TAGS = {
+    'ft': 'continued fine-tuning',
     'v': 'baseline pipeline',
     'f': 'face detection + alignment',
     'b': 'class-balanced sampling',
@@ -50,6 +52,8 @@ def model_tags(record):
     config = record['config']
     augmentation = config.get('augmentation', 'none')
     tags = []
+    if config.get('continued_finetuning'):
+        tags.append('ft')
     if config.get('preprocess') == 'face':
         tags.append('f')
     if config.get('balance'):
@@ -79,6 +83,8 @@ def model_tag_legend(records):
 def model_description(record):
     config = record['config']
     backbones = config.get('backbones', [])
+    if config.get('continued_finetuning'):
+        return 'ResNet-18 continued from the original image checkpoint; the final residual stage and classifier were fine-tuned. Full-frame RGB input at 224 pixels; fixed threshold 0.5.'
     if config.get('kind') == 'temporal':
         return 'EfficientNet-B0 extracts features from eight sampled frames; a one-layer LSTM classifies the sequence. The final score comes from the LSTM head.'
     if config.get('kind') == 'score_fusion':
@@ -188,6 +194,10 @@ def catalog(modality='Image', include_experimental=False):
                               evaluation_protocol=None, evaluation_dataset='Image transfer not benchmarked',
                               training_dataset='Local source-grouped DFDC training videos')
                 rows.append(record)
+    if modality == 'Image':
+        candidate = active_image_candidate()
+        if candidate is not None:
+            rows.append(candidate)
     for record in rows:
         record['family'] = family(record)
         record['validation'] = complete_metrics(record['validation'])

@@ -111,8 +111,11 @@ lookup = {record['id']: record for record in records}
 
 def variant_label(identifier):
     record = lookup[identifier]
-    accuracy = record['validation'].get('accuracy') if record['ranked'] else None
-    score = f' · {accuracy:.2%} validation accuracy' if accuracy is not None else ' · accuracy not measured'
+    display_metrics = record.get('full_validation', record['validation'])
+    accuracy = display_metrics.get('accuracy') if record['ranked'] else None
+    split_label = 'full validation accuracy' if record.get('full_validation') else 'validation accuracy'
+    digits = 3 if record.get('full_validation') else 2
+    score = f' · {accuracy:.{digits}%} {split_label}' if accuracy is not None else ' · accuracy not measured'
     suffix = ' (recommended)' if identifier == records[0]['id'] else ''
     if not record['ranked']:
         suffix += ' (experimental image transfer)'
@@ -124,7 +127,11 @@ record = lookup[selected]
 st.caption(model_description(record))
 if record['ranked']:
     metrics = record['validation']
-    st.caption(f"Validation: balanced accuracy {metrics['balanced_accuracy']:.2%} · accuracy {metrics['accuracy']:.2%} · macro-F1 {metrics['macro_f1']:.3f} · {record['evaluation_unit']} level")
+    validation_label = 'Common 2,000-image validation' if record.get('full_validation') else 'Validation'
+    st.caption(f"{validation_label}: balanced accuracy {metrics['balanced_accuracy']:.2%} · accuracy {metrics['accuracy']:.2%} · macro-F1 {metrics['macro_f1']:.3f} · {record['evaluation_unit']} level")
+    if record.get('full_validation'):
+        full, held_out = record['full_validation'], record['held_out_test']
+        st.caption(f"Full validation ({full['samples']:,} images): accuracy {full['accuracy']:.3%}, balanced accuracy {full['balanced_accuracy']:.3%}. Held-out test ({held_out['samples']:,} images): accuracy {held_out['accuracy']:.3%}, balanced accuracy {held_out['balanced_accuracy']:.3%}.")
 else:
     page_notes.append(('info', 'The reported DFDC validation metrics are video-level. Image transfer of this DFDC-trained spatial head has not been benchmarked.'))
 if kind == 'Image' and selected in {'S6', 'S7', 'S8'}:
@@ -137,6 +144,8 @@ with st.expander('Model and evaluation details'):
     st.json({'checkpoint_id': selected, 'checkpoint_sha256': record['checkpoint_sha256'], 'checkpoint_path': record['checkpoint'],
              'architecture': record['config'], 'validation': record['validation'], 'calibration': record['calibration'],
              'protocol': record['evaluation_protocol'], 'limitations': record.get('limitations', 'Small local subset; source grouping does not establish actor disjointness. Image transfer is a separate domain.')})
+    if record.get('full_validation'):
+        st.json({'full_validation': record['full_validation'], 'held_out_test': record['held_out_test']})
     st.dataframe([{'Family': group['family'], 'Best model': display_name(group['best']),
                    'Best validation BA': group['best']['validation'].get('balanced_accuracy'),
                    'Mean validation BA': group['mean_balanced_accuracy'], 'Comparable completed runs': group['comparable_runs']}

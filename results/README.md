@@ -6,6 +6,7 @@ Git contains the source code, run configurations, documentation and compact evid
 - Completed image-run configurations, summaries, validation scores and aggregate charts.
 - Refinement reports, aggregate attribution checks, pilot comparison and the image-transfer prediction CSV used by the model catalog's integrity check.
 - Final automatic-gallery UI checks, concurrent/serial attribution comparison and regression summary.
+- The 21 October image continuation's aggregate validation/test metrics, epoch history and executed report. Portable PNG/SVG figures and their compact evidence snapshot are in `docs/figures/demo_accuracy_20261021/`.
 
 `.gitignore` allows these files explicitly. New experiment output is ignored by default until its reviewable evidence is deliberately included.
 

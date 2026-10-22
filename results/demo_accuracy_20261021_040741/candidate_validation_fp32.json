@@ -1,0 +1,41 @@
+{
+  "accuracy": 0.98655,
+  "precision": 0.9856273081145823,
+  "real_precision": 0.9874762047890993,
+  "real_recall": 0.9856,
+  "fake_recall": 0.9875,
+  "macro_f1": 0.986549987861364,
+  "pr_auc": 0.9991378868799764,
+  "brier_score": 0.010341152128959787,
+  "recall": 0.9875,
+  "f1": 0.9865627653728958,
+  "roc_auc": 0.9991437400000001,
+  "balanced_accuracy": 0.98655,
+  "log_loss": 0.038193785162877476,
+  "confusion_matrix_real_fake": [
+    [
+      9856,
+      144
+    ],
+    [
+      125,
+      9875
+    ]
+  ],
+  "positive_class": "FAKE",
+  "threshold": 0.5,
+  "undefined_precision_recall_f1_policy": "zero when denominator zero",
+  "loss": 0.03819372550398111,
+  "samples": 20000,
+  "split": "validation",
+  "completed": true,
+  "checkpoint_sha256": "314f1394a1876cd6b41d3ddf80b09aef98f6960df31a58f9dc8b73f46319b0a0",
+  "class_to_idx": {
+    "fake": 0,
+    "real": 1
+  },
+  "inference_precision": "FP32",
+  "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+  "seconds": 74.39420829992741,
+  "evaluated_utc": "2026-10-21T04:50:41.989307+00:00"
+}

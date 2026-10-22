@@ -18,6 +18,9 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+# Machine-local activation pointer; references ignored checkpoints and deployment evidence.
+/configs/active_image_model.json
+/configs/runtime/
 .aws/
 .kaggle/
 kaggle.json
@@ -122,3 +125,14 @@ literature_implementation_note.md
 !/results/demo_presentation_20261020/app_qa_final.json
 !/results/demo_presentation_20261020/parallel_parity.json
 !/results/demo_presentation_20261020/regression.json
+
+# Image continuation: aggregate metrics/report only; weights, backups, uploads,
+# per-image CSVs, process state and deployment pointers remain local.
+!/results/demo_accuracy_20261021_040741/
+/results/demo_accuracy_20261021_040741/*
+!/results/demo_accuracy_20261021_040741/REPORT.md
+!/results/demo_accuracy_20261021_040741/baseline_validation_fp32.json
+!/results/demo_accuracy_20261021_040741/candidate_validation_fp32.json
+!/results/demo_accuracy_20261021_040741/candidate_test_fp32.json
+!/results/demo_accuracy_20261021_040741/final_status.json
+!/results/demo_accuracy_20261021_040741/history.json
