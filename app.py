@@ -112,10 +112,10 @@ lookup = {record['id']: record for record in records}
 def variant_label(identifier):
     record = lookup[identifier]
     display_metrics = record.get('full_validation', record['validation'])
-    accuracy = display_metrics.get('accuracy') if record['ranked'] else None
-    split_label = 'full validation accuracy' if record.get('full_validation') else 'validation accuracy'
+    accuracy = display_metrics.get('balanced_accuracy') if record['ranked'] else None
+    split_label = 'full validation balanced accuracy' if record.get('full_validation') else 'validation balanced accuracy'
     digits = 3 if record.get('full_validation') else 2
-    score = f' · {accuracy:.{digits}%} {split_label}' if accuracy is not None else ' · accuracy not measured'
+    score = f' · {accuracy:.{digits}%} {split_label}' if accuracy is not None else ' · validation score not measured'
     suffix = ' (recommended)' if identifier == records[0]['id'] else ''
     if not record['ranked']:
         suffix += ' (experimental image transfer)'
@@ -146,12 +146,14 @@ with st.expander('Model and evaluation details'):
              'protocol': record['evaluation_protocol'], 'limitations': record.get('limitations', 'Small local subset; source grouping does not establish actor disjointness. Image transfer is a separate domain.')})
     if record.get('full_validation'):
         st.json({'full_validation': record['full_validation'], 'held_out_test': record['held_out_test']})
+    if record.get('training_summary'):
+        st.json({'training': record['training_summary'], 'inference_benchmark': record.get('inference_benchmark')})
     st.dataframe([{'Family': group['family'], 'Best model': display_name(group['best']),
                    'Best validation BA': group['best']['validation'].get('balanced_accuracy'),
                    'Mean validation BA': group['mean_balanced_accuracy'], 'Comparable completed runs': group['comparable_runs']}
                   for group in families], hide_index=True, width='stretch')
     if kind == 'Image':
-        page_notes.append(('info', 'Image validation uses the same 2,000-image subset with each model’s native preprocessing. The preserved ResNet used 100,000 training images; E01–E04 used 12,000. DFDC transfer variants trained on videos. Their training budgets and domains differ.'))
+        page_notes.append(('info', 'Family rankings use the common 2,000-image validation subset with each model’s native preprocessing. Full 20,000-image scores are labeled separately. Current ResNet and EfficientNet training counts appear in their tags and details; historical E01, E03 and E04 used 12,000 images. DFDC transfer variants trained on videos. Training budgets and domains differ.'))
 
 uploaded = st.file_uploader('Upload a face image' if kind == 'Image' else 'Upload a video', type=['jpg', 'jpeg', 'png'] if kind == 'Image' else ['mp4', 'mov'])
 if uploaded is None:

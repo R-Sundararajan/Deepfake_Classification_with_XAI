@@ -1,10 +1,10 @@
 # Automatic XAI demonstration
 
-## Current image checkpoint — 21 October 2026
+## Current image checkpoints
 
-The recommended image model is **ResNet-18 [ft, a, img100k]**, where `ft` means continued fine-tuning of the original checkpoint. Its selector shows **98.655% full validation accuracy** on 20,000 images. The caption separately reports **98.695% held-out test accuracy** on 20,000 images. Ranking still uses the shared 2,000-image validation cohort; the full validation score is explicitly labeled to distinguish these scopes. Internal ID: `R18_FT_20261021`.
+The existing ResNet and E02 selector entries now use their validation-selected full-dataset checkpoints. The selector shows full 20,000-image validation accuracy; model details separately expose the common 2,000-image ranking cohort and repeated 20,000-image test result. Both retain all six CNN attribution methods.
 
-The final checkpoint passed reload, repeated inference, all six CNN explanation methods and actual Streamlit uploads. Epoch selection used validation only. The test set was evaluated once after selection. These are within-dataset image results; heatmaps retain the interpretation limits below. The original image checkpoint remains available, and the video models retain their existing results. See [the local measured report](../results/demo_accuracy_20261021_040741/REPORT.md) for precision, recall, F1, confusion matrices and rollback.
+Checkpoint hashes are included in prediction and explanation cache keys. Current training provenance and metrics are in [the execution report](../results/current_image_models/REPORT.md). Historical video results remain unchanged.
 
 Upload an image or video, keep the recommended detection model or choose another, and scroll through the explanation gallery. Every compatible method runs automatically. The default video explanation uses the sampled frame whose spatial score most supports the video prediction; the optional frame panel can select up to three frames.
 
@@ -26,7 +26,7 @@ The UI names each plot's purpose and contents, states the model branch it covers
 |---|---|
 | ResNet-18 [v, img100k] | S0 |
 | ResNet-18 [a, img12k] | E01_resnet18 |
-| EfficientNet-B0 [a, img12k] | E02_efficientnet_b0 |
+| EfficientNet-B0 [ft, a, img100k] | E02_efficientnet_b0 |
 | EfficientNet-B0 + ECA [a, img12k] | E03_attention |
 | EfficientNet-B0 [a, j, img12k] | E04_jpeg |
 | EfficientNet-B0 [v] | S1 |
@@ -42,7 +42,7 @@ The UI names each plot's purpose and contents, states the model branch it covers
 
 Tags: `v` = baseline preprocessing/training pipeline; `f` = YuNet face detection and alignment; `b` = inverse-class-frequency balanced sampling; `a` = training augmentation; `j` = JPEG augmentation; `img12k` / `img100k` = number of face images used in image training. Tags come from the saved run configuration and appear in a legend below the selector. `a` denotes the augmentation registered for each run, rather than implying identical augmentation across datasets.
 
-Each selector option also shows its validation accuracy for the current input mode, for example `EfficientNet-B0 + LSTM [f, b, a] · 90.29% validation accuracy`. This is ordinary accuracy; balanced accuracy remains separately labeled in the metrics caption and determines the ranking. Experimental image transfers without an image benchmark say `accuracy not measured` instead of borrowing a video score.
+Each selector option shows its validation balanced accuracy for the current input mode, for example `EfficientNet-B0 + LSTM [f, b, a] · 94.82% validation balanced accuracy`. The metric matches the balanced-accuracy ranking. Experimental image transfers without an image benchmark say `validation score not measured` instead of borrowing a video score.
 
 S6 has a temporal LSTM decision head. S7 combines the S2 spatial classifier's probability with the S6 LSTM probability; the selected weights are 25% spatial and 75% temporal. S8 combines the S5 CNN/transformer spatial classifier with S6; its LSTM consumes EfficientNet features only. The selected model caption spells out these branches and weights. S5 instead concatenates encoder features before one spatial classifier.
 
