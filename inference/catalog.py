@@ -7,7 +7,7 @@ from inference.contracts import checkpoint_digest
 from inference.unified import available_models, ResearchPredictor
 from inference.media import MediaPredictor
 from explainability.api import compatible_methods
-from inference.demo_candidate import active_image_candidate
+from inference.demo_candidate import current_image_candidates
 
 
 ARCHITECTURE_NAMES = {
@@ -84,7 +84,9 @@ def model_description(record):
     config = record['config']
     backbones = config.get('backbones', [])
     if config.get('continued_finetuning'):
-        return 'ResNet-18 continued from the original image checkpoint; the final residual stage and classifier were fine-tuned. Full-frame RGB input at 224 pixels; fixed threshold 0.5.'
+        name = architecture_name(record)
+        layers = 'final residual stage' if 'resnet18' in backbones else 'final two feature stages'
+        return f'{name} continued from its existing image checkpoint; the {layers} and classifier were fine-tuned on 100,000 images. Full-frame RGB input at 224 pixels; fixed threshold 0.5.'
     if config.get('kind') == 'temporal':
         return 'EfficientNet-B0 extracts features from eight sampled frames; a one-layer LSTM classifies the sequence. The final score comes from the LSTM head.'
     if config.get('kind') == 'score_fusion':
@@ -195,9 +197,9 @@ def catalog(modality='Image', include_experimental=False):
                               training_dataset='Local source-grouped DFDC training videos')
                 rows.append(record)
     if modality == 'Image':
-        candidate = active_image_candidate()
-        if candidate is not None:
-            rows.append(candidate)
+        overrides = {record['id']: record for record in current_image_candidates()}
+        rows = [record for record in rows if record['id'] not in overrides]
+        rows.extend(overrides.values())
     for record in rows:
         record['family'] = family(record)
         record['validation'] = complete_metrics(record['validation'])

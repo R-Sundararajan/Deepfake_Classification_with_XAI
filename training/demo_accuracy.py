@@ -48,6 +48,25 @@ def utc():
     return datetime.now(timezone.utc).isoformat()
 
 
+def image_metrics(fake_truth, fake_probabilities):
+    """Metric labels use FAKE=positive; model logits retain FAKE=0, REAL=1."""
+    metrics = binary_metrics(fake_truth, fake_probabilities)
+    tn, fp = metrics['confusion_matrix_real_fake'][0]
+    fn, tp = metrics['confusion_matrix_real_fake'][1]
+    real_f1 = 2*tn/max(2*tn+fp+fn, 1)
+    fake_f1 = 2*tp/max(2*tp+fp+fn, 1)
+    metrics.update(real_f1=real_f1, fake_precision=metrics['precision'], fake_f1=fake_f1,
+                   weighted_f1=(real_f1*(tn+fp)+fake_f1*(tp+fn))/max(tn+fp+fn+tp, 1),
+                   false_positives=fp, false_negatives=fn, true_positives=tp, true_negatives=tn,
+                   false_positive_rate=fp/max(tn+fp, 1), false_negative_rate=fn/max(tp+fn, 1),
+                   specificity=tn/max(tn+fp, 1), sensitivity=tp/max(tp+fn, 1),
+                   classwise={'REAL': {'precision': metrics['real_precision'], 'recall': metrics['real_recall'],
+                                       'f1': real_f1, 'support': tn+fp},
+                              'FAKE': {'precision': metrics['precision'], 'recall': metrics['recall'],
+                                       'f1': fake_f1, 'support': tp+fn}})
+    return metrics
+
+
 def evaluate(model, loader, device, output, split, checkpoint_hash, amp=False, deadline=None):
     model.eval()
     probabilities, truth, indices = [], [], []
@@ -68,20 +87,23 @@ def evaluate(model, loader, device, output, split, checkpoint_hash, amp=False, d
             indices.extend(positions.tolist())
             count += len(labels)
     assert count == len(loader.dataset), (count, len(loader.dataset))
-    metrics = binary_metrics(truth, probabilities)
+    metrics = image_metrics(truth, probabilities)
     metrics.update(loss=loss_sum/count, samples=count, split=split, completed=True,
                    checkpoint_sha256=checkpoint_hash, threshold=.5, positive_class='FAKE',
                    class_to_idx={'fake': 0, 'real': 1}, inference_precision='AMP FP16' if amp else 'FP32',
                    preprocessing='RGB full frame; PIL bilinear 224; ImageNet normalization',
                    seconds=time.perf_counter()-tick, evaluated_utc=utc())
-    write(output, metrics)
     prediction_file = Path(output).with_suffix('.csv')
-    with prediction_file.open('w', newline='', encoding='utf-8') as stream:
+    temporary = prediction_file.with_suffix('.csv.tmp')
+    with temporary.open('w', newline='', encoding='utf-8') as stream:
         writer = csv.DictWriter(stream, fieldnames=['input', 'label', 'fake_probability', 'prediction'])
         writer.writeheader()
         for index, target, probability in zip(indices, truth, probabilities):
             writer.writerow({'input': loader.dataset.samples[index][0], 'label': 'FAKE' if target else 'REAL',
                              'fake_probability': probability, 'prediction': 'FAKE' if probability >= .5 else 'REAL'})
+    temporary.replace(prediction_file)
+    metrics['predictions_sha256'] = sha(prediction_file)
+    write(output, metrics)
     return metrics
 
 

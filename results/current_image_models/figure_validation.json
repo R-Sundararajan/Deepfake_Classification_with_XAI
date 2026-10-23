@@ -1,0 +1,147 @@
+{
+  "passed": true,
+  "pairs": 14,
+  "visual_review": "Contact sheet inspected: readable labels and stage markers, no clipping observed",
+  "figures": [
+    {
+      "figure": "classwise_metrics",
+      "png_pixels": [
+        1980,
+        1440
+      ],
+      "png_sha256": "c1a593fd8c11d335b730afe3dd07f020c3085a8c48a21e4f62aafd5bc04a2a01",
+      "svg_sha256": "01ae872485b3f811dbc44cb8cb2c340dbdb194756eba28d623df4963efc99eb5",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "confusion_matrices",
+      "png_pixels": [
+        1800,
+        1440
+      ],
+      "png_sha256": "dff16ad6212c3ab2a6aeaf3ec232cb7213ae1d33be4885eb1a2d0650fb653d24",
+      "svg_sha256": "96073944e0386623c3afe57d9d805e6d5007e82c6fde8d01b7d7f7f16802c64c",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "efficientnet_b0_accuracy",
+      "png_pixels": [
+        1530,
+        810
+      ],
+      "png_sha256": "90d59e44ca95a656934a4ac3a0a10f9c1d8eb3fbf5d52ec4208fd154c7be8308",
+      "svg_sha256": "7fe76c36a7568fb9a464341563a99feb46a0a846be964751aedff1aead826a95",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "efficientnet_b0_loss",
+      "png_pixels": [
+        1530,
+        810
+      ],
+      "png_sha256": "346d850dbbd7a0c26c82ee541f19deb6534afc4663e695d0c872b3ea0e5cd2b2",
+      "svg_sha256": "b63d20947d799145bfabea8efb9c1ff38fd8cbbad3c7f94d940f0e5b7a458e11",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "inference_comparison",
+      "png_pixels": [
+        2340,
+        810
+      ],
+      "png_sha256": "8bb5278cc43b8c9e88a1760b8652903b2c09cefbcda70c776a8d0b1741f8310d",
+      "svg_sha256": "ef76cc1288b8ba3fff5d317210558361d8da03d87e73de6dabf8aac3b14e3c90",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "model_resources",
+      "png_pixels": [
+        1800,
+        810
+      ],
+      "png_sha256": "12c4db5d942cc4789c71d832f348f6fb5990b0d0ee5b0a284baf3c4fcf675966",
+      "svg_sha256": "85a9e27c57e49329e0a12fdfa9bec941d18693ed7a8cfefdcf8c49b5966ba015",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "precision_recall_curves",
+      "png_pixels": [
+        1980,
+        864
+      ],
+      "png_sha256": "881e77f5e1ab6c2eacab9f3498a03e0dda1945fc18e82a42782600f26f73715a",
+      "svg_sha256": "034d558514c760f0f1e9fd1f65387edfadb2860c87c82e3b760ba06f18a79506",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "resnet18_accuracy",
+      "png_pixels": [
+        1530,
+        810
+      ],
+      "png_sha256": "1215d3e7721af88cfe1b37c68564eb5fda0c9c3c0ee697c96abe4031169dda6b",
+      "svg_sha256": "515ec998cd70dfe31e6babc0dc92e1d843471bceb862acf2d829090b6f9efc34",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "resnet18_loss",
+      "png_pixels": [
+        1530,
+        810
+      ],
+      "png_sha256": "689cdfa307bc365f5ea7a8ce7102fe2e09f48db9affbcd2e4fc8e248ce4f0552",
+      "svg_sha256": "641995ac4af74de1ef5e0dfedc5c15d40090d7a5ca943e6351820d9aa99d7eb4",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "resnet18_test_improvement",
+      "png_pixels": [
+        1620,
+        810
+      ],
+      "png_sha256": "8c8cefc184864bac639e7e56ed6775ae67ff69a8c273203b8cb4e396133dc9ad",
+      "svg_sha256": "21423192a8080f04e163b43c1179bb8be8871efcd5a6e4fa68cf646c74200559",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "roc_curves",
+      "png_pixels": [
+        1980,
+        864
+      ],
+      "png_sha256": "7f8f5350a2447cfc92391bef51af078330fe5866bd73eacd807a0521baab0e1a",
+      "svg_sha256": "27de1d10fff8037c613baae1c016bca83229f2d9f9fa74cf819effbf531f29ce",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "test_comparison",
+      "png_pixels": [
+        1620,
+        864
+      ],
+      "png_sha256": "9610f62db514b0e4b9303c25ebf69135b0152c4af17e237b0e8288020f618f29",
+      "svg_sha256": "d11abafab187628657daaf23ea7f799654a1a3fa7b24a122d76b63a6c2cb3632",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "validation_comparison",
+      "png_pixels": [
+        1620,
+        864
+      ],
+      "png_sha256": "2a8d00f9940f04e6dc3e3569bf9cade3bc6caa2096402c70250f389ccf57d10e",
+      "svg_sha256": "4c521318e236f76262cc5925ec99d7230abd31afe3da96d6c293e799855ec6cd",
+      "editable_svg_text": true
+    },
+    {
+      "figure": "validation_improvement",
+      "png_pixels": [
+        1800,
+        810
+      ],
+      "png_sha256": "2c28707ee44b4c52a82872045cbbda1bd2c1cec4ca9ca04d300987f32ecbe0bf",
+      "svg_sha256": "43beea32b289312cf0de4589c4064dd2a079533cb9df9f8ecbb437cd8dd24627",
+      "editable_svg_text": true
+    }
+  ]
+}

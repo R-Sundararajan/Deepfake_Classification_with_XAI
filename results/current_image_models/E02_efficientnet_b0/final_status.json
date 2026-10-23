@@ -1,0 +1,207 @@
+{
+  "completed": true,
+  "test_evaluated": true,
+  "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\current_image_models\\E02_efficientnet_b0\\selected_final.pth",
+  "checkpoint_sha256": "2389a6c08ebcec818aefe22572a23e040056251e008724cc45e6ac2d030bf77e",
+  "selected_epoch": 10,
+  "validation": {
+    "accuracy": 0.9812,
+    "precision": 0.9750246791707798,
+    "real_precision": 0.9875379939209726,
+    "real_recall": 0.9747,
+    "fake_recall": 0.9877,
+    "macro_f1": 0.9811992056664394,
+    "pr_auc": 0.9985698009270495,
+    "brier_score": 0.014182257945494391,
+    "recall": 0.9877,
+    "f1": 0.9813214108296076,
+    "roc_auc": 0.9985463050000001,
+    "balanced_accuracy": 0.9812000000000001,
+    "log_loss": 0.04972189823966577,
+    "confusion_matrix_real_fake": [
+      [
+        9747,
+        253
+      ],
+      [
+        123,
+        9877
+      ]
+    ],
+    "positive_class": "FAKE",
+    "threshold": 0.5,
+    "undefined_precision_recall_f1_policy": "zero when denominator zero",
+    "real_f1": 0.9810770005032713,
+    "fake_precision": 0.9750246791707798,
+    "fake_f1": 0.9813214108296076,
+    "weighted_f1": 0.9811992056664394,
+    "false_positives": 253,
+    "false_negatives": 123,
+    "true_positives": 9877,
+    "true_negatives": 9747,
+    "false_positive_rate": 0.0253,
+    "false_negative_rate": 0.0123,
+    "specificity": 0.9747,
+    "sensitivity": 0.9877,
+    "classwise": {
+      "REAL": {
+        "precision": 0.9875379939209726,
+        "recall": 0.9747,
+        "f1": 0.9810770005032713,
+        "support": 10000
+      },
+      "FAKE": {
+        "precision": 0.9750246791707798,
+        "recall": 0.9877,
+        "f1": 0.9813214108296076,
+        "support": 10000
+      }
+    },
+    "loss": 0.049721897544711825,
+    "samples": 20000,
+    "split": "validation",
+    "completed": true,
+    "checkpoint_sha256": "2389a6c08ebcec818aefe22572a23e040056251e008724cc45e6ac2d030bf77e",
+    "class_to_idx": {
+      "fake": 0,
+      "real": 1
+    },
+    "inference_precision": "FP32",
+    "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+    "seconds": 35.371407600003295,
+    "evaluated_utc": "2026-10-23T07:26:10.869472+00:00",
+    "predictions_sha256": "83e17549709a4bc41f6cb362893c077d388c1da0211826576c0a40d12512a1e7"
+  },
+  "promotion_eligible": true,
+  "improved_on_validation": true,
+  "test": {
+    "accuracy": 0.9806,
+    "precision": 0.9752768987341772,
+    "real_precision": 0.9860436893203883,
+    "real_recall": 0.975,
+    "fake_recall": 0.9862,
+    "macro_f1": 0.9805993915969204,
+    "pr_auc": 0.9984450592494584,
+    "brier_score": 0.014787579462023002,
+    "recall": 0.9862,
+    "f1": 0.9807080350039777,
+    "roc_auc": 0.99841728,
+    "balanced_accuracy": 0.9805999999999999,
+    "log_loss": 0.05189322400740511,
+    "confusion_matrix_real_fake": [
+      [
+        9750,
+        250
+      ],
+      [
+        138,
+        9862
+      ]
+    ],
+    "positive_class": "FAKE",
+    "threshold": 0.5,
+    "undefined_precision_recall_f1_policy": "zero when denominator zero",
+    "real_f1": 0.9804907481898633,
+    "fake_precision": 0.9752768987341772,
+    "fake_f1": 0.9807080350039777,
+    "weighted_f1": 0.9805993915969204,
+    "false_positives": 250,
+    "false_negatives": 138,
+    "true_positives": 9862,
+    "true_negatives": 9750,
+    "false_positive_rate": 0.025,
+    "false_negative_rate": 0.0138,
+    "specificity": 0.975,
+    "sensitivity": 0.9862,
+    "classwise": {
+      "REAL": {
+        "precision": 0.9860436893203883,
+        "recall": 0.975,
+        "f1": 0.9804907481898633,
+        "support": 10000
+      },
+      "FAKE": {
+        "precision": 0.9752768987341772,
+        "recall": 0.9862,
+        "f1": 0.9807080350039777,
+        "support": 10000
+      }
+    },
+    "loss": 0.05189322521910071,
+    "samples": 20000,
+    "split": "test",
+    "completed": true,
+    "checkpoint_sha256": "2389a6c08ebcec818aefe22572a23e040056251e008724cc45e6ac2d030bf77e",
+    "class_to_idx": {
+      "fake": 0,
+      "real": 1
+    },
+    "inference_precision": "FP32",
+    "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+    "seconds": 28.232573800021783,
+    "evaluated_utc": "2026-10-23T07:27:56.088743+00:00",
+    "predictions_sha256": "dd90ca1110129bf6011dc9cd6d3b04ca3f4311b676a0735c8b5de3e7f80e4557"
+  },
+  "common_validation": {
+    "accuracy": 0.979,
+    "precision": 0.9686888454011742,
+    "real_precision": 0.9897750511247444,
+    "real_recall": 0.968,
+    "fake_recall": 0.99,
+    "macro_f1": 0.9789974586925018,
+    "pr_auc": 0.9986109736254092,
+    "brier_score": 0.015063207982937012,
+    "recall": 0.99,
+    "f1": 0.9792284866468842,
+    "roc_auc": 0.99859,
+    "balanced_accuracy": 0.979,
+    "log_loss": 0.051795199865222706,
+    "confusion_matrix_real_fake": [
+      [
+        968,
+        32
+      ],
+      [
+        10,
+        990
+      ]
+    ],
+    "positive_class": "FAKE",
+    "threshold": 0.5,
+    "undefined_precision_recall_f1_policy": "zero when denominator zero",
+    "real_f1": 0.9787664307381193,
+    "fake_precision": 0.9686888454011742,
+    "fake_f1": 0.9792284866468842,
+    "weighted_f1": 0.9789974586925019,
+    "false_positives": 32,
+    "false_negatives": 10,
+    "true_positives": 990,
+    "true_negatives": 968,
+    "false_positive_rate": 0.032,
+    "false_negative_rate": 0.01,
+    "specificity": 0.968,
+    "sensitivity": 0.99,
+    "classwise": {
+      "REAL": {
+        "precision": 0.9897750511247444,
+        "recall": 0.968,
+        "f1": 0.9787664307381193,
+        "support": 1000
+      },
+      "FAKE": {
+        "precision": 0.9686888454011742,
+        "recall": 0.99,
+        "f1": 0.9792284866468842,
+        "support": 1000
+      }
+    },
+    "samples": 2000,
+    "split": "validation",
+    "completed": true,
+    "checkpoint_sha256": "2389a6c08ebcec818aefe22572a23e040056251e008724cc45e6ac2d030bf77e",
+    "inference_precision": "FP32",
+    "scope": "historical common 2,000-image validation subset; reporting only, not epoch selection"
+  },
+  "checkpoint_bytes": 16341487,
+  "test_scope": "repeat evaluation of historically used predefined test split"
+}

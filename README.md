@@ -1,47 +1,29 @@
 # Explainable Deepfake Classification: unified image/video experiments
 
-## Demo image continuation — 21 October 2026
+## Image Classification Models
 
-The active image model is **ResNet-18 [ft, a, img100k]** (`ft` = continued fine-tuning, `a` = training augmentation, `img100k` = 100,000 training images). Full validation accuracy is **98.655%** and held-out test accuracy is **98.695%**. Accuracy equals balanced accuracy here because both classes have 10,000 images per split.
+The existing `R18_FT_20261021` and `E02_efficientnet_b0` identities resolve to validation-selected checkpoints. Both continuation stages use the predefined 100,000-image training split and FP32 evaluation at 224 pixels, with FAKE positive and threshold 0.5. Historical runs and video checkpoints remain preserved.
 
-| Model / split | Images | Accuracy | FAKE precision | FAKE recall | FAKE F1 |
-|---|---:|---:|---:|---:|---:|
-| Original / full validation | 20,000 | 96.925% | 98.774% | 95.030% | 0.96866 |
-| Continued / full validation | 20,000 | 98.655% | 98.563% | 98.750% | 0.98656 |
-| Original / recorded held-out test | 20,000 | 97.120% | 98.930% | 95.270% | 0.97066 |
-| Continued / final held-out test | 20,000 | 98.695% | 98.593% | 98.800% | 0.98696 |
+| Model | Split / images | Accuracy | Balanced accuracy | FAKE recall | Macro-F1 | ROC-AUC |
+|---|---|---:|---:|---:|---:|---:|
+| ResNet-18 | validation (20,000) | 98.915% | 98.915% | 98.720% | 0.989150 | 0.999358 |
+| ResNet-18 | test (20,000) | 98.905% | 98.905% | 98.640% | 0.989050 | 0.999400 |
+| EfficientNet-B0 | validation (20,000) | 98.120% | 98.120% | 98.770% | 0.981199 | 0.998546 |
+| EfficientNet-B0 | test (20,000) | 98.060% | 98.060% | 98.620% | 0.980599 | 0.998417 |
 
-On the held-out test, missed FAKE images decreased from **473 to 120**, while REAL images incorrectly flagged FAKE increased from **103 to 141**. The confusion matrices below expose this trade-off.
+**ResNet-18**: trained epochs: 10, selected epoch 9; early stopping did not trigger. Full-validation accuracy is 98.915%.
 
-The original held-out result was recorded before this continuation. The candidate was selected using complete validation results and evaluated once on the held-out test set. The shared 2,000-image comparison cohort is separate: the candidate scores **98.85%**, versus **96.90%** for the original image model. The UI labels these evaluation scopes explicitly.
+**EfficientNet-B0**: trained epochs 1–10, selected epoch 10; early stopping did not trigger. Full-validation accuracy is 98.120%.
 
-### Accuracy and error comparison
+The predefined test split was used in historical reporting. These repeated test results describe the frozen selections; they are not a newly independent sealed benchmark and did not choose epochs or deployment candidates. Family ranking retains the common 2,000-image validation cohort, separately from full-validation selection.
 
-![Accuracy and error comparison](docs/figures/demo_accuracy_20261021/accuracy_comparison.png)
+![Full-validation model comparison](docs/figures/current_image_models/validation_comparison.png)
 
-Why: quantify the improvement on equal evaluation splits. The left panel shows accuracy on a zero-based scale; the right panel shows the corresponding number of errors. Each split contains 20,000 images.
+![Training accuracy](docs/figures/current_image_models/resnet18_accuracy.png)
 
-### Training and validation curves
+![EfficientNet full-dataset training](docs/figures/current_image_models/efficientnet_b0_accuracy.png)
 
-![Training and validation curves](docs/figures/demo_accuracy_20261021/training_curves.png)
-
-Why: show how continued training changed accuracy and loss. The dashed line separates the original two epochs from four continuation epochs; the star marks the validation-selected epoch. Training accuracy includes stochastic augmentation. No test scores selected the epoch.
-
-### Confusion matrices
-
-![Confusion matrices](docs/figures/demo_accuracy_20261021/confusion_matrices.png)
-
-Why: show which class errors remain. Rows are actual labels and columns are predictions; off-diagonal cells are mistakes. Counts and within-class percentages use a shared color scale. The original test matrix is previously recorded evidence.
-
-### ROC and precision–recall
-
-![ROC and precision–recall](docs/figures/demo_accuracy_20261021/roc_precision_recall.png)
-
-Why: demonstrate separation and the precision/recall trade-off across thresholds. FAKE is positive; dots mark the deployed threshold of 0.5. Dashed references show chance ROC and the 50% FAKE prevalence. Insets magnify the near-perfect region with explicitly zoomed axes. These are descriptive plots from saved scores; no threshold was selected on test data.
-
-PNG and editable SVG figures, compact metrics, source hashes and regeneration instructions are in [the plot evidence folder](docs/figures/demo_accuracy_20261021/README.md). The complete local execution report is [here](results/demo_accuracy_20261021_040741/REPORT.md). These within-dataset scores do not establish performance on arbitrary internet photos. Classification heatmaps show model influence, not verified edit boundaries.
-
-Activation uses `configs/runtime/active_image_model.json`; original weights are preserved. Restore the original demo with `powershell -ExecutionPolicy Bypass -File "D:\sundarCollege\Deepfake_Detect\Deepfakereserch\rollback_demo.ps1"`. The historical video benchmark below retains its original results. Model weights, rollback backups and the machine-local activation pointer are excluded from Git; a fresh checkout needs these assets provisioned before the improved model can load.
+All accuracy/loss, confusion, ROC/PR, class-wise, resource, latency and before/after charts have PNG and editable SVG versions in [the current figure folder](docs/figures/current_image_models/README.md). The [executed report](results/current_image_models/REPORT.md) includes model hashes, timings, training settings, and verification.
 
 Current debugging, XAI, latency and mixed-domain results are in [the executed refinement report](results/debug_refinement_20261019/REPORT.md). The original sealed video benchmark tables below remain historical results.
 
@@ -169,12 +151,12 @@ Fixed: legacy CLI bicubic/bilinear mismatch, IG sign loss and insufficient integ
 
 ### Current image-family ranking (common 2,000-image validation cohort)
 
-Updated after the 21 October continuation. Full 20,000-image metrics above are a separate scope.
+Current checkpoint aliases; full-validation selection is reported above. Training budgets differ across historical variants.
 
-| Family | Best variant | Best validation BA | Mean validation BA | Comparable runs |
+| Family | Best current variant | Best validation BA | Mean validation BA | Comparable runs |
 |---|---|---:|---:|---:|
-| ResNet / CNN | ResNet-18 [ft, a, img100k] | 98.85% | 95.52% | 3 |
-| EfficientNet | EfficientNet-B0 [a, img12k] | 92.45% | 81.96% | 4 |
+| ResNet / CNN | ResNet-18 [ft, a, img100k] | 98.900% | 95.533% | 3 |
+| EfficientNet | EfficientNet-B0 [ft, a, img100k] | 97.900% | 83.325% | 4 |
 
 ### Video-family ranking (common grouped DFDC validation cohort)
 
@@ -186,7 +168,7 @@ Updated after the 21 October continuation. Full 20,000-image metrics above are a
 | CNN + ViT Hybrid | S5 | 72.31% | 72.31% | 1 |
 | ResNet / CNN | S0 | 50.00% | 50.00% | 1 |
 
-Families rank by their best validated compatible variant. Means count only completed comparable runs. S0 trained on 100,000 images, E01–E04 on 12,000, and S2 on DFDC videos; training budgets/domains differ. The continued ResNet-18 is the current image default; S0 remains available as the original image baseline. S6 is the video default. Unbenchmarked image transfers are optional and unranked. Model details expose datasets, checkpoint hashes, accuracy, macro-F1 and limitations.
+Families rank by their best validated compatible variant. Means count only completed comparable runs. S0 and the current ResNet/E02 models trained on 100,000 images, historical E01/E03/E04 on 12,000, and S2 on DFDC videos; training budgets/domains differ. The recommended image model is ResNet-18 [ft, a, img100k] on the common validation ranking; S0 remains available as the original image baseline. S6 is the video default. Unbenchmarked image transfers are optional and unranked. Model details expose datasets, checkpoint hashes, accuracy, macro-F1 and limitations.
 
 ## Previous explanation interface — 19 October 2026
 

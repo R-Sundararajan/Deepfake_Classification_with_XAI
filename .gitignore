@@ -136,3 +136,25 @@ literature_implementation_note.md
 !/results/demo_accuracy_20261021_040741/candidate_test_fp32.json
 !/results/demo_accuracy_20261021_040741/final_status.json
 !/results/demo_accuracy_20261021_040741/history.json
+
+# Current aliases for the two existing image models: aggregate evidence only.
+!/results/current_image_models/
+/results/current_image_models/*
+!/results/current_image_models/REPORT.md
+!/results/current_image_models/current_metrics.json
+!/results/current_image_models/current_metrics.csv
+!/results/current_image_models/regression.json
+!/results/current_image_models/final_consistency.json
+!/results/current_image_models/figure_validation.json
+!/results/current_image_models/R18_FT_20261021/
+!/results/current_image_models/E02_efficientnet_b0/
+/results/current_image_models/R18_FT_20261021/*
+/results/current_image_models/E02_efficientnet_b0/*
+!/results/current_image_models/*/history.json
+!/results/current_image_models/*/training_finished.json
+!/results/current_image_models/*/baseline_validation_fp32.json
+!/results/current_image_models/*/candidate_validation_fp32.json
+!/results/current_image_models/*/candidate_test_fp32.json
+!/results/current_image_models/*/common_validation_fp32.json
+!/results/current_image_models/*/inference_benchmark.json
+!/results/current_image_models/*/final_status.json

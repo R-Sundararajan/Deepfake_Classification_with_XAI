@@ -85,6 +85,11 @@ class ParallelExplanationTests(unittest.TestCase):
                 other.futures['lime'].result()
             self.assertTrue(all(future.exception() is None for method, future in other.futures.items() if method != 'lime'))
             self.assertEqual({target for p in instances for _, target in p.calls[-1:]}, {'REAL'})
+            # Rebinding the same logical ID must invalidate the XAI suite even
+            # when the upload path and predicted class have not changed.
+            rebound = runner.start({**record, 'checkpoint_sha256': 'updated weights'}, result, 'first', 'Image')
+            self.assertIsNot(rebound, suite)
+            self.assertTrue(all(np.isfinite(f.result(timeout=30)['cam']).all() for f in rebound.futures.values()))
         finally:
             runner.close()
 

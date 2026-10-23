@@ -1,0 +1,2551 @@
+{
+  "models": {
+    "R18_FT_20261021": {
+      "training": {
+        "identity": "R18_FT_20261021",
+        "completed": true,
+        "start_epoch": 7,
+        "end_epoch": 10,
+        "selected_epoch": 9,
+        "selected_checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\current_image_models\\R18_FT_20261021\\selected_epoch_9.pth",
+        "selected_checkpoint_sha256": "379bbc5f2a83fc97274a89c7951e07292f2e6775fc715a04ef5b417cd603f39c",
+        "selected_validation": {
+          "accuracy": 0.98915,
+          "precision": 0.9910651541009938,
+          "real_precision": 0.9872497260683335,
+          "real_recall": 0.9911,
+          "fake_recall": 0.9872,
+          "macro_f1": 0.9891499587427182,
+          "pr_auc": 0.9993552278176019,
+          "brier_score": 0.008779588845221167,
+          "recall": 0.9872,
+          "f1": 0.9891288011622664,
+          "roc_auc": 0.99935786,
+          "balanced_accuracy": 0.98915,
+          "log_loss": 0.0337014415319021,
+          "confusion_matrix_real_fake": [
+            [
+              9911,
+              89
+            ],
+            [
+              128,
+              9872
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "real_f1": 0.9891711163231698,
+          "fake_precision": 0.9910651541009938,
+          "fake_f1": 0.9891288011622664,
+          "weighted_f1": 0.989149958742718,
+          "false_positives": 89,
+          "false_negatives": 128,
+          "true_positives": 9872,
+          "true_negatives": 9911,
+          "false_positive_rate": 0.0089,
+          "false_negative_rate": 0.0128,
+          "specificity": 0.9911,
+          "sensitivity": 0.9872,
+          "classwise": {
+            "REAL": {
+              "precision": 0.9872497260683335,
+              "recall": 0.9911,
+              "f1": 0.9891711163231698,
+              "support": 10000
+            },
+            "FAKE": {
+              "precision": 0.9910651541009938,
+              "recall": 0.9872,
+              "f1": 0.9891288011622664,
+              "support": 10000
+            }
+          },
+          "loss": 0.033701413389504886,
+          "samples": 20000,
+          "split": "validation",
+          "completed": true,
+          "checkpoint_sha256": "in_memory_R18_FT_20261021_epoch_9",
+          "class_to_idx": {
+            "fake": 0,
+            "real": 1
+          },
+          "inference_precision": "FP32",
+          "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+          "seconds": 76.33341870002914,
+          "evaluated_utc": "2026-10-23T05:50:16.619830+00:00",
+          "predictions_sha256": "6d8816a6d3b83c2fa66bc3c49471f1d2b6ba2d00be54417cd6ccfeabc52f70f2"
+        },
+        "early_stopping_triggered": false,
+        "training_seconds": 2543.744729500031,
+        "peak_vram_bytes": 694611456,
+        "parameters": 11177538,
+        "trainable_parameters": 8394754,
+        "checkpoint_bytes": 44789387,
+        "physical_batch_size": 64,
+        "effective_batch_size": 64,
+        "loader_configuration": {
+          "worker_processes": 0,
+          "decode_threads": 4,
+          "prefetched_cpu_batches": 1,
+          "backend": "threaded PIL decode plus CPU prefetch"
+        },
+        "warm_start": {
+          "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\demo_accuracy_20261021_040741\\selected_final.pth",
+          "sha256": "314f1394a1876cd6b41d3ddf80b09aef98f6960df31a58f9dc8b73f46319b0a0",
+          "epoch": 6,
+          "bytes": 44788107,
+          "optimizer_state_available": false,
+          "resume_mode": "weight-only continuation; original checkpoints have no optimizer/scheduler/scaler state",
+          "initialization": "existing ImageNet-pretrained, image-trained checkpoint",
+          "previous_training_images": 100000
+        },
+        "protocol": {
+          "max_epoch": 10,
+          "patience": 3,
+          "min_delta": 0.0001,
+          "selection": "validation balanced accuracy; ties within 1e-12 use lower FP32 validation loss",
+          "early_stopping": "validation loss must decrease by more than min_delta; independent of model selection",
+          "optimizer": "AdamW",
+          "backbone_lr": 3e-05,
+          "classifier_lr": 0.0001,
+          "resnet_classifier_lr": 3e-05,
+          "weight_decay": 0.0001,
+          "scheduler": "ReduceLROnPlateau",
+          "scheduler_factor": 0.5,
+          "scheduler_patience": 1,
+          "loss": "CrossEntropyLoss",
+          "amp_training": true,
+          "validation_precision": "FP32",
+          "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+          "augmentation": "unchanged training.data.training_transform: flip, mild color jitter, rotation 4 degrees",
+          "threshold": 0.5,
+          "class_to_idx": {
+            "fake": 0,
+            "real": 1
+          },
+          "test_policy": "freeze both selections and promotion eligibility on validation before any final test evaluation; repeated historical test, not a newly sealed benchmark",
+          "augmentation_rng": "deterministic per sample and epoch; main CPU/CUDA RNG and shuffle generator restored"
+        },
+        "history": [
+          {
+            "epoch": 1,
+            "train_loss": 0.1805403984069824,
+            "train_accuracy": 0.92561,
+            "validation": {
+              "accuracy": 0.96465,
+              "loss": 0.092198159211874
+            },
+            "seconds": 362.0667485999875,
+            "stage": "original 100k training",
+            "historical": true
+          },
+          {
+            "epoch": 2,
+            "train_loss": 0.0725240724492073,
+            "train_accuracy": 0.97219,
+            "validation": {
+              "accuracy": 0.96925,
+              "loss": 0.08206657633185387
+            },
+            "seconds": 296.5609293000016,
+            "stage": "original 100k training",
+            "historical": true
+          },
+          {
+            "epoch": 3,
+            "train_loss": 0.01705585501551628,
+            "train_accuracy": 0.99495,
+            "validation": {
+              "accuracy": 0.9824,
+              "precision": 0.983754512635379,
+              "real_precision": 0.9810530514559234,
+              "real_recall": 0.9838,
+              "fake_recall": 0.981,
+              "macro_f1": 0.9823999655039324,
+              "pr_auc": 0.9986556343943033,
+              "brier_score": 0.013255169859653505,
+              "recall": 0.981,
+              "f1": 0.9823753254556379,
+              "roc_auc": 0.99863407,
+              "balanced_accuracy": 0.9823999999999999,
+              "log_loss": 0.048074361493580624,
+              "confusion_matrix_real_fake": [
+                [
+                  9838,
+                  162
+                ],
+                [
+                  190,
+                  9810
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "loss": 0.04807435675337911,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_epoch_1",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 70.36530019994825,
+              "evaluated_utc": "2026-10-21T04:22:40.299856+00:00",
+              "inference_precision": "FP32"
+            },
+            "seconds": 495.2282573999837,
+            "stage": "October 21 continuation",
+            "historical": true
+          },
+          {
+            "epoch": 4,
+            "train_loss": 0.006482994513511657,
+            "train_accuracy": 0.99835,
+            "validation": {
+              "accuracy": 0.985,
+              "precision": 0.9827792156082023,
+              "real_precision": 0.9872413100261201,
+              "real_recall": 0.9827,
+              "fake_recall": 0.9873,
+              "macro_f1": 0.9849999206495803,
+              "pr_auc": 0.998941782759464,
+              "brier_score": 0.011521082036667532,
+              "recall": 0.9873,
+              "f1": 0.9850344208320863,
+              "roc_auc": 0.998934985,
+              "balanced_accuracy": 0.985,
+              "log_loss": 0.043745102416424486,
+              "confusion_matrix_real_fake": [
+                [
+                  9827,
+                  173
+                ],
+                [
+                  127,
+                  9873
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "loss": 0.04374512813165784,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_epoch_2",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 63.096593099995516,
+              "evaluated_utc": "2026-10-21T04:29:43.688528+00:00",
+              "inference_precision": "FP32"
+            },
+            "seconds": 423.24760870006867,
+            "stage": "October 21 continuation",
+            "historical": true
+          },
+          {
+            "epoch": 5,
+            "train_loss": 0.028613010947704316,
+            "train_accuracy": 0.98955,
+            "validation": {
+              "accuracy": 0.98555,
+              "precision": 0.9810759932626573,
+              "real_precision": 0.9901080044413041,
+              "real_recall": 0.9809,
+              "fake_recall": 0.9902,
+              "macro_f1": 0.985549687548119,
+              "pr_auc": 0.9991583024686279,
+              "brier_score": 0.010891878075509356,
+              "recall": 0.9902,
+              "f1": 0.9856168815010202,
+              "roc_auc": 0.99914799,
+              "balanced_accuracy": 0.9855499999999999,
+              "log_loss": 0.03979791652546619,
+              "confusion_matrix_real_fake": [
+                [
+                  9809,
+                  191
+                ],
+                [
+                  98,
+                  9902
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "loss": 0.0397978936612606,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_epoch_3",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 62.99346449994482,
+              "evaluated_utc": "2026-10-21T04:36:38.937664+00:00",
+              "inference_precision": "FP32"
+            },
+            "seconds": 415.11010159994476,
+            "stage": "October 21 continuation",
+            "historical": true
+          },
+          {
+            "epoch": 6,
+            "train_loss": 0.01822552217364311,
+            "train_accuracy": 0.99333,
+            "validation": {
+              "accuracy": 0.98655,
+              "precision": 0.9856273081145823,
+              "real_precision": 0.9874762047890993,
+              "real_recall": 0.9856,
+              "fake_recall": 0.9875,
+              "macro_f1": 0.986549987861364,
+              "pr_auc": 0.9991378868799764,
+              "brier_score": 0.010341152128959787,
+              "recall": 0.9875,
+              "f1": 0.9865627653728958,
+              "roc_auc": 0.9991437400000001,
+              "balanced_accuracy": 0.98655,
+              "log_loss": 0.038193785162877476,
+              "confusion_matrix_real_fake": [
+                [
+                  9856,
+                  144
+                ],
+                [
+                  125,
+                  9875
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "loss": 0.03819372550398111,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_epoch_4",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 61.557934499927796,
+              "evaluated_utc": "2026-10-21T04:43:28.700349+00:00",
+              "inference_precision": "FP32"
+            },
+            "seconds": 409.5987189000007,
+            "stage": "October 21 continuation",
+            "historical": true
+          },
+          {
+            "epoch": 7,
+            "stage": "100k continuation",
+            "train_loss": 0.02197129998087883,
+            "train_accuracy": 0.99199,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.9868,
+              "precision": 0.9899355877616747,
+              "real_precision": 0.983704292527822,
+              "real_recall": 0.99,
+              "fake_recall": 0.9836,
+              "macro_f1": 0.9867998648306158,
+              "pr_auc": 0.9991967375593683,
+              "brier_score": 0.01020548191398326,
+              "recall": 0.9836,
+              "f1": 0.9867576243980738,
+              "roc_auc": 0.99919817,
+              "balanced_accuracy": 0.9868,
+              "log_loss": 0.03799984330241955,
+              "confusion_matrix_real_fake": [
+                [
+                  9900,
+                  100
+                ],
+                [
+                  164,
+                  9836
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.9868421052631579,
+              "fake_precision": 0.9899355877616747,
+              "fake_f1": 0.9867576243980738,
+              "weighted_f1": 0.9867998648306159,
+              "false_positives": 100,
+              "false_negatives": 164,
+              "true_positives": 9836,
+              "true_negatives": 9900,
+              "false_positive_rate": 0.01,
+              "false_negative_rate": 0.0164,
+              "specificity": 0.99,
+              "sensitivity": 0.9836,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.983704292527822,
+                  "recall": 0.99,
+                  "f1": 0.9868421052631579,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9899355877616747,
+                  "recall": 0.9836,
+                  "f1": 0.9867576243980738,
+                  "support": 10000
+                }
+              },
+              "loss": 0.037999845561617986,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_R18_FT_20261021_epoch_7",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 165.84118540002964,
+              "evaluated_utc": "2026-10-23T05:25:15.155532+00:00",
+              "predictions_sha256": "a51bfd6577feef943877442b671e54d5668fff32c2d854a4feeb9e9e1064825e"
+            },
+            "learning_rates_used": [
+              3e-05
+            ],
+            "learning_rates_next": [
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 984.4722048999975,
+            "peak_vram_bytes": 694611456,
+            "batch_size": 64,
+            "gradient_accumulation": 1,
+            "workers": 2,
+            "historical": false
+          },
+          {
+            "epoch": 8,
+            "stage": "100k continuation",
+            "train_loss": 0.020859333188533783,
+            "train_accuracy": 0.9923,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.98695,
+              "precision": 0.9802741887760135,
+              "real_precision": 0.9938140148058007,
+              "real_recall": 0.98,
+              "fake_recall": 0.9939,
+              "macro_f1": 0.9869493696219261,
+              "pr_auc": 0.9992663838921048,
+              "brier_score": 0.009982794431218684,
+              "recall": 0.9939,
+              "f1": 0.9870400715030537,
+              "roc_auc": 0.9992712949999998,
+              "balanced_accuracy": 0.98695,
+              "log_loss": 0.037775968347224145,
+              "confusion_matrix_real_fake": [
+                [
+                  9800,
+                  200
+                ],
+                [
+                  61,
+                  9939
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.9868586677407986,
+              "fake_precision": 0.9802741887760135,
+              "fake_f1": 0.9870400715030537,
+              "weighted_f1": 0.9869493696219263,
+              "false_positives": 200,
+              "false_negatives": 61,
+              "true_positives": 9939,
+              "true_negatives": 9800,
+              "false_positive_rate": 0.02,
+              "false_negative_rate": 0.0061,
+              "specificity": 0.98,
+              "sensitivity": 0.9939,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9938140148058007,
+                  "recall": 0.98,
+                  "f1": 0.9868586677407986,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9802741887760135,
+                  "recall": 0.9939,
+                  "f1": 0.9870400715030537,
+                  "support": 10000
+                }
+              },
+              "loss": 0.03777596686966717,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_R18_FT_20261021_epoch_8",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 89.43156719999388,
+              "evaluated_utc": "2026-10-23T05:41:46.333492+00:00",
+              "predictions_sha256": "57716898ccfac2bb5940407f9152051b7b0540e869ee4eedcca5961a3ad14284"
+            },
+            "learning_rates_used": [
+              3e-05
+            ],
+            "learning_rates_next": [
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 540.9524840000086,
+            "peak_vram_bytes": 650764288,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1180696576,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "four decode threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 9,
+            "stage": "100k continuation",
+            "train_loss": 0.0183871031665802,
+            "train_accuracy": 0.9931,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.98915,
+              "precision": 0.9910651541009938,
+              "real_precision": 0.9872497260683335,
+              "real_recall": 0.9911,
+              "fake_recall": 0.9872,
+              "macro_f1": 0.9891499587427182,
+              "pr_auc": 0.9993552278176019,
+              "brier_score": 0.008779588845221167,
+              "recall": 0.9872,
+              "f1": 0.9891288011622664,
+              "roc_auc": 0.99935786,
+              "balanced_accuracy": 0.98915,
+              "log_loss": 0.0337014415319021,
+              "confusion_matrix_real_fake": [
+                [
+                  9911,
+                  89
+                ],
+                [
+                  128,
+                  9872
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.9891711163231698,
+              "fake_precision": 0.9910651541009938,
+              "fake_f1": 0.9891288011622664,
+              "weighted_f1": 0.989149958742718,
+              "false_positives": 89,
+              "false_negatives": 128,
+              "true_positives": 9872,
+              "true_negatives": 9911,
+              "false_positive_rate": 0.0089,
+              "false_negative_rate": 0.0128,
+              "specificity": 0.9911,
+              "sensitivity": 0.9872,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9872497260683335,
+                  "recall": 0.9911,
+                  "f1": 0.9891711163231698,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9910651541009938,
+                  "recall": 0.9872,
+                  "f1": 0.9891288011622664,
+                  "support": 10000
+                }
+              },
+              "loss": 0.033701413389504886,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_R18_FT_20261021_epoch_9",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 76.33341870002914,
+              "evaluated_utc": "2026-10-23T05:50:16.619830+00:00",
+              "predictions_sha256": "6d8816a6d3b83c2fa66bc3c49471f1d2b6ba2d00be54417cd6ccfeabc52f70f2"
+            },
+            "learning_rates_used": [
+              3e-05
+            ],
+            "learning_rates_next": [
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 509.2725609000772,
+            "peak_vram_bytes": 650764288,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1180696576,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "four decode threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 10,
+            "stage": "100k continuation",
+            "train_loss": 0.014416980410814285,
+            "train_accuracy": 0.99494,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.987,
+              "precision": 0.9821782178217822,
+              "real_precision": 0.9919191919191919,
+              "real_recall": 0.982,
+              "fake_recall": 0.992,
+              "macro_f1": 0.9869996749918748,
+              "pr_auc": 0.9993385077307858,
+              "brier_score": 0.010068869562523036,
+              "recall": 0.992,
+              "f1": 0.9870646766169154,
+              "roc_auc": 0.9993383149999999,
+              "balanced_accuracy": 0.987,
+              "log_loss": 0.038231161856059376,
+              "confusion_matrix_real_fake": [
+                [
+                  9820,
+                  180
+                ],
+                [
+                  80,
+                  9920
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.9869346733668342,
+              "fake_precision": 0.9821782178217822,
+              "fake_f1": 0.9870646766169154,
+              "weighted_f1": 0.9869996749918748,
+              "false_positives": 180,
+              "false_negatives": 80,
+              "true_positives": 9920,
+              "true_negatives": 9820,
+              "false_positive_rate": 0.018,
+              "false_negative_rate": 0.008,
+              "specificity": 0.982,
+              "sensitivity": 0.992,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9919191919191919,
+                  "recall": 0.982,
+                  "f1": 0.9869346733668342,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9821782178217822,
+                  "recall": 0.992,
+                  "f1": 0.9870646766169154,
+                  "support": 10000
+                }
+              },
+              "loss": 0.038230777405202386,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_R18_FT_20261021_epoch_10",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 75.72352060000412,
+              "evaluated_utc": "2026-10-23T05:58:46.667608+00:00",
+              "predictions_sha256": "6c421c5cfdc73bdfe6817a2afc76a465cf53f70e38ccf5b38d9ddb7d0d07c2d5"
+            },
+            "learning_rates_used": [
+              3e-05
+            ],
+            "learning_rates_next": [
+              3e-05
+            ],
+            "early_stopping_counter": 1,
+            "seconds": 509.04747969994787,
+            "peak_vram_bytes": 650764288,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1180696576,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "four decode threads in main process",
+            "historical": false
+          }
+        ],
+        "finished_utc": "2026-10-23T05:58:47.708286+00:00",
+        "resume_events": [
+          {
+            "utc": "2026-10-23T05:32:45.400004+00:00",
+            "committed_epoch": 7,
+            "next_epoch": 8,
+            "state_sha256": "8475d56e1a565b3ff5fd74de3da7ba6db8a23e671a80f9567ccbee63dc297087",
+            "optimizer_restored": true,
+            "scheduler_restored": true,
+            "scaler_restored": true,
+            "cpu_cuda_rng_restored": true,
+            "selected_epoch": 7
+          }
+        ]
+      },
+      "evaluation": {
+        "completed": true,
+        "test_evaluated": true,
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\current_image_models\\R18_FT_20261021\\selected_final.pth",
+        "checkpoint_sha256": "55ad833b1c75aa58e2aaafa4609a3b5ed98e52439b795c775a1e9f5323bf89ad",
+        "selected_epoch": 9,
+        "validation": {
+          "accuracy": 0.98915,
+          "precision": 0.9910651541009938,
+          "real_precision": 0.9872497260683335,
+          "real_recall": 0.9911,
+          "fake_recall": 0.9872,
+          "macro_f1": 0.9891499587427182,
+          "pr_auc": 0.9993552278176019,
+          "brier_score": 0.008779588845221167,
+          "recall": 0.9872,
+          "f1": 0.9891288011622664,
+          "roc_auc": 0.99935786,
+          "balanced_accuracy": 0.98915,
+          "log_loss": 0.0337014415319021,
+          "confusion_matrix_real_fake": [
+            [
+              9911,
+              89
+            ],
+            [
+              128,
+              9872
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "real_f1": 0.9891711163231698,
+          "fake_precision": 0.9910651541009938,
+          "fake_f1": 0.9891288011622664,
+          "weighted_f1": 0.989149958742718,
+          "false_positives": 89,
+          "false_negatives": 128,
+          "true_positives": 9872,
+          "true_negatives": 9911,
+          "false_positive_rate": 0.0089,
+          "false_negative_rate": 0.0128,
+          "specificity": 0.9911,
+          "sensitivity": 0.9872,
+          "classwise": {
+            "REAL": {
+              "precision": 0.9872497260683335,
+              "recall": 0.9911,
+              "f1": 0.9891711163231698,
+              "support": 10000
+            },
+            "FAKE": {
+              "precision": 0.9910651541009938,
+              "recall": 0.9872,
+              "f1": 0.9891288011622664,
+              "support": 10000
+            }
+          },
+          "loss": 0.033701413389504886,
+          "samples": 20000,
+          "split": "validation",
+          "completed": true,
+          "checkpoint_sha256": "55ad833b1c75aa58e2aaafa4609a3b5ed98e52439b795c775a1e9f5323bf89ad",
+          "class_to_idx": {
+            "fake": 0,
+            "real": 1
+          },
+          "inference_precision": "FP32",
+          "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+          "seconds": 28.827094400068745,
+          "evaluated_utc": "2026-10-23T07:25:33.663008+00:00",
+          "predictions_sha256": "6d8816a6d3b83c2fa66bc3c49471f1d2b6ba2d00be54417cd6ccfeabc52f70f2"
+        },
+        "promotion_eligible": true,
+        "improved_on_validation": true,
+        "test": {
+          "accuracy": 0.98905,
+          "precision": 0.9916557756107369,
+          "real_precision": 0.9864716999900527,
+          "real_recall": 0.9917,
+          "fake_recall": 0.9864,
+          "macro_f1": 0.9890499231030849,
+          "pr_auc": 0.9994166092591138,
+          "brier_score": 0.008708276295222701,
+          "recall": 0.9864,
+          "f1": 0.9890209053993082,
+          "roc_auc": 0.99939991,
+          "balanced_accuracy": 0.98905,
+          "log_loss": 0.0328765884424224,
+          "confusion_matrix_real_fake": [
+            [
+              9917,
+              83
+            ],
+            [
+              136,
+              9864
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "real_f1": 0.9890789408068618,
+          "fake_precision": 0.9916557756107369,
+          "fake_f1": 0.9890209053993082,
+          "weighted_f1": 0.989049923103085,
+          "false_positives": 83,
+          "false_negatives": 136,
+          "true_positives": 9864,
+          "true_negatives": 9917,
+          "false_positive_rate": 0.0083,
+          "false_negative_rate": 0.0136,
+          "specificity": 0.9917,
+          "sensitivity": 0.9864,
+          "classwise": {
+            "REAL": {
+              "precision": 0.9864716999900527,
+              "recall": 0.9917,
+              "f1": 0.9890789408068618,
+              "support": 10000
+            },
+            "FAKE": {
+              "precision": 0.9916557756107369,
+              "recall": 0.9864,
+              "f1": 0.9890209053993082,
+              "support": 10000
+            }
+          },
+          "loss": 0.03287658932313789,
+          "samples": 20000,
+          "split": "test",
+          "completed": true,
+          "checkpoint_sha256": "55ad833b1c75aa58e2aaafa4609a3b5ed98e52439b795c775a1e9f5323bf89ad",
+          "class_to_idx": {
+            "fake": 0,
+            "real": 1
+          },
+          "inference_precision": "FP32",
+          "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+          "seconds": 65.22189549996983,
+          "evaluated_utc": "2026-10-23T07:27:18.954902+00:00",
+          "predictions_sha256": "542fdd724048133b3ac422c86b876d55b4454b69d4a93bfe99b9402d7b207a6f"
+        },
+        "common_validation": {
+          "accuracy": 0.989,
+          "precision": 0.9919517102615694,
+          "real_precision": 0.9860834990059643,
+          "real_recall": 0.992,
+          "fake_recall": 0.986,
+          "macro_f1": 0.9889999009991091,
+          "pr_auc": 0.9994436352218006,
+          "brier_score": 0.009126880673838171,
+          "recall": 0.986,
+          "f1": 0.9889669007021064,
+          "roc_auc": 0.9994409999999999,
+          "balanced_accuracy": 0.989,
+          "log_loss": 0.03371696383014404,
+          "confusion_matrix_real_fake": [
+            [
+              992,
+              8
+            ],
+            [
+              14,
+              986
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "real_f1": 0.9890329012961117,
+          "fake_precision": 0.9919517102615694,
+          "fake_f1": 0.9889669007021064,
+          "weighted_f1": 0.9889999009991091,
+          "false_positives": 8,
+          "false_negatives": 14,
+          "true_positives": 986,
+          "true_negatives": 992,
+          "false_positive_rate": 0.008,
+          "false_negative_rate": 0.014,
+          "specificity": 0.992,
+          "sensitivity": 0.986,
+          "classwise": {
+            "REAL": {
+              "precision": 0.9860834990059643,
+              "recall": 0.992,
+              "f1": 0.9890329012961117,
+              "support": 1000
+            },
+            "FAKE": {
+              "precision": 0.9919517102615694,
+              "recall": 0.986,
+              "f1": 0.9889669007021064,
+              "support": 1000
+            }
+          },
+          "samples": 2000,
+          "split": "validation",
+          "completed": true,
+          "checkpoint_sha256": "55ad833b1c75aa58e2aaafa4609a3b5ed98e52439b795c775a1e9f5323bf89ad",
+          "inference_precision": "FP32",
+          "scope": "historical common 2,000-image validation subset; reporting only, not epoch selection"
+        },
+        "checkpoint_bytes": 44804363,
+        "test_scope": "repeat evaluation of historically used predefined test split"
+      },
+      "benchmark": {
+        "protocol": {
+          "precision": "FP32; TF32 disabled",
+          "batch_size": 32,
+          "warmups": 10,
+          "repeats": 30,
+          "synchronization": "torch.cuda.synchronize before and after each forward",
+          "scope": "resident-input model forward; excludes decoding, preprocessing, transfer, XAI",
+          "input": "first 32 predefined validation images, unchanged evaluation preprocessing"
+        },
+        "batches": {
+          "32": {
+            "mean_batch_ms": 20.14363333582878,
+            "median_batch_ms": 20.327450009062886,
+            "ms_per_image": 0.6294885417446494,
+            "images_per_second": 1588.5912668536669,
+            "timed_batch_seconds": [
+              0.021362600033171475,
+              0.020277499919757247,
+              0.020282800076529384,
+              0.020281899953261018,
+              0.02030079998075962,
+              0.020310599938966334,
+              0.02032630005851388,
+              0.020348799997009337,
+              0.02041220001410693,
+              0.020350800012238324,
+              0.020344099961221218,
+              0.020328599959611893,
+              0.020315600093454123,
+              0.020338700036518276,
+              0.020331499981693923,
+              0.02036020008381456,
+              0.020385000039823353,
+              0.020348999998532236,
+              0.020366600016131997,
+              0.020411400008015335,
+              0.0203351000091061,
+              0.020437899976968765,
+              0.019463300006464124,
+              0.019443399971351027,
+              0.019472299958579242,
+              0.019483900046907365,
+              0.019505699980072677,
+              0.019460099982097745,
+              0.019464500015601516,
+              0.01945779996458441
+            ]
+          },
+          "1": {
+            "mean_batch_ms": 3.983636673850318,
+            "median_batch_ms": 3.7670500460080802,
+            "ms_per_image": 3.983636673850318,
+            "images_per_second": 251.02690879524076,
+            "timed_batch_seconds": [
+              0.003640500013716519,
+              0.003612500033341348,
+              0.00449639989528805,
+              0.0036773999454453588,
+              0.0037206000415608287,
+              0.003750300034880638,
+              0.00407600007019937,
+              0.004131800029426813,
+              0.0037557000759989023,
+              0.0035874999593943357,
+              0.0037004000041633844,
+              0.003667699988000095,
+              0.0036316000623628497,
+              0.00359890004619956,
+              0.003852299996651709,
+              0.0037131999852135777,
+              0.0035861999494954944,
+              0.0037987000541761518,
+              0.0037682000547647476,
+              0.004371499991975725,
+              0.0044006999814882874,
+              0.004173799999989569,
+              0.004586099996231496,
+              0.004951899987645447,
+              0.0036368999863043427,
+              0.003765900037251413,
+              0.005385900032706559,
+              0.004050399991683662,
+              0.004182099946774542,
+              0.004238000023178756
+            ]
+          }
+        },
+        "peak_vram_bytes": 305073664
+      }
+    },
+    "E02_efficientnet_b0": {
+      "training": {
+        "identity": "E02_efficientnet_b0",
+        "completed": true,
+        "start_epoch": 1,
+        "end_epoch": 10,
+        "selected_epoch": 10,
+        "selected_checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\current_image_models\\E02_efficientnet_b0\\selected_epoch_10.pth",
+        "selected_checkpoint_sha256": "7cd62af3a1a23fa2a04d2b7582c5e2c8c97f467471d4c1fb909ea61cec42e3c5",
+        "selected_validation": {
+          "accuracy": 0.9812,
+          "precision": 0.9750246791707798,
+          "real_precision": 0.9875379939209726,
+          "real_recall": 0.9747,
+          "fake_recall": 0.9877,
+          "macro_f1": 0.9811992056664394,
+          "pr_auc": 0.9985698009270495,
+          "brier_score": 0.014182257945494391,
+          "recall": 0.9877,
+          "f1": 0.9813214108296076,
+          "roc_auc": 0.9985463050000001,
+          "balanced_accuracy": 0.9812000000000001,
+          "log_loss": 0.04972189823966577,
+          "confusion_matrix_real_fake": [
+            [
+              9747,
+              253
+            ],
+            [
+              123,
+              9877
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "real_f1": 0.9810770005032713,
+          "fake_precision": 0.9750246791707798,
+          "fake_f1": 0.9813214108296076,
+          "weighted_f1": 0.9811992056664394,
+          "false_positives": 253,
+          "false_negatives": 123,
+          "true_positives": 9877,
+          "true_negatives": 9747,
+          "false_positive_rate": 0.0253,
+          "false_negative_rate": 0.0123,
+          "specificity": 0.9747,
+          "sensitivity": 0.9877,
+          "classwise": {
+            "REAL": {
+              "precision": 0.9875379939209726,
+              "recall": 0.9747,
+              "f1": 0.9810770005032713,
+              "support": 10000
+            },
+            "FAKE": {
+              "precision": 0.9750246791707798,
+              "recall": 0.9877,
+              "f1": 0.9813214108296076,
+              "support": 10000
+            }
+          },
+          "loss": 0.049721897544711825,
+          "samples": 20000,
+          "split": "validation",
+          "completed": true,
+          "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_10",
+          "class_to_idx": {
+            "fake": 0,
+            "real": 1
+          },
+          "inference_precision": "FP32",
+          "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+          "seconds": 65.13257019990124,
+          "evaluated_utc": "2026-10-23T07:24:51.637724+00:00",
+          "predictions_sha256": "83e17549709a4bc41f6cb362893c077d388c1da0211826576c0a40d12512a1e7"
+        },
+        "early_stopping_triggered": false,
+        "training_seconds": 4820.198640999966,
+        "peak_vram_bytes": 820466176,
+        "parameters": 4010110,
+        "trainable_parameters": 1131954,
+        "checkpoint_bytes": 16321455,
+        "physical_batch_size": 64,
+        "effective_batch_size": 64,
+        "loader_configuration": {
+          "worker_processes": 0,
+          "decode_threads": 4,
+          "prefetched_cpu_batches": 1,
+          "backend": "threaded PIL decode plus CPU prefetch"
+        },
+        "warm_start": {
+          "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\execution_20261019\\E02_efficientnet_b0\\best.pt",
+          "sha256": "6b1b9682f615c3d74bc29d066160cd153d05766c0a0d6ce33db9faba44d27b0b",
+          "epoch": 3,
+          "bytes": 16320613,
+          "optimizer_state_available": false,
+          "resume_mode": "weight-only continuation; original checkpoints have no optimizer/scheduler/scaler state",
+          "initialization": "existing ImageNet-pretrained, image-trained checkpoint",
+          "previous_training_images": 12000
+        },
+        "protocol": {
+          "max_epoch": 10,
+          "patience": 3,
+          "min_delta": 0.0001,
+          "selection": "validation balanced accuracy; ties within 1e-12 use lower FP32 validation loss",
+          "early_stopping": "validation loss must decrease by more than min_delta; independent of model selection",
+          "optimizer": "AdamW",
+          "backbone_lr": 3e-05,
+          "classifier_lr": 0.0001,
+          "resnet_classifier_lr": 3e-05,
+          "weight_decay": 0.0001,
+          "scheduler": "ReduceLROnPlateau",
+          "scheduler_factor": 0.5,
+          "scheduler_patience": 1,
+          "loss": "CrossEntropyLoss",
+          "amp_training": true,
+          "validation_precision": "FP32",
+          "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+          "augmentation": "unchanged training.data.training_transform: flip, mild color jitter, rotation 4 degrees",
+          "threshold": 0.5,
+          "class_to_idx": {
+            "fake": 0,
+            "real": 1
+          },
+          "test_policy": "freeze both selections and promotion eligibility on validation before any final test evaluation; repeated historical test, not a newly sealed benchmark",
+          "augmentation_rng": "deterministic per sample and epoch; main CPU/CUDA RNG and shuffle generator restored"
+        },
+        "history": [
+          {
+            "epoch": 1,
+            "stage": "100k full-dataset stage",
+            "train_loss": 0.20704279663324357,
+            "train_accuracy": 0.91553,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.94645,
+              "precision": 0.9312276634791847,
+              "real_precision": 0.9627863584534052,
+              "real_recall": 0.9288,
+              "fake_recall": 0.9641,
+              "macro_f1": 0.946433312771678,
+              "pr_auc": 0.9889806722437513,
+              "brier_score": 0.040512527192298,
+              "recall": 0.9641,
+              "f1": 0.9473787648012578,
+              "roc_auc": 0.9890344799999999,
+              "balanced_accuracy": 0.94645,
+              "log_loss": 0.1401738716094631,
+              "confusion_matrix_real_fake": [
+                [
+                  9288,
+                  712
+                ],
+                [
+                  359,
+                  9641
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.945487860742098,
+              "fake_precision": 0.9312276634791847,
+              "fake_f1": 0.9473787648012578,
+              "weighted_f1": 0.9464333127716779,
+              "false_positives": 712,
+              "false_negatives": 359,
+              "true_positives": 9641,
+              "true_negatives": 9288,
+              "false_positive_rate": 0.0712,
+              "false_negative_rate": 0.0359,
+              "specificity": 0.9288,
+              "sensitivity": 0.9641,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9627863584534052,
+                  "recall": 0.9288,
+                  "f1": 0.945487860742098,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9312276634791847,
+                  "recall": 0.9641,
+                  "f1": 0.9473787648012578,
+                  "support": 10000
+                }
+              },
+              "loss": 0.14017387249469757,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_1",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 77.1028255999554,
+              "evaluated_utc": "2026-10-23T06:08:08.501256+00:00",
+              "predictions_sha256": "1cee8b0f0577b57d4b8e2aa29a63e2073774b711b9ee16dc05de8ef3fef91cd9"
+            },
+            "learning_rates_used": [
+              0.0001,
+              3e-05
+            ],
+            "learning_rates_next": [
+              0.0001,
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 521.4783086000243,
+            "peak_vram_bytes": 819614208,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1224736768,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "four decode threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 2,
+            "stage": "100k full-dataset stage",
+            "train_loss": 0.15356080129146576,
+            "train_accuracy": 0.94006,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.95935,
+              "precision": 0.9476659195010233,
+              "real_precision": 0.9716603347366259,
+              "real_recall": 0.9463,
+              "fake_recall": 0.9724,
+              "macro_f1": 0.9593430760242045,
+              "pr_auc": 0.9931601138628381,
+              "brier_score": 0.03123046908792173,
+              "recall": 0.9724,
+              "f1": 0.9598736488820887,
+              "roc_auc": 0.993148895,
+              "balanced_accuracy": 0.95935,
+              "log_loss": 0.10930584541257579,
+              "confusion_matrix_real_fake": [
+                [
+                  9463,
+                  537
+                ],
+                [
+                  276,
+                  9724
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.9588125031663205,
+              "fake_precision": 0.9476659195010233,
+              "fake_f1": 0.9598736488820887,
+              "weighted_f1": 0.9593430760242045,
+              "false_positives": 537,
+              "false_negatives": 276,
+              "true_positives": 9724,
+              "true_negatives": 9463,
+              "false_positive_rate": 0.0537,
+              "false_negative_rate": 0.0276,
+              "specificity": 0.9463,
+              "sensitivity": 0.9724,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9716603347366259,
+                  "recall": 0.9463,
+                  "f1": 0.9588125031663205,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9476659195010233,
+                  "recall": 0.9724,
+                  "f1": 0.9598736488820887,
+                  "support": 10000
+                }
+              },
+              "loss": 0.1093058460175991,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_2",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 78.70897999999579,
+              "evaluated_utc": "2026-10-23T06:17:03.331199+00:00",
+              "predictions_sha256": "149e0154775a2c861af3dc9944d9d706aa0158fb1768f70ff61f9d29c4210281"
+            },
+            "learning_rates_used": [
+              0.0001,
+              3e-05
+            ],
+            "learning_rates_next": [
+              0.0001,
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 534.354628900066,
+            "peak_vram_bytes": 819614208,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1224736768,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "four decode threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 3,
+            "stage": "100k full-dataset stage",
+            "train_loss": 0.1233427427148819,
+            "train_accuracy": 0.95298,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.96735,
+              "precision": 0.9590413515371771,
+              "real_precision": 0.9759649658824727,
+              "real_recall": 0.9583,
+              "fake_recall": 0.9764,
+              "macro_f1": 0.9673473256643402,
+              "pr_auc": 0.9954668054337631,
+              "brier_score": 0.024836462686584803,
+              "recall": 0.9764,
+              "f1": 0.9676428323670779,
+              "roc_auc": 0.99547876,
+              "balanced_accuracy": 0.96735,
+              "log_loss": 0.08802614028592298,
+              "confusion_matrix_real_fake": [
+                [
+                  9583,
+                  417
+                ],
+                [
+                  236,
+                  9764
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.9670518189616025,
+              "fake_precision": 0.9590413515371771,
+              "fake_f1": 0.9676428323670779,
+              "weighted_f1": 0.9673473256643403,
+              "false_positives": 417,
+              "false_negatives": 236,
+              "true_positives": 9764,
+              "true_negatives": 9583,
+              "false_positive_rate": 0.0417,
+              "false_negative_rate": 0.0236,
+              "specificity": 0.9583,
+              "sensitivity": 0.9764,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9759649658824727,
+                  "recall": 0.9583,
+                  "f1": 0.9670518189616025,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9590413515371771,
+                  "recall": 0.9764,
+                  "f1": 0.9676428323670779,
+                  "support": 10000
+                }
+              },
+              "loss": 0.08802613936066628,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_3",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 100.0083556000609,
+              "evaluated_utc": "2026-10-23T06:30:47.772307+00:00",
+              "predictions_sha256": "46dd2a0e039f052e09ca7e91f1b10f12378de4de335d78fc6edff128151222c9"
+            },
+            "learning_rates_used": [
+              0.0001,
+              3e-05
+            ],
+            "learning_rates_next": [
+              0.0001,
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 524.3253128000069,
+            "peak_vram_bytes": 820466176,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1367343104,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "4 image transform threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 4,
+            "stage": "100k full-dataset stage",
+            "train_loss": 0.1021991735970974,
+            "train_accuracy": 0.96116,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.971,
+              "precision": 0.974320241691843,
+              "real_precision": 0.9677259185700099,
+              "real_recall": 0.9745,
+              "fake_recall": 0.9675,
+              "macro_f1": 0.9709996447456481,
+              "pr_auc": 0.9966020211502383,
+              "brier_score": 0.021808255712241698,
+              "recall": 0.9675,
+              "f1": 0.9708981435022579,
+              "roc_auc": 0.9965657,
+              "balanced_accuracy": 0.9710000000000001,
+              "log_loss": 0.07681911859816322,
+              "confusion_matrix_real_fake": [
+                [
+                  9745,
+                  255
+                ],
+                [
+                  325,
+                  9675
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.9711011459890384,
+              "fake_precision": 0.974320241691843,
+              "fake_f1": 0.9708981435022579,
+              "weighted_f1": 0.970999644745648,
+              "false_positives": 255,
+              "false_negatives": 325,
+              "true_positives": 9675,
+              "true_negatives": 9745,
+              "false_positive_rate": 0.0255,
+              "false_negative_rate": 0.0325,
+              "specificity": 0.9745,
+              "sensitivity": 0.9675,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9677259185700099,
+                  "recall": 0.9745,
+                  "f1": 0.9711011459890384,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.974320241691843,
+                  "recall": 0.9675,
+                  "f1": 0.9708981435022579,
+                  "support": 10000
+                }
+              },
+              "loss": 0.07681911850869656,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_4",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 79.12731520005036,
+              "evaluated_utc": "2026-10-23T06:39:36.739834+00:00",
+              "predictions_sha256": "33e2b69e44c7db159eefbdbf485e547602c9ab53362876e453c0ec9c25ccd04a"
+            },
+            "learning_rates_used": [
+              0.0001,
+              3e-05
+            ],
+            "learning_rates_next": [
+              0.0001,
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 528.3820853000507,
+            "peak_vram_bytes": 820466176,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1367343104,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "4 image transform threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 5,
+            "stage": "100k full-dataset stage",
+            "train_loss": 0.08563379133462906,
+            "train_accuracy": 0.96839,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.9731,
+              "precision": 0.9677674510579395,
+              "real_precision": 0.9785555330770787,
+              "real_recall": 0.9674,
+              "fake_recall": 0.9788,
+              "macro_f1": 0.9730991259906034,
+              "pr_auc": 0.9971224981935627,
+              "brier_score": 0.01995513805318562,
+              "recall": 0.9788,
+              "f1": 0.973252460972457,
+              "roc_auc": 0.9970933650000001,
+              "balanced_accuracy": 0.9731000000000001,
+              "log_loss": 0.06962847088744782,
+              "confusion_matrix_real_fake": [
+                [
+                  9674,
+                  326
+                ],
+                [
+                  212,
+                  9788
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.9729457910087499,
+              "fake_precision": 0.9677674510579395,
+              "fake_f1": 0.973252460972457,
+              "weighted_f1": 0.9730991259906033,
+              "false_positives": 326,
+              "false_negatives": 212,
+              "true_positives": 9788,
+              "true_negatives": 9674,
+              "false_positive_rate": 0.0326,
+              "false_negative_rate": 0.0212,
+              "specificity": 0.9674,
+              "sensitivity": 0.9788,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9785555330770787,
+                  "recall": 0.9674,
+                  "f1": 0.9729457910087499,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9677674510579395,
+                  "recall": 0.9788,
+                  "f1": 0.973252460972457,
+                  "support": 10000
+                }
+              },
+              "loss": 0.0696284707710147,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_5",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 78.97605100006331,
+              "evaluated_utc": "2026-10-23T06:48:16.354544+00:00",
+              "predictions_sha256": "2c088b62d497b483a4ad3932a63c048c1a42afc62b57177ec1fc8052bfe368e8"
+            },
+            "learning_rates_used": [
+              0.0001,
+              3e-05
+            ],
+            "learning_rates_next": [
+              0.0001,
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 518.909775499953,
+            "peak_vram_bytes": 820466176,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1367343104,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "4 image transform threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 6,
+            "stage": "100k full-dataset stage",
+            "train_loss": 0.07320960308313369,
+            "train_accuracy": 0.9725,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.9754,
+              "precision": 0.9821501014198782,
+              "real_precision": 0.968836291913215,
+              "real_recall": 0.9824,
+              "fake_recall": 0.9684,
+              "macro_f1": 0.9753987945409326,
+              "pr_auc": 0.9976887542310419,
+              "brier_score": 0.01848642630066891,
+              "recall": 0.9684,
+              "f1": 0.9752265861027191,
+              "roc_auc": 0.99768565,
+              "balanced_accuracy": 0.9754,
+              "log_loss": 0.06471937256118751,
+              "confusion_matrix_real_fake": [
+                [
+                  9824,
+                  176
+                ],
+                [
+                  316,
+                  9684
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.975571002979146,
+              "fake_precision": 0.9821501014198782,
+              "fake_f1": 0.9752265861027191,
+              "weighted_f1": 0.9753987945409325,
+              "false_positives": 176,
+              "false_negatives": 316,
+              "true_positives": 9684,
+              "true_negatives": 9824,
+              "false_positive_rate": 0.0176,
+              "false_negative_rate": 0.0316,
+              "specificity": 0.9824,
+              "sensitivity": 0.9684,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.968836291913215,
+                  "recall": 0.9824,
+                  "f1": 0.975571002979146,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9821501014198782,
+                  "recall": 0.9684,
+                  "f1": 0.9752265861027191,
+                  "support": 10000
+                }
+              },
+              "loss": 0.0647193725258112,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_6",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 66.52920299989637,
+              "evaluated_utc": "2026-10-23T06:55:58.138658+00:00",
+              "predictions_sha256": "ef6ba6f8813e959f8d4ff3e5af9697cebe892b91255c6ec4503e92469031f8be"
+            },
+            "learning_rates_used": [
+              0.0001,
+              3e-05
+            ],
+            "learning_rates_next": [
+              0.0001,
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 461.2518091000384,
+            "peak_vram_bytes": 820466176,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1367343104,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "4 image transform threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 7,
+            "stage": "100k full-dataset stage",
+            "train_loss": 0.06372166012763977,
+            "train_accuracy": 0.97662,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.9762,
+              "precision": 0.9658579534337703,
+              "real_precision": 0.9870116588259358,
+              "real_recall": 0.9651,
+              "fake_recall": 0.9873,
+              "macro_f1": 0.9761970672406547,
+              "pr_auc": 0.9979642582414394,
+              "brier_score": 0.01755598916315753,
+              "recall": 0.9873,
+              "f1": 0.9764612797942834,
+              "roc_auc": 0.9979451499999998,
+              "balanced_accuracy": 0.9762,
+              "log_loss": 0.06134541087631455,
+              "confusion_matrix_real_fake": [
+                [
+                  9651,
+                  349
+                ],
+                [
+                  127,
+                  9873
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.975932854687026,
+              "fake_precision": 0.9658579534337703,
+              "fake_f1": 0.9764612797942834,
+              "weighted_f1": 0.9761970672406547,
+              "false_positives": 349,
+              "false_negatives": 127,
+              "true_positives": 9873,
+              "true_negatives": 9651,
+              "false_positive_rate": 0.0349,
+              "false_negative_rate": 0.0127,
+              "specificity": 0.9651,
+              "sensitivity": 0.9873,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9870116588259358,
+                  "recall": 0.9651,
+                  "f1": 0.975932854687026,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9658579534337703,
+                  "recall": 0.9873,
+                  "f1": 0.9764612797942834,
+                  "support": 10000
+                }
+              },
+              "loss": 0.061345410464704035,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_7",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 66.2295895999996,
+              "evaluated_utc": "2026-10-23T07:03:28.404975+00:00",
+              "predictions_sha256": "653500985eef5dbfe87f64ff49c9fccf36f2ef2ff1e5d1482b0fa13a68a034ee"
+            },
+            "learning_rates_used": [
+              0.0001,
+              3e-05
+            ],
+            "learning_rates_next": [
+              0.0001,
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 449.76766179990955,
+            "peak_vram_bytes": 820466176,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1367343104,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "4 image transform threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 8,
+            "stage": "100k full-dataset stage",
+            "train_loss": 0.05654681004524231,
+            "train_accuracy": 0.97898,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.9801,
+              "precision": 0.9734714003944773,
+              "real_precision": 0.9869168356997972,
+              "real_recall": 0.9731,
+              "fake_recall": 0.9871,
+              "macro_f1": 0.9800990248522178,
+              "pr_auc": 0.9983371708374702,
+              "brier_score": 0.015038254436006248,
+              "recall": 0.9871,
+              "f1": 0.9802383316782523,
+              "roc_auc": 0.9983193,
+              "balanced_accuracy": 0.9801,
+              "log_loss": 0.053052467883839764,
+              "confusion_matrix_real_fake": [
+                [
+                  9731,
+                  269
+                ],
+                [
+                  129,
+                  9871
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.9799597180261833,
+              "fake_precision": 0.9734714003944773,
+              "fake_f1": 0.9802383316782523,
+              "weighted_f1": 0.9800990248522179,
+              "false_positives": 269,
+              "false_negatives": 129,
+              "true_positives": 9871,
+              "true_negatives": 9731,
+              "false_positive_rate": 0.0269,
+              "false_negative_rate": 0.0129,
+              "specificity": 0.9731,
+              "sensitivity": 0.9871,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9869168356997972,
+                  "recall": 0.9731,
+                  "f1": 0.9799597180261833,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9734714003944773,
+                  "recall": 0.9871,
+                  "f1": 0.9802383316782523,
+                  "support": 10000
+                }
+              },
+              "loss": 0.053052465759962794,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_8",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 64.94436810002662,
+              "evaluated_utc": "2026-10-23T07:10:43.552326+00:00",
+              "predictions_sha256": "7e74d757f0269e0fca051ad843be326e88b6f127702c6c8d9cb4ec278cd42fbd"
+            },
+            "learning_rates_used": [
+              0.0001,
+              3e-05
+            ],
+            "learning_rates_next": [
+              0.0001,
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 434.6302477000281,
+            "peak_vram_bytes": 820466176,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1367343104,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "4 image transform threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 9,
+            "stage": "100k full-dataset stage",
+            "train_loss": 0.04977115192770958,
+            "train_accuracy": 0.98209,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.98105,
+              "precision": 0.9809057282815156,
+              "real_precision": 0.9811943583074922,
+              "real_recall": 0.9809,
+              "fake_recall": 0.9812,
+              "macro_f1": 0.981049999573625,
+              "pr_auc": 0.9983279884851399,
+              "brier_score": 0.01477038680020305,
+              "recall": 0.9812,
+              "f1": 0.9810528420736889,
+              "roc_auc": 0.99829475,
+              "balanced_accuracy": 0.98105,
+              "log_loss": 0.05205532340654079,
+              "confusion_matrix_real_fake": [
+                [
+                  9809,
+                  191
+                ],
+                [
+                  188,
+                  9812
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.981047157073561,
+              "fake_precision": 0.9809057282815156,
+              "fake_f1": 0.9810528420736889,
+              "weighted_f1": 0.9810499995736249,
+              "false_positives": 191,
+              "false_negatives": 188,
+              "true_positives": 9812,
+              "true_negatives": 9809,
+              "false_positive_rate": 0.0191,
+              "false_negative_rate": 0.0188,
+              "specificity": 0.9809,
+              "sensitivity": 0.9812,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9811943583074922,
+                  "recall": 0.9809,
+                  "f1": 0.981047157073561,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9809057282815156,
+                  "recall": 0.9812,
+                  "f1": 0.9810528420736889,
+                  "support": 10000
+                }
+              },
+              "loss": 0.05205532208755612,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_9",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 65.23132289992645,
+              "evaluated_utc": "2026-10-23T07:17:49.391933+00:00",
+              "predictions_sha256": "d52324200f8c81cc48ba1ff701f9ab6885dd6b2884d439f823347af7814d73d2"
+            },
+            "learning_rates_used": [
+              0.0001,
+              3e-05
+            ],
+            "learning_rates_next": [
+              0.0001,
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 425.3411722999299,
+            "peak_vram_bytes": 820466176,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1367343104,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "4 image transform threads in main process",
+            "historical": false
+          },
+          {
+            "epoch": 10,
+            "stage": "100k full-dataset stage",
+            "train_loss": 0.04342541211009025,
+            "train_accuracy": 0.98442,
+            "training_images": 100000,
+            "validation": {
+              "accuracy": 0.9812,
+              "precision": 0.9750246791707798,
+              "real_precision": 0.9875379939209726,
+              "real_recall": 0.9747,
+              "fake_recall": 0.9877,
+              "macro_f1": 0.9811992056664394,
+              "pr_auc": 0.9985698009270495,
+              "brier_score": 0.014182257945494391,
+              "recall": 0.9877,
+              "f1": 0.9813214108296076,
+              "roc_auc": 0.9985463050000001,
+              "balanced_accuracy": 0.9812000000000001,
+              "log_loss": 0.04972189823966577,
+              "confusion_matrix_real_fake": [
+                [
+                  9747,
+                  253
+                ],
+                [
+                  123,
+                  9877
+                ]
+              ],
+              "positive_class": "FAKE",
+              "threshold": 0.5,
+              "undefined_precision_recall_f1_policy": "zero when denominator zero",
+              "real_f1": 0.9810770005032713,
+              "fake_precision": 0.9750246791707798,
+              "fake_f1": 0.9813214108296076,
+              "weighted_f1": 0.9811992056664394,
+              "false_positives": 253,
+              "false_negatives": 123,
+              "true_positives": 9877,
+              "true_negatives": 9747,
+              "false_positive_rate": 0.0253,
+              "false_negative_rate": 0.0123,
+              "specificity": 0.9747,
+              "sensitivity": 0.9877,
+              "classwise": {
+                "REAL": {
+                  "precision": 0.9875379939209726,
+                  "recall": 0.9747,
+                  "f1": 0.9810770005032713,
+                  "support": 10000
+                },
+                "FAKE": {
+                  "precision": 0.9750246791707798,
+                  "recall": 0.9877,
+                  "f1": 0.9813214108296076,
+                  "support": 10000
+                }
+              },
+              "loss": 0.049721897544711825,
+              "samples": 20000,
+              "split": "validation",
+              "completed": true,
+              "checkpoint_sha256": "in_memory_E02_efficientnet_b0_epoch_10",
+              "class_to_idx": {
+                "fake": 0,
+                "real": 1
+              },
+              "inference_precision": "FP32",
+              "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+              "seconds": 65.13257019990124,
+              "evaluated_utc": "2026-10-23T07:24:51.637724+00:00",
+              "predictions_sha256": "83e17549709a4bc41f6cb362893c077d388c1da0211826576c0a40d12512a1e7"
+            },
+            "learning_rates_used": [
+              0.0001,
+              3e-05
+            ],
+            "learning_rates_next": [
+              0.0001,
+              3e-05
+            ],
+            "early_stopping_counter": 0,
+            "seconds": 421.75763899995945,
+            "peak_vram_bytes": 820466176,
+            "batch_size": 64,
+            "peak_vram_reserved_bytes": 1367343104,
+            "gradient_accumulation": 1,
+            "workers": 0,
+            "loader_backend": "4 image transform threads in main process",
+            "historical": false
+          }
+        ],
+        "finished_utc": "2026-10-23T07:24:52.439359+00:00",
+        "resume_events": [
+          {
+            "utc": "2026-10-23T06:22:03.602851+00:00",
+            "committed_epoch": 2,
+            "next_epoch": 3,
+            "state_sha256": "fb80071e5aff0a00569feab79f1caf01459cf2f4e00c45c7212945623ee49209",
+            "optimizer_restored": true,
+            "scheduler_restored": true,
+            "scaler_restored": true,
+            "cpu_cuda_rng_restored": true,
+            "selected_epoch": 2
+          }
+        ]
+      },
+      "evaluation": {
+        "completed": true,
+        "test_evaluated": true,
+        "checkpoint": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\current_image_models\\E02_efficientnet_b0\\selected_final.pth",
+        "checkpoint_sha256": "2389a6c08ebcec818aefe22572a23e040056251e008724cc45e6ac2d030bf77e",
+        "selected_epoch": 10,
+        "validation": {
+          "accuracy": 0.9812,
+          "precision": 0.9750246791707798,
+          "real_precision": 0.9875379939209726,
+          "real_recall": 0.9747,
+          "fake_recall": 0.9877,
+          "macro_f1": 0.9811992056664394,
+          "pr_auc": 0.9985698009270495,
+          "brier_score": 0.014182257945494391,
+          "recall": 0.9877,
+          "f1": 0.9813214108296076,
+          "roc_auc": 0.9985463050000001,
+          "balanced_accuracy": 0.9812000000000001,
+          "log_loss": 0.04972189823966577,
+          "confusion_matrix_real_fake": [
+            [
+              9747,
+              253
+            ],
+            [
+              123,
+              9877
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "real_f1": 0.9810770005032713,
+          "fake_precision": 0.9750246791707798,
+          "fake_f1": 0.9813214108296076,
+          "weighted_f1": 0.9811992056664394,
+          "false_positives": 253,
+          "false_negatives": 123,
+          "true_positives": 9877,
+          "true_negatives": 9747,
+          "false_positive_rate": 0.0253,
+          "false_negative_rate": 0.0123,
+          "specificity": 0.9747,
+          "sensitivity": 0.9877,
+          "classwise": {
+            "REAL": {
+              "precision": 0.9875379939209726,
+              "recall": 0.9747,
+              "f1": 0.9810770005032713,
+              "support": 10000
+            },
+            "FAKE": {
+              "precision": 0.9750246791707798,
+              "recall": 0.9877,
+              "f1": 0.9813214108296076,
+              "support": 10000
+            }
+          },
+          "loss": 0.049721897544711825,
+          "samples": 20000,
+          "split": "validation",
+          "completed": true,
+          "checkpoint_sha256": "2389a6c08ebcec818aefe22572a23e040056251e008724cc45e6ac2d030bf77e",
+          "class_to_idx": {
+            "fake": 0,
+            "real": 1
+          },
+          "inference_precision": "FP32",
+          "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+          "seconds": 35.371407600003295,
+          "evaluated_utc": "2026-10-23T07:26:10.869472+00:00",
+          "predictions_sha256": "83e17549709a4bc41f6cb362893c077d388c1da0211826576c0a40d12512a1e7"
+        },
+        "promotion_eligible": true,
+        "improved_on_validation": true,
+        "test": {
+          "accuracy": 0.9806,
+          "precision": 0.9752768987341772,
+          "real_precision": 0.9860436893203883,
+          "real_recall": 0.975,
+          "fake_recall": 0.9862,
+          "macro_f1": 0.9805993915969204,
+          "pr_auc": 0.9984450592494584,
+          "brier_score": 0.014787579462023002,
+          "recall": 0.9862,
+          "f1": 0.9807080350039777,
+          "roc_auc": 0.99841728,
+          "balanced_accuracy": 0.9805999999999999,
+          "log_loss": 0.05189322400740511,
+          "confusion_matrix_real_fake": [
+            [
+              9750,
+              250
+            ],
+            [
+              138,
+              9862
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "real_f1": 0.9804907481898633,
+          "fake_precision": 0.9752768987341772,
+          "fake_f1": 0.9807080350039777,
+          "weighted_f1": 0.9805993915969204,
+          "false_positives": 250,
+          "false_negatives": 138,
+          "true_positives": 9862,
+          "true_negatives": 9750,
+          "false_positive_rate": 0.025,
+          "false_negative_rate": 0.0138,
+          "specificity": 0.975,
+          "sensitivity": 0.9862,
+          "classwise": {
+            "REAL": {
+              "precision": 0.9860436893203883,
+              "recall": 0.975,
+              "f1": 0.9804907481898633,
+              "support": 10000
+            },
+            "FAKE": {
+              "precision": 0.9752768987341772,
+              "recall": 0.9862,
+              "f1": 0.9807080350039777,
+              "support": 10000
+            }
+          },
+          "loss": 0.05189322521910071,
+          "samples": 20000,
+          "split": "test",
+          "completed": true,
+          "checkpoint_sha256": "2389a6c08ebcec818aefe22572a23e040056251e008724cc45e6ac2d030bf77e",
+          "class_to_idx": {
+            "fake": 0,
+            "real": 1
+          },
+          "inference_precision": "FP32",
+          "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+          "seconds": 28.232573800021783,
+          "evaluated_utc": "2026-10-23T07:27:56.088743+00:00",
+          "predictions_sha256": "dd90ca1110129bf6011dc9cd6d3b04ca3f4311b676a0735c8b5de3e7f80e4557"
+        },
+        "common_validation": {
+          "accuracy": 0.979,
+          "precision": 0.9686888454011742,
+          "real_precision": 0.9897750511247444,
+          "real_recall": 0.968,
+          "fake_recall": 0.99,
+          "macro_f1": 0.9789974586925018,
+          "pr_auc": 0.9986109736254092,
+          "brier_score": 0.015063207982937012,
+          "recall": 0.99,
+          "f1": 0.9792284866468842,
+          "roc_auc": 0.99859,
+          "balanced_accuracy": 0.979,
+          "log_loss": 0.051795199865222706,
+          "confusion_matrix_real_fake": [
+            [
+              968,
+              32
+            ],
+            [
+              10,
+              990
+            ]
+          ],
+          "positive_class": "FAKE",
+          "threshold": 0.5,
+          "undefined_precision_recall_f1_policy": "zero when denominator zero",
+          "real_f1": 0.9787664307381193,
+          "fake_precision": 0.9686888454011742,
+          "fake_f1": 0.9792284866468842,
+          "weighted_f1": 0.9789974586925019,
+          "false_positives": 32,
+          "false_negatives": 10,
+          "true_positives": 990,
+          "true_negatives": 968,
+          "false_positive_rate": 0.032,
+          "false_negative_rate": 0.01,
+          "specificity": 0.968,
+          "sensitivity": 0.99,
+          "classwise": {
+            "REAL": {
+              "precision": 0.9897750511247444,
+              "recall": 0.968,
+              "f1": 0.9787664307381193,
+              "support": 1000
+            },
+            "FAKE": {
+              "precision": 0.9686888454011742,
+              "recall": 0.99,
+              "f1": 0.9792284866468842,
+              "support": 1000
+            }
+          },
+          "samples": 2000,
+          "split": "validation",
+          "completed": true,
+          "checkpoint_sha256": "2389a6c08ebcec818aefe22572a23e040056251e008724cc45e6ac2d030bf77e",
+          "inference_precision": "FP32",
+          "scope": "historical common 2,000-image validation subset; reporting only, not epoch selection"
+        },
+        "checkpoint_bytes": 16341487,
+        "test_scope": "repeat evaluation of historically used predefined test split"
+      },
+      "benchmark": {
+        "protocol": {
+          "precision": "FP32; TF32 disabled",
+          "batch_size": 32,
+          "warmups": 10,
+          "repeats": 30,
+          "synchronization": "torch.cuda.synchronize before and after each forward",
+          "scope": "resident-input model forward; excludes decoding, preprocessing, transfer, XAI",
+          "input": "first 32 predefined validation images, unchanged evaluation preprocessing"
+        },
+        "batches": {
+          "32": {
+            "mean_batch_ms": 30.016743341305602,
+            "median_batch_ms": 29.97645002324134,
+            "ms_per_image": 0.9380232294158001,
+            "images_per_second": 1066.0716799335544,
+            "timed_batch_seconds": [
+              0.02994630008470267,
+              0.029947400093078613,
+              0.029933899990282953,
+              0.030050899949856102,
+              0.02992400003131479,
+              0.029945799964480102,
+              0.029927799943834543,
+              0.029951700009405613,
+              0.029914500075392425,
+              0.030013300012797117,
+              0.030085899983532727,
+              0.03006320004351437,
+              0.029945999966003,
+              0.02998470002785325,
+              0.030205899965949357,
+              0.029969100025482476,
+              0.029966999893076718,
+              0.03013570001348853,
+              0.03002609999384731,
+              0.029957400052808225,
+              0.030407599988393486,
+              0.0299848000286147,
+              0.030013900017365813,
+              0.029988199938088655,
+              0.02995240001473576,
+              0.030361399985849857,
+              0.0299612000817433,
+              0.02998330001719296,
+              0.029982100008055568,
+              0.029970800038427114
+            ]
+          },
+          "1": {
+            "mean_batch_ms": 14.472900001176942,
+            "median_batch_ms": 14.013099949806929,
+            "ms_per_image": 14.472900001176942,
+            "images_per_second": 69.09465275920373,
+            "timed_batch_seconds": [
+              0.014307199977338314,
+              0.013751200051046908,
+              0.01351960003376007,
+              0.015609800000675023,
+              0.016357700107619166,
+              0.013904399937018752,
+              0.013637800002470613,
+              0.0151344999903813,
+              0.013987099984660745,
+              0.014900800073519349,
+              0.014438700047321618,
+              0.016562399920076132,
+              0.013937999960035086,
+              0.013925000093877316,
+              0.014052900020033121,
+              0.015866099973209202,
+              0.014933100086636841,
+              0.01361000002361834,
+              0.013489199918694794,
+              0.017081899917684495,
+              0.014039099914953113,
+              0.01362909993622452,
+              0.01593490003142506,
+              0.013800100074149668,
+              0.01362919993698597,
+              0.014442799962125719,
+              0.014954300015233457,
+              0.013798700063489377,
+              0.013572399970144033,
+              0.0133790000109002
+            ]
+          }
+        },
+        "peak_vram_bytes": 404130816
+      }
+    }
+  },
+  "rows": [
+    {
+      "identity": "R18_FT_20261021",
+      "split": "validation",
+      "samples": 20000,
+      "accuracy": 0.98915,
+      "balanced_accuracy": 0.98915,
+      "precision": 0.9910651541009938,
+      "fake_recall": 0.9872,
+      "f1": 0.9891288011622664,
+      "macro_f1": 0.9891499587427182,
+      "weighted_f1": 0.989149958742718,
+      "roc_auc": 0.99935786,
+      "pr_auc": 0.9993552278176019,
+      "loss": 0.033701413389504886,
+      "log_loss": 0.0337014415319021,
+      "brier_score": 0.008779588845221167,
+      "false_positives": 89,
+      "false_negatives": 128,
+      "false_positive_rate": 0.0089,
+      "false_negative_rate": 0.0128,
+      "specificity": 0.9911,
+      "sensitivity": 0.9872,
+      "real_precision": 0.9872497260683335,
+      "real_recall": 0.9911,
+      "real_f1": 0.9891711163231698,
+      "parameters": 11177538,
+      "trainable_parameters": 8394754,
+      "checkpoint_bytes": 44804363,
+      "checkpoint_sha256": "55ad833b1c75aa58e2aaafa4609a3b5ed98e52439b795c775a1e9f5323bf89ad",
+      "batch32_ms_per_image": 0.6294885417446494,
+      "batch32_images_per_second": 1588.5912668536669,
+      "singleton_ms": 3.983636673850318
+    },
+    {
+      "identity": "R18_FT_20261021",
+      "split": "test",
+      "samples": 20000,
+      "accuracy": 0.98905,
+      "balanced_accuracy": 0.98905,
+      "precision": 0.9916557756107369,
+      "fake_recall": 0.9864,
+      "f1": 0.9890209053993082,
+      "macro_f1": 0.9890499231030849,
+      "weighted_f1": 0.989049923103085,
+      "roc_auc": 0.99939991,
+      "pr_auc": 0.9994166092591138,
+      "loss": 0.03287658932313789,
+      "log_loss": 0.0328765884424224,
+      "brier_score": 0.008708276295222701,
+      "false_positives": 83,
+      "false_negatives": 136,
+      "false_positive_rate": 0.0083,
+      "false_negative_rate": 0.0136,
+      "specificity": 0.9917,
+      "sensitivity": 0.9864,
+      "real_precision": 0.9864716999900527,
+      "real_recall": 0.9917,
+      "real_f1": 0.9890789408068618,
+      "parameters": 11177538,
+      "trainable_parameters": 8394754,
+      "checkpoint_bytes": 44804363,
+      "checkpoint_sha256": "55ad833b1c75aa58e2aaafa4609a3b5ed98e52439b795c775a1e9f5323bf89ad",
+      "batch32_ms_per_image": 0.6294885417446494,
+      "batch32_images_per_second": 1588.5912668536669,
+      "singleton_ms": 3.983636673850318
+    },
+    {
+      "identity": "E02_efficientnet_b0",
+      "split": "validation",
+      "samples": 20000,
+      "accuracy": 0.9812,
+      "balanced_accuracy": 0.9812000000000001,
+      "precision": 0.9750246791707798,
+      "fake_recall": 0.9877,
+      "f1": 0.9813214108296076,
+      "macro_f1": 0.9811992056664394,
+      "weighted_f1": 0.9811992056664394,
+      "roc_auc": 0.9985463050000001,
+      "pr_auc": 0.9985698009270495,
+      "loss": 0.049721897544711825,
+      "log_loss": 0.04972189823966577,
+      "brier_score": 0.014182257945494391,
+      "false_positives": 253,
+      "false_negatives": 123,
+      "false_positive_rate": 0.0253,
+      "false_negative_rate": 0.0123,
+      "specificity": 0.9747,
+      "sensitivity": 0.9877,
+      "real_precision": 0.9875379939209726,
+      "real_recall": 0.9747,
+      "real_f1": 0.9810770005032713,
+      "parameters": 4010110,
+      "trainable_parameters": 1131954,
+      "checkpoint_bytes": 16341487,
+      "checkpoint_sha256": "2389a6c08ebcec818aefe22572a23e040056251e008724cc45e6ac2d030bf77e",
+      "batch32_ms_per_image": 0.9380232294158001,
+      "batch32_images_per_second": 1066.0716799335544,
+      "singleton_ms": 14.472900001176942
+    },
+    {
+      "identity": "E02_efficientnet_b0",
+      "split": "test",
+      "samples": 20000,
+      "accuracy": 0.9806,
+      "balanced_accuracy": 0.9805999999999999,
+      "precision": 0.9752768987341772,
+      "fake_recall": 0.9862,
+      "f1": 0.9807080350039777,
+      "macro_f1": 0.9805993915969204,
+      "weighted_f1": 0.9805993915969204,
+      "roc_auc": 0.99841728,
+      "pr_auc": 0.9984450592494584,
+      "loss": 0.05189322521910071,
+      "log_loss": 0.05189322400740511,
+      "brier_score": 0.014787579462023002,
+      "false_positives": 250,
+      "false_negatives": 138,
+      "false_positive_rate": 0.025,
+      "false_negative_rate": 0.0138,
+      "specificity": 0.975,
+      "sensitivity": 0.9862,
+      "real_precision": 0.9860436893203883,
+      "real_recall": 0.975,
+      "real_f1": 0.9804907481898633,
+      "parameters": 4010110,
+      "trainable_parameters": 1131954,
+      "checkpoint_bytes": 16341487,
+      "checkpoint_sha256": "2389a6c08ebcec818aefe22572a23e040056251e008724cc45e6ac2d030bf77e",
+      "batch32_ms_per_image": 0.9380232294158001,
+      "batch32_images_per_second": 1066.0716799335544,
+      "singleton_ms": 14.472900001176942
+    }
+  ],
+  "protocol": {
+    "max_epoch": 10,
+    "patience": 3,
+    "min_delta": 0.0001,
+    "selection": "validation balanced accuracy; ties within 1e-12 use lower FP32 validation loss",
+    "early_stopping": "validation loss must decrease by more than min_delta; independent of model selection",
+    "optimizer": "AdamW",
+    "backbone_lr": 3e-05,
+    "classifier_lr": 0.0001,
+    "resnet_classifier_lr": 3e-05,
+    "weight_decay": 0.0001,
+    "scheduler": "ReduceLROnPlateau",
+    "scheduler_factor": 0.5,
+    "scheduler_patience": 1,
+    "loss": "CrossEntropyLoss",
+    "amp_training": true,
+    "validation_precision": "FP32",
+    "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+    "augmentation": "unchanged training.data.training_transform: flip, mild color jitter, rotation 4 degrees",
+    "threshold": 0.5,
+    "class_to_idx": {
+      "fake": 0,
+      "real": 1
+    },
+    "test_policy": "freeze both selections and promotion eligibility on validation before any final test evaluation; repeated historical test, not a newly sealed benchmark",
+    "augmentation_rng": "deterministic per sample and epoch; main CPU/CUDA RNG and shuffle generator restored"
+  },
+  "historical_evidence_unchanged": true,
+  "deployment_summary_sha256": "b4503956bcbb6a69ccb047e67eaab8abb200f04fef5fe8243ec92fdd4eaa8eec"
+}

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "tests_run": 70,
+  "log": "results/current_image_models/regression_final.log",
+  "seconds": 65.571,
+  "command": "dfenv/Scripts/python.exe -B -m unittest discover -s tests -v",
+  "exit_code": 0
+}

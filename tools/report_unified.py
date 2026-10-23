@@ -228,6 +228,12 @@ Frozen features and a small fixed augmentation-view cache limit adaptation. No a
         from tools.report_refinement import update_readme
         body=update_readme(body,refinement)
     (ROOT/'README.md').write_text(body,encoding='utf-8')
+    # Reapply current image aliases after regenerating the historical video
+    # document. This consumes saved evidence and never re-evaluates either split.
+    current = ROOT/'results/current_image_models'
+    if (current/'promotion.json').exists():
+        from tools.plot_demo_accuracy import current_snapshot, publish_current
+        publish_current(current_snapshot(current), ROOT/'docs/figures/current_image_models', current)
     print(f'Generated README and {len(full)} observed comparison rows',flush=True)
 
 

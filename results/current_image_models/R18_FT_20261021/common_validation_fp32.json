@@ -1,0 +1,60 @@
+{
+  "accuracy": 0.989,
+  "precision": 0.9919517102615694,
+  "real_precision": 0.9860834990059643,
+  "real_recall": 0.992,
+  "fake_recall": 0.986,
+  "macro_f1": 0.9889999009991091,
+  "pr_auc": 0.9994436352218006,
+  "brier_score": 0.009126880673838171,
+  "recall": 0.986,
+  "f1": 0.9889669007021064,
+  "roc_auc": 0.9994409999999999,
+  "balanced_accuracy": 0.989,
+  "log_loss": 0.03371696383014404,
+  "confusion_matrix_real_fake": [
+    [
+      992,
+      8
+    ],
+    [
+      14,
+      986
+    ]
+  ],
+  "positive_class": "FAKE",
+  "threshold": 0.5,
+  "undefined_precision_recall_f1_policy": "zero when denominator zero",
+  "real_f1": 0.9890329012961117,
+  "fake_precision": 0.9919517102615694,
+  "fake_f1": 0.9889669007021064,
+  "weighted_f1": 0.9889999009991091,
+  "false_positives": 8,
+  "false_negatives": 14,
+  "true_positives": 986,
+  "true_negatives": 992,
+  "false_positive_rate": 0.008,
+  "false_negative_rate": 0.014,
+  "specificity": 0.992,
+  "sensitivity": 0.986,
+  "classwise": {
+    "REAL": {
+      "precision": 0.9860834990059643,
+      "recall": 0.992,
+      "f1": 0.9890329012961117,
+      "support": 1000
+    },
+    "FAKE": {
+      "precision": 0.9919517102615694,
+      "recall": 0.986,
+      "f1": 0.9889669007021064,
+      "support": 1000
+    }
+  },
+  "samples": 2000,
+  "split": "validation",
+  "completed": true,
+  "checkpoint_sha256": "55ad833b1c75aa58e2aaafa4609a3b5ed98e52439b795c775a1e9f5323bf89ad",
+  "inference_precision": "FP32",
+  "scope": "historical common 2,000-image validation subset; reporting only, not epoch selection"
+}

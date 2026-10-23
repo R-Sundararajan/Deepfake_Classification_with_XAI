@@ -1,0 +1,68 @@
+{
+  "accuracy": 0.98905,
+  "precision": 0.9916557756107369,
+  "real_precision": 0.9864716999900527,
+  "real_recall": 0.9917,
+  "fake_recall": 0.9864,
+  "macro_f1": 0.9890499231030849,
+  "pr_auc": 0.9994166092591138,
+  "brier_score": 0.008708276295222701,
+  "recall": 0.9864,
+  "f1": 0.9890209053993082,
+  "roc_auc": 0.99939991,
+  "balanced_accuracy": 0.98905,
+  "log_loss": 0.0328765884424224,
+  "confusion_matrix_real_fake": [
+    [
+      9917,
+      83
+    ],
+    [
+      136,
+      9864
+    ]
+  ],
+  "positive_class": "FAKE",
+  "threshold": 0.5,
+  "undefined_precision_recall_f1_policy": "zero when denominator zero",
+  "real_f1": 0.9890789408068618,
+  "fake_precision": 0.9916557756107369,
+  "fake_f1": 0.9890209053993082,
+  "weighted_f1": 0.989049923103085,
+  "false_positives": 83,
+  "false_negatives": 136,
+  "true_positives": 9864,
+  "true_negatives": 9917,
+  "false_positive_rate": 0.0083,
+  "false_negative_rate": 0.0136,
+  "specificity": 0.9917,
+  "sensitivity": 0.9864,
+  "classwise": {
+    "REAL": {
+      "precision": 0.9864716999900527,
+      "recall": 0.9917,
+      "f1": 0.9890789408068618,
+      "support": 10000
+    },
+    "FAKE": {
+      "precision": 0.9916557756107369,
+      "recall": 0.9864,
+      "f1": 0.9890209053993082,
+      "support": 10000
+    }
+  },
+  "loss": 0.03287658932313789,
+  "samples": 20000,
+  "split": "test",
+  "completed": true,
+  "checkpoint_sha256": "55ad833b1c75aa58e2aaafa4609a3b5ed98e52439b795c775a1e9f5323bf89ad",
+  "class_to_idx": {
+    "fake": 0,
+    "real": 1
+  },
+  "inference_precision": "FP32",
+  "preprocessing": "RGB full frame; PIL bilinear 224; ImageNet normalization",
+  "seconds": 65.22189549996983,
+  "evaluated_utc": "2026-10-23T07:27:18.954902+00:00",
+  "predictions_sha256": "542fdd724048133b3ac422c86b876d55b4454b69d4a93bfe99b9402d7b207a6f"
+}

@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "stable_ids": [
+    "R18_FT_20261021",
+    "E02_efficientnet_b0"
+  ],
+  "unique_catalog_ids": [
+    "R18_FT_20261021",
+    "E02_efficientnet_b0",
+    "S0",
+    "E04_jpeg",
+    "E03_attention",
+    "E01_resnet18",
+    "S2"
+  ],
+  "checks": [
+    "checkpoint digests and sizes",
+    "prediction evidence digests",
+    "report/CSV/figure/UI metric equality",
+    "README scores",
+    "validation-only best selection",
+    "complete epoch history and caps",
+    "100k training counts",
+    "historical evidence hashes"
+  ],
+  "historical_files_unchanged": 169
+}
