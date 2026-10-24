@@ -235,7 +235,7 @@ Use the existing `dfenv` from the project root. Commands that generate diagnosti
 .\\dfenv\\Scripts\\python.exe -m tools.audit_refinement --output results/refinement_rerun/audit
 .\\dfenv\\Scripts\\python.exe -m tools.verify_refinement images --output results/refinement_rerun/images
 .\\dfenv\\Scripts\\python.exe -m tools.verify_refinement video --output results/refinement_rerun/video
-.\\dfenv\\Scripts\\python.exe -m tools.verify_app_refinement --output results/refinement_rerun/app_qa.json
+.\\dfenv\\Scripts\\python.exe -m tools.verify_automatic_gallery --output results/refinement_rerun/app_qa.json
 .\\dfenv\\Scripts\\python.exe -m tools.profile_refinement --output results/refinement_rerun/profile
 .\\dfenv\\Scripts\\python.exe -m training.domain_pilot --output results/refinement_rerun/domain_pilot --epochs 16 --per-class 1000 --domain-weight 0.5
 .\\dfenv\\Scripts\\python.exe -m tools.report_refinement

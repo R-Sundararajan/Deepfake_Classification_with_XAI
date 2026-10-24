@@ -1,0 +1,50 @@
+[
+  {
+    "level": "error",
+    "message": "Client Error: File uploader error on file upload - AxiosError: Network Error",
+    "timestamp": "2026-10-24T03:39:25.057Z",
+    "url": "http://localhost:8501/static/js/index.DucWPHXi.js"
+  },
+  {
+    "level": "warn",
+    "message": "WARN Infinite extent for field \"seconds\": [Infinity, -Infinity]",
+    "timestamp": "2026-10-24T03:40:56.892Z",
+    "url": "http://localhost:8501/static/js/styled-components.BGit4FcC.js"
+  },
+  {
+    "level": "warn",
+    "message": "WARN Infinite extent for field \"fake_probability\": [Infinity, -Infinity]",
+    "timestamp": "2026-10-24T03:40:56.893Z",
+    "url": "http://localhost:8501/static/js/styled-components.BGit4FcC.js"
+  },
+  {
+    "level": "warn",
+    "message": "WARN Scale bindings are currently only supported for scales with unbinned, continuous domains.",
+    "timestamp": "2026-10-24T03:40:57.061Z",
+    "url": "http://localhost:8501/static/js/styled-components.BGit4FcC.js"
+  },
+  {
+    "level": "warn",
+    "message": "WARN Infinite extent for field \"seconds\": [Infinity, -Infinity]",
+    "timestamp": "2026-10-24T03:41:59.465Z",
+    "url": "http://localhost:8501/static/js/styled-components.BGit4FcC.js"
+  },
+  {
+    "level": "warn",
+    "message": "WARN Infinite extent for field \"fake_probability\": [Infinity, -Infinity]",
+    "timestamp": "2026-10-24T03:41:59.465Z",
+    "url": "http://localhost:8501/static/js/styled-components.BGit4FcC.js"
+  },
+  {
+    "level": "warn",
+    "message": "WARN Scale bindings are currently only supported for scales with unbinned, continuous domains.",
+    "timestamp": "2026-10-24T03:41:59.627Z",
+    "url": "http://localhost:8501/static/js/styled-components.BGit4FcC.js"
+  },
+  {
+    "level": "error",
+    "message": "Client Error: File uploader error on file upload - AxiosError: Network Error",
+    "timestamp": "2026-10-24T03:43:51.750Z",
+    "url": "http://localhost:8501/static/js/index.DucWPHXi.js"
+  }
+]

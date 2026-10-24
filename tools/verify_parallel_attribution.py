@@ -8,7 +8,7 @@ import numpy as np
 from PIL import Image
 import torch
 
-from config import PROJECT_ROOT
+from config import PROJECT_ROOT, DATASET_PATH
 from explainability.suite import ParallelExplainer, DEFAULT_PARAMETERS
 from inference.catalog import catalog, create_predictor, methods_for
 from tools.runtime import configure_runtime
@@ -23,7 +23,7 @@ def run(output):
     with (RUN / 'manifest.csv').open(newline='', encoding='utf-8') as stream:
         rows = list(csv.DictReader(stream))
     clip = sorted([row for row in rows if row['split'] == 'validation' and row['label'] == 'FAKE'], key=lambda row: row['filename'])[0]
-    cases = [('Image', 'S0', Path(r'C:\Users\Rangarajan\OneDrive\Pictures\Saved Pictures\random-person.jpeg')),
+    cases = [('Image', catalog('Image')[0]['id'], DATASET_PATH / 'test/fake/00276TOPP4.jpg'),
              ('Video', 'S8', Path(clip['path']))]
     report = []
     for modality, identifier, path in cases:
@@ -60,7 +60,8 @@ def run(output):
                 checks.append({'method': method, 'max_absolute_map_difference': maximum_error,
                                'execution': before['details']['execution']})
             serial_seconds = time.perf_counter() - tick
-            modules = ([predictor.legacy] if identifier == 'S0' else predictor.encoders + [predictor.spatial_head, predictor.temporal_head])
+            modules = [value for value in vars(predictor).values() if isinstance(value, torch.nn.Module)]
+            modules += getattr(predictor, 'encoders', [])
             assert all(not module._forward_hooks for root in modules if root is not None for module in root.modules())
             for encoder in getattr(predictor, 'encoders', []):
                 if hasattr(encoder, 'blocks'):

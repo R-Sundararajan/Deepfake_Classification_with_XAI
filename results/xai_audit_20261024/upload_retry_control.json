@@ -1,0 +1,9 @@
+{
+  "original_path": "C:\\Users\\Rangarajan\\OneDrive\\Pictures\\Saved Pictures\\Goodies.jpeg",
+  "original_exists_at_retry": false,
+  "preserved_path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\uploads\\a0c8c636dbb420d2d675526b058025004bfbbb00e349d0c376bd4bf887738063.jpeg",
+  "control_path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\results\\xai_audit_20261024\\upload_controls\\Goodies.jpeg",
+  "original_recorded_sha256": "a0c8c636dbb420d2d675526b058025004bfbbb00e349d0c376bd4bf887738063",
+  "preserved_sha256": "a0c8c636dbb420d2d675526b058025004bfbbb00e349d0c376bd4bf887738063",
+  "copy_sha256": "a0c8c636dbb420d2d675526b058025004bfbbb00e349d0c376bd4bf887738063"
+}

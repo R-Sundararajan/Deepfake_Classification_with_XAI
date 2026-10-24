@@ -84,16 +84,29 @@ def occlusion_sensitivity(model, tensor, class_index, patch=32, batch_size=8):
     regions = [(y, min(y+patch, height), x, min(x+patch, width))
                for y in range(0, height, patch) for x in range(0, width, patch)]
     raw = np.zeros((height, width), np.float32)
+    margin_drops = []
     with torch.inference_mode():
-        clean = float(model(tensor).softmax(-1)[0, class_index])
+        clean_logits = model(tensor).float()
+        clean = float(clean_logits.softmax(-1)[0, class_index])
+        alternative = [i for i in range(clean_logits.shape[-1]) if i != class_index]
+        clean_margin = clean_logits[0, class_index] - clean_logits[0, alternative].max()
         for start in range(0, len(regions), batch_size):
             batch = tensor.repeat(len(regions[start:start+batch_size]), 1, 1, 1)
             for item, (y1, y2, x1, x2) in enumerate(regions[start:start+batch_size]):
                 batch[item, :, y1:y2, x1:x2] = 0
-            drops = clean-model(batch).float().softmax(-1)[:, class_index].cpu().numpy()
+            logits = model(batch).float()
+            drops = clean-logits.softmax(-1)[:, class_index].cpu().numpy()
+            margin_drops.extend((clean_margin-(logits[:, class_index]-logits[:, alternative].max(-1).values)).cpu().tolist())
             for drop, (y1, y2, x1, x2) in zip(drops, regions[start:start+batch_size]):
                 raw[y1:y2, x1:x2] = drop
+    maximum = float(np.abs(raw).max())
     return normalize_map(raw), {'patch_size': patch, 'regions': len(regions), 'baseline': 'ImageNet mean RGB',
+                                'score_space': 'selected class probability',
+                                'max_absolute_probability_change': maximum,
+                                'probability_resolution_limited': bool(maximum <= 8*np.finfo(np.float32).eps),
+                                'probability_resolution_note': 'Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.',
+                                'patch_bounds_y1_y2_x1_x2': [list(region) for region in regions],
+                                'target_vs_best_alternative_margin_drops': margin_drops,
                                 'raw_attribution_statistics': statistics(raw), 'clean_class_probability': clean,
                                 'limitation': 'Masking may create out-of-distribution inputs', 'signed': True}
 
@@ -127,6 +140,7 @@ def lime_explanation(model, tensor, class_index, samples=256, grid=7, batch_size
         weights[index] = coefficient
     raw = weights[segments]
     return normalize_map(raw), {'samples': samples, 'seed': seed, 'regions': count,
+        'score_space': 'selected class probability (weighted local surrogate)',
         'segmentation': f'{grid} by {grid} nonoverlapping grid; not semantic objects',
         'weighted_surrogate_r2': float(fit), 'surrogate_intercept': float(intercept),
         'surrogate_local_prediction': float(np.asarray(local).ravel()[0]),

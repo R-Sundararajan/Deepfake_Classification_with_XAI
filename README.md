@@ -1,5 +1,15 @@
 # Explainable Deepfake Classification: unified image/video experiments
 
+The current demo uses ResNet-18 for images and EfficientNet-B0 + LSTM (S6) for videos. Uploading runs every compatible explanation automatically. Local checkpoints and datasets are required; they are deliberately excluded from Git.
+
+Start with the [demo guide](docs/automatic_gallery.md), [end-to-end XAI audit](docs/xai_end_to_end_audit.md), [results index](results/README.md), and [tools index](tools/README.md). The [cleanup record](docs/repository_cleanup.md) explains the final repository layout and retired utilities.
+
+## XAI audit — 24 October 2026
+
+The actual Streamlit UI was exercised with supplied images/videos and labeled held-out examples. Two numerical passes covered 14 input/model cases and 87 attribution maps per pass. All 74 regression tests passed; the integration verifier passed 16 cases covering 63 maps.
+
+The audit corrected probability-method diagnostics that were labeled as logits and added visible occlusion effect sizes plus separate margin diagnostics. Predictions, attribution arrays and checkpoint weights remained unchanged. Faint signed IG, negative occlusion and saturated probability maps can be mathematically valid; weak LIME fits and failed IG completeness checks remain explicitly inconclusive. Background sensitivity was demonstrated under controlled masking, with out-of-distribution limitations recorded. See the [full audit and evidence](docs/xai_end_to_end_audit.md).
+
 ## Image Classification Models
 
 The existing `R18_FT_20261021` and `E02_efficientnet_b0` identities resolve to validation-selected checkpoints. Both continuation stages use the predefined 100,000-image training split and FP32 evaluation at 224 pixels, with FAKE positive and threshold 0.5. Historical runs and video checkpoints remain preserved.

@@ -158,3 +158,27 @@ literature_implementation_note.md
 !/results/current_image_models/*/common_validation_fp32.json
 !/results/current_image_models/*/inference_benchmark.json
 !/results/current_image_models/*/final_status.json
+
+# Final XAI audit: portable numeric evidence only. Uploaded faces, screenshots,
+# attribution arrays, duplicate media and raw console logs stay local.
+!/results/xai_audit_20261024/
+/results/xai_audit_20261024/*
+!/results/xai_audit_20261024/README.md
+!/results/xai_audit_20261024/environment.json
+!/results/xai_audit_20261024/inputs.json
+!/results/xai_audit_20261024/experiments.json
+!/results/xai_audit_20261024/controls.json
+!/results/xai_audit_20261024/before_after_parity.json
+!/results/xai_audit_20261024/checkpoint_integrity_after.json
+!/results/xai_audit_20261024/shared_assets.json
+!/results/xai_audit_20261024/saved_image_label_search.json
+!/results/xai_audit_20261024/app_gallery_verified.json
+!/results/xai_audit_20261024/verification.json
+!/results/xai_audit_20261024/cleanup_verification.json
+!/results/xai_audit_20261024/ui_evidence_index.json
+!/results/xai_audit_20261024/browser_errors.json
+!/results/xai_audit_20261024/upload_retry_control.json
+!/results/xai_audit_20261024/verified/
+/results/xai_audit_20261024/verified/*
+!/results/xai_audit_20261024/verified/experiments.json
+!/results/xai_audit_20261024/verified/checkpoint_integrity_after.json

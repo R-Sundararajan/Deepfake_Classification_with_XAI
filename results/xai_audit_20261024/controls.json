@@ -1,0 +1,2722 @@
+{
+  "original_metadata_reproduction": {
+    "algorithm_returned": "selected class probability",
+    "original_displayed": "selected class logit/log-probability; video temperature included for video decisions",
+    "expected_equal": false,
+    "regression": "test_research_probability_metadata_is_not_overwritten fails on original function"
+  },
+  "controls": [
+    {
+      "key": "02_fake_R18_FT_20261021",
+      "spatial_perturbations": {
+        "background_side_strips_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              16,
+              176,
+              0,
+              16
+            ],
+            [
+              16,
+              176,
+              208,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.9072822332382202,
+          "target_probability_drop": 0.09270429611206055,
+          "target_margin_drop": 8.937013626098633
+        },
+        "background_side_strips_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              16,
+              176,
+              0,
+              16
+            ],
+            [
+              16,
+              176,
+              208,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.9967787861824036,
+          "target_probability_drop": 0.0032077431678771973,
+          "target_margin_drop": 5.483147621154785
+        },
+        "background_side_strips_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              16,
+              176,
+              0,
+              16
+            ],
+            [
+              16,
+              176,
+              208,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.9987261891365051,
+          "target_probability_drop": 0.0012603402137756348,
+          "target_margin_drop": 4.553382873535156
+        },
+        "eyes_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              112,
+              64,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.0007975331973284483,
+          "target_probability_drop": 0.999189019203186,
+          "target_margin_drop": 18.351097106933594
+        },
+        "eyes_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              112,
+              64,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.0032316194847226143,
+          "target_probability_drop": 0.9967548847198486,
+          "target_margin_drop": 16.949443817138672
+        },
+        "eyes_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              112,
+              64,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 6.962036422919482e-05,
+          "target_probability_drop": 0.9999169111251831,
+          "target_margin_drop": 20.79029083251953
+        },
+        "mouth_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              144,
+              176,
+              72,
+              152
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.7953044176101685,
+          "target_probability_drop": 0.2046821117401123,
+          "target_margin_drop": 9.860706329345703
+        },
+        "mouth_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              144,
+              176,
+              72,
+              152
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.3430389165878296,
+          "target_probability_drop": 0.6569476127624512,
+          "target_margin_drop": 11.86768913269043
+        },
+        "mouth_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              144,
+              176,
+              72,
+              152
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.3281925320625305,
+          "target_probability_drop": 0.6717939972877502,
+          "target_margin_drop": 11.934279441833496
+        },
+        "outer_background_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              0,
+              180,
+              0,
+              24
+            ],
+            [
+              0,
+              180,
+              200,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.6883790493011475,
+          "target_probability_drop": 0.3116074800491333,
+          "target_margin_drop": 10.425355911254883
+        },
+        "outer_background_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              0,
+              180,
+              0,
+              24
+            ],
+            [
+              0,
+              180,
+              200,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.9926055669784546,
+          "target_probability_drop": 0.007380962371826172,
+          "target_margin_drop": 6.318307876586914
+        },
+        "outer_background_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              0,
+              180,
+              0,
+              24
+            ],
+            [
+              0,
+              180,
+              200,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999865293502808,
+          "changed_target_probability": 0.9981207251548767,
+          "target_probability_drop": 0.0018658041954040527,
+          "target_margin_drop": 4.942931652069092
+        }
+      },
+      "repeat_maps": {
+        "integrated_gradients": {
+          "max_abs_change": 0.0,
+          "details": {
+            "steps": 64,
+            "quadrature": "Gauss-Legendre",
+            "internal_batch_size": 8,
+            "baseline": "zero normalized input = ImageNet mean RGB",
+            "output_difference": 12.586478233337402,
+            "signed_attribution_sum": 12.756305694580078,
+            "completeness_absolute_residual": 0.16982746124267578,
+            "completeness_relative_residual": 0.013492849873832,
+            "converged": true,
+            "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+            "convergence_history": [
+              {
+                "steps": 32,
+                "absolute_residual": 0.9932699203491211,
+                "relative_residual": 0.07891563485314572
+              },
+              {
+                "steps": 64,
+                "absolute_residual": 0.16982746124267578,
+                "relative_residual": 0.013492849873832
+              }
+            ],
+            "raw_attribution_statistics": {
+              "min": -0.9781061410903931,
+              "max": 0.9487832188606262,
+              "mean": 8.474372247408923e-05,
+              "std": 0.059529245814473865,
+              "abs_sum": 5133.215625012455,
+              "signed_sum": 12.756303056579704,
+              "positive_sum": 2572.985964034518,
+              "negative_sum": -2560.229660977938,
+              "absolute_quantiles_0_50_90_99_100": [
+                6.003605079740737e-08,
+                0.017025796696543694,
+                0.08600274175405503,
+                0.23615742132067716,
+                0.9781061410903931
+              ]
+            },
+            "gradient_abs_sum": 442701.5078125,
+            "gradient_available": true,
+            "low_signal": false,
+            "target_index": 0,
+            "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+            "method": "integrated_gradients",
+            "finite": true,
+            "constant_map": false,
+            "signed": true,
+            "attribution_ms": 642.368599998008,
+            "target_class": "FAKE",
+            "precision": "FP32",
+            "blend_ms": 3.071800005272962
+          }
+        },
+        "occlusion": {
+          "max_abs_change": 0.0,
+          "details": {
+            "patch_size": 32,
+            "regions": 49,
+            "baseline": "ImageNet mean RGB",
+            "score_space": "selected class probability",
+            "max_absolute_probability_change": 0.3188917636871338,
+            "probability_resolution_limited": false,
+            "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+            "patch_bounds_y1_y2_x1_x2": [
+              [
+                0,
+                32,
+                0,
+                32
+              ],
+              [
+                0,
+                32,
+                32,
+                64
+              ],
+              [
+                0,
+                32,
+                64,
+                96
+              ],
+              [
+                0,
+                32,
+                96,
+                128
+              ],
+              [
+                0,
+                32,
+                128,
+                160
+              ],
+              [
+                0,
+                32,
+                160,
+                192
+              ],
+              [
+                0,
+                32,
+                192,
+                224
+              ],
+              [
+                32,
+                64,
+                0,
+                32
+              ],
+              [
+                32,
+                64,
+                32,
+                64
+              ],
+              [
+                32,
+                64,
+                64,
+                96
+              ],
+              [
+                32,
+                64,
+                96,
+                128
+              ],
+              [
+                32,
+                64,
+                128,
+                160
+              ],
+              [
+                32,
+                64,
+                160,
+                192
+              ],
+              [
+                32,
+                64,
+                192,
+                224
+              ],
+              [
+                64,
+                96,
+                0,
+                32
+              ],
+              [
+                64,
+                96,
+                32,
+                64
+              ],
+              [
+                64,
+                96,
+                64,
+                96
+              ],
+              [
+                64,
+                96,
+                96,
+                128
+              ],
+              [
+                64,
+                96,
+                128,
+                160
+              ],
+              [
+                64,
+                96,
+                160,
+                192
+              ],
+              [
+                64,
+                96,
+                192,
+                224
+              ],
+              [
+                96,
+                128,
+                0,
+                32
+              ],
+              [
+                96,
+                128,
+                32,
+                64
+              ],
+              [
+                96,
+                128,
+                64,
+                96
+              ],
+              [
+                96,
+                128,
+                96,
+                128
+              ],
+              [
+                96,
+                128,
+                128,
+                160
+              ],
+              [
+                96,
+                128,
+                160,
+                192
+              ],
+              [
+                96,
+                128,
+                192,
+                224
+              ],
+              [
+                128,
+                160,
+                0,
+                32
+              ],
+              [
+                128,
+                160,
+                32,
+                64
+              ],
+              [
+                128,
+                160,
+                64,
+                96
+              ],
+              [
+                128,
+                160,
+                96,
+                128
+              ],
+              [
+                128,
+                160,
+                128,
+                160
+              ],
+              [
+                128,
+                160,
+                160,
+                192
+              ],
+              [
+                128,
+                160,
+                192,
+                224
+              ],
+              [
+                160,
+                192,
+                0,
+                32
+              ],
+              [
+                160,
+                192,
+                32,
+                64
+              ],
+              [
+                160,
+                192,
+                64,
+                96
+              ],
+              [
+                160,
+                192,
+                96,
+                128
+              ],
+              [
+                160,
+                192,
+                128,
+                160
+              ],
+              [
+                160,
+                192,
+                160,
+                192
+              ],
+              [
+                160,
+                192,
+                192,
+                224
+              ],
+              [
+                192,
+                224,
+                0,
+                32
+              ],
+              [
+                192,
+                224,
+                32,
+                64
+              ],
+              [
+                192,
+                224,
+                64,
+                96
+              ],
+              [
+                192,
+                224,
+                96,
+                128
+              ],
+              [
+                192,
+                224,
+                128,
+                160
+              ],
+              [
+                192,
+                224,
+                160,
+                192
+              ],
+              [
+                192,
+                224,
+                192,
+                224
+              ]
+            ],
+            "target_vs_best_alternative_margin_drops": [
+              1.8761358261108398,
+              2.484511375427246,
+              3.700568199157715,
+              2.157729148864746,
+              3.162982940673828,
+              0.8354120254516602,
+              1.3532800674438477,
+              1.4268054962158203,
+              5.029010772705078,
+              6.320151329040527,
+              1.748427391052246,
+              3.633694648742676,
+              5.60898494720459,
+              1.617131233215332,
+              2.817265510559082,
+              4.473402976989746,
+              9.729748725891113,
+              8.837759017944336,
+              5.992774963378906,
+              5.510244369506836,
+              2.2134695053100586,
+              1.9835329055786133,
+              4.009376525878906,
+              9.909527778625488,
+              7.871419906616211,
+              7.799096584320068,
+              8.125365257263184,
+              1.6726083755493164,
+              3.133103370666504,
+              6.068927764892578,
+              8.955613136291504,
+              10.459100723266602,
+              7.915824890136719,
+              8.893470764160156,
+              2.842576026916504,
+              3.193730354309082,
+              1.474172592163086,
+              4.748522758483887,
+              5.152215957641602,
+              0.6013879776000977,
+              0.3724050521850586,
+              1.8752994537353516,
+              2.636265754699707,
+              2.403201103210449,
+              3.275209426879883,
+              7.963524341583252,
+              4.173793792724609,
+              2.2255916595458984,
+              0.8932313919067383
+            ],
+            "raw_attribution_statistics": {
+              "min": 6.079673767089844e-06,
+              "max": 0.3188917636871338,
+              "mean": 0.024566364531614343,
+              "std": 0.06096921263012677,
+              "abs_sum": 1232.6419067382812,
+              "signed_sum": 1232.6419067382812,
+              "positive_sum": 1232.6419067382812,
+              "negative_sum": 0.0,
+              "absolute_quantiles_0_50_90_99_100": [
+                6.079673767089844e-06,
+                0.00034165382385253906,
+                0.08910566568374634,
+                0.3188917636871338,
+                0.3188917636871338
+              ]
+            },
+            "clean_class_probability": 0.9999865293502808,
+            "limitation": "Masking may create out-of-distribution inputs",
+            "signed": true,
+            "method": "occlusion",
+            "target_index": 0,
+            "finite": true,
+            "constant_map": false,
+            "attribution_ms": 89.0501999965636,
+            "target_class": "FAKE",
+            "precision": "FP32",
+            "blend_ms": 4.50289999571396
+          }
+        },
+        "lime": {
+          "max_abs_change": 0.0,
+          "details": {
+            "samples": 256,
+            "seed": 42,
+            "regions": 49,
+            "score_space": "selected class probability (weighted local surrogate)",
+            "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+            "weighted_surrogate_r2": 0.31587963998441726,
+            "surrogate_intercept": -0.3109727885208838,
+            "surrogate_local_prediction": 0.3113987988464621,
+            "actual_target_probability": 0.9999866485595703,
+            "raw_attribution_statistics": {
+              "min": 0.0011840594233945012,
+              "max": 0.03086993470788002,
+              "mean": 0.012701460949088238,
+              "std": 0.006165364093980672,
+              "abs_sum": 0.6223715865053236,
+              "signed_sum": 0.6223715865053236,
+              "positive_sum": 0.6223715865053236,
+              "negative_sum": 0.0,
+              "absolute_quantiles_0_50_90_99_100": [
+                0.0011840594233945012,
+                0.011995861306786537,
+                0.02081774584949017,
+                0.028236372917890527,
+                0.03086993470788002
+              ]
+            },
+            "signed": true,
+            "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+            "method": "lime",
+            "target_index": 0,
+            "finite": true,
+            "constant_map": false,
+            "attribution_ms": 4163.218199995754,
+            "target_class": "FAKE",
+            "precision": "FP32",
+            "blend_ms": 3.3952999947359785
+          }
+        }
+      },
+      "gradcam_reference_max_error": 5.960464477539063e-08
+    },
+    {
+      "key": "04_real_R18_FT_20261021",
+      "spatial_perturbations": {
+        "background_side_strips_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              16,
+              176,
+              0,
+              16
+            ],
+            [
+              16,
+              176,
+              208,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 1.0,
+          "target_probability_drop": -3.0994415283203125e-06,
+          "target_margin_drop": -6.691478729248047
+        },
+        "background_side_strips_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              16,
+              176,
+              0,
+              16
+            ],
+            [
+              16,
+              176,
+              208,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 0.9999966621398926,
+          "target_probability_drop": 2.384185791015625e-07,
+          "target_margin_drop": 0.05190467834472656
+        },
+        "background_side_strips_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              16,
+              176,
+              0,
+              16
+            ],
+            [
+              16,
+              176,
+              208,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 0.9999995231628418,
+          "target_probability_drop": -2.6226043701171875e-06,
+          "target_margin_drop": -1.808938980102539
+        },
+        "eyes_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              112,
+              64,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 1.0,
+          "target_probability_drop": -3.0994415283203125e-06,
+          "target_margin_drop": -6.754127502441406
+        },
+        "eyes_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              112,
+              64,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 0.9999998807907104,
+          "target_probability_drop": -2.9802322387695312e-06,
+          "target_margin_drop": -3.8282470703125
+        },
+        "eyes_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              112,
+              64,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 1.0,
+          "target_probability_drop": -3.0994415283203125e-06,
+          "target_margin_drop": -8.954010009765625
+        },
+        "mouth_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              144,
+              176,
+              72,
+              152
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 1.0,
+          "target_probability_drop": -3.0994415283203125e-06,
+          "target_margin_drop": -4.216451644897461
+        },
+        "mouth_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              144,
+              176,
+              72,
+              152
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 1.0,
+          "target_probability_drop": -3.0994415283203125e-06,
+          "target_margin_drop": -4.328330993652344
+        },
+        "mouth_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              144,
+              176,
+              72,
+              152
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 0.9999948740005493,
+          "target_probability_drop": 2.0265579223632812e-06,
+          "target_margin_drop": 0.5058403015136719
+        },
+        "outer_background_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              0,
+              180,
+              0,
+              24
+            ],
+            [
+              0,
+              180,
+              200,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 1.0,
+          "target_probability_drop": -3.0994415283203125e-06,
+          "target_margin_drop": -6.443380355834961
+        },
+        "outer_background_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              0,
+              180,
+              0,
+              24
+            ],
+            [
+              0,
+              180,
+              200,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 0.999985933303833,
+          "target_probability_drop": 1.0967254638671875e-05,
+          "target_margin_drop": 1.5068607330322266
+        },
+        "outer_background_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              0,
+              180,
+              0,
+              24
+            ],
+            [
+              0,
+              180,
+              200,
+              224
+            ]
+          ],
+          "clean_target_probability": 0.9999969005584717,
+          "changed_target_probability": 0.9999992847442627,
+          "target_probability_drop": -2.384185791015625e-06,
+          "target_margin_drop": -1.4195261001586914
+        }
+      },
+      "repeat_maps": {
+        "integrated_gradients": {
+          "max_abs_change": 0.0,
+          "details": {
+            "steps": 64,
+            "quadrature": "Gauss-Legendre",
+            "internal_batch_size": 8,
+            "baseline": "zero normalized input = ImageNet mean RGB",
+            "output_difference": -0.8966565132141113,
+            "signed_attribution_sum": -0.8713779449462891,
+            "completeness_absolute_residual": 0.025278568267822266,
+            "completeness_relative_residual": 0.028192031056808967,
+            "converged": true,
+            "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+            "convergence_history": [
+              {
+                "steps": 32,
+                "absolute_residual": 0.5544648170471191,
+                "relative_residual": 0.6183692516319449
+              },
+              {
+                "steps": 64,
+                "absolute_residual": 0.025278568267822266,
+                "relative_residual": 0.028192031056808967
+              }
+            ],
+            "raw_attribution_statistics": {
+              "min": -0.9831739664077759,
+              "max": 0.9505636096000671,
+              "mean": -5.788770376055133e-06,
+              "std": 0.0686249904391161,
+              "abs_sum": 6518.131290399986,
+              "signed_sum": -0.871372027166827,
+              "positive_sum": 3258.6299591864095,
+              "negative_sum": -3259.501331213576,
+              "absolute_quantiles_0_50_90_99_100": [
+                7.386597111747051e-09,
+                0.02572258561849594,
+                0.10450862348079683,
+                0.2523440143465996,
+                0.9831739664077759
+              ]
+            },
+            "gradient_abs_sum": 344045.359375,
+            "gradient_available": true,
+            "low_signal": false,
+            "target_index": 1,
+            "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+            "method": "integrated_gradients",
+            "finite": true,
+            "constant_map": false,
+            "signed": true,
+            "attribution_ms": 325.76289999997243,
+            "target_class": "REAL",
+            "precision": "FP32",
+            "blend_ms": 2.1227999968687072
+          }
+        },
+        "occlusion": {
+          "max_abs_change": 0.0,
+          "details": {
+            "patch_size": 32,
+            "regions": 49,
+            "baseline": "ImageNet mean RGB",
+            "score_space": "selected class probability",
+            "max_absolute_probability_change": 3.0994415283203125e-06,
+            "probability_resolution_limited": false,
+            "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+            "patch_bounds_y1_y2_x1_x2": [
+              [
+                0,
+                32,
+                0,
+                32
+              ],
+              [
+                0,
+                32,
+                32,
+                64
+              ],
+              [
+                0,
+                32,
+                64,
+                96
+              ],
+              [
+                0,
+                32,
+                96,
+                128
+              ],
+              [
+                0,
+                32,
+                128,
+                160
+              ],
+              [
+                0,
+                32,
+                160,
+                192
+              ],
+              [
+                0,
+                32,
+                192,
+                224
+              ],
+              [
+                32,
+                64,
+                0,
+                32
+              ],
+              [
+                32,
+                64,
+                32,
+                64
+              ],
+              [
+                32,
+                64,
+                64,
+                96
+              ],
+              [
+                32,
+                64,
+                96,
+                128
+              ],
+              [
+                32,
+                64,
+                128,
+                160
+              ],
+              [
+                32,
+                64,
+                160,
+                192
+              ],
+              [
+                32,
+                64,
+                192,
+                224
+              ],
+              [
+                64,
+                96,
+                0,
+                32
+              ],
+              [
+                64,
+                96,
+                32,
+                64
+              ],
+              [
+                64,
+                96,
+                64,
+                96
+              ],
+              [
+                64,
+                96,
+                96,
+                128
+              ],
+              [
+                64,
+                96,
+                128,
+                160
+              ],
+              [
+                64,
+                96,
+                160,
+                192
+              ],
+              [
+                64,
+                96,
+                192,
+                224
+              ],
+              [
+                96,
+                128,
+                0,
+                32
+              ],
+              [
+                96,
+                128,
+                32,
+                64
+              ],
+              [
+                96,
+                128,
+                64,
+                96
+              ],
+              [
+                96,
+                128,
+                96,
+                128
+              ],
+              [
+                96,
+                128,
+                128,
+                160
+              ],
+              [
+                96,
+                128,
+                160,
+                192
+              ],
+              [
+                96,
+                128,
+                192,
+                224
+              ],
+              [
+                128,
+                160,
+                0,
+                32
+              ],
+              [
+                128,
+                160,
+                32,
+                64
+              ],
+              [
+                128,
+                160,
+                64,
+                96
+              ],
+              [
+                128,
+                160,
+                96,
+                128
+              ],
+              [
+                128,
+                160,
+                128,
+                160
+              ],
+              [
+                128,
+                160,
+                160,
+                192
+              ],
+              [
+                128,
+                160,
+                192,
+                224
+              ],
+              [
+                160,
+                192,
+                0,
+                32
+              ],
+              [
+                160,
+                192,
+                32,
+                64
+              ],
+              [
+                160,
+                192,
+                64,
+                96
+              ],
+              [
+                160,
+                192,
+                96,
+                128
+              ],
+              [
+                160,
+                192,
+                128,
+                160
+              ],
+              [
+                160,
+                192,
+                160,
+                192
+              ],
+              [
+                160,
+                192,
+                192,
+                224
+              ],
+              [
+                192,
+                224,
+                0,
+                32
+              ],
+              [
+                192,
+                224,
+                32,
+                64
+              ],
+              [
+                192,
+                224,
+                64,
+                96
+              ],
+              [
+                192,
+                224,
+                96,
+                128
+              ],
+              [
+                192,
+                224,
+                128,
+                160
+              ],
+              [
+                192,
+                224,
+                160,
+                192
+              ],
+              [
+                192,
+                224,
+                192,
+                224
+              ]
+            ],
+            "target_vs_best_alternative_margin_drops": [
+              -1.3484134674072266,
+              -1.3615245819091797,
+              -2.555330276489258,
+              -1.7696819305419922,
+              -1.2456893920898438,
+              -2.3235092163085938,
+              -2.5555810928344727,
+              -1.135603904724121,
+              -2.996368408203125,
+              -1.4011554718017578,
+              -1.456146240234375,
+              -1.3698358535766602,
+              -4.827581405639648,
+              -2.2451114654541016,
+              -3.0970726013183594,
+              -4.804084777832031,
+              -5.1560516357421875,
+              -4.623439788818359,
+              -1.8320512771606445,
+              -2.3323974609375,
+              -4.399940490722656,
+              -2.7164154052734375,
+              -2.7181406021118164,
+              -4.062629699707031,
+              -5.380363464355469,
+              -1.3011913299560547,
+              -2.252248764038086,
+              -3.9586219787597656,
+              -1.534708023071289,
+              -2.2803173065185547,
+              -2.929598808288574,
+              -6.8921356201171875,
+              -3.7296600341796875,
+              -2.1075334548950195,
+              -3.5807266235351562,
+              -0.5240964889526367,
+              -2.296365737915039,
+              -2.67081356048584,
+              -4.33985710144043,
+              -2.3939332962036133,
+              -2.2720556259155273,
+              -1.7874135971069336,
+              -2.7066240310668945,
+              -3.832895278930664,
+              -2.8636512756347656,
+              -2.22247314453125,
+              -1.3359966278076172,
+              -2.1311683654785156,
+              -1.7315616607666016
+            ],
+            "raw_attribution_statistics": {
+              "min": -3.0994415283203125e-06,
+              "max": -1.1920928955078125e-06,
+              "mean": -2.7247837611607143e-06,
+              "std": 3.6206060861637416e-07,
+              "abs_sum": 0.13671875,
+              "signed_sum": -0.13671875,
+              "positive_sum": 0.0,
+              "negative_sum": -0.13671875,
+              "absolute_quantiles_0_50_90_99_100": [
+                1.1920928955078125e-06,
+                2.7418136596679688e-06,
+                3.0994415283203125e-06,
+                3.0994415283203125e-06,
+                3.0994415283203125e-06
+              ]
+            },
+            "clean_class_probability": 0.9999969005584717,
+            "limitation": "Masking may create out-of-distribution inputs",
+            "signed": true,
+            "method": "occlusion",
+            "target_index": 1,
+            "finite": true,
+            "constant_map": false,
+            "attribution_ms": 81.01340000575874,
+            "target_class": "REAL",
+            "precision": "FP32",
+            "blend_ms": 1.9138999996357597
+          }
+        },
+        "lime": {
+          "max_abs_change": 0.0,
+          "details": {
+            "samples": 256,
+            "seed": 42,
+            "regions": 49,
+            "score_space": "selected class probability (weighted local surrogate)",
+            "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+            "weighted_surrogate_r2": 0.3125697656993398,
+            "surrogate_intercept": 1.0000009584124059,
+            "surrogate_local_prediction": 0.9999990387695282,
+            "actual_target_probability": 0.9999969005584717,
+            "raw_attribution_statistics": {
+              "min": -9.421373903251151e-08,
+              "max": -4.765246863769335e-09,
+              "mean": -3.917638505665114e-08,
+              "std": 1.9121917038256515e-08,
+              "abs_sum": 1.919642867775906e-06,
+              "signed_sum": -1.919642867775906e-06,
+              "positive_sum": 0.0,
+              "negative_sum": -1.919642867775906e-06,
+              "absolute_quantiles_0_50_90_99_100": [
+                4.765246863769335e-09,
+                3.77323701172827e-08,
+                6.442604956191646e-08,
+                8.799905373280121e-08,
+                9.421373903251151e-08
+              ]
+            },
+            "signed": true,
+            "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+            "method": "lime",
+            "target_index": 1,
+            "finite": true,
+            "constant_map": false,
+            "attribution_ms": 301.67269999947166,
+            "target_class": "REAL",
+            "precision": "FP32",
+            "blend_ms": 2.6085999998031184
+          }
+        }
+      },
+      "gradcam_reference_max_error": 5.960464477539063e-08
+    },
+    {
+      "key": "11_aaqaifqrwn_S4",
+      "spatial_perturbations": {
+        "background_window_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              96,
+              160,
+              0,
+              32
+            ]
+          ],
+          "clean_target_probability": 0.6864378452301025,
+          "changed_target_probability": 0.6796524524688721,
+          "target_probability_drop": 0.006785392761230469,
+          "target_margin_drop": 0.031343042850494385
+        },
+        "background_window_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              96,
+              160,
+              0,
+              32
+            ]
+          ],
+          "clean_target_probability": 0.6864378452301025,
+          "changed_target_probability": 0.6850869655609131,
+          "target_probability_drop": 0.0013508796691894531,
+          "target_margin_drop": 0.006268799304962158
+        },
+        "background_window_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              96,
+              160,
+              0,
+              32
+            ]
+          ],
+          "clean_target_probability": 0.6864378452301025,
+          "changed_target_probability": 0.6826674342155457,
+          "target_probability_drop": 0.0037704110145568848,
+          "target_margin_drop": 0.017460405826568604
+        },
+        "face_center_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              160,
+              80,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.6864378452301025,
+          "changed_target_probability": 0.6879553198814392,
+          "target_probability_drop": -0.00151747465133667,
+          "target_margin_drop": -0.00705951452255249
+        },
+        "face_center_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              160,
+              80,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.6864378452301025,
+          "changed_target_probability": 0.6876792311668396,
+          "target_probability_drop": -0.0012413859367370605,
+          "target_margin_drop": -0.0057738423347473145
+        },
+        "face_center_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              160,
+              80,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.6864378452301025,
+          "changed_target_probability": 0.6874876022338867,
+          "target_probability_drop": -0.0010497570037841797,
+          "target_margin_drop": -0.004881560802459717
+        }
+      },
+      "repeat_maps": {
+        "integrated_gradients": {
+          "max_abs_change": 0.0,
+          "details": {
+            "steps": 32,
+            "quadrature": "Gauss-Legendre",
+            "internal_batch_size": 8,
+            "baseline": "zero normalized input = ImageNet mean RGB",
+            "output_difference": -0.015426397323608398,
+            "signed_attribution_sum": -0.00892859697341919,
+            "completeness_absolute_residual": 0.006497800350189209,
+            "completeness_relative_residual": 0.42121308130998564,
+            "converged": true,
+            "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+            "convergence_history": [
+              {
+                "steps": 32,
+                "absolute_residual": 0.006497800350189209,
+                "relative_residual": 0.42121308130998564
+              }
+            ],
+            "raw_attribution_statistics": {
+              "min": -0.0576801598072052,
+              "max": 0.05966351181268692,
+              "mean": -5.9315461345274985e-08,
+              "std": 0.0012242715627803827,
+              "abs_sum": 73.10082722115709,
+              "signed_sum": -0.008928637765381553,
+              "positive_sum": 36.545949291695855,
+              "negative_sum": -36.554877929461234,
+              "absolute_quantiles_0_50_90_99_100": [
+                3.1812436018796575e-10,
+                0.00018256076145917177,
+                0.0011126579833216983,
+                0.004769142656587075,
+                0.05966351181268692
+              ]
+            },
+            "gradient_abs_sum": 2937.9883728027344,
+            "gradient_available": true,
+            "low_signal": false,
+            "target_index": 1,
+            "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+            "method": "integrated_gradients",
+            "finite": true,
+            "constant_map": false,
+            "signed": true,
+            "attribution_ms": 315.6362000008812,
+            "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+            "target_class": "FAKE",
+            "precision": "FP32",
+            "blend_ms": 3.319099996588193
+          }
+        },
+        "occlusion": {
+          "max_abs_change": 0.0,
+          "details": {
+            "patch_size": 32,
+            "regions": 49,
+            "baseline": "ImageNet mean RGB",
+            "score_space": "selected class probability",
+            "max_absolute_probability_change": 0.021866798400878906,
+            "probability_resolution_limited": false,
+            "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+            "patch_bounds_y1_y2_x1_x2": [
+              [
+                0,
+                32,
+                0,
+                32
+              ],
+              [
+                0,
+                32,
+                32,
+                64
+              ],
+              [
+                0,
+                32,
+                64,
+                96
+              ],
+              [
+                0,
+                32,
+                96,
+                128
+              ],
+              [
+                0,
+                32,
+                128,
+                160
+              ],
+              [
+                0,
+                32,
+                160,
+                192
+              ],
+              [
+                0,
+                32,
+                192,
+                224
+              ],
+              [
+                32,
+                64,
+                0,
+                32
+              ],
+              [
+                32,
+                64,
+                32,
+                64
+              ],
+              [
+                32,
+                64,
+                64,
+                96
+              ],
+              [
+                32,
+                64,
+                96,
+                128
+              ],
+              [
+                32,
+                64,
+                128,
+                160
+              ],
+              [
+                32,
+                64,
+                160,
+                192
+              ],
+              [
+                32,
+                64,
+                192,
+                224
+              ],
+              [
+                64,
+                96,
+                0,
+                32
+              ],
+              [
+                64,
+                96,
+                32,
+                64
+              ],
+              [
+                64,
+                96,
+                64,
+                96
+              ],
+              [
+                64,
+                96,
+                96,
+                128
+              ],
+              [
+                64,
+                96,
+                128,
+                160
+              ],
+              [
+                64,
+                96,
+                160,
+                192
+              ],
+              [
+                64,
+                96,
+                192,
+                224
+              ],
+              [
+                96,
+                128,
+                0,
+                32
+              ],
+              [
+                96,
+                128,
+                32,
+                64
+              ],
+              [
+                96,
+                128,
+                64,
+                96
+              ],
+              [
+                96,
+                128,
+                96,
+                128
+              ],
+              [
+                96,
+                128,
+                128,
+                160
+              ],
+              [
+                96,
+                128,
+                160,
+                192
+              ],
+              [
+                96,
+                128,
+                192,
+                224
+              ],
+              [
+                128,
+                160,
+                0,
+                32
+              ],
+              [
+                128,
+                160,
+                32,
+                64
+              ],
+              [
+                128,
+                160,
+                64,
+                96
+              ],
+              [
+                128,
+                160,
+                96,
+                128
+              ],
+              [
+                128,
+                160,
+                128,
+                160
+              ],
+              [
+                128,
+                160,
+                160,
+                192
+              ],
+              [
+                128,
+                160,
+                192,
+                224
+              ],
+              [
+                160,
+                192,
+                0,
+                32
+              ],
+              [
+                160,
+                192,
+                32,
+                64
+              ],
+              [
+                160,
+                192,
+                64,
+                96
+              ],
+              [
+                160,
+                192,
+                96,
+                128
+              ],
+              [
+                160,
+                192,
+                128,
+                160
+              ],
+              [
+                160,
+                192,
+                160,
+                192
+              ],
+              [
+                160,
+                192,
+                192,
+                224
+              ],
+              [
+                192,
+                224,
+                0,
+                32
+              ],
+              [
+                192,
+                224,
+                32,
+                64
+              ],
+              [
+                192,
+                224,
+                64,
+                96
+              ],
+              [
+                192,
+                224,
+                96,
+                128
+              ],
+              [
+                192,
+                224,
+                128,
+                160
+              ],
+              [
+                192,
+                224,
+                160,
+                192
+              ],
+              [
+                192,
+                224,
+                192,
+                224
+              ]
+            ],
+            "target_vs_best_alternative_margin_drops": [
+              0.03237396478652954,
+              0.03079456090927124,
+              -0.0008664131164550781,
+              0.022598445415496826,
+              0.04128354787826538,
+              0.03125792741775513,
+              0.006129920482635498,
+              0.023114264011383057,
+              0.01826643943786621,
+              0.047116637229919434,
+              0.005386710166931152,
+              0.026551365852355957,
+              0.011670589447021484,
+              0.023475348949432373,
+              0.017802953720092773,
+              0.027054011821746826,
+              0.059243619441986084,
+              0.061194539070129395,
+              0.01717132329940796,
+              0.020194053649902344,
+              0.016977250576019287,
+              0.006803572177886963,
+              0.027880311012268066,
+              0.03454500436782837,
+              0.029368817806243896,
+              0.04716211557388306,
+              0.04205399751663208,
+              0.05383378267288208,
+              0.04353111982345581,
+              0.034252822399139404,
+              0.020447075366973877,
+              0.05471163988113403,
+              0.02119004726409912,
+              0.02723163366317749,
+              0.08866256475448608,
+              0.03780078887939453,
+              0.029315650463104248,
+              0.07187867164611816,
+              0.06784647703170776,
+              0.05086618661880493,
+              0.03636777400970459,
+              -0.029428601264953613,
+              0.011841118335723877,
+              0.09280186891555786,
+              0.09930580854415894,
+              0.09978652000427246,
+              0.06880420446395874,
+              0.03862076997756958,
+              0.055571138858795166
+            ],
+            "raw_attribution_statistics": {
+              "min": -0.006299197673797607,
+              "max": 0.021866798400878906,
+              "mean": 0.007994582458418243,
+              "std": 0.005656733327589397,
+              "abs_sum": 414.41876220703125,
+              "signed_sum": 401.13616943359375,
+              "positive_sum": 407.7774658203125,
+              "negative_sum": -6.64129638671875,
+              "absolute_quantiles_0_50_90_99_100": [
+                0.00018644332885742188,
+                0.006766855716705322,
+                0.015674471855163574,
+                0.021866798400878906,
+                0.021866798400878906
+              ]
+            },
+            "clean_class_probability": 0.6864378452301025,
+            "limitation": "Masking may create out-of-distribution inputs",
+            "signed": true,
+            "method": "occlusion",
+            "target_index": 1,
+            "finite": true,
+            "constant_map": false,
+            "attribution_ms": 137.58480000251438,
+            "target_class": "FAKE",
+            "precision": "FP32",
+            "blend_ms": 1.9079999983659945
+          }
+        },
+        "lime": {
+          "max_abs_change": 0.0,
+          "details": {
+            "samples": 256,
+            "seed": 42,
+            "regions": 49,
+            "score_space": "selected class probability (weighted local surrogate)",
+            "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+            "weighted_surrogate_r2": 0.7074164875040508,
+            "surrogate_intercept": 0.6698661101081724,
+            "surrogate_local_prediction": 0.6826229028482325,
+            "actual_target_probability": 0.6864638328552246,
+            "raw_attribution_statistics": {
+              "min": -0.01562381349503994,
+              "max": 0.01690848357975483,
+              "mean": 0.000260342682645851,
+              "std": 0.005507005814304777,
+              "abs_sum": 0.2036258221451135,
+              "signed_sum": 0.012756791449646698,
+              "positive_sum": 0.1081913067973801,
+              "negative_sum": -0.0954345153477334,
+              "absolute_quantiles_0_50_90_99_100": [
+                5.054507710156031e-05,
+                0.003023484256118536,
+                0.008330658450722698,
+                0.016291841939091677,
+                0.01690848357975483
+              ]
+            },
+            "signed": true,
+            "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+            "method": "lime",
+            "target_index": 1,
+            "finite": true,
+            "constant_map": false,
+            "attribution_ms": 486.6321000008611,
+            "target_class": "FAKE",
+            "precision": "FP32",
+            "blend_ms": 2.1294999969541095
+          }
+        }
+      },
+      "selected_frame_index": 206,
+      "other_seven_context_unchanged": true,
+      "calibrated_decision_probability_difference": -2.8073787689208984e-05,
+      "raw_attention_class_agnostic_equal": true,
+      "attention_flags_restored": true,
+      "attention_rollout_reference_error": 0.0,
+      "attention_shapes": [
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ]
+      ],
+      "second_frame_probability_difference": -9.399652481079102e-05
+    },
+    {
+      "key": "13_aaqaifqrwn_S8",
+      "spatial_perturbations": {
+        "background_window_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              96,
+              160,
+              0,
+              32
+            ]
+          ],
+          "clean_target_probability": 0.891830325126648,
+          "changed_target_probability": 0.8927223086357117,
+          "target_probability_drop": -0.0008919835090637207,
+          "target_margin_drop": -0.009279966354370117
+        },
+        "background_window_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              96,
+              160,
+              0,
+              32
+            ]
+          ],
+          "clean_target_probability": 0.891830325126648,
+          "changed_target_probability": 0.8927952647209167,
+          "target_probability_drop": -0.0009649395942687988,
+          "target_margin_drop": -0.010041952133178711
+        },
+        "background_window_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              96,
+              160,
+              0,
+              32
+            ]
+          ],
+          "clean_target_probability": 0.891830325126648,
+          "changed_target_probability": 0.8927221298217773,
+          "target_probability_drop": -0.0008918046951293945,
+          "target_margin_drop": -0.009277582168579102
+        },
+        "face_center_mean": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              160,
+              80,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.891830325126648,
+          "changed_target_probability": 0.8936884999275208,
+          "target_probability_drop": -0.0018581748008728027,
+          "target_margin_drop": -0.019408702850341797
+        },
+        "face_center_black": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              160,
+              80,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.891830325126648,
+          "changed_target_probability": 0.8642563819885254,
+          "target_probability_drop": 0.02757394313812256,
+          "target_margin_drop": 0.25847339630126953
+        },
+        "face_center_white": {
+          "rectangles_y1_y2_x1_x2": [
+            [
+              80,
+              160,
+              80,
+              160
+            ]
+          ],
+          "clean_target_probability": 0.891830325126648,
+          "changed_target_probability": 0.8654655814170837,
+          "target_probability_drop": 0.02636474370956421,
+          "target_margin_drop": 0.24812781810760498
+        }
+      },
+      "repeat_maps": {
+        "integrated_gradients": {
+          "max_abs_change": 0.0,
+          "details": {
+            "steps": 128,
+            "quadrature": "Gauss-Legendre",
+            "internal_batch_size": 8,
+            "baseline": "zero normalized input = ImageNet mean RGB",
+            "output_difference": -0.01565013825893402,
+            "signed_attribution_sum": -0.034677207469940186,
+            "completeness_absolute_residual": 0.019027069211006165,
+            "completeness_relative_residual": 1.2157764293324624,
+            "converged": false,
+            "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+            "convergence_history": [
+              {
+                "steps": 32,
+                "absolute_residual": 0.04968508332967758,
+                "relative_residual": 3.1747376609477818
+              },
+              {
+                "steps": 64,
+                "absolute_residual": 0.1344606801867485,
+                "relative_residual": 8.59166085066312
+              },
+              {
+                "steps": 128,
+                "absolute_residual": 0.019027069211006165,
+                "relative_residual": 1.2157764293324624
+              }
+            ],
+            "raw_attribution_statistics": {
+              "min": -0.0033612949773669243,
+              "max": 0.0025535449385643005,
+              "mean": -2.3037039022924118e-07,
+              "std": 0.0001674011548235572,
+              "abs_sum": 13.331837282337323,
+              "signed_sum": -0.03467719410042722,
+              "positive_sum": 6.6485800441184475,
+              "negative_sum": -6.683257238218875,
+              "absolute_quantiles_0_50_90_99_100": [
+                2.528624809539082e-10,
+                4.034695120935794e-05,
+                0.00022192882024683075,
+                0.000687695869710297,
+                0.0033612949773669243
+              ]
+            },
+            "gradient_abs_sum": 3159.842879295349,
+            "gradient_available": true,
+            "low_signal": false,
+            "target_index": 1,
+            "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+            "method": "integrated_gradients",
+            "finite": true,
+            "constant_map": false,
+            "signed": true,
+            "attribution_ms": 11931.364399999438,
+            "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+            "target_class": "FAKE",
+            "precision": "FP32",
+            "blend_ms": 2.5883999987854622
+          }
+        },
+        "occlusion": {
+          "max_abs_change": 0.0,
+          "details": {
+            "patch_size": 32,
+            "regions": 49,
+            "baseline": "ImageNet mean RGB",
+            "score_space": "selected class probability",
+            "max_absolute_probability_change": 0.004371166229248047,
+            "probability_resolution_limited": false,
+            "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+            "patch_bounds_y1_y2_x1_x2": [
+              [
+                0,
+                32,
+                0,
+                32
+              ],
+              [
+                0,
+                32,
+                32,
+                64
+              ],
+              [
+                0,
+                32,
+                64,
+                96
+              ],
+              [
+                0,
+                32,
+                96,
+                128
+              ],
+              [
+                0,
+                32,
+                128,
+                160
+              ],
+              [
+                0,
+                32,
+                160,
+                192
+              ],
+              [
+                0,
+                32,
+                192,
+                224
+              ],
+              [
+                32,
+                64,
+                0,
+                32
+              ],
+              [
+                32,
+                64,
+                32,
+                64
+              ],
+              [
+                32,
+                64,
+                64,
+                96
+              ],
+              [
+                32,
+                64,
+                96,
+                128
+              ],
+              [
+                32,
+                64,
+                128,
+                160
+              ],
+              [
+                32,
+                64,
+                160,
+                192
+              ],
+              [
+                32,
+                64,
+                192,
+                224
+              ],
+              [
+                64,
+                96,
+                0,
+                32
+              ],
+              [
+                64,
+                96,
+                32,
+                64
+              ],
+              [
+                64,
+                96,
+                64,
+                96
+              ],
+              [
+                64,
+                96,
+                96,
+                128
+              ],
+              [
+                64,
+                96,
+                128,
+                160
+              ],
+              [
+                64,
+                96,
+                160,
+                192
+              ],
+              [
+                64,
+                96,
+                192,
+                224
+              ],
+              [
+                96,
+                128,
+                0,
+                32
+              ],
+              [
+                96,
+                128,
+                32,
+                64
+              ],
+              [
+                96,
+                128,
+                64,
+                96
+              ],
+              [
+                96,
+                128,
+                96,
+                128
+              ],
+              [
+                96,
+                128,
+                128,
+                160
+              ],
+              [
+                96,
+                128,
+                160,
+                192
+              ],
+              [
+                96,
+                128,
+                192,
+                224
+              ],
+              [
+                128,
+                160,
+                0,
+                32
+              ],
+              [
+                128,
+                160,
+                32,
+                64
+              ],
+              [
+                128,
+                160,
+                64,
+                96
+              ],
+              [
+                128,
+                160,
+                96,
+                128
+              ],
+              [
+                128,
+                160,
+                128,
+                160
+              ],
+              [
+                128,
+                160,
+                160,
+                192
+              ],
+              [
+                128,
+                160,
+                192,
+                224
+              ],
+              [
+                160,
+                192,
+                0,
+                32
+              ],
+              [
+                160,
+                192,
+                32,
+                64
+              ],
+              [
+                160,
+                192,
+                64,
+                96
+              ],
+              [
+                160,
+                192,
+                96,
+                128
+              ],
+              [
+                160,
+                192,
+                128,
+                160
+              ],
+              [
+                160,
+                192,
+                160,
+                192
+              ],
+              [
+                160,
+                192,
+                192,
+                224
+              ],
+              [
+                192,
+                224,
+                0,
+                32
+              ],
+              [
+                192,
+                224,
+                32,
+                64
+              ],
+              [
+                192,
+                224,
+                64,
+                96
+              ],
+              [
+                192,
+                224,
+                96,
+                128
+              ],
+              [
+                192,
+                224,
+                128,
+                160
+              ],
+              [
+                192,
+                224,
+                160,
+                192
+              ],
+              [
+                192,
+                224,
+                192,
+                224
+              ]
+            ],
+            "target_vs_best_alternative_margin_drops": [
+              -0.0024662017822265625,
+              -0.015295028686523438,
+              0.014718055725097656,
+              -0.0005395412445068359,
+              -0.017969846725463867,
+              0.030112028121948242,
+              0.01668524742126465,
+              1.5974044799804688e-05,
+              0.01960587501525879,
+              0.004626035690307617,
+              0.032384395599365234,
+              -0.012360334396362305,
+              0.008791685104370117,
+              -0.014575958251953125,
+              -0.018671274185180664,
+              -0.010404348373413086,
+              -0.0030701160430908203,
+              0.016629695892333984,
+              -0.0012202262878417969,
+              0.017142534255981445,
+              0.00010204315185546875,
+              -0.011227846145629883,
+              -0.007799625396728516,
+              -0.046138763427734375,
+              -0.028842687606811523,
+              -0.013931751251220703,
+              0.02744889259338379,
+              0.004278659820556641,
+              0.003468036651611328,
+              0.0028994083404541016,
+              0.00045037269592285156,
+              -0.026851415634155273,
+              0.0006318092346191406,
+              0.025932788848876953,
+              0.0095672607421875,
+              0.007009744644165039,
+              0.004814863204956055,
+              -0.022151708602905273,
+              0.031964778900146484,
+              -0.03841757774353027,
+              0.02321171760559082,
+              0.01003122329711914,
+              0.014621973037719727,
+              -0.008476495742797852,
+              0.0057413578033447266,
+              -0.0023581981658935547,
+              -0.021544933319091797,
+              0.004945993423461914,
+              0.012072563171386719
+            ],
+            "raw_attribution_statistics": {
+              "min": -0.004371166229248047,
+              "max": 0.003163933753967285,
+              "mean": 6.20605994244011e-05,
+              "std": 0.0016939511528173445,
+              "abs_sum": 66.57586669921875,
+              "signed_sum": 3.11395263671875,
+              "positive_sum": 34.84490966796875,
+              "negative_sum": -31.73095703125,
+              "absolute_quantiles_0_50_90_99_100": [
+                1.4901161193847656e-06,
+                0.0011701583862304688,
+                0.0029393434524536133,
+                0.004371166229248047,
+                0.004371166229248047
+              ]
+            },
+            "clean_class_probability": 0.891830325126648,
+            "limitation": "Masking may create out-of-distribution inputs",
+            "signed": true,
+            "method": "occlusion",
+            "target_index": 1,
+            "finite": true,
+            "constant_map": false,
+            "attribution_ms": 531.5649000040139,
+            "target_class": "FAKE",
+            "precision": "FP32",
+            "blend_ms": 2.3772999993525445
+          }
+        },
+        "lime": {
+          "max_abs_change": 0.0,
+          "details": {
+            "samples": 256,
+            "seed": 42,
+            "regions": 49,
+            "score_space": "selected class probability (weighted local surrogate)",
+            "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+            "weighted_surrogate_r2": 0.6642802371348362,
+            "surrogate_intercept": 0.8897103435060171,
+            "surrogate_local_prediction": 0.8930648238001486,
+            "actual_target_probability": 0.8918138742446899,
+            "raw_attribution_statistics": {
+              "min": -0.0056176199577748775,
+              "max": 0.0037488576490432024,
+              "mean": 6.8458788630277e-05,
+              "std": 0.0016408842020421066,
+              "abs_sum": 0.06005856191768544,
+              "signed_sum": 0.0033544806428835727,
+              "positive_sum": 0.031706521280284505,
+              "negative_sum": -0.028352040637400933,
+              "absolute_quantiles_0_50_90_99_100": [
+                6.107133958721533e-05,
+                0.0009629416163079441,
+                0.002189398044720293,
+                0.00506373910233378,
+                0.0056176199577748775
+              ]
+            },
+            "signed": true,
+            "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+            "method": "lime",
+            "target_index": 1,
+            "finite": true,
+            "constant_map": false,
+            "attribution_ms": 940.3516000020318,
+            "target_class": "FAKE",
+            "precision": "FP32",
+            "blend_ms": 5.739500003983267
+          }
+        }
+      },
+      "gradcam_reference_max_error": 5.960464477539063e-08,
+      "selected_frame_index": 281,
+      "other_seven_context_unchanged": true,
+      "calibrated_decision_probability_difference": -3.814697265625e-06,
+      "native_lstm_max_logit_error": 4.291534423828125e-05,
+      "raw_attention_class_agnostic_equal": true,
+      "attention_flags_restored": true,
+      "attention_rollout_reference_error": 0.0,
+      "attention_shapes": [
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ],
+        [
+          1,
+          3,
+          197,
+          197
+        ]
+      ],
+      "second_frame_probability_difference": -2.3126602172851562e-05
+    }
+  ]
+}

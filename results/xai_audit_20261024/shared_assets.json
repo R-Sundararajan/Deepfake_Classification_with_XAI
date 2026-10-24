@@ -1,0 +1,17 @@
+[
+  {
+    "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\deit_tiny_patch16_224.pt",
+    "bytes": 22156059,
+    "sha256": "e1cf022b64547ae004b720dd45047b80fdf5361ad8eb9d26a106e7e33fe1e057"
+  },
+  {
+    "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\unified_encoders\\efficientnet_b0.pt",
+    "bytes": 16325971,
+    "sha256": "173ad13ecc6cfcbd74c517f52dcf44621983b977f8d6c1f87368e02cdbd49c3e"
+  },
+  {
+    "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\runtime\\yunet.onnx",
+    "bytes": 232589,
+    "sha256": "8f2383e4dd3cfbb4553ea8718107fc0423210dc964f9f4280604804ed2552fa4"
+  }
+]

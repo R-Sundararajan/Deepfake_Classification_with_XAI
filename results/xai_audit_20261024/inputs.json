@@ -1,0 +1,92 @@
+[
+  {
+    "path": "C:\\Users\\Rangarajan\\OneDrive\\Pictures\\Saved Pictures\\1.mp4",
+    "label": null,
+    "source": "user Saved Pictures; name is not verified ground truth",
+    "sha256": "585563deeb447132157369d41f72a3b2c8229f33751598bac6125148e6f4f771"
+  },
+  {
+    "path": "C:\\Users\\Rangarajan\\OneDrive\\Pictures\\Saved Pictures\\2.mp4",
+    "label": null,
+    "source": "user Saved Pictures; name is not verified ground truth",
+    "sha256": "8acacf8f7fbf720a7cd76ad3083afea60806a3e8dfe0a86305f5e990f061c48d"
+  },
+  {
+    "path": "C:\\Users\\Rangarajan\\OneDrive\\Pictures\\Saved Pictures\\fake.jpg",
+    "label": null,
+    "source": "user Saved Pictures; name is not verified ground truth",
+    "sha256": "4d1d2343167d59438aa8a9b53cbc40d0de704989124fc0569512510bc97f9659"
+  },
+  {
+    "path": "C:\\Users\\Rangarajan\\OneDrive\\Pictures\\Saved Pictures\\Goodies.jpeg",
+    "label": null,
+    "source": "user Saved Pictures; name is not verified ground truth",
+    "sha256": "a0c8c636dbb420d2d675526b058025004bfbbb00e349d0c376bd4bf887738063"
+  },
+  {
+    "path": "C:\\Users\\Rangarajan\\OneDrive\\Pictures\\Saved Pictures\\real.jpeg",
+    "label": null,
+    "source": "user Saved Pictures; name is not verified ground truth",
+    "sha256": "19c50faeb1ae03c62abf6127b969e7a1e9254159cdda840f71cca1403684e6f9"
+  },
+  {
+    "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\real_vs_fake\\real-vs-fake\\test\\real\\00001.jpg",
+    "label": "REAL",
+    "source": "supplied Real vs Fake Faces test folder; historical test reused, identity disjointness unverified",
+    "sha256": "5c986f2f957d9d2cdfe77cebdabcbd5ccd780b9d0f0a62c7d674261077b7a40d"
+  },
+  {
+    "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\real_vs_fake\\real-vs-fake\\test\\fake\\00276TOPP4.jpg",
+    "label": "FAKE",
+    "source": "supplied Real vs Fake Faces test folder; historical test reused, identity disjointness unverified",
+    "sha256": "93010eed7cdd517c4cbccc1593889fc7ae809006ad08297fd2452c356fd7be87"
+  },
+  {
+    "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\train_sample_videos\\chqqxfuuzi.mp4",
+    "label": "REAL",
+    "source": "local DFDC metadata, source-grouped test",
+    "manifest_sha256": "5f883627c611764a256aa9279dab6a7c2ea8517c8a4d5b9bc76ff9986baa5c96",
+    "sha256": "5f883627c611764a256aa9279dab6a7c2ea8517c8a4d5b9bc76ff9986baa5c96",
+    "matched_video_manifest": {
+      "filename": "chqqxfuuzi.mp4",
+      "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\train_sample_videos\\chqqxfuuzi.mp4",
+      "label": "REAL",
+      "original": "",
+      "source_group": "chqqxfuuzi.mp4",
+      "split": "test",
+      "sha256": "5f883627c611764a256aa9279dab6a7c2ea8517c8a4d5b9bc76ff9986baa5c96",
+      "bytes": "7317706",
+      "frame_count": "300",
+      "fps": "29.9689",
+      "width": "1080",
+      "height": "1920",
+      "duration_seconds": "10.010377424596832",
+      "status": "valid",
+      "error": ""
+    }
+  },
+  {
+    "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\train_sample_videos\\aaqaifqrwn.mp4",
+    "label": "FAKE",
+    "source": "local DFDC metadata, source-grouped test",
+    "manifest_sha256": "37f0ff1e337e6fe2211757b8255c8098f8a4f303b333e9c5e0da27c37e095876",
+    "sha256": "37f0ff1e337e6fe2211757b8255c8098f8a4f303b333e9c5e0da27c37e095876",
+    "matched_video_manifest": {
+      "filename": "aaqaifqrwn.mp4",
+      "path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\dfdc\\train_sample_videos\\aaqaifqrwn.mp4",
+      "label": "FAKE",
+      "original": "xugmhbetrw.mp4",
+      "source_group": "aaqaifqrwn.mp4",
+      "split": "test",
+      "sha256": "37f0ff1e337e6fe2211757b8255c8098f8a4f303b333e9c5e0da27c37e095876",
+      "bytes": "5128324",
+      "frame_count": "300",
+      "fps": "29.9691",
+      "width": "1920",
+      "height": "1080",
+      "duration_seconds": "10.010310619938537",
+      "status": "valid",
+      "error": ""
+    }
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "case": "fake_verified",
+    "prediction": "FAKE",
+    "snapshot": "ui/ui_fake_verified.txt",
+    "method_screenshots": [
+      "ui/ui_fake_verified_Grad_CAM.jpg",
+      "ui/ui_fake_verified_Grad_CAM_.jpg",
+      "ui/ui_fake_verified_Integrated_Gradients.jpg",
+      "ui/ui_fake_verified_LIME.jpg",
+      "ui/ui_fake_verified_Layer_CAM.jpg",
+      "ui/ui_fake_verified_Occlusion.jpg"
+    ],
+    "count": 6
+  },
+  {
+    "case": "real_verified",
+    "prediction": "REAL",
+    "snapshot": "ui/ui_real_verified.txt",
+    "method_screenshots": [
+      "ui/ui_real_verified_Grad_CAM.jpg",
+      "ui/ui_real_verified_Grad_CAM_.jpg",
+      "ui/ui_real_verified_Integrated_Gradients.jpg",
+      "ui/ui_real_verified_LIME.jpg",
+      "ui/ui_real_verified_Layer_CAM.jpg",
+      "ui/ui_real_verified_Occlusion.jpg"
+    ],
+    "count": 6
+  },
+  {
+    "case": "goodies_verified",
+    "prediction": "REAL",
+    "snapshot": "ui/ui_goodies_verified.txt",
+    "method_screenshots": [
+      "ui/ui_goodies_verified_Grad_CAM.jpg",
+      "ui/ui_goodies_verified_Grad_CAM_.jpg",
+      "ui/ui_goodies_verified_Integrated_Gradients.jpg",
+      "ui/ui_goodies_verified_LIME.jpg",
+      "ui/ui_goodies_verified_Layer_CAM.jpg",
+      "ui/ui_goodies_verified_Occlusion.jpg"
+    ],
+    "count": 6
+  },
+  {
+    "case": "1_verified",
+    "prediction": "REAL",
+    "snapshot": "ui/ui_1_verified.txt",
+    "method_screenshots": [
+      "ui/ui_1_verified_Grad_CAM.jpg",
+      "ui/ui_1_verified_Grad_CAM_.jpg",
+      "ui/ui_1_verified_Integrated_Gradients.jpg",
+      "ui/ui_1_verified_LIME.jpg",
+      "ui/ui_1_verified_Layer_CAM.jpg",
+      "ui/ui_1_verified_Occlusion.jpg"
+    ],
+    "count": 6
+  },
+  {
+    "case": "2_verified",
+    "prediction": "FAKE",
+    "snapshot": "ui/ui_2_verified.txt",
+    "method_screenshots": [
+      "ui/ui_2_verified_Grad_CAM.jpg",
+      "ui/ui_2_verified_Grad_CAM_.jpg",
+      "ui/ui_2_verified_Integrated_Gradients.jpg",
+      "ui/ui_2_verified_LIME.jpg",
+      "ui/ui_2_verified_Layer_CAM.jpg",
+      "ui/ui_2_verified_Occlusion.jpg"
+    ],
+    "count": 6
+  },
+  {
+    "case": "heldout_real_R18",
+    "prediction": "REAL",
+    "snapshot": "ui/ui_heldout_real_R18.txt",
+    "method_screenshots": [
+      "ui/ui_heldout_real_R18_Grad_CAM.jpg",
+      "ui/ui_heldout_real_R18_Grad_CAM_.jpg",
+      "ui/ui_heldout_real_R18_Integrated_Gradients.jpg",
+      "ui/ui_heldout_real_R18_LIME.jpg",
+      "ui/ui_heldout_real_R18_Layer_CAM.jpg",
+      "ui/ui_heldout_real_R18_Occlusion.jpg"
+    ],
+    "count": 6
+  },
+  {
+    "case": "heldout_fake_R18",
+    "prediction": "FAKE",
+    "snapshot": "ui/ui_heldout_fake_R18.txt",
+    "method_screenshots": [
+      "ui/ui_heldout_fake_R18_Grad_CAM.jpg",
+      "ui/ui_heldout_fake_R18_Grad_CAM_.jpg",
+      "ui/ui_heldout_fake_R18_Integrated_Gradients.jpg",
+      "ui/ui_heldout_fake_R18_LIME.jpg",
+      "ui/ui_heldout_fake_R18_Layer_CAM.jpg",
+      "ui/ui_heldout_fake_R18_Occlusion.jpg"
+    ],
+    "count": 6
+  },
+  {
+    "case": "heldout_real_E02",
+    "prediction": "REAL",
+    "snapshot": "ui/ui_heldout_real_E02.txt",
+    "method_screenshots": [
+      "ui/ui_heldout_real_E02_Grad_CAM.jpg",
+      "ui/ui_heldout_real_E02_Grad_CAM_.jpg",
+      "ui/ui_heldout_real_E02_Integrated_Gradients.jpg",
+      "ui/ui_heldout_real_E02_LIME.jpg",
+      "ui/ui_heldout_real_E02_Layer_CAM.jpg",
+      "ui/ui_heldout_real_E02_Occlusion.jpg"
+    ],
+    "count": 6
+  },
+  {
+    "case": "heldout_fake_E02",
+    "prediction": "FAKE",
+    "snapshot": "ui/ui_heldout_fake_E02.txt",
+    "method_screenshots": [
+      "ui/ui_heldout_fake_E02_Grad_CAM.jpg",
+      "ui/ui_heldout_fake_E02_Grad_CAM_.jpg",
+      "ui/ui_heldout_fake_E02_Integrated_Gradients.jpg",
+      "ui/ui_heldout_fake_E02_LIME.jpg",
+      "ui/ui_heldout_fake_E02_Layer_CAM.jpg",
+      "ui/ui_heldout_fake_E02_Occlusion.jpg"
+    ],
+    "count": 6
+  },
+  {
+    "case": "heldout_fake_S6",
+    "prediction": "FAKE",
+    "snapshot": "ui/ui_heldout_fake_S6.txt",
+    "method_screenshots": [
+      "ui/ui_heldout_fake_S6_Grad_CAM.jpg",
+      "ui/ui_heldout_fake_S6_Grad_CAM_.jpg",
+      "ui/ui_heldout_fake_S6_Integrated_Gradients.jpg",
+      "ui/ui_heldout_fake_S6_LIME.jpg",
+      "ui/ui_heldout_fake_S6_Layer_CAM.jpg",
+      "ui/ui_heldout_fake_S6_Occlusion.jpg"
+    ],
+    "count": 6
+  },
+  {
+    "case": "heldout_fake_S4",
+    "prediction": "FAKE",
+    "snapshot": "ui/ui_heldout_fake_S4.txt",
+    "method_screenshots": [
+      "ui/ui_heldout_fake_S4_Attention_rollout.jpg",
+      "ui/ui_heldout_fake_S4_Gradient_weighted_attention.jpg",
+      "ui/ui_heldout_fake_S4_Integrated_Gradients.jpg",
+      "ui/ui_heldout_fake_S4_LIME.jpg",
+      "ui/ui_heldout_fake_S4_Occlusion.jpg"
+    ],
+    "count": 5
+  },
+  {
+    "case": "heldout_fake_S8",
+    "prediction": "FAKE",
+    "snapshot": "ui/ui_heldout_fake_S8.txt",
+    "method_screenshots": [
+      "ui/ui_heldout_fake_S8_Attention_rollout.jpg",
+      "ui/ui_heldout_fake_S8_Grad_CAM.jpg",
+      "ui/ui_heldout_fake_S8_Grad_CAM_.jpg",
+      "ui/ui_heldout_fake_S8_Gradient_weighted_attention.jpg",
+      "ui/ui_heldout_fake_S8_Integrated_Gradients.jpg",
+      "ui/ui_heldout_fake_S8_LIME.jpg",
+      "ui/ui_heldout_fake_S8_Layer_CAM.jpg",
+      "ui/ui_heldout_fake_S8_Occlusion.jpg"
+    ],
+    "count": 8
+  }
+]

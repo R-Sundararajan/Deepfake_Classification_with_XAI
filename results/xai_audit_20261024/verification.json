@@ -1,0 +1,24 @@
+{
+  "audit_date": "2026-10-24",
+  "initial_revision": "b88788c3dafe9b99106ac2389ccae0b24966ce3f",
+  "initial_tests": {
+    "tests": 70,
+    "seconds": 94.03,
+    "passed": true
+  },
+  "final_audit_tests": {
+    "tests": 74,
+    "seconds": 95.07,
+    "passed": true
+  },
+  "input_model_cases_per_pass": 14,
+  "maps_per_pass": 87,
+  "numerical_passes": 2,
+  "all_scores_and_maps_exactly_unchanged": true,
+  "all_model_states_unchanged": true,
+  "app_test_cases": 16,
+  "app_test_maps": 63,
+  "real_browser_complete_galleries": 12,
+  "real_browser_method_screenshots": 73,
+  "scope": "Recorded audit execution; post-cleanup checks are separate in cleanup_verification.json. Screenshots/media/logs stay local."
+}

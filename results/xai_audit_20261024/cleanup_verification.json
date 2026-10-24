@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-24",
+  "moved_files": 142,
+  "deleted_disposable_files": 530,
+  "removed_generated_directories": 17,
+  "retired_scripts": 10,
+  "removed_disposable_bytes": 51759164,
+  "protected_artifacts_checked": 286,
+  "all_protected_artifacts_unchanged": true,
+  "intentional_documentation_changes": [
+    "results\\README.md"
+  ],
+  "post_cleanup_tests": {
+    "status": "passed",
+    "tests": 74,
+    "seconds": 94.682
+  },
+  "post_cleanup_integration": {
+    "status": "passed",
+    "cases": 16,
+    "maps": 63,
+    "case_names": [
+      "initial",
+      "fake_auto_six",
+      "rerender_cached",
+      "opacity_cached",
+      "real_auto_six",
+      "model_change_automatic",
+      "experimental_options",
+      "hybrid_image_eight",
+      "video_initial",
+      "video_real_auto_six",
+      "video_cache",
+      "video_extra_frame_automatic",
+      "video_fake_auto_six",
+      "video_hybrid_eight",
+      "video_transformer_five",
+      "corrupt_video"
+    ]
+  },
+  "post_cleanup_parallel_parity": {
+    "status": "passed",
+    "models": [
+      "R18_FT_20261021",
+      "S8"
+    ],
+    "maps": 14,
+    "maximum_map_difference": 0.0,
+    "all_predictions_exactly_unchanged": true
+  },
+  "catalog": {
+    "image_default": 7,
+    "image_including_experimental": 16,
+    "video": 11
+  },
+  "source_and_links": {
+    "python_source_files_parsed": 94,
+    "missing_local_imports": [],
+    "audit_links_checked": 128,
+    "missing_documentation_links": []
+  },
+  "verifier_migration_note": "Current image champion uses MediaPredictor. Hook cleanup now inspects module roots for either predictor family; initial verifier-only introspection failure was corrected and the complete comparison rerun passed.",
+  "final_cache_cleanup": {
+    "bytecode_cache_files_removed": 39,
+    "bytecode_cache_directories_removed": 8,
+    "empty_test_roots_removed": 2
+  }
+}

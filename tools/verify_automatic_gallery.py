@@ -9,9 +9,10 @@ from unittest.mock import patch
 import numpy as np
 from streamlit.testing.v1 import AppTest
 
-from config import PROJECT_ROOT
+from config import PROJECT_ROOT, DATASET_PATH
 from explainability.suite import ParallelExplainer
 from inference.media import MediaPredictor
+from inference.catalog import catalog
 from inference.unified import ResearchPredictor
 from tools.runtime import configure_runtime
 from training.video_protocol import RUN
@@ -105,10 +106,10 @@ def run(output):
             app.file_uploader[0].set_value((path.name, path.read_bytes(), mime))
 
         check('initial')
-        assert model().value == 'S0'
+        assert model().value == catalog('Image')[0]['id']
         assert all(not label.startswith(('S0', 'S1', 'S2', 'E0')) for label in model().options)
-        pictures = Path(r'C:\Users\Rangarajan\OneDrive\Pictures\Saved Pictures')
-        check('synthetic_auto_six', lambda: upload(pictures / 'random-person.jpeg', 'image/jpeg'), 6)
+        pictures = DATASET_PATH / 'test'
+        check('fake_auto_six', lambda: upload(pictures / 'fake/00276TOPP4.jpg', 'image/jpeg'), 6)
         assert app.metric[0].value == 'FAKE'
         first_prediction = [item.value for item in app.metric]
         assert checks[-1]['new_predictions'] == 1 and checks[-1]['new_maps'] == 6
@@ -117,7 +118,7 @@ def run(output):
         check('opacity_cached', lambda: app.slider[0].set_value(.7), 6)
         assert checks[-1]['new_predictions'] == checks[-1]['new_maps'] == 0
         assert [item.value for item in app.metric] == first_prediction
-        check('real_auto_six', lambda: upload(pictures / 'real.jpeg', 'image/jpeg'), 6)
+        check('real_auto_six', lambda: upload(pictures / 'real/00001.jpg', 'image/jpeg'), 6)
         assert app.metric[0].value == 'REAL'
         check('model_change_automatic', lambda: model().set_value('E02_efficientnet_b0'), 6)
         check('experimental_options', lambda: app.checkbox[0].set_value(True))

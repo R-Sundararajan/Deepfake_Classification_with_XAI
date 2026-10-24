@@ -145,7 +145,8 @@ class ResearchPredictor:
         original=np.asarray(image);tensor=self.tensor(original[None]);view=self.attribution_model(context,position,image_input)
         transformer=self.encoders[self.names.index('deit_tiny_patch16_224')] if 'deit_tiny_patch16_224' in self.names else None
         cam,details=explain_tensor(view,tensor,target,method,self.layer,transformer,**parameters)
-        details.update(target_class='FAKE' if target else 'REAL',score_space='selected class logit/log-probability; video temperature included for video decisions',precision='FP32')
+        details.setdefault('score_space', 'native attention; class agnostic' if method=='attention_rollout' else 'selected class logit/log-probability; video temperature included for video decisions')
+        details.update(target_class='FAKE' if target else 'REAL',precision='FP32')
         scope='Selected checkpoint decision'
         if self.id in {'S6','S7','S8'} and image_input:scope=f'{self.image_spatial_id} spatial fallback for image input; temporal branch bypassed'
         elif context is not None:scope='Selected complete video decision with other seven frame embeddings held fixed'

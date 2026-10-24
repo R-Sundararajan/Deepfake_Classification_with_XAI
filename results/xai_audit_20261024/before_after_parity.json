@@ -1,0 +1,201 @@
+[
+  {
+    "key": "00_1_S6",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "01_2_S6",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "02_fake_R18_FT_20261021",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "03_Goodies_R18_FT_20261021",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "04_real_R18_FT_20261021",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "05_00001_R18_FT_20261021",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "06_00001_E02_efficientnet_b0",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "07_00276TOPP4_R18_FT_20261021",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "08_00276TOPP4_E02_efficientnet_b0",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "09_chqqxfuuzi_S6",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "10_aaqaifqrwn_S6",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "11_aaqaifqrwn_S4",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0,
+      "attention_rollout": 0.0,
+      "gradient_attention": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "12_aaqaifqrwn_S5",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0,
+      "attention_rollout": 0.0,
+      "gradient_attention": 0.0
+    },
+    "model_state_unchanged": true
+  },
+  {
+    "key": "13_aaqaifqrwn_S8",
+    "fake_probability_exact_equal": true,
+    "all_maps_max_abs_difference": 0.0,
+    "map_differences": {
+      "gradcam": 0.0,
+      "gradcam++": 0.0,
+      "layercam": 0.0,
+      "integrated_gradients": 0.0,
+      "occlusion": 0.0,
+      "lime": 0.0,
+      "attention_rollout": 0.0,
+      "gradient_attention": 0.0
+    },
+    "model_state_unchanged": true
+  }
+]

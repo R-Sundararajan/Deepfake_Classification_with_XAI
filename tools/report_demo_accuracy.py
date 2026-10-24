@@ -33,7 +33,6 @@ def run(root,activated):
     now=datetime.now(timezone.utc)
     elapsed=(now-datetime.fromisoformat(manifest['start_utc'])).total_seconds()/60
     name='ResNet-18 [ft, a, img100k]' if activated else 'ResNet-18 [v, img100k] (original baseline)'
-    rollback=f'powershell -ExecutionPolicy Bypass -File "{PROJECT_ROOT / "rollback_demo.ps1"}"'
     rows=[table_row('Original ResNet-18','Full validation, rerun here',baseline),
           table_row('Continued ResNet-18','Full validation',status.get('validation')),
           table_row('Original ResNet-18','Held-out test, recorded baseline',historical),
@@ -43,13 +42,9 @@ def run(root,activated):
 
 Demo model: **{name}**. Candidate activated: **{activated}**. Handoff prepared after {elapsed:.1f} minutes.
 
-## Immediate rollback
+## Historical rollback
 
-```powershell
-{rollback}
-```
-
-Rollback stops only this run's registered experiment/verifier processes, restores the exact baseline app, registry, README and ignored image checkpoint, removes the activation pointer, and restarts the local demo. Dataset files, unrelated work, experiment evidence and video checkpoints are preserved. Backup integrity and a real baseline restore/server-health cycle were verified before training.
+The experiment-specific deadline/rollback utilities were retired during final cleanup. Matching backups and manifests remain local; historical scripts can be recovered from Git for inspection. Use the current demo launcher for normal startup. Backup integrity and a real baseline restore/server-health cycle were verified before this historical training run.
 
 ## Comparable measured results
 
@@ -100,7 +95,7 @@ These are within-dataset results on Real vs Fake Faces and do not establish accu
 
 The current image demo uses **ResNet-18 [ft, a, img100k]**, selected on full validation and verified through the actual image/XAI UI. Validation accuracy improved from **{baseline['accuracy']:.3%}** to **{status['validation']['accuracy']:.3%}** on the same 20,000 images. The fixed candidate's held-out test accuracy is **{status['test']['accuracy']:.3%}** on 20,000 images, compared with the recorded baseline's **{historical['accuracy']:.3%}**. Full validation/test balanced accuracy, fake-class precision/recall/F1, confusion matrices and checkpoint identities are in [the local executed report]({root.relative_to(PROJECT_ROOT).as_posix()}/REPORT.md).
 
-Activation uses `configs/runtime/active_image_model.json`; original weights are preserved. Restore the original demo with `powershell -ExecutionPolicy Bypass -File "{PROJECT_ROOT / 'rollback_demo.ps1'}"`. The experimental checkpoint and rollback bundle are local artifacts. The historical benchmark sections below retain their original results.
+Activation uses `configs/runtime/active_image_model.json`; original weights are preserved. Historical rollback data remains local; the expired deadline/rollback utilities were retired during final cleanup. The historical benchmark sections below retain their original results.
 
 '''
         marker='## Demo image continuation — 21 October 2026'

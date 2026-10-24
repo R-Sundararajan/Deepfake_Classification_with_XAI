@@ -1,0 +1,11 @@
+{
+  "files_scanned": 140000,
+  "matches": [
+    {
+      "saved_file": "C:\\Users\\Rangarajan\\OneDrive\\Pictures\\Saved Pictures\\fake.jpg",
+      "dataset_path": "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\data\\real_vs_fake\\real-vs-fake\\test\\fake\\0DOPX4E7HV.jpg",
+      "split": "test",
+      "label": "FAKE"
+    }
+  ]
+}

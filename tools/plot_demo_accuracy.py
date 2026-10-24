@@ -189,7 +189,7 @@ def publish(data, folder):
     for name, title, caption in descriptions:
         section += f'### {title}\n\n![{title}]({base}/{name}.png)\n\n{caption}\n\n'
     section += f'PNG and editable SVG figures, compact metrics, source hashes and regeneration instructions are in [the plot evidence folder]({base}/README.md). The complete local execution report is [here](results/demo_accuracy_20261021_040741/REPORT.md). These within-dataset scores do not establish performance on arbitrary internet photos. Classification heatmaps show model influence, not verified edit boundaries.\n\n'
-    section += 'Activation uses `configs/runtime/active_image_model.json`; original weights are preserved. Restore the original demo with `powershell -ExecutionPolicy Bypass -File "D:\\sundarCollege\\Deepfake_Detect\\Deepfakereserch\\rollback_demo.ps1"`. The historical video benchmark below retains its original results. Model weights, rollback backups and the machine-local activation pointer are excluded from Git; a fresh checkout needs these assets provisioned before the improved model can load.\n\n'
+    section += 'Activation uses `configs/runtime/active_image_model.json`; original weights are preserved. Expired experiment-specific rollback utilities were retired during final cleanup; matching historical backups remain local. The historical video benchmark below retains its original results. Model weights, rollback backups and the machine-local activation pointer are excluded from Git; a fresh checkout needs these assets provisioned before the improved model can load.\n\n'
     readme = PROJECT_ROOT/'README.md'
     text = readme.read_text(encoding='utf-8')
     start = text.index('## Demo image continuation — 21 October 2026')

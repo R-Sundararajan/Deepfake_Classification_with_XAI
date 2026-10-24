@@ -1,5 +1,7 @@
 # DFDC transfer-learning implementation
 
+This is the historical initial transfer-stage record. Its acquisition status, four-frame protocol and deferred-method statements describe that stage. For the deployed eight-frame systems and automatic XAI gallery, use the [current README](../README.md), [demo guide](automatic_gallery.md), and [24 October audit](xai_end_to_end_audit.md).
+
 The pipeline is implemented and validated with synthetic software fixtures. **Official Kaggle sample download returns HTTP 403. No DFDC model has been trained, no DFDC score measured, and no champion selected.** An ImageNet backbone is not automatically a deepfake detector. Software tests and memory checks are excluded from the research leaderboard.
 
 ## Repository and research locations
@@ -125,7 +127,7 @@ Masked mean-color inputs can be out of distribution. Negative deletion drops and
 ```powershell
 .\dfenv\Scripts\python.exe -m unittest discover -s tests -v
 .\dfenv\Scripts\python.exe -m tools.smoke_transfer
-.\dfenv\Scripts\python.exe -m tools.smoke_app
+.\dfenv\Scripts\python.exe -m tools.verify_automatic_gallery --output results/gallery_rerun/app_qa.json
 ```
 
 Unit tests use synthetic fixtures. The sequential smoke includes frozen and selective-backbone forward/backward operations at batch 2, 224×224, both CAM methods, legacy image/video inference, no-face fallback, and a detector/alignment check on a pre-existing face image. It does not train on or measure DFDC. The legacy `models/best_resnet18.pth` hash is checked before/after. Test logs, software-check JSON and the implementation report record executed evidence and remaining limits.

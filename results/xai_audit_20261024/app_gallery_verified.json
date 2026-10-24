@@ -1,0 +1,6600 @@
+{
+  "checks": [
+    {
+      "case": "initial",
+      "milliseconds": 1652.3845999981859,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "synthetic_auto_six",
+      "milliseconds": 4204.880699995556,
+      "new_predictions": 1,
+      "new_maps": 6
+    },
+    {
+      "case": "rerender_cached",
+      "milliseconds": 128.3021999988705,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "opacity_cached",
+      "milliseconds": 116.4070000013453,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "real_auto_six",
+      "milliseconds": 637.7525000061723,
+      "new_predictions": 1,
+      "new_maps": 6
+    },
+    {
+      "case": "model_change_automatic",
+      "milliseconds": 2064.674000001105,
+      "new_predictions": 1,
+      "new_maps": 6
+    },
+    {
+      "case": "experimental_options",
+      "milliseconds": 152.8444999930798,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "hybrid_image_eight",
+      "milliseconds": 62151.665900004446,
+      "new_predictions": 1,
+      "new_maps": 8
+    },
+    {
+      "case": "video_initial",
+      "milliseconds": 51.66290000488516,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "video_real_auto_six",
+      "milliseconds": 15980.48949999793,
+      "new_predictions": 1,
+      "new_maps": 6
+    },
+    {
+      "case": "video_cache",
+      "milliseconds": 303.5916000008001,
+      "new_predictions": 0,
+      "new_maps": 0
+    },
+    {
+      "case": "video_extra_frame_automatic",
+      "milliseconds": 8061.185600003228,
+      "new_predictions": 0,
+      "new_maps": 12
+    },
+    {
+      "case": "video_fake_auto_six",
+      "milliseconds": 12695.663099999365,
+      "new_predictions": 1,
+      "new_maps": 6
+    },
+    {
+      "case": "video_hybrid_eight",
+      "milliseconds": 17953.342399996473,
+      "new_predictions": 1,
+      "new_maps": 8
+    },
+    {
+      "case": "video_transformer_five",
+      "milliseconds": 7208.4811000022455,
+      "new_predictions": 1,
+      "new_maps": 5
+    },
+    {
+      "case": "corrupt_video",
+      "milliseconds": 79.90399999835063,
+      "new_predictions": 0,
+      "new_maps": 0
+    }
+  ],
+  "calls": [
+    {
+      "method": "gradcam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 64971.9851378,
+      "finished": 64972.1333021,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 85.66363525390625,
+        "raw_map_max": 0.16592027246952057,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 138.87769999564625,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 4.316099999414291,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64971.9847514,
+          "finished": 64972.133332,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 64972.0205099,
+      "finished": 64972.1649804,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 85.66363525390625,
+        "raw_map_max": 3.130405902862549,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 137.250399995537,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 3.905900004610885,
+        "execution": {
+          "worker": "xai_1",
+          "started": 64972.0200861,
+          "finished": 64972.1650098,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 64972.1343291,
+      "finished": 64972.1794683,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 85.66363525390625,
+        "raw_map_max": 0.16655796766281128,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 22.567200001503807,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.9847000041627325,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64972.1334456,
+          "finished": 64972.1794894,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 64972.1800384,
+      "finished": 64972.3728934,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "score_space": "selected class probability",
+        "max_absolute_probability_change": 0.3188917636871338,
+        "probability_resolution_limited": false,
+        "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+        "patch_bounds_y1_y2_x1_x2": [
+          [
+            0,
+            32,
+            0,
+            32
+          ],
+          [
+            0,
+            32,
+            32,
+            64
+          ],
+          [
+            0,
+            32,
+            64,
+            96
+          ],
+          [
+            0,
+            32,
+            96,
+            128
+          ],
+          [
+            0,
+            32,
+            128,
+            160
+          ],
+          [
+            0,
+            32,
+            160,
+            192
+          ],
+          [
+            0,
+            32,
+            192,
+            224
+          ],
+          [
+            32,
+            64,
+            0,
+            32
+          ],
+          [
+            32,
+            64,
+            32,
+            64
+          ],
+          [
+            32,
+            64,
+            64,
+            96
+          ],
+          [
+            32,
+            64,
+            96,
+            128
+          ],
+          [
+            32,
+            64,
+            128,
+            160
+          ],
+          [
+            32,
+            64,
+            160,
+            192
+          ],
+          [
+            32,
+            64,
+            192,
+            224
+          ],
+          [
+            64,
+            96,
+            0,
+            32
+          ],
+          [
+            64,
+            96,
+            32,
+            64
+          ],
+          [
+            64,
+            96,
+            64,
+            96
+          ],
+          [
+            64,
+            96,
+            96,
+            128
+          ],
+          [
+            64,
+            96,
+            128,
+            160
+          ],
+          [
+            64,
+            96,
+            160,
+            192
+          ],
+          [
+            64,
+            96,
+            192,
+            224
+          ],
+          [
+            96,
+            128,
+            0,
+            32
+          ],
+          [
+            96,
+            128,
+            32,
+            64
+          ],
+          [
+            96,
+            128,
+            64,
+            96
+          ],
+          [
+            96,
+            128,
+            96,
+            128
+          ],
+          [
+            96,
+            128,
+            128,
+            160
+          ],
+          [
+            96,
+            128,
+            160,
+            192
+          ],
+          [
+            96,
+            128,
+            192,
+            224
+          ],
+          [
+            128,
+            160,
+            0,
+            32
+          ],
+          [
+            128,
+            160,
+            32,
+            64
+          ],
+          [
+            128,
+            160,
+            64,
+            96
+          ],
+          [
+            128,
+            160,
+            96,
+            128
+          ],
+          [
+            128,
+            160,
+            128,
+            160
+          ],
+          [
+            128,
+            160,
+            160,
+            192
+          ],
+          [
+            128,
+            160,
+            192,
+            224
+          ],
+          [
+            160,
+            192,
+            0,
+            32
+          ],
+          [
+            160,
+            192,
+            32,
+            64
+          ],
+          [
+            160,
+            192,
+            64,
+            96
+          ],
+          [
+            160,
+            192,
+            96,
+            128
+          ],
+          [
+            160,
+            192,
+            128,
+            160
+          ],
+          [
+            160,
+            192,
+            160,
+            192
+          ],
+          [
+            160,
+            192,
+            192,
+            224
+          ],
+          [
+            192,
+            224,
+            0,
+            32
+          ],
+          [
+            192,
+            224,
+            32,
+            64
+          ],
+          [
+            192,
+            224,
+            64,
+            96
+          ],
+          [
+            192,
+            224,
+            96,
+            128
+          ],
+          [
+            192,
+            224,
+            128,
+            160
+          ],
+          [
+            192,
+            224,
+            160,
+            192
+          ],
+          [
+            192,
+            224,
+            192,
+            224
+          ]
+        ],
+        "target_vs_best_alternative_margin_drops": [
+          1.8761358261108398,
+          2.484511375427246,
+          3.700568199157715,
+          2.157729148864746,
+          3.162982940673828,
+          0.8354120254516602,
+          1.3532800674438477,
+          1.4268054962158203,
+          5.029010772705078,
+          6.320151329040527,
+          1.748427391052246,
+          3.633694648742676,
+          5.60898494720459,
+          1.617131233215332,
+          2.817265510559082,
+          4.473402976989746,
+          9.729748725891113,
+          8.837759017944336,
+          5.992774963378906,
+          5.510244369506836,
+          2.2134695053100586,
+          1.9835329055786133,
+          4.009376525878906,
+          9.909527778625488,
+          7.871419906616211,
+          7.799096584320068,
+          8.125365257263184,
+          1.6726083755493164,
+          3.133103370666504,
+          6.068927764892578,
+          8.955613136291504,
+          10.459100723266602,
+          7.915824890136719,
+          8.893470764160156,
+          2.842576026916504,
+          3.193730354309082,
+          1.474172592163086,
+          4.748522758483887,
+          5.152215957641602,
+          0.6013879776000977,
+          0.3724050521850586,
+          1.8752994537353516,
+          2.636265754699707,
+          2.403201103210449,
+          3.275209426879883,
+          7.963524341583252,
+          4.173793792724609,
+          2.2255916595458984,
+          0.8932313919067383
+        ],
+        "raw_attribution_statistics": {
+          "min": 6.079673767089844e-06,
+          "max": 0.3188917636871338,
+          "mean": 0.024566364531614343,
+          "std": 0.06096921263012677,
+          "abs_sum": 1232.6419067382812,
+          "signed_sum": 1232.6419067382812,
+          "positive_sum": 1232.6419067382812,
+          "negative_sum": 0.0,
+          "absolute_quantiles_0_50_90_99_100": [
+            6.079673767089844e-06,
+            0.00034165382385253906,
+            0.08910566568374634,
+            0.3188917636871338,
+            0.3188917636871338
+          ]
+        },
+        "clean_class_probability": 0.9999865293502808,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 187.71070000366308,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.9643000016221777,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64972.179572,
+          "finished": 64972.3729262,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 64972.1656742,
+      "finished": 64972.6783938,
+      "details": {
+        "steps": 64,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 12.586478233337402,
+        "signed_attribution_sum": 12.756305694580078,
+        "completeness_absolute_residual": 0.16982746124267578,
+        "completeness_relative_residual": 0.013492849873832,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.9932699203491211,
+            "relative_residual": 0.07891563485314572
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.16982746124267578,
+            "relative_residual": 0.013492849873832
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.9781061410903931,
+          "max": 0.9487832188606262,
+          "mean": 8.474372247408923e-05,
+          "std": 0.059529245814473865,
+          "abs_sum": 5133.215625012455,
+          "signed_sum": 12.756303056579704,
+          "positive_sum": 2572.985964034518,
+          "negative_sum": -2560.229660977938,
+          "absolute_quantiles_0_50_90_99_100": [
+            6.003605079740737e-08,
+            0.017025796696543694,
+            0.08600274175405503,
+            0.23615742132067716,
+            0.9781061410903931
+          ]
+        },
+        "gradient_abs_sum": 442701.5078125,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 507.72259999939706,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.6339000032749027,
+        "execution": {
+          "worker": "xai_1",
+          "started": 64972.165109,
+          "finished": 64972.6784276,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 64972.3731571,
+      "finished": 64975.0345318,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "score_space": "selected class probability (weighted local surrogate)",
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.31587963998441726,
+        "surrogate_intercept": -0.3109727885208838,
+        "surrogate_local_prediction": 0.3113987988464621,
+        "actual_target_probability": 0.9999866485595703,
+        "raw_attribution_statistics": {
+          "min": 0.0011840594233945012,
+          "max": 0.03086993470788002,
+          "mean": 0.012701460949088238,
+          "std": 0.006165364093980672,
+          "abs_sum": 0.6223715865053236,
+          "signed_sum": 0.6223715865053236,
+          "positive_sum": 0.6223715865053236,
+          "negative_sum": 0.0,
+          "absolute_quantiles_0_50_90_99_100": [
+            0.0011840594233945012,
+            0.011995861306786537,
+            0.02081774584949017,
+            0.028236372917890527,
+            0.03086993470788002
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 2655.6844000006095,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 3.3178000012412667,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64972.3730233,
+          "finished": 64975.0345689,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 64975.4736525,
+      "finished": 64975.500077,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 76.2314453125,
+        "raw_map_max": 7.778352737426758,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 20.56579999771202,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.995200000645127,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64975.4730795,
+          "finished": 64975.5001068,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 64975.4732611,
+      "finished": 64975.5043707,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 76.2314453125,
+        "raw_map_max": 0.4101063311100006,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 23.822800001653377,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.802100003871601,
+        "execution": {
+          "worker": "xai_1",
+          "started": 64975.472567,
+          "finished": 64975.5044076,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 64975.5009898,
+      "finished": 64975.5426803,
+      "details": {
+        "activation_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          512,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 76.2314453125,
+        "raw_map_max": 0.5346088409423828,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 26.437399996211752,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.089399997610599,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64975.5002238,
+          "finished": 64975.5427137,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 64975.5440054,
+      "finished": 64975.6360474,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "score_space": "selected class probability",
+        "max_absolute_probability_change": 3.0994415283203125e-06,
+        "probability_resolution_limited": false,
+        "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+        "patch_bounds_y1_y2_x1_x2": [
+          [
+            0,
+            32,
+            0,
+            32
+          ],
+          [
+            0,
+            32,
+            32,
+            64
+          ],
+          [
+            0,
+            32,
+            64,
+            96
+          ],
+          [
+            0,
+            32,
+            96,
+            128
+          ],
+          [
+            0,
+            32,
+            128,
+            160
+          ],
+          [
+            0,
+            32,
+            160,
+            192
+          ],
+          [
+            0,
+            32,
+            192,
+            224
+          ],
+          [
+            32,
+            64,
+            0,
+            32
+          ],
+          [
+            32,
+            64,
+            32,
+            64
+          ],
+          [
+            32,
+            64,
+            64,
+            96
+          ],
+          [
+            32,
+            64,
+            96,
+            128
+          ],
+          [
+            32,
+            64,
+            128,
+            160
+          ],
+          [
+            32,
+            64,
+            160,
+            192
+          ],
+          [
+            32,
+            64,
+            192,
+            224
+          ],
+          [
+            64,
+            96,
+            0,
+            32
+          ],
+          [
+            64,
+            96,
+            32,
+            64
+          ],
+          [
+            64,
+            96,
+            64,
+            96
+          ],
+          [
+            64,
+            96,
+            96,
+            128
+          ],
+          [
+            64,
+            96,
+            128,
+            160
+          ],
+          [
+            64,
+            96,
+            160,
+            192
+          ],
+          [
+            64,
+            96,
+            192,
+            224
+          ],
+          [
+            96,
+            128,
+            0,
+            32
+          ],
+          [
+            96,
+            128,
+            32,
+            64
+          ],
+          [
+            96,
+            128,
+            64,
+            96
+          ],
+          [
+            96,
+            128,
+            96,
+            128
+          ],
+          [
+            96,
+            128,
+            128,
+            160
+          ],
+          [
+            96,
+            128,
+            160,
+            192
+          ],
+          [
+            96,
+            128,
+            192,
+            224
+          ],
+          [
+            128,
+            160,
+            0,
+            32
+          ],
+          [
+            128,
+            160,
+            32,
+            64
+          ],
+          [
+            128,
+            160,
+            64,
+            96
+          ],
+          [
+            128,
+            160,
+            96,
+            128
+          ],
+          [
+            128,
+            160,
+            128,
+            160
+          ],
+          [
+            128,
+            160,
+            160,
+            192
+          ],
+          [
+            128,
+            160,
+            192,
+            224
+          ],
+          [
+            160,
+            192,
+            0,
+            32
+          ],
+          [
+            160,
+            192,
+            32,
+            64
+          ],
+          [
+            160,
+            192,
+            64,
+            96
+          ],
+          [
+            160,
+            192,
+            96,
+            128
+          ],
+          [
+            160,
+            192,
+            128,
+            160
+          ],
+          [
+            160,
+            192,
+            160,
+            192
+          ],
+          [
+            160,
+            192,
+            192,
+            224
+          ],
+          [
+            192,
+            224,
+            0,
+            32
+          ],
+          [
+            192,
+            224,
+            32,
+            64
+          ],
+          [
+            192,
+            224,
+            64,
+            96
+          ],
+          [
+            192,
+            224,
+            96,
+            128
+          ],
+          [
+            192,
+            224,
+            128,
+            160
+          ],
+          [
+            192,
+            224,
+            160,
+            192
+          ],
+          [
+            192,
+            224,
+            192,
+            224
+          ]
+        ],
+        "target_vs_best_alternative_margin_drops": [
+          -1.3484134674072266,
+          -1.3615245819091797,
+          -2.555330276489258,
+          -1.7696819305419922,
+          -1.2456893920898438,
+          -2.3235092163085938,
+          -2.5555810928344727,
+          -1.135603904724121,
+          -2.996368408203125,
+          -1.4011554718017578,
+          -1.456146240234375,
+          -1.3698358535766602,
+          -4.827581405639648,
+          -2.2451114654541016,
+          -3.0970726013183594,
+          -4.804084777832031,
+          -5.1560516357421875,
+          -4.623439788818359,
+          -1.8320512771606445,
+          -2.3323974609375,
+          -4.399940490722656,
+          -2.7164154052734375,
+          -2.7181406021118164,
+          -4.062629699707031,
+          -5.380363464355469,
+          -1.3011913299560547,
+          -2.252248764038086,
+          -3.9586219787597656,
+          -1.534708023071289,
+          -2.2803173065185547,
+          -2.929598808288574,
+          -6.8921356201171875,
+          -3.7296600341796875,
+          -2.1075334548950195,
+          -3.5807266235351562,
+          -0.5240964889526367,
+          -2.296365737915039,
+          -2.67081356048584,
+          -4.33985710144043,
+          -2.3939332962036133,
+          -2.2720556259155273,
+          -1.7874135971069336,
+          -2.7066240310668945,
+          -3.832895278930664,
+          -2.8636512756347656,
+          -2.22247314453125,
+          -1.3359966278076172,
+          -2.1311683654785156,
+          -1.7315616607666016
+        ],
+        "raw_attribution_statistics": {
+          "min": -3.0994415283203125e-06,
+          "max": -1.1920928955078125e-06,
+          "mean": -2.7247837611607143e-06,
+          "std": 3.6206060861637416e-07,
+          "abs_sum": 0.13671875,
+          "signed_sum": -0.13671875,
+          "positive_sum": 0.0,
+          "negative_sum": -0.13671875,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.1920928955078125e-06,
+            2.7418136596679688e-06,
+            3.0994415283203125e-06,
+            3.0994415283203125e-06,
+            3.0994415283203125e-06
+          ]
+        },
+        "clean_class_probability": 0.9999969005584717,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 86.43930000107503,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.1003000040072948,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64975.5428185,
+          "finished": 64975.6360746,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 64975.5046448,
+      "finished": 64975.8772072,
+      "details": {
+        "steps": 64,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": -0.8966565132141113,
+        "signed_attribution_sum": -0.8713779449462891,
+        "completeness_absolute_residual": 0.025278568267822266,
+        "completeness_relative_residual": 0.028192031056808967,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.5544648170471191,
+            "relative_residual": 0.6183692516319449
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.025278568267822266,
+            "relative_residual": 0.028192031056808967
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.9831739664077759,
+          "max": 0.9505636096000671,
+          "mean": -5.788770376055133e-06,
+          "std": 0.0686249904391161,
+          "abs_sum": 6518.131290399986,
+          "signed_sum": -0.871372027166827,
+          "positive_sum": 3258.6299591864095,
+          "negative_sum": -3259.501331213576,
+          "absolute_quantiles_0_50_90_99_100": [
+            7.386597111747051e-09,
+            0.02572258561849594,
+            0.10450862348079683,
+            0.2523440143465996,
+            0.9831739664077759
+          ]
+        },
+        "gradient_abs_sum": 344045.359375,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 362.42269999638665,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.3489000013796613,
+        "execution": {
+          "worker": "xai_1",
+          "started": 64975.5044866,
+          "finished": 64975.8772295,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 64975.6367612,
+      "finished": 64975.9154112,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "score_space": "selected class probability (weighted local surrogate)",
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.3125697656993398,
+        "surrogate_intercept": 1.0000009584124059,
+        "surrogate_local_prediction": 0.9999990387695282,
+        "actual_target_probability": 0.9999969005584717,
+        "raw_attribution_statistics": {
+          "min": -9.421373903251151e-08,
+          "max": -4.765246863769335e-09,
+          "mean": -3.917638505665114e-08,
+          "std": 1.9121917038256515e-08,
+          "abs_sum": 1.919642867775906e-06,
+          "signed_sum": -1.919642867775906e-06,
+          "positive_sum": 0.0,
+          "negative_sum": -1.919642867775906e-06,
+          "absolute_quantiles_0_50_90_99_100": [
+            4.765246863769335e-09,
+            3.77323701172827e-08,
+            6.442604956191646e-08,
+            8.799905373280121e-08,
+            9.421373903251151e-08
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 273.6858999996912,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.7020000052289106,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64975.6361595,
+          "finished": 64975.9154409,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 64976.5845611,
+      "finished": 64976.7447458,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 89.98067474365234,
+        "raw_map_max": 10.577423095703125,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 152.45049999793991,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.4836000049836002,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64976.5842033,
+          "finished": 64976.7447693,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 64976.7454655,
+      "finished": 64976.796558,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 89.98067474365234,
+        "raw_map_max": 0.44179490208625793,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 45.074199995724484,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.210000002582092,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64976.7448462,
+          "finished": 64976.7965825,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 64976.6761585,
+      "finished": 64976.8302136,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 89.98067474365234,
+        "raw_map_max": 0.3322252035140991,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 148.2419999956619,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.5233000016887672,
+        "execution": {
+          "worker": "xai_1",
+          "started": 64976.675945,
+          "finished": 64976.8302403,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 64976.8309768,
+      "finished": 64977.1979794,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "score_space": "selected class probability",
+        "max_absolute_probability_change": 0.06913727521896362,
+        "probability_resolution_limited": false,
+        "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+        "patch_bounds_y1_y2_x1_x2": [
+          [
+            0,
+            32,
+            0,
+            32
+          ],
+          [
+            0,
+            32,
+            32,
+            64
+          ],
+          [
+            0,
+            32,
+            64,
+            96
+          ],
+          [
+            0,
+            32,
+            96,
+            128
+          ],
+          [
+            0,
+            32,
+            128,
+            160
+          ],
+          [
+            0,
+            32,
+            160,
+            192
+          ],
+          [
+            0,
+            32,
+            192,
+            224
+          ],
+          [
+            32,
+            64,
+            0,
+            32
+          ],
+          [
+            32,
+            64,
+            32,
+            64
+          ],
+          [
+            32,
+            64,
+            64,
+            96
+          ],
+          [
+            32,
+            64,
+            96,
+            128
+          ],
+          [
+            32,
+            64,
+            128,
+            160
+          ],
+          [
+            32,
+            64,
+            160,
+            192
+          ],
+          [
+            32,
+            64,
+            192,
+            224
+          ],
+          [
+            64,
+            96,
+            0,
+            32
+          ],
+          [
+            64,
+            96,
+            32,
+            64
+          ],
+          [
+            64,
+            96,
+            64,
+            96
+          ],
+          [
+            64,
+            96,
+            96,
+            128
+          ],
+          [
+            64,
+            96,
+            128,
+            160
+          ],
+          [
+            64,
+            96,
+            160,
+            192
+          ],
+          [
+            64,
+            96,
+            192,
+            224
+          ],
+          [
+            96,
+            128,
+            0,
+            32
+          ],
+          [
+            96,
+            128,
+            32,
+            64
+          ],
+          [
+            96,
+            128,
+            64,
+            96
+          ],
+          [
+            96,
+            128,
+            96,
+            128
+          ],
+          [
+            96,
+            128,
+            128,
+            160
+          ],
+          [
+            96,
+            128,
+            160,
+            192
+          ],
+          [
+            96,
+            128,
+            192,
+            224
+          ],
+          [
+            128,
+            160,
+            0,
+            32
+          ],
+          [
+            128,
+            160,
+            32,
+            64
+          ],
+          [
+            128,
+            160,
+            64,
+            96
+          ],
+          [
+            128,
+            160,
+            96,
+            128
+          ],
+          [
+            128,
+            160,
+            128,
+            160
+          ],
+          [
+            128,
+            160,
+            160,
+            192
+          ],
+          [
+            128,
+            160,
+            192,
+            224
+          ],
+          [
+            160,
+            192,
+            0,
+            32
+          ],
+          [
+            160,
+            192,
+            32,
+            64
+          ],
+          [
+            160,
+            192,
+            64,
+            96
+          ],
+          [
+            160,
+            192,
+            96,
+            128
+          ],
+          [
+            160,
+            192,
+            128,
+            160
+          ],
+          [
+            160,
+            192,
+            160,
+            192
+          ],
+          [
+            160,
+            192,
+            192,
+            224
+          ],
+          [
+            192,
+            224,
+            0,
+            32
+          ],
+          [
+            192,
+            224,
+            32,
+            64
+          ],
+          [
+            192,
+            224,
+            64,
+            96
+          ],
+          [
+            192,
+            224,
+            96,
+            128
+          ],
+          [
+            192,
+            224,
+            128,
+            160
+          ],
+          [
+            192,
+            224,
+            160,
+            192
+          ],
+          [
+            192,
+            224,
+            192,
+            224
+          ]
+        ],
+        "target_vs_best_alternative_margin_drops": [
+          -0.6575675010681152,
+          -0.13262462615966797,
+          0.2750239372253418,
+          0.7433886528015137,
+          0.46821165084838867,
+          0.05266857147216797,
+          -0.47670745849609375,
+          -0.5681829452514648,
+          0.20517587661743164,
+          0.1461782455444336,
+          0.08137130737304688,
+          0.759000301361084,
+          1.3787403106689453,
+          -0.26053810119628906,
+          -0.24052715301513672,
+          0.6223211288452148,
+          0.28349804878234863,
+          -0.654263973236084,
+          0.0062694549560546875,
+          1.3651878833770752,
+          -0.5623970031738281,
+          -0.703216552734375,
+          0.32683682441711426,
+          0.7918472290039062,
+          -1.074967384338379,
+          -0.3699007034301758,
+          0.13596343994140625,
+          -0.6761074066162109,
+          -0.7514505386352539,
+          0.045762062072753906,
+          0.9880592823028564,
+          0.6518690586090088,
+          1.8228998184204102,
+          -0.15555047988891602,
+          -0.6808357238769531,
+          0.4806368350982666,
+          0.032245635986328125,
+          -0.19333934783935547,
+          -0.550696849822998,
+          0.2343916893005371,
+          0.16315841674804688,
+          0.19971036911010742,
+          0.8445088863372803,
+          -0.38216209411621094,
+          -1.9109959602355957,
+          -0.6532135009765625,
+          -1.399831771850586,
+          0.24328398704528809,
+          0.1472311019897461
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.012360692024230957,
+          "max": 0.06913727521896362,
+          "mean": 0.003997711502775854,
+          "std": 0.014645698860652909,
+          "abs_sum": 463.80279541015625,
+          "signed_sum": 200.58917236328125,
+          "positive_sum": 332.19598388671875,
+          "negative_sum": -131.6068115234375,
+          "absolute_quantiles_0_50_90_99_100": [
+            9.006261825561523e-05,
+            0.006104469299316406,
+            0.018649697303771973,
+            0.06913727521896362,
+            0.06913727521896362
+          ]
+        },
+        "clean_class_probability": 0.9854615926742554,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 362.1445000026142,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.794600004563108,
+        "execution": {
+          "worker": "xai_1",
+          "started": 64976.8303297,
+          "finished": 64977.1980151,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 64977.1993348,
+      "finished": 64977.851329,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "score_space": "selected class probability (weighted local surrogate)",
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.4475542254024343,
+        "surrogate_intercept": 0.9459413787475819,
+        "surrogate_local_prediction": 0.9268064842927194,
+        "actual_target_probability": 0.9854292273521423,
+        "raw_attribution_statistics": {
+          "min": -0.06631409376859665,
+          "max": 0.049816012382507324,
+          "mean": -0.0003905081541874171,
+          "std": 0.02403216242798636,
+          "abs_sum": 0.8619204088583956,
+          "signed_sum": -0.019134899555183438,
+          "positive_sum": 0.4213927546516061,
+          "negative_sum": -0.4405276542067895,
+          "absolute_quantiles_0_50_90_99_100": [
+            2.194848320868914e-06,
+            0.013330896385014057,
+            0.04413051307201388,
+            0.06375035613775251,
+            0.06631409376859665
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 646.5563999954611,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.174100005708169,
+        "execution": {
+          "worker": "xai_1",
+          "started": 64977.1981287,
+          "finished": 64977.8513521,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 64976.7972124,
+      "finished": 64977.981743,
+      "details": {
+        "steps": 64,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 7.170952320098877,
+        "signed_attribution_sum": 6.946695804595947,
+        "completeness_absolute_residual": 0.2242565155029297,
+        "completeness_relative_residual": 0.031272905674519604,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 1.3769640922546387,
+            "relative_residual": 0.19201969707639227
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.2242565155029297,
+            "relative_residual": 0.031272905674519604
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.40149787068367004,
+          "max": 0.4855424463748932,
+          "mean": 4.61488707694789e-05,
+          "std": 0.029726610284182768,
+          "abs_sum": 2607.869601037385,
+          "signed_sum": 6.94669721918812,
+          "positive_sum": 1307.4081491282866,
+          "negative_sum": -1300.4614519090985,
+          "absolute_quantiles_0_50_90_99_100": [
+            4.932407371427416e-09,
+            0.009046148508787155,
+            0.04274944141507149,
+            0.11623289510607723,
+            0.4855424463748932
+          ]
+        },
+        "gradient_abs_sum": 139031.607421875,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 1178.4419999967213,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.1616999985999428,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64976.7966633,
+          "finished": 64977.9817748,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 64985.2051049,
+      "finished": 64990.9244583,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 84.57710266113281,
+        "raw_map_max": 8.409357070922852,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 5690.164499996172,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.1997000003466383,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64985.2048103,
+          "finished": 64990.9244861,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 64985.3347462,
+      "finished": 64990.9950087,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 84.57710266113281,
+        "raw_map_max": 0.049856074154376984,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 5645.870100001048,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.639199999975972,
+        "execution": {
+          "worker": "xai_1",
+          "started": 64985.3346202,
+          "finished": 64990.9950368,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 64990.9254499,
+      "finished": 64991.0706998,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 84.57710266113281,
+        "raw_map_max": 0.35031479597091675,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 81.87239999824669,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.1561000030487776,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64990.9245604,
+          "finished": 64991.0707279,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 64991.0715047,
+      "finished": 64991.6014252,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "score_space": "selected class probability",
+        "max_absolute_probability_change": 0.055374979972839355,
+        "probability_resolution_limited": false,
+        "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+        "patch_bounds_y1_y2_x1_x2": [
+          [
+            0,
+            32,
+            0,
+            32
+          ],
+          [
+            0,
+            32,
+            32,
+            64
+          ],
+          [
+            0,
+            32,
+            64,
+            96
+          ],
+          [
+            0,
+            32,
+            96,
+            128
+          ],
+          [
+            0,
+            32,
+            128,
+            160
+          ],
+          [
+            0,
+            32,
+            160,
+            192
+          ],
+          [
+            0,
+            32,
+            192,
+            224
+          ],
+          [
+            32,
+            64,
+            0,
+            32
+          ],
+          [
+            32,
+            64,
+            32,
+            64
+          ],
+          [
+            32,
+            64,
+            64,
+            96
+          ],
+          [
+            32,
+            64,
+            96,
+            128
+          ],
+          [
+            32,
+            64,
+            128,
+            160
+          ],
+          [
+            32,
+            64,
+            160,
+            192
+          ],
+          [
+            32,
+            64,
+            192,
+            224
+          ],
+          [
+            64,
+            96,
+            0,
+            32
+          ],
+          [
+            64,
+            96,
+            32,
+            64
+          ],
+          [
+            64,
+            96,
+            64,
+            96
+          ],
+          [
+            64,
+            96,
+            96,
+            128
+          ],
+          [
+            64,
+            96,
+            128,
+            160
+          ],
+          [
+            64,
+            96,
+            160,
+            192
+          ],
+          [
+            64,
+            96,
+            192,
+            224
+          ],
+          [
+            96,
+            128,
+            0,
+            32
+          ],
+          [
+            96,
+            128,
+            32,
+            64
+          ],
+          [
+            96,
+            128,
+            64,
+            96
+          ],
+          [
+            96,
+            128,
+            96,
+            128
+          ],
+          [
+            96,
+            128,
+            128,
+            160
+          ],
+          [
+            96,
+            128,
+            160,
+            192
+          ],
+          [
+            96,
+            128,
+            192,
+            224
+          ],
+          [
+            128,
+            160,
+            0,
+            32
+          ],
+          [
+            128,
+            160,
+            32,
+            64
+          ],
+          [
+            128,
+            160,
+            64,
+            96
+          ],
+          [
+            128,
+            160,
+            96,
+            128
+          ],
+          [
+            128,
+            160,
+            128,
+            160
+          ],
+          [
+            128,
+            160,
+            160,
+            192
+          ],
+          [
+            128,
+            160,
+            192,
+            224
+          ],
+          [
+            160,
+            192,
+            0,
+            32
+          ],
+          [
+            160,
+            192,
+            32,
+            64
+          ],
+          [
+            160,
+            192,
+            64,
+            96
+          ],
+          [
+            160,
+            192,
+            96,
+            128
+          ],
+          [
+            160,
+            192,
+            128,
+            160
+          ],
+          [
+            160,
+            192,
+            160,
+            192
+          ],
+          [
+            160,
+            192,
+            192,
+            224
+          ],
+          [
+            192,
+            224,
+            0,
+            32
+          ],
+          [
+            192,
+            224,
+            32,
+            64
+          ],
+          [
+            192,
+            224,
+            64,
+            96
+          ],
+          [
+            192,
+            224,
+            96,
+            128
+          ],
+          [
+            192,
+            224,
+            128,
+            160
+          ],
+          [
+            192,
+            224,
+            160,
+            192
+          ],
+          [
+            192,
+            224,
+            192,
+            224
+          ]
+        ],
+        "target_vs_best_alternative_margin_drops": [
+          0.016389012336730957,
+          -0.0979844331741333,
+          -0.10151863098144531,
+          0.08686947822570801,
+          0.04177522659301758,
+          -0.14873218536376953,
+          0.03649437427520752,
+          0.06647968292236328,
+          -0.1548011302947998,
+          -0.20196664333343506,
+          -0.0776517391204834,
+          -0.2043311595916748,
+          0.053227901458740234,
+          0.08621907234191895,
+          0.14309418201446533,
+          -0.01150655746459961,
+          -0.16413307189941406,
+          -0.12672173976898193,
+          0.10424590110778809,
+          0.0917210578918457,
+          -0.01853346824645996,
+          0.006215810775756836,
+          -0.04524827003479004,
+          0.004776477813720703,
+          -0.07133746147155762,
+          -0.12850379943847656,
+          -0.018926143646240234,
+          0.06690120697021484,
+          -0.0492100715637207,
+          -0.04346787929534912,
+          -0.13090813159942627,
+          -0.2295323610305786,
+          -0.07123351097106934,
+          -0.0442349910736084,
+          -0.0010809898376464844,
+          -0.08910751342773438,
+          -0.14128708839416504,
+          -0.14648795127868652,
+          0.08082449436187744,
+          -0.0511859655380249,
+          -0.237434983253479,
+          -0.14626812934875488,
+          -0.33142709732055664,
+          -0.1846613883972168,
+          -0.029105663299560547,
+          0.21504759788513184,
+          -0.32472550868988037,
+          -0.4010423421859741,
+          -0.027477502822875977
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.055374979972839355,
+          "max": 0.03594636917114258,
+          "mean": -0.009151914898230105,
+          "std": 0.018584142553977237,
+          "abs_sum": 824.6532592773438,
+          "signed_sum": -459.20648193359375,
+          "positive_sum": 182.723388671875,
+          "negative_sum": -641.9298706054688,
+          "absolute_quantiles_0_50_90_99_100": [
+            0.00016939640045166016,
+            0.013878107070922852,
+            0.0345684289932251,
+            0.055374979972839355,
+            0.055374979972839355
+          ]
+        },
+        "clean_class_probability": 0.805243730545044,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 505.27490000240505,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.9092999975546263,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64991.0708037,
+          "finished": 64991.6014644,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 64991.6026715,
+      "finished": 64993.3655344,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "score_space": "selected class probability (weighted local surrogate)",
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.6136240583521231,
+        "surrogate_intercept": 0.5681012004137795,
+        "surrogate_local_prediction": 0.9147846962405527,
+        "actual_target_probability": 0.8048979043960571,
+        "raw_attribution_statistics": {
+          "min": -0.04400033503770828,
+          "max": 0.05460379272699356,
+          "mean": 0.007075173264137429,
+          "std": 0.02373202276464598,
+          "abs_sum": 1.0229765156673238,
+          "signed_sum": 0.346683489942734,
+          "positive_sum": 0.6848300028050289,
+          "negative_sum": -0.3381465128622949,
+          "absolute_quantiles_0_50_90_99_100": [
+            9.833920557866804e-06,
+            0.020977074280381203,
+            0.0390985667705536,
+            0.04990187674760815,
+            0.05460379272699356
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 1737.326499998744,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.0059999951627105,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64991.6015619,
+          "finished": 64993.3655744,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "attention_rollout",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 64993.366252,
+      "finished": 64993.417557,
+      "details": {
+        "class_agnostic": true,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "attention_rollout",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 27.889700002560858,
+        "score_space": "native attention; class agnostic",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 3.4255999999004416,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64993.3656798,
+          "finished": 64993.4175972,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradient_attention",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 64993.4184952,
+      "finished": 64993.5841108,
+      "details": {
+        "class_agnostic": false,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "gradient_attention",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 142.25979999901028,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.961599995614961,
+        "execution": {
+          "worker": "xai_0",
+          "started": 64993.4176971,
+          "finished": 64993.584168,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 64990.9958426,
+      "finished": 65040.2850672,
+      "details": {
+        "steps": 128,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": -0.846808135509491,
+        "signed_attribution_sum": -0.9502196311950684,
+        "completeness_absolute_residual": 0.10341149568557739,
+        "completeness_relative_residual": 0.12211915704300454,
+        "converged": false,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 1.3921545147895813,
+            "relative_residual": 1.6440022909699339
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.3604428172111511,
+            "relative_residual": 0.4256487415467341
+          },
+          {
+            "steps": 128,
+            "absolute_residual": 0.10341149568557739,
+            "relative_residual": 0.12211915704300454
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.16435034573078156,
+          "max": 0.2622601389884949,
+          "mean": -6.312577335180681e-06,
+          "std": 0.010459593007673506,
+          "abs_sum": 774.737280417065,
+          "signed_sum": -0.9502196411100776,
+          "positive_sum": 386.8935303879774,
+          "negative_sum": -387.8437500290876,
+          "absolute_quantiles_0_50_90_99_100": [
+            2.1288791174356447e-08,
+            0.0022731060162186623,
+            0.012222280539572253,
+            0.045114305801689715,
+            0.2622601389884949
+          ]
+        },
+        "gradient_abs_sum": 83731.76556396484,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 49261.66640000156,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.4149000018951483,
+        "execution": {
+          "worker": "xai_1",
+          "started": 64990.9951113,
+          "finished": 65040.2851206,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 65052.5901787,
+      "finished": 65053.0856786,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.0010039081098511815,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 468.7476000035531,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.736800001410302,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65052.5869522,
+          "finished": 65053.0857302,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 65052.7745359,
+      "finished": 65053.2651645,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.031048545613884926,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 418.7116999964928,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.996999996365048,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65052.7273372,
+          "finished": 65053.2651976,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 65053.1537317,
+      "finished": 65053.3062993,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.0012674687895923853,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 138.82359999843175,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.037200000311714,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65053.0858575,
+          "finished": 65053.3063851,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 65053.3073528,
+      "finished": 65055.4589302,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "score_space": "selected class probability",
+        "max_absolute_probability_change": 0.00028204917907714844,
+        "probability_resolution_limited": false,
+        "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+        "patch_bounds_y1_y2_x1_x2": [
+          [
+            0,
+            32,
+            0,
+            32
+          ],
+          [
+            0,
+            32,
+            32,
+            64
+          ],
+          [
+            0,
+            32,
+            64,
+            96
+          ],
+          [
+            0,
+            32,
+            96,
+            128
+          ],
+          [
+            0,
+            32,
+            128,
+            160
+          ],
+          [
+            0,
+            32,
+            160,
+            192
+          ],
+          [
+            0,
+            32,
+            192,
+            224
+          ],
+          [
+            32,
+            64,
+            0,
+            32
+          ],
+          [
+            32,
+            64,
+            32,
+            64
+          ],
+          [
+            32,
+            64,
+            64,
+            96
+          ],
+          [
+            32,
+            64,
+            96,
+            128
+          ],
+          [
+            32,
+            64,
+            128,
+            160
+          ],
+          [
+            32,
+            64,
+            160,
+            192
+          ],
+          [
+            32,
+            64,
+            192,
+            224
+          ],
+          [
+            64,
+            96,
+            0,
+            32
+          ],
+          [
+            64,
+            96,
+            32,
+            64
+          ],
+          [
+            64,
+            96,
+            64,
+            96
+          ],
+          [
+            64,
+            96,
+            96,
+            128
+          ],
+          [
+            64,
+            96,
+            128,
+            160
+          ],
+          [
+            64,
+            96,
+            160,
+            192
+          ],
+          [
+            64,
+            96,
+            192,
+            224
+          ],
+          [
+            96,
+            128,
+            0,
+            32
+          ],
+          [
+            96,
+            128,
+            32,
+            64
+          ],
+          [
+            96,
+            128,
+            64,
+            96
+          ],
+          [
+            96,
+            128,
+            96,
+            128
+          ],
+          [
+            96,
+            128,
+            128,
+            160
+          ],
+          [
+            96,
+            128,
+            160,
+            192
+          ],
+          [
+            96,
+            128,
+            192,
+            224
+          ],
+          [
+            128,
+            160,
+            0,
+            32
+          ],
+          [
+            128,
+            160,
+            32,
+            64
+          ],
+          [
+            128,
+            160,
+            64,
+            96
+          ],
+          [
+            128,
+            160,
+            96,
+            128
+          ],
+          [
+            128,
+            160,
+            128,
+            160
+          ],
+          [
+            128,
+            160,
+            160,
+            192
+          ],
+          [
+            128,
+            160,
+            192,
+            224
+          ],
+          [
+            160,
+            192,
+            0,
+            32
+          ],
+          [
+            160,
+            192,
+            32,
+            64
+          ],
+          [
+            160,
+            192,
+            64,
+            96
+          ],
+          [
+            160,
+            192,
+            96,
+            128
+          ],
+          [
+            160,
+            192,
+            128,
+            160
+          ],
+          [
+            160,
+            192,
+            160,
+            192
+          ],
+          [
+            160,
+            192,
+            192,
+            224
+          ],
+          [
+            192,
+            224,
+            0,
+            32
+          ],
+          [
+            192,
+            224,
+            32,
+            64
+          ],
+          [
+            192,
+            224,
+            64,
+            96
+          ],
+          [
+            192,
+            224,
+            96,
+            128
+          ],
+          [
+            192,
+            224,
+            128,
+            160
+          ],
+          [
+            192,
+            224,
+            160,
+            192
+          ],
+          [
+            192,
+            224,
+            192,
+            224
+          ]
+        ],
+        "target_vs_best_alternative_margin_drops": [
+          0.0009350776672363281,
+          0.0025920867919921875,
+          0.003242015838623047,
+          0.0011830329895019531,
+          -0.0009806156158447266,
+          -0.0017237663269042969,
+          -0.000743865966796875,
+          0.0030231475830078125,
+          0.0007872581481933594,
+          0.0009579658508300781,
+          0.0008978843688964844,
+          -0.0004630088806152344,
+          0.0019030570983886719,
+          0.0022094249725341797,
+          -0.0006611347198486328,
+          -0.0003447532653808594,
+          0.0027043819427490234,
+          0.008624553680419922,
+          0.0008435249328613281,
+          0.0020198822021484375,
+          0.00138092041015625,
+          0.003212451934814453,
+          0.0002789497375488281,
+          0.011281728744506836,
+          0.011722564697265625,
+          0.005830287933349609,
+          0.0014567375183105469,
+          -0.0013310909271240234,
+          6.842613220214844e-05,
+          0.0017676353454589844,
+          0.0054378509521484375,
+          -0.002446889877319336,
+          -0.0002942085266113281,
+          0.0019311904907226562,
+          -0.00042366981506347656,
+          0.0004868507385253906,
+          -1.430511474609375e-05,
+          -0.005352020263671875,
+          -0.0021734237670898438,
+          0.00141143798828125,
+          -0.0012288093566894531,
+          -0.001232147216796875,
+          0.0007538795471191406,
+          0.0008494853973388672,
+          -0.0012331008911132812,
+          -0.0003490447998046875,
+          0.0008580684661865234,
+          -0.0012633800506591797,
+          0.0002741813659667969
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.00012761354446411133,
+          "max": 0.00028204917907714844,
+          "mean": 2.8807289746342872e-05,
+          "std": 7.374519384780415e-05,
+          "abs_sum": 2.5325927734375,
+          "signed_sum": 1.4454345703125,
+          "positive_sum": 1.989013671875,
+          "negative_sum": -0.5435791015625,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.5762786865234375e-07,
+            2.9385089874267578e-05,
+            0.0001304149627685547,
+            0.00028204917907714844,
+            0.00028204917907714844
+          ]
+        },
+        "clean_class_probability": 0.9754828214645386,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 2128.21840000106,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 5.761200001870748,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65053.3064682,
+          "finished": 65055.4589789,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 65053.2665905,
+      "finished": 65055.9357626,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.013683319091796875,
+        "signed_attribution_sum": 0.01848100870847702,
+        "completeness_absolute_residual": 0.004797689616680145,
+        "completeness_relative_residual": 0.3506232358168386,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.004797689616680145,
+            "relative_residual": 0.3506232358168386
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0009114212007261813,
+          "max": 0.001000061514787376,
+          "mean": 1.2277459890318595e-07,
+          "std": 6.182096092368707e-05,
+          "abs_sum": 4.869213786343034,
+          "signed_sum": 0.018481014823698773,
+          "positive_sum": 2.443847400583366,
+          "negative_sum": -2.4253663857596672,
+          "absolute_quantiles_0_50_90_99_100": [
+            6.967443288985464e-11,
+            1.34185393108055e-05,
+            8.392498566536244e-05,
+            0.00025721362966578507,
+            0.001000061514787376
+          ]
+        },
+        "gradient_abs_sum": 256.7776565551758,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 2647.3741000008886,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.813600000285078,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65053.265287,
+          "finished": 65055.9357965,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 65055.4600622,
+      "finished": 65056.3421679,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "score_space": "selected class probability (weighted local surrogate)",
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.8013337916312131,
+        "surrogate_intercept": 0.9736879065654568,
+        "surrogate_local_prediction": 0.9751950833765453,
+        "actual_target_probability": 0.9754830598831177,
+        "raw_attribution_statistics": {
+          "min": -0.00021627308160532266,
+          "max": 0.0007205831934697926,
+          "mean": 3.0758710751718594e-05,
+          "std": 0.0001704566317906005,
+          "abs_sum": 0.005699285123654363,
+          "signed_sum": 0.0015071768268342112,
+          "positive_sum": 0.003603230975244287,
+          "negative_sum": -0.002096054148410076,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.8039738115003274e-07,
+            6.957365258131176e-05,
+            0.00022377278946805748,
+            0.0005880779470317054,
+            0.0007205831934697926
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 861.6398999947705,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.1706000043195672,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65055.4590804,
+          "finished": 65056.3422005,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 65056.9449775,
+      "finished": 65057.0379012,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.0010039081098511815,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 69.34059999912279,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.221400002075825,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65056.9436684,
+          "finished": 65057.1236661,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 65056.9451332,
+      "finished": 65057.0536108,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.031048545613884926,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 87.06250000250293,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.478200000245124,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65056.9438447,
+          "finished": 65057.1591546,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 65057.0380426,
+      "finished": 65057.1236281,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.9701606631278992,
+        "raw_map_max": 0.002445593476295471,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 70.2439999950002,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.66450000385521,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65056.9436684,
+          "finished": 65057.1236661,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 65057.0537337,
+      "finished": 65057.1591152,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.9701606631278992,
+        "raw_map_max": 0.07286489009857178,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 90.13820000109263,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 3.54920000245329,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65056.9438447,
+          "finished": 65057.1591546,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 65057.1249351,
+      "finished": 65057.244025,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.48629456758499146,
+        "raw_map_max": 0.0012674687895923853,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 98.47679999802494,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.4062000011326745,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65057.1237572,
+          "finished": 65057.3181213,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 65057.2441678,
+      "finished": 65057.3180781,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.9701606631278992,
+        "raw_map_max": 0.0029747167136520147,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 58.06750000192551,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.93950000195764,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65057.1237572,
+          "finished": 65057.3181213,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 65057.3193243,
+      "finished": 65057.5388773,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "score_space": "selected class probability",
+        "max_absolute_probability_change": 0.00028204917907714844,
+        "probability_resolution_limited": false,
+        "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+        "patch_bounds_y1_y2_x1_x2": [
+          [
+            0,
+            32,
+            0,
+            32
+          ],
+          [
+            0,
+            32,
+            32,
+            64
+          ],
+          [
+            0,
+            32,
+            64,
+            96
+          ],
+          [
+            0,
+            32,
+            96,
+            128
+          ],
+          [
+            0,
+            32,
+            128,
+            160
+          ],
+          [
+            0,
+            32,
+            160,
+            192
+          ],
+          [
+            0,
+            32,
+            192,
+            224
+          ],
+          [
+            32,
+            64,
+            0,
+            32
+          ],
+          [
+            32,
+            64,
+            32,
+            64
+          ],
+          [
+            32,
+            64,
+            64,
+            96
+          ],
+          [
+            32,
+            64,
+            96,
+            128
+          ],
+          [
+            32,
+            64,
+            128,
+            160
+          ],
+          [
+            32,
+            64,
+            160,
+            192
+          ],
+          [
+            32,
+            64,
+            192,
+            224
+          ],
+          [
+            64,
+            96,
+            0,
+            32
+          ],
+          [
+            64,
+            96,
+            32,
+            64
+          ],
+          [
+            64,
+            96,
+            64,
+            96
+          ],
+          [
+            64,
+            96,
+            96,
+            128
+          ],
+          [
+            64,
+            96,
+            128,
+            160
+          ],
+          [
+            64,
+            96,
+            160,
+            192
+          ],
+          [
+            64,
+            96,
+            192,
+            224
+          ],
+          [
+            96,
+            128,
+            0,
+            32
+          ],
+          [
+            96,
+            128,
+            32,
+            64
+          ],
+          [
+            96,
+            128,
+            64,
+            96
+          ],
+          [
+            96,
+            128,
+            96,
+            128
+          ],
+          [
+            96,
+            128,
+            128,
+            160
+          ],
+          [
+            96,
+            128,
+            160,
+            192
+          ],
+          [
+            96,
+            128,
+            192,
+            224
+          ],
+          [
+            128,
+            160,
+            0,
+            32
+          ],
+          [
+            128,
+            160,
+            32,
+            64
+          ],
+          [
+            128,
+            160,
+            64,
+            96
+          ],
+          [
+            128,
+            160,
+            96,
+            128
+          ],
+          [
+            128,
+            160,
+            128,
+            160
+          ],
+          [
+            128,
+            160,
+            160,
+            192
+          ],
+          [
+            128,
+            160,
+            192,
+            224
+          ],
+          [
+            160,
+            192,
+            0,
+            32
+          ],
+          [
+            160,
+            192,
+            32,
+            64
+          ],
+          [
+            160,
+            192,
+            64,
+            96
+          ],
+          [
+            160,
+            192,
+            96,
+            128
+          ],
+          [
+            160,
+            192,
+            128,
+            160
+          ],
+          [
+            160,
+            192,
+            160,
+            192
+          ],
+          [
+            160,
+            192,
+            192,
+            224
+          ],
+          [
+            192,
+            224,
+            0,
+            32
+          ],
+          [
+            192,
+            224,
+            32,
+            64
+          ],
+          [
+            192,
+            224,
+            64,
+            96
+          ],
+          [
+            192,
+            224,
+            96,
+            128
+          ],
+          [
+            192,
+            224,
+            128,
+            160
+          ],
+          [
+            192,
+            224,
+            160,
+            192
+          ],
+          [
+            192,
+            224,
+            192,
+            224
+          ]
+        ],
+        "target_vs_best_alternative_margin_drops": [
+          0.0009350776672363281,
+          0.0025920867919921875,
+          0.003242015838623047,
+          0.0011830329895019531,
+          -0.0009806156158447266,
+          -0.0017237663269042969,
+          -0.000743865966796875,
+          0.0030231475830078125,
+          0.0007872581481933594,
+          0.0009579658508300781,
+          0.0008978843688964844,
+          -0.0004630088806152344,
+          0.0019030570983886719,
+          0.0022094249725341797,
+          -0.0006611347198486328,
+          -0.0003447532653808594,
+          0.0027043819427490234,
+          0.008624553680419922,
+          0.0008435249328613281,
+          0.0020198822021484375,
+          0.00138092041015625,
+          0.003212451934814453,
+          0.0002789497375488281,
+          0.011281728744506836,
+          0.011722564697265625,
+          0.005830287933349609,
+          0.0014567375183105469,
+          -0.0013310909271240234,
+          6.842613220214844e-05,
+          0.0017676353454589844,
+          0.0054378509521484375,
+          -0.002446889877319336,
+          -0.0002942085266113281,
+          0.0019311904907226562,
+          -0.00042366981506347656,
+          0.0004868507385253906,
+          -1.430511474609375e-05,
+          -0.005352020263671875,
+          -0.0021734237670898438,
+          0.00141143798828125,
+          -0.0012288093566894531,
+          -0.001232147216796875,
+          0.0007538795471191406,
+          0.0008494853973388672,
+          -0.0012331008911132812,
+          -0.0003490447998046875,
+          0.0008580684661865234,
+          -0.0012633800506591797,
+          0.0002741813659667969
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.00012761354446411133,
+          "max": 0.00028204917907714844,
+          "mean": 2.8807289746342872e-05,
+          "std": 7.374519384780415e-05,
+          "abs_sum": 2.5325927734375,
+          "signed_sum": 1.4454345703125,
+          "positive_sum": 1.989013671875,
+          "negative_sum": -0.5435791015625,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.5762786865234375e-07,
+            2.9385089874267578e-05,
+            0.0001304149627685547,
+            0.00028204917907714844,
+            0.00028204917907714844
+          ]
+        },
+        "clean_class_probability": 0.9754828214645386,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 196.7106000010972,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 4.267399999662302,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65057.3182073,
+          "finished": 65057.7708093,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 65057.5389943,
+      "finished": 65057.7707645,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "score_space": "selected class probability",
+        "max_absolute_probability_change": 0.002987384796142578,
+        "probability_resolution_limited": false,
+        "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+        "patch_bounds_y1_y2_x1_x2": [
+          [
+            0,
+            32,
+            0,
+            32
+          ],
+          [
+            0,
+            32,
+            32,
+            64
+          ],
+          [
+            0,
+            32,
+            64,
+            96
+          ],
+          [
+            0,
+            32,
+            96,
+            128
+          ],
+          [
+            0,
+            32,
+            128,
+            160
+          ],
+          [
+            0,
+            32,
+            160,
+            192
+          ],
+          [
+            0,
+            32,
+            192,
+            224
+          ],
+          [
+            32,
+            64,
+            0,
+            32
+          ],
+          [
+            32,
+            64,
+            32,
+            64
+          ],
+          [
+            32,
+            64,
+            64,
+            96
+          ],
+          [
+            32,
+            64,
+            96,
+            128
+          ],
+          [
+            32,
+            64,
+            128,
+            160
+          ],
+          [
+            32,
+            64,
+            160,
+            192
+          ],
+          [
+            32,
+            64,
+            192,
+            224
+          ],
+          [
+            64,
+            96,
+            0,
+            32
+          ],
+          [
+            64,
+            96,
+            32,
+            64
+          ],
+          [
+            64,
+            96,
+            64,
+            96
+          ],
+          [
+            64,
+            96,
+            96,
+            128
+          ],
+          [
+            64,
+            96,
+            128,
+            160
+          ],
+          [
+            64,
+            96,
+            160,
+            192
+          ],
+          [
+            64,
+            96,
+            192,
+            224
+          ],
+          [
+            96,
+            128,
+            0,
+            32
+          ],
+          [
+            96,
+            128,
+            32,
+            64
+          ],
+          [
+            96,
+            128,
+            64,
+            96
+          ],
+          [
+            96,
+            128,
+            96,
+            128
+          ],
+          [
+            96,
+            128,
+            128,
+            160
+          ],
+          [
+            96,
+            128,
+            160,
+            192
+          ],
+          [
+            96,
+            128,
+            192,
+            224
+          ],
+          [
+            128,
+            160,
+            0,
+            32
+          ],
+          [
+            128,
+            160,
+            32,
+            64
+          ],
+          [
+            128,
+            160,
+            64,
+            96
+          ],
+          [
+            128,
+            160,
+            96,
+            128
+          ],
+          [
+            128,
+            160,
+            128,
+            160
+          ],
+          [
+            128,
+            160,
+            160,
+            192
+          ],
+          [
+            128,
+            160,
+            192,
+            224
+          ],
+          [
+            160,
+            192,
+            0,
+            32
+          ],
+          [
+            160,
+            192,
+            32,
+            64
+          ],
+          [
+            160,
+            192,
+            64,
+            96
+          ],
+          [
+            160,
+            192,
+            96,
+            128
+          ],
+          [
+            160,
+            192,
+            128,
+            160
+          ],
+          [
+            160,
+            192,
+            160,
+            192
+          ],
+          [
+            160,
+            192,
+            192,
+            224
+          ],
+          [
+            192,
+            224,
+            0,
+            32
+          ],
+          [
+            192,
+            224,
+            32,
+            64
+          ],
+          [
+            192,
+            224,
+            64,
+            96
+          ],
+          [
+            192,
+            224,
+            96,
+            128
+          ],
+          [
+            192,
+            224,
+            128,
+            160
+          ],
+          [
+            192,
+            224,
+            160,
+            192
+          ],
+          [
+            192,
+            224,
+            192,
+            224
+          ]
+        ],
+        "target_vs_best_alternative_margin_drops": [
+          -9.298324584960938e-05,
+          -0.0006251335144042969,
+          0.0017008781433105469,
+          -0.0010938644409179688,
+          -0.0006394386291503906,
+          -0.0024056434631347656,
+          -0.002557516098022461,
+          0.002688169479370117,
+          -0.005112886428833008,
+          0.0007755756378173828,
+          0.0022110939025878906,
+          0.0025866031646728516,
+          0.0006341934204101562,
+          -0.0023190975189208984,
+          0.0010688304901123047,
+          0.0008492469787597656,
+          0.015651226043701172,
+          0.0199127197265625,
+          0.0012390613555908203,
+          0.0030341148376464844,
+          0.0008680820465087891,
+          0.0011005401611328125,
+          -0.003127574920654297,
+          0.1180274486541748,
+          0.011006355285644531,
+          0.0009262561798095703,
+          0.006186962127685547,
+          -0.00011944770812988281,
+          -0.0007967948913574219,
+          0.0037469863891601562,
+          0.009939908981323242,
+          -0.002057313919067383,
+          0.0015835762023925781,
+          0.001028299331665039,
+          0.0008978843688964844,
+          0.0014057159423828125,
+          0.004895925521850586,
+          -0.0048809051513671875,
+          -0.003284454345703125,
+          -8.678436279296875e-05,
+          -0.0012886524200439453,
+          0.0004658699035644531,
+          0.0033664703369140625,
+          0.002742290496826172,
+          0.00034546852111816406,
+          0.0015239715576171875,
+          0.0017671585083007812,
+          -0.0021390914916992188,
+          0.00124359130859375
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.00012201070785522461,
+          "max": 0.002987384796142578,
+          "mean": 9.7743102482387e-05,
+          "std": 0.0004309240162778453,
+          "abs_sum": 6.49920654296875,
+          "signed_sum": 4.90435791015625,
+          "positive_sum": 5.7017822265625,
+          "negative_sum": -0.79742431640625,
+          "absolute_quantiles_0_50_90_99_100": [
+            2.086162567138672e-06,
+            4.07099723815918e-05,
+            0.00023889541625976562,
+            0.002987384796142578,
+            0.002987384796142578
+          ]
+        },
+        "clean_class_probability": 0.9754789471626282,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 222.3803999950178,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.2488000031444244,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65057.3182073,
+          "finished": 65057.7708093,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 65057.7718883,
+      "finished": 65058.5053713,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "score_space": "selected class probability (weighted local surrogate)",
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.8013337916312131,
+        "surrogate_intercept": 0.9736879065654568,
+        "surrogate_local_prediction": 0.9751950833765453,
+        "actual_target_probability": 0.9754830598831177,
+        "raw_attribution_statistics": {
+          "min": -0.00021627308160532266,
+          "max": 0.0007205831934697926,
+          "mean": 3.0758710751718594e-05,
+          "std": 0.0001704566317906005,
+          "abs_sum": 0.005699285123654363,
+          "signed_sum": 0.0015071768268342112,
+          "positive_sum": 0.003603230975244287,
+          "negative_sum": -0.002096054148410076,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.8039738115003274e-07,
+            6.957365258131176e-05,
+            0.00022377278946805748,
+            0.0005880779470317054,
+            0.0007205831934697926
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 710.5579000053694,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.7502000011736527,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65057.7709003,
+          "finished": 65059.2333775,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "REAL",
+      "worker": "xai_1",
+      "started": 65058.5055468,
+      "finished": 65059.2333196,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "score_space": "selected class probability (weighted local surrogate)",
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.7161211013485922,
+        "surrogate_intercept": 0.9739061730404716,
+        "surrogate_local_prediction": 0.97468549148127,
+        "actual_target_probability": 0.9754772782325745,
+        "raw_attribution_statistics": {
+          "min": -0.00026811400311999023,
+          "max": 0.0010741009609773755,
+          "mean": 1.590445829290785e-05,
+          "std": 0.00021370513899292068,
+          "abs_sum": 0.006769265388811618,
+          "signed_sum": 0.0007793184563524846,
+          "positive_sum": 0.0037742919225820515,
+          "negative_sum": -0.002994973466229567,
+          "absolute_quantiles_0_50_90_99_100": [
+            7.538547379226657e-06,
+            9.171912824967876e-05,
+            0.00027536961133591844,
+            0.0007308827154338331,
+            0.0010741009609773755
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 0,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 717.151400000148,
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.6581999991321936,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65057.7709003,
+          "finished": 65059.2333775,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 65057.1602769,
+      "finished": 65063.6826517,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.013683319091796875,
+        "signed_attribution_sum": 0.01848100870847702,
+        "completeness_absolute_residual": 0.004797689616680145,
+        "completeness_relative_residual": 0.3506232358168386,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.004797689616680145,
+            "relative_residual": 0.3506232358168386
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0009114212007261813,
+          "max": 0.001000061514787376,
+          "mean": 1.2277459890318595e-07,
+          "std": 6.182096092368707e-05,
+          "abs_sum": 4.869213786343034,
+          "signed_sum": 0.018481014823698773,
+          "positive_sum": 2.443847400583366,
+          "negative_sum": -2.4253663857596672,
+          "absolute_quantiles_0_50_90_99_100": [
+            6.967443288985464e-11,
+            1.34185393108055e-05,
+            8.392498566536244e-05,
+            0.00025721362966578507,
+            0.001000061514787376
+          ]
+        },
+        "gradient_abs_sum": 256.7776565551758,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 6490.766499999154,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.3636999976588413,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65057.1592408,
+          "finished": 65064.7013508,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "REAL",
+      "worker": "xai_0",
+      "started": 65063.682795,
+      "finished": 65064.7013073,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.01596975326538086,
+        "signed_attribution_sum": 0.012025384232401848,
+        "completeness_absolute_residual": 0.0039443690329790115,
+        "completeness_relative_residual": 0.24698997958406735,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.0039443690329790115,
+            "relative_residual": 0.24698997958406735
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0010875217849388719,
+          "max": 0.0010450822301208973,
+          "mean": 7.988805701055413e-08,
+          "std": 6.561867676097047e-05,
+          "abs_sum": 5.213759444695158,
+          "signed_sum": 0.012025389445684691,
+          "positive_sum": 2.6128924170704213,
+          "negative_sum": -2.6008670276247363,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.634375786432109e-11,
+            1.4396037840924691e-05,
+            9.031831577885899e-05,
+            0.0002725685093901139,
+            0.0010875217849388719
+          ]
+        },
+        "gradient_abs_sum": 303.6159477233887,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 0,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 1006.9511000037892,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "REAL",
+        "precision": "FP32",
+        "blend_ms": 2.016300000832416,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65057.1592408,
+          "finished": 65064.7013508,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65075.7542934,
+      "finished": 65075.8464265,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 25.29421043395996,
+        "raw_map_max": 3.100731611251831,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 66.93929999892134,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.3501999967265874,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65075.7523339,
+          "finished": 65075.8464576,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 65075.7544746,
+      "finished": 65075.8688871,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 25.29421043395996,
+        "raw_map_max": 0.019957326352596283,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 95.55120000004536,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.8601000012713484,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65075.7521914,
+          "finished": 65075.8689183,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65075.8477983,
+      "finished": 65075.9421568,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 25.29421043395996,
+        "raw_map_max": 0.12726551294326782,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 74.23919999564532,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 4.883699999481905,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65075.846542,
+          "finished": 65075.9421992,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65075.9436333,
+      "finished": 65076.4390213,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "score_space": "selected class probability",
+        "max_absolute_probability_change": 0.0036679506301879883,
+        "probability_resolution_limited": false,
+        "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+        "patch_bounds_y1_y2_x1_x2": [
+          [
+            0,
+            32,
+            0,
+            32
+          ],
+          [
+            0,
+            32,
+            32,
+            64
+          ],
+          [
+            0,
+            32,
+            64,
+            96
+          ],
+          [
+            0,
+            32,
+            96,
+            128
+          ],
+          [
+            0,
+            32,
+            128,
+            160
+          ],
+          [
+            0,
+            32,
+            160,
+            192
+          ],
+          [
+            0,
+            32,
+            192,
+            224
+          ],
+          [
+            32,
+            64,
+            0,
+            32
+          ],
+          [
+            32,
+            64,
+            32,
+            64
+          ],
+          [
+            32,
+            64,
+            64,
+            96
+          ],
+          [
+            32,
+            64,
+            96,
+            128
+          ],
+          [
+            32,
+            64,
+            128,
+            160
+          ],
+          [
+            32,
+            64,
+            160,
+            192
+          ],
+          [
+            32,
+            64,
+            192,
+            224
+          ],
+          [
+            64,
+            96,
+            0,
+            32
+          ],
+          [
+            64,
+            96,
+            32,
+            64
+          ],
+          [
+            64,
+            96,
+            64,
+            96
+          ],
+          [
+            64,
+            96,
+            96,
+            128
+          ],
+          [
+            64,
+            96,
+            128,
+            160
+          ],
+          [
+            64,
+            96,
+            160,
+            192
+          ],
+          [
+            64,
+            96,
+            192,
+            224
+          ],
+          [
+            96,
+            128,
+            0,
+            32
+          ],
+          [
+            96,
+            128,
+            32,
+            64
+          ],
+          [
+            96,
+            128,
+            64,
+            96
+          ],
+          [
+            96,
+            128,
+            96,
+            128
+          ],
+          [
+            96,
+            128,
+            128,
+            160
+          ],
+          [
+            96,
+            128,
+            160,
+            192
+          ],
+          [
+            96,
+            128,
+            192,
+            224
+          ],
+          [
+            128,
+            160,
+            0,
+            32
+          ],
+          [
+            128,
+            160,
+            32,
+            64
+          ],
+          [
+            128,
+            160,
+            64,
+            96
+          ],
+          [
+            128,
+            160,
+            96,
+            128
+          ],
+          [
+            128,
+            160,
+            128,
+            160
+          ],
+          [
+            128,
+            160,
+            160,
+            192
+          ],
+          [
+            128,
+            160,
+            192,
+            224
+          ],
+          [
+            160,
+            192,
+            0,
+            32
+          ],
+          [
+            160,
+            192,
+            32,
+            64
+          ],
+          [
+            160,
+            192,
+            64,
+            96
+          ],
+          [
+            160,
+            192,
+            96,
+            128
+          ],
+          [
+            160,
+            192,
+            128,
+            160
+          ],
+          [
+            160,
+            192,
+            160,
+            192
+          ],
+          [
+            160,
+            192,
+            192,
+            224
+          ],
+          [
+            192,
+            224,
+            0,
+            32
+          ],
+          [
+            192,
+            224,
+            32,
+            64
+          ],
+          [
+            192,
+            224,
+            64,
+            96
+          ],
+          [
+            192,
+            224,
+            96,
+            128
+          ],
+          [
+            192,
+            224,
+            128,
+            160
+          ],
+          [
+            192,
+            224,
+            160,
+            192
+          ],
+          [
+            192,
+            224,
+            192,
+            224
+          ]
+        ],
+        "target_vs_best_alternative_margin_drops": [
+          0.27307653427124023,
+          -0.0500035285949707,
+          0.10682439804077148,
+          -0.015999317169189453,
+          0.04776811599731445,
+          0.058556556701660156,
+          0.018661022186279297,
+          0.05743217468261719,
+          0.059144020080566406,
+          0.023410797119140625,
+          -0.07656192779541016,
+          -0.06612110137939453,
+          -0.06319618225097656,
+          -0.02985858917236328,
+          0.07590198516845703,
+          -0.05958747863769531,
+          -0.1582484245300293,
+          -0.26804208755493164,
+          0.0116119384765625,
+          0.05327320098876953,
+          0.08493900299072266,
+          -0.04722785949707031,
+          -0.06361865997314453,
+          -0.30208778381347656,
+          -0.21175289154052734,
+          -0.043328285217285156,
+          0.05542421340942383,
+          0.10495948791503906,
+          -0.2619476318359375,
+          -0.25821399688720703,
+          0.0704503059387207,
+          -0.27150535583496094,
+          -0.05753660202026367,
+          0.009280204772949219,
+          0.014611244201660156,
+          -0.2975597381591797,
+          -0.08382987976074219,
+          -0.2299051284790039,
+          -0.11406517028808594,
+          -0.11342239379882812,
+          0.0610957145690918,
+          0.02819061279296875,
+          -0.4194154739379883,
+          -0.33788442611694336,
+          -0.004719734191894531,
+          0.03582000732421875,
+          0.048297882080078125,
+          -0.008298873901367188,
+          -0.01367044448852539
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0036679506301879883,
+          "max": 0.0033382177352905273,
+          "mean": -0.0004647666094254474,
+          "std": 0.0013576307888824406,
+          "abs_sum": 53.31060791015625,
+          "signed_sum": -23.32012939453125,
+          "positive_sum": 14.9952392578125,
+          "negative_sum": -38.31536865234375,
+          "absolute_quantiles_0_50_90_99_100": [
+            5.030632019042969e-05,
+            0.000653684139251709,
+            0.0027531981468200684,
+            0.0036679506301879883,
+            0.0036679506301879883
+          ]
+        },
+        "clean_class_probability": 0.9892162084579468,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 474.0377999987686,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.790300000924617,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65075.94227,
+          "finished": 65076.4390584,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65076.4401221,
+      "finished": 65077.068728,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "score_space": "selected class probability (weighted local surrogate)",
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.45951169909748524,
+        "surrogate_intercept": 0.9933153824916607,
+        "surrogate_local_prediction": 0.9898397339510929,
+        "actual_target_probability": 0.989258348941803,
+        "raw_attribution_statistics": {
+          "min": -0.0007665165467187762,
+          "max": 0.0007188046583905816,
+          "mean": -7.093160256401312e-05,
+          "std": 0.0003587948748735138,
+          "abs_sum": 0.01501381691196002,
+          "signed_sum": -0.003475648525636643,
+          "positive_sum": 0.005769084193161689,
+          "negative_sum": -0.009244732718798332,
+          "absolute_quantiles_0_50_90_99_100": [
+            2.2866890503792092e-05,
+            0.0002959596167784184,
+            0.000583933130837977,
+            0.0007436148403212426,
+            0.0007665165467187762
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 606.205999996746,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 7.931599997391459,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65076.4391556,
+          "finished": 65077.0687682,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 65075.8700382,
+      "finished": 65077.4072572,
+      "details": {
+        "steps": 64,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.11487197875976562,
+        "signed_attribution_sum": 0.12646132707595825,
+        "completeness_absolute_residual": 0.011589348316192627,
+        "completeness_relative_residual": 0.10088925464085279,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.044682323932647705,
+            "relative_residual": 0.3889749651313386
+          },
+          {
+            "steps": 64,
+            "absolute_residual": 0.011589348316192627,
+            "relative_residual": 0.10088925464085279
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.039887867867946625,
+          "max": 0.0361027829349041,
+          "mean": 8.401193602074192e-07,
+          "std": 0.0017627662316885152,
+          "abs_sum": 139.42522693742586,
+          "signed_sum": 0.1264614870533024,
+          "positive_sum": 69.77584421223959,
+          "negative_sum": -69.64938272518629,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.5360168692524212e-10,
+            0.0003990823170170188,
+            0.0024126874515786787,
+            0.007161960713565413,
+            0.039887867867946625
+          ]
+        },
+        "gradient_abs_sum": 16588.49156188965,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 1517.3021000009612,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.0245999985490926,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65075.8689922,
+          "finished": 65077.407292,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam++",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 65087.1790253,
+      "finished": 65087.7672554,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.22664828598499298,
+        "raw_map_max": 0.055181834846735,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam++",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 560.2062000034493,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 3.074499996728264,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65087.1736608,
+          "finished": 65087.7673638,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradcam",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65087.6974323,
+      "finished": 65087.8723003,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.22664828598499298,
+        "raw_map_max": 0.00034834188409149647,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "gradcam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 149.98329999798443,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.945300002465956,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65087.6957835,
+          "finished": 65087.8723316,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "layercam",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 65087.768857,
+      "finished": 65087.9201851,
+      "details": {
+        "activation_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_shape": [
+          1,
+          1280,
+          7,
+          7
+        ],
+        "gradient_abs_sum": 0.22664828598499298,
+        "raw_map_max": 0.00225242180749774,
+        "raw_map_min": 0.0,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "Relative positive influence on the selected class score",
+        "method": "layercam",
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 123.66720000136411,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.977900003315881,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65087.767724,
+          "finished": 65087.9202176,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 65087.9214185,
+      "finished": 65091.025509,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "score_space": "selected class probability",
+        "max_absolute_probability_change": 0.0010669827461242676,
+        "probability_resolution_limited": false,
+        "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+        "patch_bounds_y1_y2_x1_x2": [
+          [
+            0,
+            32,
+            0,
+            32
+          ],
+          [
+            0,
+            32,
+            32,
+            64
+          ],
+          [
+            0,
+            32,
+            64,
+            96
+          ],
+          [
+            0,
+            32,
+            96,
+            128
+          ],
+          [
+            0,
+            32,
+            128,
+            160
+          ],
+          [
+            0,
+            32,
+            160,
+            192
+          ],
+          [
+            0,
+            32,
+            192,
+            224
+          ],
+          [
+            32,
+            64,
+            0,
+            32
+          ],
+          [
+            32,
+            64,
+            32,
+            64
+          ],
+          [
+            32,
+            64,
+            64,
+            96
+          ],
+          [
+            32,
+            64,
+            96,
+            128
+          ],
+          [
+            32,
+            64,
+            128,
+            160
+          ],
+          [
+            32,
+            64,
+            160,
+            192
+          ],
+          [
+            32,
+            64,
+            192,
+            224
+          ],
+          [
+            64,
+            96,
+            0,
+            32
+          ],
+          [
+            64,
+            96,
+            32,
+            64
+          ],
+          [
+            64,
+            96,
+            64,
+            96
+          ],
+          [
+            64,
+            96,
+            96,
+            128
+          ],
+          [
+            64,
+            96,
+            128,
+            160
+          ],
+          [
+            64,
+            96,
+            160,
+            192
+          ],
+          [
+            64,
+            96,
+            192,
+            224
+          ],
+          [
+            96,
+            128,
+            0,
+            32
+          ],
+          [
+            96,
+            128,
+            32,
+            64
+          ],
+          [
+            96,
+            128,
+            64,
+            96
+          ],
+          [
+            96,
+            128,
+            96,
+            128
+          ],
+          [
+            96,
+            128,
+            128,
+            160
+          ],
+          [
+            96,
+            128,
+            160,
+            192
+          ],
+          [
+            96,
+            128,
+            192,
+            224
+          ],
+          [
+            128,
+            160,
+            0,
+            32
+          ],
+          [
+            128,
+            160,
+            32,
+            64
+          ],
+          [
+            128,
+            160,
+            64,
+            96
+          ],
+          [
+            128,
+            160,
+            96,
+            128
+          ],
+          [
+            128,
+            160,
+            128,
+            160
+          ],
+          [
+            128,
+            160,
+            160,
+            192
+          ],
+          [
+            128,
+            160,
+            192,
+            224
+          ],
+          [
+            160,
+            192,
+            0,
+            32
+          ],
+          [
+            160,
+            192,
+            32,
+            64
+          ],
+          [
+            160,
+            192,
+            64,
+            96
+          ],
+          [
+            160,
+            192,
+            96,
+            128
+          ],
+          [
+            160,
+            192,
+            128,
+            160
+          ],
+          [
+            160,
+            192,
+            160,
+            192
+          ],
+          [
+            160,
+            192,
+            192,
+            224
+          ],
+          [
+            192,
+            224,
+            0,
+            32
+          ],
+          [
+            192,
+            224,
+            32,
+            64
+          ],
+          [
+            192,
+            224,
+            64,
+            96
+          ],
+          [
+            192,
+            224,
+            96,
+            128
+          ],
+          [
+            192,
+            224,
+            128,
+            160
+          ],
+          [
+            192,
+            224,
+            160,
+            192
+          ],
+          [
+            192,
+            224,
+            192,
+            224
+          ]
+        ],
+        "target_vs_best_alternative_margin_drops": [
+          0.008191347122192383,
+          0.00724339485168457,
+          -0.00431060791015625,
+          0.00021195411682128906,
+          0.002081155776977539,
+          -0.0051577091217041016,
+          -0.0024073123931884766,
+          0.0020062923431396484,
+          -0.003217458724975586,
+          0.0011813640594482422,
+          0.007322549819946289,
+          -0.003000974655151367,
+          0.004113674163818359,
+          -0.005352973937988281,
+          -0.0026302337646484375,
+          0.0003859996795654297,
+          -0.0063283443450927734,
+          0.0006473064422607422,
+          0.0007259845733642578,
+          0.002080202102661133,
+          -0.0018978118896484375,
+          0.003310680389404297,
+          0.0006351470947265625,
+          0.013602733612060547,
+          -0.0032296180725097656,
+          -0.00030994415283203125,
+          0.0035631656646728516,
+          -0.003933906555175781,
+          -0.0031926631927490234,
+          -0.002256155014038086,
+          -0.005091428756713867,
+          -0.005559444427490234,
+          0.0018706321716308594,
+          0.0002067089080810547,
+          -0.0023326873779296875,
+          0.00874638557434082,
+          0.03080606460571289,
+          -0.004178285598754883,
+          -0.007797956466674805,
+          0.003748178482055664,
+          -0.0014362335205078125,
+          -0.0025072097778320312,
+          0.005301237106323242,
+          0.013649940490722656,
+          -0.004552125930786133,
+          0.0007658004760742188,
+          -0.0028924942016601562,
+          6.628036499023438e-05,
+          -0.0027074813842773438
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0002652406692504883,
+          "max": 0.0010669827461242676,
+          "mean": 2.5889094994992625e-05,
+          "std": 0.0002210205219746016,
+          "abs_sum": 7.31951904296875,
+          "signed_sum": 1.29901123046875,
+          "positive_sum": 4.30926513671875,
+          "negative_sum": -3.01025390625,
+          "absolute_quantiles_0_50_90_99_100": [
+            2.2649765014648438e-06,
+            0.00010877847671508789,
+            0.00028079748153686523,
+            0.0010669827461242676,
+            0.0010669827461242676
+          ]
+        },
+        "clean_class_probability": 0.9646052122116089,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 3081.901300000027,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.6475999984540977,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65087.9202877,
+          "finished": 65091.0255531,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65087.8735392,
+      "finished": 65093.3949819,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.003202870488166809,
+        "signed_attribution_sum": -0.0005002273246645927,
+        "completeness_absolute_residual": 0.003703097812831402,
+        "completeness_relative_residual": 1.156180940351073,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.003703097812831402,
+            "relative_residual": 1.156180940351073
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0005837287753820419,
+          "max": 0.0009166713571175933,
+          "mean": -3.3231562245137687e-09,
+          "std": 2.9396386950165118e-05,
+          "abs_sum": 2.276429149178739,
+          "signed_sum": -0.0005002280601636086,
+          "positive_sum": 1.1379644605592876,
+          "negative_sum": -1.1384646886194512,
+          "absolute_quantiles_0_50_90_99_100": [
+            8.037340758215716e-12,
+            6.4164805735345e-06,
+            3.909092265530492e-05,
+            0.00011784715985413659,
+            0.0009166713571175933
+          ]
+        },
+        "gradient_abs_sum": 118.15230560302734,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 5500.162800002727,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.384100000199396,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65087.8724024,
+          "finished": 65093.3950196,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "attention_rollout",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65093.3997319,
+      "finished": 65093.5231813,
+      "details": {
+        "class_agnostic": true,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "attention_rollout",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 100.45659999741474,
+        "score_space": "native attention; class agnostic",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.806099997542333,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65093.3951064,
+          "finished": 65093.5232187,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradient_attention",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65093.5241725,
+      "finished": 65093.8762288,
+      "details": {
+        "class_agnostic": false,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "gradient_attention",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 328.04729999770643,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 3.1597999986843206,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65093.5233127,
+          "finished": 65093.8762734,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 65091.0269514,
+      "finished": 65095.3602503,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "score_space": "selected class probability (weighted local surrogate)",
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.47987363053459675,
+        "surrogate_intercept": 0.9612874197645692,
+        "surrogate_local_prediction": 0.9657365409273604,
+        "actual_target_probability": 0.9646010994911194,
+        "raw_attribution_statistics": {
+          "min": -0.0008732777205295861,
+          "max": 0.0006684151012450457,
+          "mean": 9.079839191497517e-05,
+          "std": 0.00026758761250257493,
+          "abs_sum": 0.010345131852773193,
+          "signed_sum": 0.0044491212038337835,
+          "positive_sum": 0.007397126528303488,
+          "negative_sum": -0.0029480053244697046,
+          "absolute_quantiles_0_50_90_99_100": [
+            7.87536282587098e-06,
+            0.0001417215244146064,
+            0.0004191122250631453,
+            0.0007749436632730059,
+            0.0008732777205295861
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 4310.76810000377,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.019999999902211,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65091.0256405,
+          "finished": 65095.360293,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "occlusion",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 65097.0136633,
+      "finished": 65098.6899292,
+      "details": {
+        "patch_size": 32,
+        "regions": 49,
+        "baseline": "ImageNet mean RGB",
+        "score_space": "selected class probability",
+        "max_absolute_probability_change": 0.007030487060546875,
+        "probability_resolution_limited": false,
+        "probability_resolution_note": "Small probability differences can be rounded away near saturation; margin changes are a separate diagnostic, not the displayed map.",
+        "patch_bounds_y1_y2_x1_x2": [
+          [
+            0,
+            32,
+            0,
+            32
+          ],
+          [
+            0,
+            32,
+            32,
+            64
+          ],
+          [
+            0,
+            32,
+            64,
+            96
+          ],
+          [
+            0,
+            32,
+            96,
+            128
+          ],
+          [
+            0,
+            32,
+            128,
+            160
+          ],
+          [
+            0,
+            32,
+            160,
+            192
+          ],
+          [
+            0,
+            32,
+            192,
+            224
+          ],
+          [
+            32,
+            64,
+            0,
+            32
+          ],
+          [
+            32,
+            64,
+            32,
+            64
+          ],
+          [
+            32,
+            64,
+            64,
+            96
+          ],
+          [
+            32,
+            64,
+            96,
+            128
+          ],
+          [
+            32,
+            64,
+            128,
+            160
+          ],
+          [
+            32,
+            64,
+            160,
+            192
+          ],
+          [
+            32,
+            64,
+            192,
+            224
+          ],
+          [
+            64,
+            96,
+            0,
+            32
+          ],
+          [
+            64,
+            96,
+            32,
+            64
+          ],
+          [
+            64,
+            96,
+            64,
+            96
+          ],
+          [
+            64,
+            96,
+            96,
+            128
+          ],
+          [
+            64,
+            96,
+            128,
+            160
+          ],
+          [
+            64,
+            96,
+            160,
+            192
+          ],
+          [
+            64,
+            96,
+            192,
+            224
+          ],
+          [
+            96,
+            128,
+            0,
+            32
+          ],
+          [
+            96,
+            128,
+            32,
+            64
+          ],
+          [
+            96,
+            128,
+            64,
+            96
+          ],
+          [
+            96,
+            128,
+            96,
+            128
+          ],
+          [
+            96,
+            128,
+            128,
+            160
+          ],
+          [
+            96,
+            128,
+            160,
+            192
+          ],
+          [
+            96,
+            128,
+            192,
+            224
+          ],
+          [
+            128,
+            160,
+            0,
+            32
+          ],
+          [
+            128,
+            160,
+            32,
+            64
+          ],
+          [
+            128,
+            160,
+            64,
+            96
+          ],
+          [
+            128,
+            160,
+            96,
+            128
+          ],
+          [
+            128,
+            160,
+            128,
+            160
+          ],
+          [
+            128,
+            160,
+            160,
+            192
+          ],
+          [
+            128,
+            160,
+            192,
+            224
+          ],
+          [
+            160,
+            192,
+            0,
+            32
+          ],
+          [
+            160,
+            192,
+            32,
+            64
+          ],
+          [
+            160,
+            192,
+            64,
+            96
+          ],
+          [
+            160,
+            192,
+            96,
+            128
+          ],
+          [
+            160,
+            192,
+            128,
+            160
+          ],
+          [
+            160,
+            192,
+            160,
+            192
+          ],
+          [
+            160,
+            192,
+            192,
+            224
+          ],
+          [
+            192,
+            224,
+            0,
+            32
+          ],
+          [
+            192,
+            224,
+            32,
+            64
+          ],
+          [
+            192,
+            224,
+            64,
+            96
+          ],
+          [
+            192,
+            224,
+            96,
+            128
+          ],
+          [
+            192,
+            224,
+            128,
+            160
+          ],
+          [
+            192,
+            224,
+            160,
+            192
+          ],
+          [
+            192,
+            224,
+            192,
+            224
+          ]
+        ],
+        "target_vs_best_alternative_margin_drops": [
+          0.007465481758117676,
+          0.01035463809967041,
+          0.017818450927734375,
+          0.0396273136138916,
+          0.035894036293029785,
+          0.028973937034606934,
+          0.012608170509338379,
+          0.0001914501190185547,
+          0.003759145736694336,
+          0.006787657737731934,
+          0.005215167999267578,
+          0.004303574562072754,
+          0.006592154502868652,
+          0.0010665655136108398,
+          0.001875758171081543,
+          0.00301516056060791,
+          -0.0018943548202514648,
+          5.9485435485839844e-05,
+          0.009423017501831055,
+          0.004438281059265137,
+          0.000662684440612793,
+          0.006134390830993652,
+          0.003805994987487793,
+          -0.0025173425674438477,
+          0.0053615570068359375,
+          0.004674673080444336,
+          0.007582187652587891,
+          0.005837798118591309,
+          0.002546072006225586,
+          0.0037010908126831055,
+          0.0023239850997924805,
+          0.005528807640075684,
+          0.0006721019744873047,
+          0.005972862243652344,
+          0.004060149192810059,
+          0.006735324859619141,
+          0.003554821014404297,
+          0.005571246147155762,
+          0.0011581182479858398,
+          0.0026727914810180664,
+          0.001837611198425293,
+          0.0013123750686645508,
+          0.005776166915893555,
+          0.007750988006591797,
+          0.007088184356689453,
+          0.0020993947982788086,
+          0.003216266632080078,
+          0.004988670349121094,
+          0.008749842643737793
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.00044155120849609375,
+          "max": 0.007030487060546875,
+          "mean": 0.0011386457754641163,
+          "std": 0.0014412902622205682,
+          "abs_sum": 58.7176513671875,
+          "signed_sum": 57.1326904296875,
+          "positive_sum": 57.9251708984375,
+          "negative_sum": -0.79248046875,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.043081283569336e-05,
+            0.0008215904235839844,
+            0.002220630645751953,
+            0.007030487060546875,
+            0.007030487060546875
+          ]
+        },
+        "clean_class_probability": 0.7729107141494751,
+        "limitation": "Masking may create out-of-distribution inputs",
+        "signed": true,
+        "method": "occlusion",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 1663.6593000002904,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.32539999706205,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65097.0126078,
+          "finished": 65098.6899573,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "integrated_gradients",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65097.066734,
+      "finished": 65099.2357568,
+      "details": {
+        "steps": 32,
+        "quadrature": "Gauss-Legendre",
+        "internal_batch_size": 8,
+        "baseline": "zero normalized input = ImageNet mean RGB",
+        "output_difference": 0.000979989767074585,
+        "signed_attribution_sum": 0.003468761220574379,
+        "completeness_absolute_residual": 0.002488771453499794,
+        "completeness_relative_residual": 2.5395892254356354,
+        "converged": true,
+        "convergence_tolerance": "absolute <= 0.01 + 0.05 * abs(output difference)",
+        "convergence_history": [
+          {
+            "steps": 32,
+            "absolute_residual": 0.002488771453499794,
+            "relative_residual": 2.5395892254356354
+          }
+        ],
+        "raw_attribution_statistics": {
+          "min": -0.0007408644305542111,
+          "max": 0.0008339648484252393,
+          "mean": 2.3043995361349036e-08,
+          "std": 4.220756617838558e-05,
+          "abs_sum": 3.1790919076767103,
+          "signed_sum": 0.0034687665337531474,
+          "positive_sum": 1.5912803371052315,
+          "negative_sum": -1.5878115705714784,
+          "absolute_quantiles_0_50_90_99_100": [
+            3.6458468188893534e-11,
+            8.397536930715432e-06,
+            5.404818984970924e-05,
+            0.00017678435018751804,
+            0.0008339648484252393
+          ]
+        },
+        "gradient_abs_sum": 201.01374053955078,
+        "gradient_available": true,
+        "low_signal": false,
+        "target_index": 1,
+        "display": "signed channel sum; red supports and blue opposes the selected class relative to the baseline",
+        "method": "integrated_gradients",
+        "finite": true,
+        "constant_map": false,
+        "signed": true,
+        "attribution_ms": 2158.3958999981405,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 3.0884999941918068,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65097.0654427,
+          "finished": 65099.2358031,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "attention_rollout",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65099.2474207,
+      "finished": 65099.4519481,
+      "details": {
+        "class_agnostic": true,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "attention_rollout",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 158.729000002495,
+        "score_space": "native attention; class agnostic",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.193000000261236,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65099.2359032,
+          "finished": 65099.4519827,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "gradient_attention",
+      "target": "FAKE",
+      "worker": "xai_0",
+      "started": 65099.4530793,
+      "finished": 65099.6713751,
+      "details": {
+        "class_agnostic": false,
+        "limitation": "Attention is not established as faithful causal attribution",
+        "method": "gradient_attention",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "signed": false,
+        "attribution_ms": 206.05670000077225,
+        "score_space": "selected class logit/log-probability; video temperature included for video decisions",
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.2226000000955537,
+        "execution": {
+          "worker": "xai_0",
+          "started": 65099.4520884,
+          "finished": 65099.6714052,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    },
+    {
+      "method": "lime",
+      "target": "FAKE",
+      "worker": "xai_1",
+      "started": 65098.6982223,
+      "finished": 65102.5680985,
+      "details": {
+        "samples": 256,
+        "seed": 42,
+        "regions": 49,
+        "score_space": "selected class probability (weighted local surrogate)",
+        "segmentation": "7 by 7 nonoverlapping grid; not semantic objects",
+        "weighted_surrogate_r2": 0.6166118551109951,
+        "surrogate_intercept": 0.7634799300058227,
+        "surrogate_local_prediction": 0.7723107278768258,
+        "actual_target_probability": 0.7729116082191467,
+        "raw_attribution_statistics": {
+          "min": -0.0030849380418658257,
+          "max": 0.004270132165402174,
+          "mean": 0.00018022036824639107,
+          "std": 0.0014252124549479332,
+          "abs_sum": 0.05562768382878858,
+          "signed_sum": 0.008830798044073163,
+          "positive_sum": 0.03222924093643087,
+          "negative_sum": -0.023398442892357707,
+          "absolute_quantiles_0_50_90_99_100": [
+            1.0298837878508493e-05,
+            0.0010229225736111403,
+            0.002243125578388572,
+            0.003720863256603475,
+            0.004270132165402174
+          ]
+        },
+        "signed": true,
+        "limitation": "Local surrogate approximation; poor fit and unrealistic masks limit interpretation",
+        "method": "lime",
+        "target_index": 1,
+        "finite": true,
+        "constant_map": false,
+        "attribution_ms": 3858.1646000020555,
+        "target_class": "FAKE",
+        "precision": "FP32",
+        "blend_ms": 2.3509999955422245,
+        "execution": {
+          "worker": "xai_1",
+          "started": 65098.6900314,
+          "finished": 65102.568155,
+          "isolated_model": true,
+          "concurrent_worker_limit": 2
+        }
+      }
+    }
+  ],
+  "counters": {
+    "predictions": 8,
+    "methods": 63
+  },
+  "concurrent_pairs_observed": 53,
+  "image_prediction": [
+    "FAKE",
+    "100.00%",
+    "0.00%"
+  ],
+  "timing_scope": "AppTest wall time, includes model load, GPU warmup and rendering/serialization; not browser paint."
+}

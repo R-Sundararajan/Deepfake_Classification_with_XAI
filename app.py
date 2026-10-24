@@ -18,7 +18,7 @@ from tools.runtime import configure_runtime
 
 configure_runtime()
 st.set_page_config(page_title='Explainable Deepfake Classifier', page_icon='🔎', layout='wide')
-CACHE_VERSION = 'automatic-gallery-v1'
+CACHE_VERSION = 'automatic-gallery-v2-score-diagnostics'
 
 
 def render_page_notes(notes):
@@ -85,6 +85,10 @@ def show_explanation(explanation, strength, notes):
     st.caption(explanation['legend'])
     st.caption(explanation['coverage'])
     details = explanation['details']
+    if explanation['method'] == 'occlusion' and 'max_absolute_probability_change' in details:
+        st.caption(f"Largest absolute patch effect: {100*details['max_absolute_probability_change']:.6g} percentage points. Colors show relative probability changes, not effect size.")
+        if details.get('probability_resolution_limited'):
+            st.caption('Probability changes are near FP32 resolution. A flat or quantized map does not establish model insensitivity; inspect the margin diagnostics.')
     if details.get('constant_map') or details.get('low_signal'):
         st.caption('Localization unavailable · negligible or constant attribution. See Notes and warnings.')
     elif details.get('converged') is False:

@@ -63,3 +63,7 @@ Use a new output namespace when rerunning:
 ```
 
 The first tool checks actual Streamlit uploads, automatic generation, target consistency, cache reuse, extra video frames, CNN/transformer/hybrid compatibility, bottom warnings and corrupt input. The second compares concurrent and serial maps from real checkpoints, checks hook cleanup and verifies unchanged predictions. AppTest needs Windows loopback socket access for its local event loop.
+
+Both verifiers use the existing local held-out image/video fixtures rather than files in a personal Pictures folder. Optional broader experiments are available through `python -m tools.audit_xai_end_to_end --output results/xai_audit_new_run`; `--samples` selects an additional local media directory.
+
+The [24 October audit](xai_end_to_end_audit.md) records actual browser uploads and independent numerical checks. Occlusion now shows its largest absolute patch effect in percentage points beside the relative-color map. Its diagnostics retain separate target-versus-alternative margin changes for saturated probabilities. LIME and occlusion score-space labels identify probabilities; raw attention remains class agnostic. These presentation changes preserve predictions and attribution values.
